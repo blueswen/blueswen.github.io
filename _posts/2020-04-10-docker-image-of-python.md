@@ -8,7 +8,7 @@ tags:
     - ARTS
     - Share
     - Docker
-    - python
+    - Python
 ---
 
 [The best Docker base image for your Python application](https://pythonspeed.com/articles/base-image-python-docker-images/)

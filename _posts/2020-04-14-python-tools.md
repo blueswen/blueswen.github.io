@@ -7,7 +7,7 @@ header-style: text
 tags:
     - ARTS
     - Review
-    - python
+    - Python
 ---
 
 [Understanding Best Practice Python Tooling by Comparing Popular Project Templates](https://medium.com/better-programming/understanding-best-practice-python-tooling-by-comparing-popular-project-templates-6eba49229106)
