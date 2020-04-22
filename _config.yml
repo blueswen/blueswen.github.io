@@ -62,7 +62,7 @@ kramdown:
 netease_comment: false
 
 # Google Analytics
-ga_track_id: "UA-68568561-2" # Format: UA-xxxxxx-xx
+ga_track_id: "UA-164255350-1" # Format: UA-xxxxxx-xx
 ga_domain: blueswen.github.io
 
 # Sidebar settings
