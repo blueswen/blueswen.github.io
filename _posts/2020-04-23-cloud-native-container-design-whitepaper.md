@@ -7,6 +7,8 @@ header-style: text
 tags:
     - ARTS
     - Review
+    - K8S
+    - Cloud Native
 ---
 
 [Principles of container-based application design](https://www.redhat.com/en/resources/cloud-native-container-design-whitepaper)
