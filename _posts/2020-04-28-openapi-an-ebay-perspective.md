@@ -8,6 +8,7 @@ tags:
     - ARTS
     - Review
     - API
+    - OpenAPI
 ---
 
 [OpenAPI – An eBay Perspective](https://tech.ebayinc.com/engineering/openapi-an-ebay-perspective/)
