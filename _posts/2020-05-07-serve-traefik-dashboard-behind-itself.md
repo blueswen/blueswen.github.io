@@ -25,7 +25,8 @@ services:
       - --api
       - --providers.docker.exposedbydefault=false
       - --providers.docker.network=proxy
-      - '--providers.docker.defaultRule=Host(`{{ index .Labels "com.docker.compose.service" }}.localhost`)' # hostname = {compose service name}.localhost
+      {% raw  %}- '--providers.docker.defaultRule=Host(`{{ index .Labels "com.docker.compose.service" }}.localhost`)'{% endraw %}
+      # hostname = {compose service name}.localhost
     ports:
       - "80:80"
     volumes:
