@@ -7,7 +7,7 @@ header-style: text
 tags:
     - ARTS
     - Review
-    - K8S
+    - K8s
     - Cloud Native
 ---
 
