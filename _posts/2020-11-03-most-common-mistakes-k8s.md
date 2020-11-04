@@ -30,10 +30,10 @@ tags:
    1. 使用 PodDisruptionBudget 在 draining node 時確保 pod 數量
 8. more tenants or envs in shared cluster
    1. namespace 並不會提完整的硬體隔離性
-9.  externalTrafficPolicy: Cluster
+9. externalTrafficPolicy: Cluster
 10. pet clusters + stressing the control plane too much
-    1.  不要把 cluster 當寵物在養，要練習 Disaster Recovery，隨時有機會得重新建出一個完全一致的 cluster
-    2.  不要過度依賴 control plane，隨著 cluster 成長，上面的各種服務會越來越多，control plane 會開始變得緩慢，操作性變差
+    1. 不要把 cluster 當寵物在養，要練習 Disaster Recovery，隨時有機會得重新建出一個完全一致的 cluster
+    2. 不要過度依賴 control plane，隨著 cluster 成長，上面的各種服務會越來越多，control plane 會開始變得緩慢，操作性變差
 
 - bonus: using latest tag
   - 不要使用 latest tag
