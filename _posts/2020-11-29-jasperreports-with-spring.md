@@ -99,7 +99,7 @@ curl \
     },
     "data": [
       {
-        "ind": "2",
+        "ind": "1",
         "name": "蘋果",
         "amount": "3",
         "price": "30",
@@ -138,7 +138,7 @@ curl \
 
 在搞懂 Font Extension 前我也是依照這些分享使用這種方式，但後來發現限制實在太多，所以就還是走上正規的道路。雖然最後沒有採用這些解決方案，但有幾篇仍能提供一些不錯的思路，未來如果與到類似的問題或許可以作為參考。
 
-[Jasperreport 与 Springmvc 结合生成 PDF web 页面笔记（含解决中文问题）](https://blog.csdn.net/jiangkai528/article/details/51133347) 依照這篇文章提供的 dependencies 就能夠完整產製含有中文的報表，如果要使用繁體 pdfFontName 需設定為 MHei-Medium、MSung-Light 或 MSungStd-Light，pdfEncoding 設為 UniCNS-UCS2-H。而因為有限定了 jasperreports 的版本，所以可能會遇到使用 Jaspersoft Studio compile 出來的 jasper 在 run time 無法被使用的問題，這時候就要使用前面提到的調整 Jaspersoft Studio 的 compiler 版本來解決。
+[Jasperreport 与 Springmvc 结合生成 PDF web 页面笔记（含解决中文问题）](https://blog.csdn.net/jiangkai528/article/details/51133347)依照這篇文章提供的 dependencies 就能夠完整產製含有中文的報表，如果要使用繁體 pdfFontName 需設定為 MHei-Medium、MSung-Light 或 MSungStd-Light，pdfEncoding 設為 UniCNS-UCS2-H。而因為有限定了 jasperreports 的版本，所以可能會遇到使用 Jaspersoft Studio compile 出來的 jasper 在 run time 無法被使用的問題，這時候就要使用前面提到的調整 Jaspersoft Studio 的 compiler 版本來解決。
 
 [iText-Asian jar可 以使用的中文字符及 iText——>html2pdf 使用(附坑)](https://blog.csdn.net/weixin_41807385/article/details/98478061) 針對 iTextAsian.jar 提供了比較詳細的介紹與說明。
 
