@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[19] Implementing request-based autoscaling for machine learning workloads"
+title: "[19] ARTS Review - Implementing request-based autoscaling for machine learning workloads"
 subtitle: ""
 author: "Blueswen"
 header-style: text
