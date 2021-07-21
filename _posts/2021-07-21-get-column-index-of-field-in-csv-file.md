@@ -25,7 +25,7 @@ get-column-index-of-field-in-csv-file
 sed -n $'1s/,/\\\n/gp' some.csv | grep -nx 'e'
 #output: 5:e
 
-sed -n $'1s/,/\\\n/gp' some.csv | grep -nx 'e' | cut -f 2 -d :
+sed -n $'1s/,/\\\n/gp' some.csv | grep -nx 'e' | cut -f 1 -d :
 #output: 5
 ```
 
@@ -64,7 +64,7 @@ head -n 1 some.csv | tr "," "\n" | grep -nx e
 # 11,22,33,44,55,66,77
 # ...
 
-sed cut -f $(sed -n $'1s/,/\\\n/gp' some.csv | grep -nx 'e' | cut -f 1 -d :) -d , some.csv
+cut -f $(sed -n $'1s/,/\\\n/gp' some.csv | grep -nx 'e' | cut -f 1 -d :) -d , some.csv
 #output:
 # e
 # 55
