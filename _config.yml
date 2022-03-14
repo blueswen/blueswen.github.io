@@ -4,7 +4,7 @@ SEOTitle: Blueswen Blog
 header-img: img/home-bg.jpg
 email: blueswen@gmail.com
 description: "Blueswen Blog"
-keyword: "blueswen"
+keyword: "blueswen, 劉義瑋, LIU YI-WEI"
 url: "http://blueswen.github.io/" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -15,7 +15,7 @@ future: true
 RSS: false
 github_username: blueswen
 # twitter_username:   blueswen.tw
-# linkedin_username:  firstname-lastname-idxxxx
+linkedin_username:  blueswen
 
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
@@ -67,7 +67,7 @@ ga_domain: blueswen.github.io
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "劍一人敵，不足學，學萬人敵。－《史記 項羽本記》"
+sidebar-about-description: "Blueswen，期望成為一條龍工程師，但現在還是一條蟲。<br>#Python #Vue.js #Docker #DevOps<br>劍一人敵，不足學，學萬人敵。－《史記 項羽本記》"
 sidebar-avatar: /img/avatar-blueswen.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
