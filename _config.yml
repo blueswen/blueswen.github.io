@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: blueswen@gmail.com
 description: "Blueswen Blog"
 keyword: "blueswen, 劉義瑋, LIU YI-WEI"
-url: "http://blueswen.github.io/" # your host, for absolute URL
+url: "http://blueswen.github.io" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -62,7 +62,7 @@ kramdown:
 netease_comment: false
 
 # Google Analytics
-ga_track_id: "UA-164255350-1" # Format: UA-xxxxxx-xx
+ga_track_id: "G-C1E14RTFGS" # Format: UA-xxxxxx-xx
 ga_domain: blueswen.github.io
 
 # Sidebar settings
