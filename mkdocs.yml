@@ -61,6 +61,7 @@ plugins:
       enabled: !ENV [CI, false]
       enable_creation_date: true
       fallback_to_build_date: true
+  - meta
   - tags:
       tags_file: tags.md
   - blog:
