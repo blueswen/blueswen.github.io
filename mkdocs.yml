@@ -11,6 +11,8 @@ extra_css:
 theme:
   name: material
   custom_dir: overrides
+  icon:
+    logo: octicons/copilot-96
   
   features:
     # - announce.dismiss
