@@ -10,16 +10,15 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: github.event.repository.fork == false
+    if: github.event.repository.fork == falses
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
-      - run: pip install -r requirements.txt
-      - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
-      - env:
-          CI: true
-        run: mkdocs gh-deploy --force
+      - run: pip install --use-pep517 -r requirements.txt
+      - run: pip install --use-pep517 git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+      - run: mkdocs gh-deploy --force
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }} 
+  CI: true
