@@ -1,0 +1,76 @@
+site_name: Blueswen
+
+repo_url: https://github.com/blueswen/blueswen.github.io
+repo_name: blueswen/blueswen.github.io
+site_url: https://blueswen.github.io/
+site_dir: ./docs
+edit_uri: ""
+
+extra_css:
+  - stylesheets/main.css
+
+theme:
+  name: material
+  custom_dir: overrides
+  
+  features:
+    # - announce.dismiss
+    - content.code.annotate
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  
+  palette:
+    primary: white
+
+extra:
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - meta
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+plugins:
+  - glightbox
+  - search:
+      separator: '[\s\u200b\-]'
+  - git-revision-date-localized:
+      enabled: !ENV [CI, false]
+      enable_creation_date: true
+      fallback_to_build_date: true
+  - tags:
+      tags_file: tags.md
+  - blog:
+      categories_toc: true
+      post_readtime: false
+
+nav:
+  - Home: index.md
+  - Portfolio: portfolio.md
+  - Blog:
+     - blog/index.md
+  - Tags: tags.md

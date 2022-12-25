@@ -1,0 +1,12 @@
+.avatar {
+    border-radius: 50%;
+}
+
+.home-icon {
+    font-size: 1.5rem;
+    padding: 0 0.25rem;
+}
+
+.home-section {
+    padding: 5rem 2rem;
+}
