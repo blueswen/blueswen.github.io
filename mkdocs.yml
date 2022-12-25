@@ -57,6 +57,11 @@ markdown_extensions:
 
 plugins:
   - glightbox
+  - social:
+      cards_font: Noto Sans TC
+      cards_color:
+        fill: "#0085A1" 
+        text: "#FFFFFF"
   - search:
       separator: '[\s\u200b\-]'
   - git-revision-date-localized:

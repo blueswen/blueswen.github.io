@@ -3,3 +3,5 @@ mkdocs-material
 mkdocs-glightbox
 mkdocs-git-revision-date-localized-plugin
 jieba
+pillow
+cairosvg

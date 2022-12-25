@@ -16,6 +16,10 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
+      - uses: actions/cache@v2
+        with:
+          key: ${{ github.ref }}
+          path: .cache
       - run: pip install --use-pep517 -r requirements.txt
       - run: pip install --use-pep517 git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
       - run: mkdocs gh-deploy --force
