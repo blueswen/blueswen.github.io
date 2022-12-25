@@ -18,7 +18,7 @@ Race Condition 競爭條件，或稱作 Race Hazard 競爭危害，此詞源自�
 
 執行結果可能如下圖：
 
-![Race Condition](/img/in-post/2020-06-05-race-condition/rece-condition.png)
+![Race Condition](../../imgs/2020-06-05-race-condition/rece-condition.png)
 
 原本預期會要執行兩次 ```a++``` 變為 32，但結果卻是 31。
 

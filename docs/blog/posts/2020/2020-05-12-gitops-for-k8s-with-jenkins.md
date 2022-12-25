@@ -14,7 +14,7 @@ tags:
 
 作者所提出的 Pipeline 如下圖，將 Code 與 K8s Config 拆開成兩個 Repo。Code Repo 僅負責 Image 的建置，實際部署則由 Config Repo 所負責。
 
-![GitOps with Jenkins](/img/in-post/2020-05-12-gitops-for-k8s-with-jenkins/gitops_with_jenkins.png)  
+![GitOps with Jenkins](../../imgs/2020-05-12-gitops-for-k8s-with-jenkins/gitops_with_jenkins.png)  
 Source: [GitOps for Kubernetes with Jenkins](https://medium.com/stakater/gitops-for-kubernetes-with-jenkins-7db6304216e0)
 
 在 K8s 的架構下所謂的部署是部署**「服務組態」**，而程式碼只是 Image 的來源。若依然從單體式應用的角度去規劃部署，當一個 Pod 使用兩個以上的 Image 時就會馬上遇到問題。

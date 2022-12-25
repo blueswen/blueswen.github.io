@@ -9,7 +9,7 @@ tags:
 
 # HTTPS, SSL and TLS
 
-![SSL vs TLS vs HTTPS vs SSH](/img/in-post/2020-05-22-https-ssl-tls/ssl-tls-https-ssh.png)
+![SSL vs TLS vs HTTPS vs SSH](../../imgs/2020-05-22-https-ssl-tls/ssl-tls-https-ssh.png)
 Source: [SSL vs TLS vs SSH](https://roadmap.sh/guides/ssl-tls-https-ssh)
 
 SSL 與 TLS 都是將網路傳輸內容加密的通訊協定，兩者時常被交替使用表達加密這件事，但精準來說 SSL 已經在 1999 年被重新命名為 TLS，一般提到 SSL 都是表示 TLS。被 TLS 包裝的 HTTP 即為 HTTPS，但 TLS 並不僅侷限用於 HTTP 上。
@@ -27,7 +27,7 @@ SSL 有以下幾個優點：
 
 ## SSL 通訊步驟
 
-![How SSL/TLS works](/img/in-post/2020-05-22-https-ssl-tls/ssl_steps.png)
+![How SSL/TLS works](../../imgs/2020-05-22-https-ssl-tls/ssl_steps.png)
 Source: [那些關於SSL/TLS的二三事(二) — How SSL works?](https://medium.com/@clu1022/%E9%82%A3%E4%BA%9B%E9%97%9C%E6%96%BCssl-tls%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B-%E4%BA%8C-how-ssl-works-a9d6720bdd48)
 
 共有四個角色，分別為 Certificate Authority(CA)、Browser Vender 瀏覽器廠商、Client、Web Server。

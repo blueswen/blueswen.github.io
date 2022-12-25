@@ -48,7 +48,7 @@ Jaspersoft Studio 在 v6.0 提出了 [Font Extension](https://community.jasperso
 
 Jaspersoft Studio 新增 Font 時的設定參考下圖，PDF Encoding 選擇 ```Identify-H (Unicode with horizontal writing)```。
 
-![Font Family Setting](/img/in-post/2020-11-29-jasperreports-with-spring/font-family.png)
+![Font Family Setting](../../imgs/2020-11-29-jasperreports-with-spring/font-family.png)
 
 完成自訂字體設定後，就可以在 Font 中看到剛剛設定的字體，這時候可以利用 Preview 的功能並另存成 PDF 檢查字體是否能正常使用。
 
@@ -124,11 +124,11 @@ curl \
 
 或者使用 Postman 發送 Request，發送時記得選擇 Send 下拉選單中的 Send and Download
 
-![Postman Request](/img/in-post/2020-11-29-jasperreports-with-spring/request.png)
+![Postman Request](../../imgs/2020-11-29-jasperreports-with-spring/request.png)
 
 取得的 PDF 如下圖，可以正常顯示中文
 
-![PDF Sample](/img/in-post/2020-11-29-jasperreports-with-spring/sample.png)
+![PDF Sample](../../imgs/2020-11-29-jasperreports-with-spring/sample.png)
 
 ### 其他解決方案
 

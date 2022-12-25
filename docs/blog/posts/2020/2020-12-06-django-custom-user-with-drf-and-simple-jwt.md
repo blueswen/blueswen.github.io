@@ -220,7 +220,7 @@ $ curl -H 'Accept: application/json; indent=4' -u admin:admin http://127.0.0.1:8
 
 或是開起 DRF 內建的網頁 [localhost:8000/api/account/user/](http://localhost:8000/api/account/user/)，如下圖：
 
-![DRF](/img/in-post/2020-12-06-django-custom-user-with-drf-and-simple-jwt/drf.png)
+![DRF](../../imgs/2020-12-06-django-custom-user-with-drf-and-simple-jwt/drf.png)
 
 從結果可以確認我們使用的 Custom User 有新增的 Birthday 欄位，superuser 也是建立在 Custom User Model 中。
 
