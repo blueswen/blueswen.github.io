@@ -3,7 +3,6 @@ site_name: Blueswen
 repo_url: https://github.com/blueswen/blueswen.github.io
 repo_name: blueswen/blueswen.github.io
 site_url: https://blueswen.github.io/
-site_dir: ./docs
 edit_uri: ""
 
 extra_css:
