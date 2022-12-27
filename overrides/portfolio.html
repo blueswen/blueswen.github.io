@@ -3,38 +3,35 @@
 <script src="/javascripts/repo-card.js"></script>
 <link rel="stylesheet" href="/stylesheets/porfolio.css">
 {% endblock %}
-{% block tabs %}
-  {{ super() }}
-  <style>.md-header{position:initial}.md-main__inner{margin:0}.md-content{display:none}@media screen and (min-width:60em){.md-sidebar--secondary{display:none}}@media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}</style>
-  <section class="mdx-container portfolio-section">
-    <div class="md-grid md-typeset">
-      <div class="text-center">
-        <h1>MkDocs Plugin</h1>
-      </div>
-      <div class="grid">
-        <p class="card repo-card" data-repo="blueswen/mkdocs-glightbox"></p>
-        <p class="card repo-card" data-repo="blueswen/mkdocs-swagger-ui-tag"></p>
-        <p></p>
-      </div>
-      <div class="text-center">
-        <h1>Observability</h1>
-      </div>
-      <div class="grid">
-        <p class="card repo-card" data-repo="blueswen/fastapi-observability"></p>
-        <p class="card repo-card" data-repo="blueswen/spring-boot-observability"></p>
-        <p class="card repo-card" data-repo="blueswen/fastapi-jaeger"></p>
-        <p class="card repo-card" data-repo="blueswen/gunicorn-monitoring"></p>
-        <p class="card repo-card" data-repo="blueswen/flask-monitoring"></p>
-      </div>
-      <div class="text-center">
-        <h1>Miscellaneous</h1>
-      </div>
-      <div class="grid">
-        <p class="card repo-card" data-repo="blueswen/jasperreports-with-spring-boot"></p>
-        <p></p>
-        <p></p>
-      </div>
+{% block content %}
+<section class="mdx-container portfolio-section">
+  <div class="md-grid md-typeset">
+    <div class="text-center">
+      <h1>MkDocs Plugin</h1>
     </div>
-  </section>
+    <div class="grid">
+      <p class="card repo-card" data-repo="blueswen/mkdocs-glightbox"></p>
+      <p class="card repo-card" data-repo="blueswen/mkdocs-swagger-ui-tag"></p>
+      <p></p>
+    </div>
+    <div class="text-center">
+      <h1>Observability</h1>
+    </div>
+    <div class="grid">
+      <p class="card repo-card" data-repo="blueswen/fastapi-observability"></p>
+      <p class="card repo-card" data-repo="blueswen/spring-boot-observability"></p>
+      <p class="card repo-card" data-repo="blueswen/fastapi-jaeger"></p>
+      <p class="card repo-card" data-repo="blueswen/gunicorn-monitoring"></p>
+      <p class="card repo-card" data-repo="blueswen/flask-monitoring"></p>
+    </div>
+    <div class="text-center">
+      <h1>Miscellaneous</h1>
+    </div>
+    <div class="grid">
+      <p class="card repo-card" data-repo="blueswen/jasperreports-with-spring-boot"></p>
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+</section>
 {% endblock %}
-{% block content %}{% endblock %}
