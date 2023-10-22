@@ -1,0 +1,20 @@
+[data-md-color-primary=white] {
+    --md-typeset-a-color: #337ab7;
+    --md-accent-fg-color: #0085a1;
+}
+
+::selection {
+    color: #fff;
+    text-shadow: none;
+    background: #0085a1;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+    color: #404040;
+    ;
+}
+
+.text-center {
+    text-align: center;
+}
