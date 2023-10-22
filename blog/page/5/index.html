@@ -480,6 +480,8 @@
       
         
       
+        
+      
     
     
     
@@ -522,6 +524,32 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    2023
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -846,6 +874,135 @@
       <header class="md-typeset">
         <h1 id="blog">Blog</h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2020-09-01 00:00:00">September 1, 2020</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../../category/review/" class="md-meta__link">Review</a></li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="rules-of-thumb-for-a-1x-developer"><a class="toclink" href="../../2020/09/01/rules-of-thumb-for-a-1x-developer/">Rules of thumb for a 1x developer</a></h2>
+<p><a href="https://muldoon.cloud/programming/2020/04/17/programming-rules-thumb.html#rule-6-when-to-use-a-hardcore-language">Rules of thumb for a 1x developer</a></p>
+<p>作者借用了 10x developer 的名字，整理了他覺得 1x developer 可以作為工作指引的 20 個經驗法則，透過這些法則希望能夠成為 1.1x developer。</p>
+<p>總分為九類的法則：</p>
+<ol>
+<li>Meta</li>
+<li>Rule 1: Rules are good<ul>
+<li>透過各種經驗法則建立思考的框架，利用邏輯結構化各種問題</li>
+</ul>
+</li>
+<li>Productivity and learning</li>
+<li>Rule 2: Most of what I learn is useless outside of its immediate context<ul>
+<li>如果工作中有大量沒有價值的部分，應該盡可能地避免，盡量關注在有價值的地方就好</li>
+</ul>
+</li>
+<li>Rule 3: Focus “learning time” on things that compound<ul>
+<li>學習能夠產生複利的東西，或是進行能產生複利的行為，形成一個正向的循環。e.g. 閱讀無法產生複利，但如果能夠實際應用，甚至是分享就能達到複利。</li>
+</ul>
+</li>
+<li>Programming languages</li>
+<li>Rule 4: When to use Java or C#<ul>
+<li>大型商用軟體</li>
+</ul>
+</li>
+<li>Rule 5: When to use Python or Ruby<ul>
+<li>AI or ML</li>
+</ul>
+</li>
+<li>Rule 6: When to use a hardcore language<ul>
+<li>Go, Rust, Haskell, Erlang, Clojure, Kotlin, Scala 歸為此類</li>
+<li>Go, Rust 用於對於效能需求較高的服務</li>
+<li>Haskell, Erlang 用於簡潔或是數學方面的程式</li>
+</ul>
+</li>
+<li>Rule 7: How to do Javascript<ul>
+<li>使用 Typescript，人生可以更簡單</li>
+<li>業務邏輯盡可能做在後端就好</li>
+<li>有互動需求使用 Vue 或 React</li>
+<li>記得做 unit tests</li>
+</ul>
+</li>
+<li>Rule 8: When to use C or C++<ul>
+<li>通常不是你選擇 C，而是 C 選擇了你，因應場景被迫使用</li>
+<li>C++ 有較佳的效能，常用在機器人或是高頻交易</li>
+</ul>
+</li>
+<li>Rule 9: Use PHP or Hack if you want to test server changes without rebuilding</li>
+<li>Technologies</li>
+<li>Rule 10: When to make a serverless function<ul>
+<li>每一隔一段時間要執行的一小片段程式</li>
+</ul>
+</li>
+<li>Rule 11: Which database technology to choose<ul>
+<li>有 ACID 需求就是乖乖用 SQL，推薦 PostgreSQL</li>
+</ul>
+</li>
+<li>Testing</li>
+<li>Rule 12: When to write a unit test<ul>
+<li>評估缺陷的可能性＊缺陷帶來的損失，如果寫測試的成本遠超過了期望值，似乎也沒有寫的必要。但每個片段的程式碼仍應該是要盡可能做到測試，或至少要寫的是可測試的。</li>
+</ul>
+</li>
+<li>Rule 13: When to write an integration test<ul>
+<li>當功能包含不屬於你的 Code 時就要做 integration test，特別是 Code 可能在你不知情的狀況下被更動</li>
+</ul>
+</li>
+<li>Rule 14: When to write an end-to-end test<ul>
+<li>可以定義為一個使用者案例，使用者可能是一個人或機器</li>
+<li>三個情境</li>
+<li>對於成品沒有完全瞭解，建立一些案例當作 Smoke Test，確保東西至少沒有壞</li>
+<li>需要迴歸執行的測試，可用於未來重構的依據</li>
+<li>牽涉複雜的計算，驗證一些其他的 Code 是否會對他產生影響</li>
+</ul>
+</li>
+<li>DevOps</li>
+<li>Rule 15: When to bring on a dedicated support engineer</li>
+<li>Security</li>
+<li>Rule 16: If you delegate all your IT security to the InfoSec, they will come up with draconian rules<ul>
+<li>如果讓資安部門決定所有資安相關規範，只會建立出極度嚴苛的規範</li>
+</ul>
+</li>
+<li>Designing and Whiteboarding</li>
+<li>Rule 17: Make the design session about input, not approval</li>
+<li>Project management</li>
+<li>Rule 18: Estimates serve more for creating pressure than for project planning<ul>
+<li>時程通常是只是用來製造壓力，而不是作為規劃的指引</li>
+</ul>
+</li>
+<li>Rule 19: Be explicit about the difference between hard deadlines, soft deadlines, internal deadlines, and expected completion dates<ul>
+<li>分清楚四種不同的 Deadline</li>
+<li>Hard deadline: Delay 會讓老闆或是公司很難看的狀況</li>
+<li>Soft deadline: Delay 會讓某些人很難看的狀況</li>
+<li>Internal deadline: 只會影響到團隊內的人，但不會影響到外部的人</li>
+<li>Expected completion date: 團隊內部預期要完成的日期</li>
+</ul>
+</li>
+<li>Rule 20: When somebody says Agile, push for Kanban, not Scrum<ul>
+<li>如果要跑 Agile 用 Kanban 不要用 Scrum</li>
+<li>Scrum: 在這兩週完成這些事，外部給予的時間壓力</li>
+<li>Kanba: 做兩週能完成的事，內部評估可完成的工作量</li>
+</ul>
+</li>
+</ol>
+    <nav class="md-post__action">
+      <a href="../../2020/09/01/rules-of-thumb-for-a-1x-developer/">
+        Continue reading
+      </a>
+    </nav>
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -1595,62 +1752,6 @@ Callback Hell (Source: <a href="http://thecodebarbarian.com/the-80-20-guide-to-p
 </ol>
     <nav class="md-post__action">
       <a href="../../2020/06/18/kubernetes-probes/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-06-15 00:00:00">June 15, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/algorithm/" class="md-meta__link">Algorithm</a></li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="binary-tree-coloring-game"><a class="toclink" href="../../2020/06/15/binary-tree-coloring-game/">Binary Tree Coloring Game</a></h2>
-<p><a href="https://leetcode.com/problems/binary-tree-coloring-game/">1145. Binary Tree Coloring Game</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Definition for a binary tree node.</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># class TreeNode:</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">#     def __init__(self, val=0, left=None, right=None):</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">#         self.val = val</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">#         self.left = left</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">#         self.right = right</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="k">def</span> <span class="nf">btreeGameWinningMove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">TreeNode</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="k">def</span> <span class="nf">nodes</span><span class="p">(</span><span class="n">root</span><span class="p">:</span> <span class="n">TreeNode</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">pair</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>            <span class="k">if</span> <span class="n">root</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>                <span class="k">return</span> <span class="mi">0</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>            <span class="n">l</span> <span class="o">=</span> <span class="n">nodes</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">pair</span><span class="p">)</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>            <span class="n">r</span> <span class="o">=</span> <span class="n">nodes</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">pair</span><span class="p">)</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>            <span class="k">if</span> <span class="n">root</span><span class="o">.</span><span class="n">val</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>                <span class="n">pair</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>                <span class="n">pair</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>            <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">l</span> <span class="o">+</span> <span class="n">r</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        <span class="n">pair</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># call by ref 做暫存</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        <span class="n">nodes</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">pair</span><span class="p">)</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">pair</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">pair</span><span class="p">))</span> <span class="o">&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
-</code></pre></div>
-<p>因為上色只能從 parent, left, right 選一個，所以後手可以截斷先手的路，當截斷的那一側數量大於 n/2 就必定獲勝。因此需取得先手的三側的數量，left 與 right 用 recursion 取得，parent 那一側減去 left 與 right 即可，三側的最大值大於 n/2 則為 True。</p>
-<p>Reference:</p>
-<ol>
-<li><a href="https://youtu.be/0MGbvRHYZxc">花花酱 LeetCode 1145. Binary Tree Coloring Game - 刷题找工作 EP261</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/06/15/binary-tree-coloring-game/">
         Continue reading
       </a>
     </nav>

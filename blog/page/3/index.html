@@ -480,6 +480,8 @@
       
         
       
+        
+      
     
     
     
@@ -522,6 +524,32 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    2023
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -846,6 +874,41 @@
       <header class="md-typeset">
         <h1 id="blog">Blog</h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2021-01-21 00:00:00">January 21, 2021</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../../category/tip/" class="md-meta__link">Tip</a></li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="arrow-keys-not-working-in-vim-in-jupyter-console"><a class="toclink" href="../../2021/01/21/arrow-keys-not-working-in-vim-in-jupyter-console/">Arrow keys not working in vim in Jupyter console</a></h2>
+<p>問題：vim 在 jupyter notebook console 使用時方向鍵行為異常，無法正常移動</p>
+<p>解法：在 <code>~/.vimrc</code> 增加 <code>:set term=builtin_ansi</code></p>
+<p>在 Windows 的 Unix console <a href="https://cmder.net/">Cmder</a> 也有人遇到這個種問題，一樣可以用相同方式解決，但副作用為會影響 syntax highlighting。如果想要保持 syntax highlighting 可以參考<a href="https://github.com/microsoft/WSL/issues/1154#issuecomment-595951533">調整 key code mapping 的解法</a>。</p>
+<p>Reference:</p>
+<ol>
+<li><a href="https://github.com/jupyter/jupyter_console/issues/171">Arrow keys not working in vim in Jupyter console</a></li>
+</ol>
+    <nav class="md-post__action">
+      <a href="../../2021/01/21/arrow-keys-not-working-in-vim-in-jupyter-console/">
+        Continue reading
+      </a>
+    </nav>
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -1681,48 +1744,6 @@
 <p>最後作者也分享了另外一篇更深入比較的文章 <a href="https://www.mindk.com/blog/react-vs-vue/">React vs Vue: What is the best choice for 2020?</a></p>
     <nav class="md-post__action">
       <a href="../../2020/11/24/vue-vs-react-best-choice-for-startups/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-11-23 00:00:00">November 23, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/algorithm/" class="md-meta__link">Algorithm</a></li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="two-sum"><a class="toclink" href="../../2020/11/23/two-sum/">Two Sum</a></h2>
-<p><a href="https://leetcode.com/problems/two-sum/">1. Two Sum</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">def</span> <span class="nf">twoSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        <span class="n">patch_hash</span> <span class="o">=</span> <span class="p">{}</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="k">for</span> <span class="n">ind</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>            <span class="k">if</span> <span class="p">(</span><span class="n">target</span> <span class="o">-</span> <span class="n">num</span><span class="p">)</span> <span class="ow">in</span> <span class="n">patch_hash</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>                <span class="k">return</span> <span class="p">[</span><span class="n">patch_hash</span><span class="p">[</span><span class="n">target</span> <span class="o">-</span> <span class="n">num</span><span class="p">],</span> <span class="n">ind</span><span class="p">]</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>            <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>                <span class="n">patch_hash</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">=</span> <span class="n">ind</span>
-</code></pre></div>
-<p>Reference:</p>
-<ol>
-<li><a href="https://leetcode.com/list/xoqag3yj/">Blind Curated 75</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/11/23/two-sum/">
         Continue reading
       </a>
     </nav>

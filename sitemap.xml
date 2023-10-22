@@ -476,6 +476,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://blueswen.github.io/blog/2023/10/22/grafana-stat-panel-sparkline/</loc>
+         <lastmod>2023-10-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://blueswen.github.io/blog/archive/2023/</loc>
+         <lastmod>2023-10-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://blueswen.github.io/blog/archive/2022/</loc>
          <lastmod>2023-10-22</lastmod>
          <changefreq>daily</changefreq>

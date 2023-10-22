@@ -480,6 +480,8 @@
       
         
       
+        
+      
     
     
     
@@ -522,6 +524,32 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="archive/2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    2023
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -846,6 +874,106 @@
       <header class="md-typeset">
         <h1 id="blog">Blog</h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2023-10-22 00:00:00">October 22, 2023</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="category/tip/" class="md-meta__link">Tip</a></li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="grafana-stat-panel-sparkline"><a class="toclink" href="2023/10/22/grafana-stat-panel-sparkline/">Grafana Stat Panel 同時顯示最新的值與 Sparkline</a></h2>
+<h3 id="_1"><a class="toclink" href="2023/10/22/grafana-stat-panel-sparkline/#_1">需求</a></h3>
+<p>在 Grafana 的 <a href="https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/stat/">Stat Panel</a> 同時顯示最新的值與 Sparkline（迷你圖表）。</p>
+<h3 id="_2"><a class="toclink" href="2023/10/22/grafana-stat-panel-sparkline/#_2">問題分析</a></h3>
+<p>Stat Panel 支援 Instant Query 與 Range Query：</p>
+<ol>
+<li>Instant Query：Query Type <code>Instant</code>，只查詢最新的值，該值會顯示在 Panel 上</li>
+<li>Range Query：Query Type <code>Range</code>，查詢一段時間內的值，最後一個值會顯示在 Panel 上，所有質會以 Sparkline 的方式顯示在 Panel 上</li>
+</ol>
+<p><img alt="Instant Query 畫面" src="2023/imgs/2023-10-22-grafana-stat-panel/instant-query.png" /><br />
+Instant Query 畫面</p>
+<p><img alt="Range Query 畫面" src="2023/imgs/2023-10-22-grafana-stat-panel/range-query.png" /><br />
+Range Query 畫面</p>
+<p>但單純使用 Range Query 時會發現，有時候改變時間區間時，顯示在 Panel 上想像中代表最新的值會變大或變小，導致使用者會對於數值的正確性產生疑慮。</p>
+<p>這是因為在 Grafana 使用 Range Query 時，實際的查詢時間區間會為了配合查詢 Prometheus 時要使用的 <a href="https://prometheus.io/docs/prometheus/latest/querying/api/#range-queries">Step 參數</a>而被<a href="https://github.com/grafana/grafana/blob/v10.1.5/pkg/tsdb/prometheus/models/query.go#L147">調整</a>，查詢使用的開始與結束時間都會變得比 Grafana 畫面設定的時間區間還要早。若調整後的結束時間與畫面設定的結束時間中間剛好有資料點時，就會發生 Range Query 的結果不是該 Series 最新的值，而是調整後的結束時間點往前找到的值，如下圖所示：</p>
+<p><img alt="Query Offset" src="2023/imgs/2023-10-22-grafana-stat-panel/query-offset.png" /><br />
+藍色的最後一個資料點，因為查詢時間位移的關係而不會被該次查詢查到</p>
+<p>更詳細的 Step 參數與 Grafana 設定方式將於另一篇文章中說明。</p>
+<p>雖然可以使用 Both Type 進行查詢，同時顯示 Instant Query 與 Range Query 的結果，但 Panel 會顯示兩個值，容易造成使用者混淆。</p>
+<p><img alt="Both Query 畫面" src="2023/imgs/2023-10-22-grafana-stat-panel/both-query.png" /><br />
+Both Query 畫面</p>
+<p>圖中也可以看到，右側 Instant Query 的值與左側 Range Query 的值不同，這在查詢區間範圍較大時會更明顯。</p>
+<h3 id="_3"><a class="toclink" href="2023/10/22/grafana-stat-panel-sparkline/#_3">解法</a></h3>
+<p>使用 <code>Both</code> Type，並將兩個 Series 合併，讓 Instant Query 的值最為最後一個值，同時有 Range Query 的資料供繪製 Sparkline。</p>
+<ol>
+<li>
+<p>使用 <code>Both</code> Type 查詢</p>
+<p><img alt="Query Type" src="2023/imgs/2023-10-22-grafana-stat-panel/single-query-type.png" /><br />
+Query Type 設定</p>
+</li>
+<li>
+<p>使用 <code>Series to rows</code> 與 <code>Sort by</code> 兩個 Transform</p>
+<ol>
+<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#series-to-rows">Series to rows</a>：將 Instant Query 與 Range Query 的資料合併</li>
+<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#sort-by">Sort by</a>：將合併後的資料依照 <code>Time</code> 欄位排序，確保最後一筆資料為最新的資料</li>
+</ol>
+<p><img alt="Transform" src="2023/imgs/2023-10-22-grafana-stat-panel/single-transform.png" /><br />
+Transform 設定</p>
+</li>
+</ol>
+<h4 id="_4"><a class="toclink" href="2023/10/22/grafana-stat-panel-sparkline/#_4">說明</a></h4>
+<p><img alt="Range Series" src="2023/imgs/2023-10-22-grafana-stat-panel/explanation-01.png" /><br />
+先關閉 Transform，並切換為 Table 檢視，可以看到兩個 Series，第一個是 Range Query 的資料。</p>
+<p><img alt="Instant Series" src="2023/imgs/2023-10-22-grafana-stat-panel/explanation-02.png" /><br />
+第二個是 Instant Query 的資料。</p>
+<p><img alt="Merged Series" src="2023/imgs/2023-10-22-grafana-stat-panel/explanation-03.png" /><br />
+啟用 <code>Series to rows</code> transform，兩個 Series 會合併成一個 Series，但預設的排序是依照時間欄位降冪排序，導致最後一筆資料不是最新的資料，而 Stat Panel 預設會顯示最後一筆資料。</p>
+<p><img alt="Sorted Series" src="2023/imgs/2023-10-22-grafana-stat-panel/explanation-04.png" /><br />
+啟用 <code>Sort by</code> transform，並以 <code>Time</code> 欄位排序，確保最後一筆資料為最新的資料。</p>
+<h4 id="_5"><a class="toclink" href="2023/10/22/grafana-stat-panel-sparkline/#_5">多筆資料應用</a></h4>
+<p>如果想要在同一個 Stat Panel 上顯示多筆資料但達到一樣的效果，則要使用多額外使用 <code>Partition by values</code> transform 以 <code>Metrics</code> 欄位分割資料。</p>
+<ol>
+<li>
+<p>使用 <code>Both</code> Type 查詢</p>
+<p><img alt="Query Type" src="2023/imgs/2023-10-22-grafana-stat-panel/multi-query-type.png" /><br />
+Query Type 設定</p>
+</li>
+<li>
+<p>使用 <code>Series to rows</code>、<code>Sort by</code>、<code>Partition by values</code> 三個 Transform</p>
+<ol>
+<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#series-to-rows">Series to rows</a>：將 Instant Query 與 Range Query 的資料合併</li>
+<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#sort-by">Sort by</a>：將合併後的資料依照 <code>Time</code> 欄位排序，確保最後一筆資料為最新的資料</li>
+<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#partition-by-values">Partition by values</a>：將全部被合併的資料再以 <code>Metrics</code> 欄位分割成多筆 Series</li>
+</ol>
+<p><img alt="Transform" src="2023/imgs/2023-10-22-grafana-stat-panel/multi-transform.png" /><br />
+Transform 設定</p>
+</li>
+</ol>
+<p>參考資料：</p>
+<ol>
+<li><a href="https://grafana.com/blog/2023/10/18/how-to-easily-retrieve-values-from-a-range-in-grafana-using-a-stat-panel/">How to easily retrieve values from a range in Grafana using a stat panel</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/1382875">详解Prometheus range query中的step参数</a></li>
+</ol>
+    <nav class="md-post__action">
+      <a href="2023/10/22/grafana-stat-panel-sparkline/">
+        Continue reading
+      </a>
+    </nav>
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -1552,60 +1680,6 @@
 </ol>
     <nav class="md-post__action">
       <a href="2021/07/21/get-column-index-of-field-in-csv-file/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-07-20 00:00:00">July 20, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/review/" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="10-things-to-avoid-in-docker-containers"><a class="toclink" href="2021/07/20/10-things-to-avoid-in-docker-containers/">10 things to avoid in docker containers</a></h2>
-<p><a href="https://developers.redhat.com/blog/2016/02/24/10-things-to-avoid-in-docker-containers">10 things to avoid in docker containers</a></p>
-<p>原文寫於 2016 年，距今約 5 年前，提出了 10 個使用 Docker Container 時應該避免的行為</p>
-<ol>
-<li>Don't store data in containers<br />
-   不要在 Container 中儲存需要永久保留的資料，應使用 Volume。</li>
-<li>Don't ship your application in two pieces<br />
-   有些人會把 Container 完全視為 Virtual Machine，所以試圖把 application 部署至運行中的 Container。但正確的做法為把 application 與可運行環境的 base image 打包成一個新的 image。</li>
-<li>Don't create large images<br />
-   過肥的 image 會影響部署速度。</li>
-<li>Don't use a single layer image<br />
-   避免做出只有一層 layer 的 image，可以 OS 一層、User 設定一層、各種 package 安裝一層、config 一層，最後 application 自己一層。透過這樣的分層未更動的 layer 在建置的時候能夠使用 cache，可以加快建置的速度，因為在一般情況下都是 application 變動。</li>
-<li>Don't create images from running containers<br />
-   不要使用 Docker commit 的方式將運行中的 Container 匯出成 image，應使用 Dockerfile 建置。</li>
-<li>Don't use only the "latest" tag<br />
-   latest 不具有任何識別性，應加上其他 tag 供識別，如版本號、commit id、時間戳記等。</li>
-<li>Don't run more than one process in a single container<br />
-   Container 中只運行一個 process，同時運行多個 process 無法有效透過 Docker 管理 Container 中 process 的狀態。</li>
-<li>Don't store credentials in the image. Use environment variables<br />
-   不要把機敏資訊儲存於 Image 中，如 DB 帳密、各種 SaaS 的 api key，可以透過環境變數的方式放入。</li>
-<li>Don't run processes as a root user<br />
-   Process 不要使用 root user，如果執行的服務有安全漏洞可能會讓駭客更加容易取得 Container 的 root 權限。</li>
-<li>Don't rely on IP addresses<br />
-    不要依賴 Container 的 IP，Container 在重新啟動後會被重新分配 IP。</li>
-</ol>
-<p>雖然已經是很舊的文章了，不過還是有其參考價值。有一些內容在現在已經可以算是基本常識了，如不要在 Container 中儲存資料，不要把服務部署到 Container 中。也有一些則繼續延伸，如不要只使用 latest tag，現在大多提倡直接棄用 latest tag，每個 image 都要賦予可辨識的 tag，避免在部署時意外將 latest 部署出去。</p>
-<p>下面也有網友針對 credentials 提出不同的看法，隨著技術的推展社群也提出其他更好的方式設定 credentials，例如使用 Volume 的方式掛入寫有 credentials 的檔案，可以避免環境變數被意外寫出至 Log 或是被入侵時輕易地找出。而到了 K8s 風行的時代又更針對 credentials 提出更多處理方式，如使用 Secrets 或是使用 <a href="https://www.vaultproject.io/">Vault</a> 這類工具進行管理等。</p>
-    <nav class="md-post__action">
-      <a href="2021/07/20/10-things-to-avoid-in-docker-containers/">
         Continue reading
       </a>
     </nav>

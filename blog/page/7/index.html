@@ -480,6 +480,8 @@
       
         
       
+        
+      
     
     
     
@@ -522,6 +524,32 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    2023
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -846,6 +874,53 @@
       <header class="md-typeset">
         <h1 id="blog">Blog</h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2020-05-27 00:00:00">May 27, 2020</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../../category/tip/" class="md-meta__link">Tip</a></li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="move-all-files-including-hidden"><a class="toclink" href="../../2020/05/27/move-all-files-including-hidden/">Move all files including hidden</a></h2>
+<p>需求：搬移指定資料夾中的檔案，同時包括隱藏的檔案</p>
+<p>解法：使用 bash 的 <code>shopt</code> 設定 dotglob 跟 nullglob 讓 wildcard 可以取到 <code>.</code> 開頭的檔案 </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">shopt</span><span class="w"> </span>-s<span class="w"> </span>dotglob<span class="w"> </span>nullglob
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>mv<span class="w"> </span>Foo/*<span class="w"> </span>Bar/
+</code></pre></div>
+<p><a href="https://unix.stackexchange.com/a/6397">How do you move all files (including hidden) from one directory to another?</a> 提供了其他各種不同 shell 的解法。</p>
+<p>在 Jenkins Pipeline 中若要使用 bash 需要在 <code>sh</code> 指令中指定 interpreter，<a href="https://www.jenkins.io/doc/pipeline/steps/workflow-durable-task-step/#sh-shell-script">Jenkins Pipeline Doc</a>。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">node</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">sh</span><span class="w"> </span><span class="s2">&quot;&quot;&quot;#!/bin/bash</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="s2">        shopt -s dotglob nullglob</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="s2">        mv Foo/* Bar/</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="s2">    &quot;&quot;&quot;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="o">}</span>
+</code></pre></div>
+<p>注意一定要設定為 <code>"""#!/bin/bash</code>，這樣這份 shell 的第一行才是設定 interpreter。</p>
+<p>Reference:</p>
+<ol>
+<li><a href="https://unix.stackexchange.com/a/6397">How do you move all files (including hidden) from one directory to another?</a></li>
+</ol>
+    <nav class="md-post__action">
+      <a href="../../2020/05/27/move-all-files-including-hidden/">
+        Continue reading
+      </a>
+    </nav>
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -1272,87 +1347,6 @@ Source: <a href="https://medium.com/stakater/gitops-for-kubernetes-with-jenkins-
 <p>在 K8s 的架構下所謂的部署是部署<strong>「服務組態」</strong>，而程式碼只是 Image 的來源。若依然從單體式應用的角度去規劃部署，當一個 Pod 使用兩個以上的 Image 時就會馬上遇到問題。</p>
     <nav class="md-post__action">
       <a href="../../2020/05/12/gitops-for-kubernetes-with-jenkins/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-05-11 00:00:00">May 11, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/algorithm/" class="md-meta__link">Algorithm</a></li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="implement-trie-prefix-tree"><a class="toclink" href="../../2020/05/11/implement-trie-prefix-tree/">Implement Trie (Prefix Tree)</a></h2>
-<p><a href="https://leetcode.com/problems/implement-trie-prefix-tree/">208. Implement Trie (Prefix Tree)</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span> <span class="nc">Trie</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="sd">        Initialize your data structure here.</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="sd">        &quot;&quot;&quot;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">root</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># 用 dict 來儲存 node，key 為值，val 為子結點</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="k">def</span> <span class="nf">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="sd">        Inserts a word into the trie.</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="sd">        &quot;&quot;&quot;</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="n">cur_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>            <span class="k">if</span> <span class="n">char</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">cur_node</span><span class="p">:</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>                <span class="n">cur_node</span><span class="p">[</span><span class="n">char</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>            <span class="n">cur_node</span> <span class="o">=</span> <span class="n">cur_node</span><span class="p">[</span><span class="n">char</span><span class="p">]</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        <span class="n">cur_node</span><span class="p">[</span><span class="s2">&quot;#&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># 有 hash tag 表示為該詞最後一個點</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="sd">        Returns if the word is in the trie.</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="sd">        &quot;&quot;&quot;</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        <span class="n">query_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        <span class="k">return</span> <span class="n">query_node</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="s2">&quot;#&quot;</span> <span class="ow">in</span> <span class="n">query_node</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    <span class="k">def</span> <span class="nf">startsWith</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="sd">        Returns if there is any word in the trie that starts with the given prefix.</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="sd">        &quot;&quot;&quot;</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>        <span class="n">query_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>        <span class="k">return</span> <span class="n">query_node</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    <span class="k">def</span> <span class="nf">query</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">object</span><span class="p">:</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>        <span class="n">cur_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>        <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>            <span class="k">if</span> <span class="n">char</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">cur_node</span><span class="p">:</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>                <span class="k">return</span> <span class="kc">None</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>            <span class="n">cur_node</span> <span class="o">=</span> <span class="n">cur_node</span><span class="p">[</span><span class="n">char</span><span class="p">]</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>        <span class="k">return</span> <span class="n">cur_node</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>
-<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>
-<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="c1"># Your Trie object will be instantiated and called as such:</span>
-<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="c1"># obj = Trie()</span>
-<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="c1"># obj.insert(word)</span>
-<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="c1"># param_2 = obj.search(word)</span>
-<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="c1"># param_3 = obj.startsWith(prefix)</span>
-</code></pre></div>
-<p><a href="https://zh.wikipedia.org/wiki/Trie">Trie</a>：又稱字首樹或字典樹，讀作 tree 或 try。</p>
-<p>Reference:</p>
-<ol>
-<li><a href="https://www.youtube.com/watch?v=f48wGD-MuQw">花花酱 LeetCode 208. Implement Trie (Prefix Tree) - 刷题找工作 EP73</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/05/11/implement-trie-prefix-tree/">
         Continue reading
       </a>
     </nav>

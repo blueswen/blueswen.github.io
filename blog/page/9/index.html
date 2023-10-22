@@ -480,6 +480,8 @@
       
         
       
+        
+      
     
     
     
@@ -522,6 +524,32 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    2023
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -846,6 +874,58 @@
       <header class="md-typeset">
         <h1 id="blog">Blog</h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2020-04-23 00:00:00">April 23, 2020</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../../category/review/" class="md-meta__link">Review</a></li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="principles-of-container-based-application-design"><a class="toclink" href="../../2020/04/23/principles-of-container-based-application-design/">Principles of container-based application design</a></h2>
+<p><a href="https://www.redhat.com/en/resources/cloud-native-container-design-whitepaper">Principles of container-based application design</a></p>
+<p>這篇是由 Red Hat 針對 container-based application 提出的白皮書，簡述了幾個建議遵守的原則。從下載的檔案名稱可以發現應該是於 2017 年 10 月所發表的第三版，但因為都是很基礎的原則，到目前為止還沒有過時的問題。</p>
+<p>PRINCIPLES OF SOFTWARE DESIGN</p>
+<ul>
+<li>KISS  —   Keep it simple, stupid.</li>
+<li>DRY — Don’t repeat yourself.</li>
+<li>YAGNI — You aren’t gonna need it.</li>
+<li>SoC — Separation of concerns.</li>
+</ul>
+<p>Red Hat 在 cloud-native 的情境下提供了幾點原則：</p>
+<ul>
+<li>Single concern principle (SCP)：如同 SOLID 的 single responsibility principle (SRP)，container 應該只負責執行一個 process。</li>
+<li>High observability principle (HOP)：container 要可以很好地被觀測，如是否可以提供服務 (readiness)、是否運作正常 (liveness)，log 應該要以 standard error (STDERR) 及 standard output (STDOUT) 輸出。</li>
+<li>Life-cycle conformance principle (LCP)：針對 container 在生命週期中不同階段所接收到的 Signal，執行指定的操作。如 container 關閉前釋放資源或把當下未完成的任務完成等，藉此達到 graceful shutdown。</li>
+<li>Image immutability principle (IIP)：在不同環境下所使用的 Image 都為同一份，與環境相關的參數與設定檔都應該透過 Kubernetes ConfigMap 進行設定。</li>
+<li>Process disposability principle (PDP)：container 應該要為 stateless 或是將狀態保存於外部，這樣就可以隨時被銷毀或生成，藉此達到 auto-scaling 等需要自動增刪 container 的功能。</li>
+<li>Self-containment principle (S-CP)：container 只放置執行時所需要的東西，如 language runtime、dependencies 等，會隨部署環境變動的 config 透過 Kubernetes ConfigMap 在執行時載入。</li>
+<li>Runtime confinement principle (RCP)：container 所需使用的硬體資源應清楚說明，如 CPU、memory、網路、硬碟用量等，讓平台能有更好的調度。</li>
+</ul>
+<p>文末也列出了幾個常見的 best practice，如盡可能縮小 Image、避免使用 sudo 或特定 userid 執行 container 等，都很值得參考實踐。</p>
+<p>Reference:</p>
+<ol>
+<li><a href="https://segmentfault.com/a/1190000008233992">优雅地关闭kubernetes中的nginx</a></li>
+</ol>
+    <nav class="md-post__action">
+      <a href="../../2020/04/23/principles-of-container-based-application-design/">
+        Continue reading
+      </a>
+    </nav>
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -1234,58 +1314,6 @@
 </ol>
     <nav class="md-post__action">
       <a href="../../2020/04/07/istio-in-production/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-04-06 00:00:00">April 6, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/algorithm/" class="md-meta__link">Algorithm</a></li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="sum-of-left-leaves"><a class="toclink" href="../../2020/04/06/sum-of-left-leaves/">Sum of Left Leaves</a></h2>
-<p><a href="https://leetcode.com/problems/sum-of-left-leaves/">404. Sum of Left Leaves</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Definition for a binary tree node.</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># class TreeNode:</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">#     def __init__(self, x):</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">#         self.val = x</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">#         self.left = None</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">#         self.right = None</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">def</span> <span class="nf">sumOfLeftLeaves</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">TreeNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="k">return</span> <span class="n">sum_left_node</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">def</span> <span class="nf">sum_left_node</span><span class="p">(</span><span class="n">root</span><span class="p">:</span><span class="n">TreeNode</span><span class="p">,</span> <span class="n">is_left</span><span class="p">:</span><span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="k">if</span> <span class="n">root</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        <span class="k">return</span> <span class="mi">0</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="k">if</span> <span class="n">root</span><span class="o">.</span><span class="n">left</span> <span class="ow">or</span> <span class="n">root</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        <span class="k">return</span> <span class="n">sum_left_node</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span> <span class="o">+</span> <span class="n">sum_left_node</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        <span class="k">if</span> <span class="n">is_left</span><span class="p">:</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>            <span class="k">return</span> <span class="n">root</span><span class="o">.</span><span class="n">val</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>            <span class="k">return</span> <span class="mi">0</span>
-</code></pre></div>
-<p>用 recursive 解，透過 is_left 當 flag 判斷是否要加該 node 的值</p>
-    <nav class="md-post__action">
-      <a href="../../2020/04/06/sum-of-left-leaves/">
         Continue reading
       </a>
     </nav>

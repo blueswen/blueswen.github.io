@@ -480,6 +480,8 @@
       
         
       
+        
+      
     
     
     
@@ -522,6 +524,32 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    2023
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -853,6 +881,48 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
+          <time datetime="2020-11-23 00:00:00">November 23, 2020</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../../category/algorithm/" class="md-meta__link">Algorithm</a></li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="two-sum"><a class="toclink" href="../../2020/11/23/two-sum/">Two Sum</a></h2>
+<p><a href="https://leetcode.com/problems/two-sum/">1. Two Sum</a></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">def</span> <span class="nf">twoSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        <span class="n">patch_hash</span> <span class="o">=</span> <span class="p">{}</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="k">for</span> <span class="n">ind</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>            <span class="k">if</span> <span class="p">(</span><span class="n">target</span> <span class="o">-</span> <span class="n">num</span><span class="p">)</span> <span class="ow">in</span> <span class="n">patch_hash</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>                <span class="k">return</span> <span class="p">[</span><span class="n">patch_hash</span><span class="p">[</span><span class="n">target</span> <span class="o">-</span> <span class="n">num</span><span class="p">],</span> <span class="n">ind</span><span class="p">]</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>            <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>                <span class="n">patch_hash</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">=</span> <span class="n">ind</span>
+</code></pre></div>
+<p>Reference:</p>
+<ol>
+<li><a href="https://leetcode.com/list/xoqag3yj/">Blind Curated 75</a></li>
+</ol>
+    <nav class="md-post__action">
+      <a href="../../2020/11/23/two-sum/">
+        Continue reading
+      </a>
+    </nav>
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
           <time datetime="2020-11-15 00:00:00">November 15, 2020</time></li>
         
           <li class="md-meta__item">
@@ -935,77 +1005,77 @@
     <h2 id="chrome-err_unsafe_port"><a class="toclink" href="../../2020/11/04/chrome-err_unsafe_port/">Chrome ERR_UNSAFE_PORT</a></h2>
 <p>問題：以 6666 port 開啟服務，使用 Chrome 瀏覽時出現 ERR_UNSAFE_PORT 錯誤訊息</p>
 <p>原因：基於安全理由 Chrome 或其他瀏覽器會直接阻擋特定 port 的服務。Chromium 的<a href="https://chromium.googlesource.com/chromium/src.git/+/refs/heads/master/net/base/port_util.cc">原始碼</a>有列出會被阻擋的清單，在使用時應特別注意。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// The general list of blocked ports. Will be blocked unless a specific</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1">// protocol overrides it. (Ex: ftp can use ports 20 and 21)</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">kRestrictedPorts</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="mi">1</span><span class="p">,</span><span class="w">       </span><span class="c1">// tcpmux</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="mi">7</span><span class="p">,</span><span class="w">       </span><span class="c1">// echo</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="mi">9</span><span class="p">,</span><span class="w">       </span><span class="c1">// discard</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="mi">11</span><span class="p">,</span><span class="w">      </span><span class="c1">// systat</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="mi">13</span><span class="p">,</span><span class="w">      </span><span class="c1">// daytime</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="mi">15</span><span class="p">,</span><span class="w">      </span><span class="c1">// netstat</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="mi">17</span><span class="p">,</span><span class="w">      </span><span class="c1">// qotd</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="mi">19</span><span class="p">,</span><span class="w">      </span><span class="c1">// chargen</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="mi">20</span><span class="p">,</span><span class="w">      </span><span class="c1">// ftp data</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="mi">21</span><span class="p">,</span><span class="w">      </span><span class="c1">// ftp access</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="mi">22</span><span class="p">,</span><span class="w">      </span><span class="c1">// ssh</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="mi">23</span><span class="p">,</span><span class="w">      </span><span class="c1">// telnet</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="mi">25</span><span class="p">,</span><span class="w">      </span><span class="c1">// smtp</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">    </span><span class="mi">37</span><span class="p">,</span><span class="w">      </span><span class="c1">// time</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="mi">42</span><span class="p">,</span><span class="w">      </span><span class="c1">// name</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">    </span><span class="mi">43</span><span class="p">,</span><span class="w">      </span><span class="c1">// nicname</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="mi">53</span><span class="p">,</span><span class="w">      </span><span class="c1">// domain</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">    </span><span class="mi">77</span><span class="p">,</span><span class="w">      </span><span class="c1">// priv-rjs</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">    </span><span class="mi">79</span><span class="p">,</span><span class="w">      </span><span class="c1">// finger</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">    </span><span class="mi">87</span><span class="p">,</span><span class="w">      </span><span class="c1">// ttylink</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">    </span><span class="mi">95</span><span class="p">,</span><span class="w">      </span><span class="c1">// supdup</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">    </span><span class="mi">101</span><span class="p">,</span><span class="w">     </span><span class="c1">// hostriame</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">    </span><span class="mi">102</span><span class="p">,</span><span class="w">     </span><span class="c1">// iso-tsap</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">    </span><span class="mi">103</span><span class="p">,</span><span class="w">     </span><span class="c1">// gppitnp</span>
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">    </span><span class="mi">104</span><span class="p">,</span><span class="w">     </span><span class="c1">// acr-nema</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">    </span><span class="mi">109</span><span class="p">,</span><span class="w">     </span><span class="c1">// pop2</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">    </span><span class="mi">110</span><span class="p">,</span><span class="w">     </span><span class="c1">// pop3</span>
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">    </span><span class="mi">111</span><span class="p">,</span><span class="w">     </span><span class="c1">// sunrpc</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">    </span><span class="mi">113</span><span class="p">,</span><span class="w">     </span><span class="c1">// auth</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">    </span><span class="mi">115</span><span class="p">,</span><span class="w">     </span><span class="c1">// sftp</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">    </span><span class="mi">117</span><span class="p">,</span><span class="w">     </span><span class="c1">// uucp-path</span>
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="w">    </span><span class="mi">119</span><span class="p">,</span><span class="w">     </span><span class="c1">// nntp</span>
-<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">    </span><span class="mi">123</span><span class="p">,</span><span class="w">     </span><span class="c1">// NTP</span>
-<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="w">    </span><span class="mi">135</span><span class="p">,</span><span class="w">     </span><span class="c1">// loc-srv /epmap</span>
-<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="w">    </span><span class="mi">139</span><span class="p">,</span><span class="w">     </span><span class="c1">// netbios</span>
-<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="w">    </span><span class="mi">143</span><span class="p">,</span><span class="w">     </span><span class="c1">// imap2</span>
-<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="w">    </span><span class="mi">179</span><span class="p">,</span><span class="w">     </span><span class="c1">// BGP</span>
-<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="w">    </span><span class="mi">389</span><span class="p">,</span><span class="w">     </span><span class="c1">// ldap</span>
-<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="w">    </span><span class="mi">427</span><span class="p">,</span><span class="w">     </span><span class="c1">// SLP (Also used by Apple Filing Protocol)</span>
-<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="w">    </span><span class="mi">465</span><span class="p">,</span><span class="w">     </span><span class="c1">// smtp+ssl</span>
-<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="w">    </span><span class="mi">512</span><span class="p">,</span><span class="w">     </span><span class="c1">// print / exec</span>
-<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a><span class="w">    </span><span class="mi">513</span><span class="p">,</span><span class="w">     </span><span class="c1">// login</span>
-<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a><span class="w">    </span><span class="mi">514</span><span class="p">,</span><span class="w">     </span><span class="c1">// shell</span>
-<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a><span class="w">    </span><span class="mi">515</span><span class="p">,</span><span class="w">     </span><span class="c1">// printer</span>
-<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a><span class="w">    </span><span class="mi">526</span><span class="p">,</span><span class="w">     </span><span class="c1">// tempo</span>
-<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a><span class="w">    </span><span class="mi">530</span><span class="p">,</span><span class="w">     </span><span class="c1">// courier</span>
-<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a><span class="w">    </span><span class="mi">531</span><span class="p">,</span><span class="w">     </span><span class="c1">// chat</span>
-<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a><span class="w">    </span><span class="mi">532</span><span class="p">,</span><span class="w">     </span><span class="c1">// netnews</span>
-<a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a><span class="w">    </span><span class="mi">540</span><span class="p">,</span><span class="w">     </span><span class="c1">// uucp</span>
-<a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a><span class="w">    </span><span class="mi">548</span><span class="p">,</span><span class="w">     </span><span class="c1">// AFP (Apple Filing Protocol)</span>
-<a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a><span class="w">    </span><span class="mi">556</span><span class="p">,</span><span class="w">     </span><span class="c1">// remotefs</span>
-<a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a><span class="w">    </span><span class="mi">563</span><span class="p">,</span><span class="w">     </span><span class="c1">// nntp+ssl</span>
-<a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a><span class="w">    </span><span class="mi">587</span><span class="p">,</span><span class="w">     </span><span class="c1">// smtp (rfc6409)</span>
-<a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a><span class="w">    </span><span class="mi">601</span><span class="p">,</span><span class="w">     </span><span class="c1">// syslog-conn (rfc3195)</span>
-<a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a><span class="w">    </span><span class="mi">636</span><span class="p">,</span><span class="w">     </span><span class="c1">// ldap+ssl</span>
-<a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a><span class="w">    </span><span class="mi">993</span><span class="p">,</span><span class="w">     </span><span class="c1">// ldap+ssl</span>
-<a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a><span class="w">    </span><span class="mi">995</span><span class="p">,</span><span class="w">     </span><span class="c1">// pop3+ssl</span>
-<a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a><span class="w">    </span><span class="mi">2049</span><span class="p">,</span><span class="w">    </span><span class="c1">// nfs</span>
-<a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a><span class="w">    </span><span class="mi">3659</span><span class="p">,</span><span class="w">    </span><span class="c1">// apple-sasl / PasswordServer</span>
-<a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a><span class="w">    </span><span class="mi">4045</span><span class="p">,</span><span class="w">    </span><span class="c1">// lockd</span>
-<a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a><span class="w">    </span><span class="mi">6000</span><span class="p">,</span><span class="w">    </span><span class="c1">// X11</span>
-<a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a><span class="w">    </span><span class="mi">6665</span><span class="p">,</span><span class="w">    </span><span class="c1">// Alternate IRC [Apple addition]</span>
-<a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a><span class="w">    </span><span class="mi">6666</span><span class="p">,</span><span class="w">    </span><span class="c1">// Alternate IRC [Apple addition]</span>
-<a id="__codelineno-2-67" name="__codelineno-2-67" href="#__codelineno-2-67"></a><span class="w">    </span><span class="mi">6667</span><span class="p">,</span><span class="w">    </span><span class="c1">// Standard IRC [Apple addition]</span>
-<a id="__codelineno-2-68" name="__codelineno-2-68" href="#__codelineno-2-68"></a><span class="w">    </span><span class="mi">6668</span><span class="p">,</span><span class="w">    </span><span class="c1">// Alternate IRC [Apple addition]</span>
-<a id="__codelineno-2-69" name="__codelineno-2-69" href="#__codelineno-2-69"></a><span class="w">    </span><span class="mi">6669</span><span class="p">,</span><span class="w">    </span><span class="c1">// Alternate IRC [Apple addition]</span>
-<a id="__codelineno-2-70" name="__codelineno-2-70" href="#__codelineno-2-70"></a><span class="w">    </span><span class="mi">6697</span><span class="p">,</span><span class="w">    </span><span class="c1">// IRC + TLS</span>
-<a id="__codelineno-2-71" name="__codelineno-2-71" href="#__codelineno-2-71"></a><span class="p">};</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// The general list of blocked ports. Will be blocked unless a specific</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1">// protocol overrides it. (Ex: ftp can use ports 20 and 21)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">kRestrictedPorts</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="mi">1</span><span class="p">,</span><span class="w">       </span><span class="c1">// tcpmux</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="mi">7</span><span class="p">,</span><span class="w">       </span><span class="c1">// echo</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="mi">9</span><span class="p">,</span><span class="w">       </span><span class="c1">// discard</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="mi">11</span><span class="p">,</span><span class="w">      </span><span class="c1">// systat</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="mi">13</span><span class="p">,</span><span class="w">      </span><span class="c1">// daytime</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="mi">15</span><span class="p">,</span><span class="w">      </span><span class="c1">// netstat</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="mi">17</span><span class="p">,</span><span class="w">      </span><span class="c1">// qotd</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="mi">19</span><span class="p">,</span><span class="w">      </span><span class="c1">// chargen</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="mi">20</span><span class="p">,</span><span class="w">      </span><span class="c1">// ftp data</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="mi">21</span><span class="p">,</span><span class="w">      </span><span class="c1">// ftp access</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="mi">22</span><span class="p">,</span><span class="w">      </span><span class="c1">// ssh</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="mi">23</span><span class="p">,</span><span class="w">      </span><span class="c1">// telnet</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="mi">25</span><span class="p">,</span><span class="w">      </span><span class="c1">// smtp</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="mi">37</span><span class="p">,</span><span class="w">      </span><span class="c1">// time</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="mi">42</span><span class="p">,</span><span class="w">      </span><span class="c1">// name</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="mi">43</span><span class="p">,</span><span class="w">      </span><span class="c1">// nicname</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="mi">53</span><span class="p">,</span><span class="w">      </span><span class="c1">// domain</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="mi">77</span><span class="p">,</span><span class="w">      </span><span class="c1">// priv-rjs</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="mi">79</span><span class="p">,</span><span class="w">      </span><span class="c1">// finger</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="mi">87</span><span class="p">,</span><span class="w">      </span><span class="c1">// ttylink</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="mi">95</span><span class="p">,</span><span class="w">      </span><span class="c1">// supdup</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="mi">101</span><span class="p">,</span><span class="w">     </span><span class="c1">// hostriame</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="mi">102</span><span class="p">,</span><span class="w">     </span><span class="c1">// iso-tsap</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">    </span><span class="mi">103</span><span class="p">,</span><span class="w">     </span><span class="c1">// gppitnp</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">    </span><span class="mi">104</span><span class="p">,</span><span class="w">     </span><span class="c1">// acr-nema</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">    </span><span class="mi">109</span><span class="p">,</span><span class="w">     </span><span class="c1">// pop2</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">    </span><span class="mi">110</span><span class="p">,</span><span class="w">     </span><span class="c1">// pop3</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">    </span><span class="mi">111</span><span class="p">,</span><span class="w">     </span><span class="c1">// sunrpc</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">    </span><span class="mi">113</span><span class="p">,</span><span class="w">     </span><span class="c1">// auth</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">    </span><span class="mi">115</span><span class="p">,</span><span class="w">     </span><span class="c1">// sftp</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">    </span><span class="mi">117</span><span class="p">,</span><span class="w">     </span><span class="c1">// uucp-path</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">    </span><span class="mi">119</span><span class="p">,</span><span class="w">     </span><span class="c1">// nntp</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">    </span><span class="mi">123</span><span class="p">,</span><span class="w">     </span><span class="c1">// NTP</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">    </span><span class="mi">135</span><span class="p">,</span><span class="w">     </span><span class="c1">// loc-srv /epmap</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">    </span><span class="mi">139</span><span class="p">,</span><span class="w">     </span><span class="c1">// netbios</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">    </span><span class="mi">143</span><span class="p">,</span><span class="w">     </span><span class="c1">// imap2</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">    </span><span class="mi">179</span><span class="p">,</span><span class="w">     </span><span class="c1">// BGP</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">    </span><span class="mi">389</span><span class="p">,</span><span class="w">     </span><span class="c1">// ldap</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">    </span><span class="mi">427</span><span class="p">,</span><span class="w">     </span><span class="c1">// SLP (Also used by Apple Filing Protocol)</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">    </span><span class="mi">465</span><span class="p">,</span><span class="w">     </span><span class="c1">// smtp+ssl</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">    </span><span class="mi">512</span><span class="p">,</span><span class="w">     </span><span class="c1">// print / exec</span>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">    </span><span class="mi">513</span><span class="p">,</span><span class="w">     </span><span class="c1">// login</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">    </span><span class="mi">514</span><span class="p">,</span><span class="w">     </span><span class="c1">// shell</span>
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">    </span><span class="mi">515</span><span class="p">,</span><span class="w">     </span><span class="c1">// printer</span>
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="w">    </span><span class="mi">526</span><span class="p">,</span><span class="w">     </span><span class="c1">// tempo</span>
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="w">    </span><span class="mi">530</span><span class="p">,</span><span class="w">     </span><span class="c1">// courier</span>
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="w">    </span><span class="mi">531</span><span class="p">,</span><span class="w">     </span><span class="c1">// chat</span>
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="w">    </span><span class="mi">532</span><span class="p">,</span><span class="w">     </span><span class="c1">// netnews</span>
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="w">    </span><span class="mi">540</span><span class="p">,</span><span class="w">     </span><span class="c1">// uucp</span>
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="w">    </span><span class="mi">548</span><span class="p">,</span><span class="w">     </span><span class="c1">// AFP (Apple Filing Protocol)</span>
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="w">    </span><span class="mi">556</span><span class="p">,</span><span class="w">     </span><span class="c1">// remotefs</span>
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="w">    </span><span class="mi">563</span><span class="p">,</span><span class="w">     </span><span class="c1">// nntp+ssl</span>
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="w">    </span><span class="mi">587</span><span class="p">,</span><span class="w">     </span><span class="c1">// smtp (rfc6409)</span>
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="w">    </span><span class="mi">601</span><span class="p">,</span><span class="w">     </span><span class="c1">// syslog-conn (rfc3195)</span>
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="w">    </span><span class="mi">636</span><span class="p">,</span><span class="w">     </span><span class="c1">// ldap+ssl</span>
+<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a><span class="w">    </span><span class="mi">993</span><span class="p">,</span><span class="w">     </span><span class="c1">// ldap+ssl</span>
+<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="w">    </span><span class="mi">995</span><span class="p">,</span><span class="w">     </span><span class="c1">// pop3+ssl</span>
+<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="w">    </span><span class="mi">2049</span><span class="p">,</span><span class="w">    </span><span class="c1">// nfs</span>
+<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a><span class="w">    </span><span class="mi">3659</span><span class="p">,</span><span class="w">    </span><span class="c1">// apple-sasl / PasswordServer</span>
+<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a><span class="w">    </span><span class="mi">4045</span><span class="p">,</span><span class="w">    </span><span class="c1">// lockd</span>
+<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a><span class="w">    </span><span class="mi">6000</span><span class="p">,</span><span class="w">    </span><span class="c1">// X11</span>
+<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a><span class="w">    </span><span class="mi">6665</span><span class="p">,</span><span class="w">    </span><span class="c1">// Alternate IRC [Apple addition]</span>
+<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a><span class="w">    </span><span class="mi">6666</span><span class="p">,</span><span class="w">    </span><span class="c1">// Alternate IRC [Apple addition]</span>
+<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a><span class="w">    </span><span class="mi">6667</span><span class="p">,</span><span class="w">    </span><span class="c1">// Standard IRC [Apple addition]</span>
+<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a><span class="w">    </span><span class="mi">6668</span><span class="p">,</span><span class="w">    </span><span class="c1">// Alternate IRC [Apple addition]</span>
+<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a><span class="w">    </span><span class="mi">6669</span><span class="p">,</span><span class="w">    </span><span class="c1">// Alternate IRC [Apple addition]</span>
+<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a><span class="w">    </span><span class="mi">6697</span><span class="p">,</span><span class="w">    </span><span class="c1">// IRC + TLS</span>
+<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a><span class="p">};</span>
 </code></pre></div>
 <p>6665~6669 是 IRC protocol 預設使用的 Port。IRC 有許多安全漏洞，為了避免 Chrome 變成跳板去影響其他服務，所以會主動進行阻擋。因此這些阻擋是保護 Service 本身，而不是保護 Chrome 的使用者。</p>
 <p>Reference:</p>
@@ -1547,135 +1617,6 @@
 </ol>
     <nav class="md-post__action">
       <a href="../../2020/09/06/openvpn-for-docker/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-09-01 00:00:00">September 1, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/review/" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="rules-of-thumb-for-a-1x-developer"><a class="toclink" href="../../2020/09/01/rules-of-thumb-for-a-1x-developer/">Rules of thumb for a 1x developer</a></h2>
-<p><a href="https://muldoon.cloud/programming/2020/04/17/programming-rules-thumb.html#rule-6-when-to-use-a-hardcore-language">Rules of thumb for a 1x developer</a></p>
-<p>作者借用了 10x developer 的名字，整理了他覺得 1x developer 可以作為工作指引的 20 個經驗法則，透過這些法則希望能夠成為 1.1x developer。</p>
-<p>總分為九類的法則：</p>
-<ol>
-<li>Meta</li>
-<li>Rule 1: Rules are good<ul>
-<li>透過各種經驗法則建立思考的框架，利用邏輯結構化各種問題</li>
-</ul>
-</li>
-<li>Productivity and learning</li>
-<li>Rule 2: Most of what I learn is useless outside of its immediate context<ul>
-<li>如果工作中有大量沒有價值的部分，應該盡可能地避免，盡量關注在有價值的地方就好</li>
-</ul>
-</li>
-<li>Rule 3: Focus “learning time” on things that compound<ul>
-<li>學習能夠產生複利的東西，或是進行能產生複利的行為，形成一個正向的循環。e.g. 閱讀無法產生複利，但如果能夠實際應用，甚至是分享就能達到複利。</li>
-</ul>
-</li>
-<li>Programming languages</li>
-<li>Rule 4: When to use Java or C#<ul>
-<li>大型商用軟體</li>
-</ul>
-</li>
-<li>Rule 5: When to use Python or Ruby<ul>
-<li>AI or ML</li>
-</ul>
-</li>
-<li>Rule 6: When to use a hardcore language<ul>
-<li>Go, Rust, Haskell, Erlang, Clojure, Kotlin, Scala 歸為此類</li>
-<li>Go, Rust 用於對於效能需求較高的服務</li>
-<li>Haskell, Erlang 用於簡潔或是數學方面的程式</li>
-</ul>
-</li>
-<li>Rule 7: How to do Javascript<ul>
-<li>使用 Typescript，人生可以更簡單</li>
-<li>業務邏輯盡可能做在後端就好</li>
-<li>有互動需求使用 Vue 或 React</li>
-<li>記得做 unit tests</li>
-</ul>
-</li>
-<li>Rule 8: When to use C or C++<ul>
-<li>通常不是你選擇 C，而是 C 選擇了你，因應場景被迫使用</li>
-<li>C++ 有較佳的效能，常用在機器人或是高頻交易</li>
-</ul>
-</li>
-<li>Rule 9: Use PHP or Hack if you want to test server changes without rebuilding</li>
-<li>Technologies</li>
-<li>Rule 10: When to make a serverless function<ul>
-<li>每一隔一段時間要執行的一小片段程式</li>
-</ul>
-</li>
-<li>Rule 11: Which database technology to choose<ul>
-<li>有 ACID 需求就是乖乖用 SQL，推薦 PostgreSQL</li>
-</ul>
-</li>
-<li>Testing</li>
-<li>Rule 12: When to write a unit test<ul>
-<li>評估缺陷的可能性＊缺陷帶來的損失，如果寫測試的成本遠超過了期望值，似乎也沒有寫的必要。但每個片段的程式碼仍應該是要盡可能做到測試，或至少要寫的是可測試的。</li>
-</ul>
-</li>
-<li>Rule 13: When to write an integration test<ul>
-<li>當功能包含不屬於你的 Code 時就要做 integration test，特別是 Code 可能在你不知情的狀況下被更動</li>
-</ul>
-</li>
-<li>Rule 14: When to write an end-to-end test<ul>
-<li>可以定義為一個使用者案例，使用者可能是一個人或機器</li>
-<li>三個情境</li>
-<li>對於成品沒有完全瞭解，建立一些案例當作 Smoke Test，確保東西至少沒有壞</li>
-<li>需要迴歸執行的測試，可用於未來重構的依據</li>
-<li>牽涉複雜的計算，驗證一些其他的 Code 是否會對他產生影響</li>
-</ul>
-</li>
-<li>DevOps</li>
-<li>Rule 15: When to bring on a dedicated support engineer</li>
-<li>Security</li>
-<li>Rule 16: If you delegate all your IT security to the InfoSec, they will come up with draconian rules<ul>
-<li>如果讓資安部門決定所有資安相關規範，只會建立出極度嚴苛的規範</li>
-</ul>
-</li>
-<li>Designing and Whiteboarding</li>
-<li>Rule 17: Make the design session about input, not approval</li>
-<li>Project management</li>
-<li>Rule 18: Estimates serve more for creating pressure than for project planning<ul>
-<li>時程通常是只是用來製造壓力，而不是作為規劃的指引</li>
-</ul>
-</li>
-<li>Rule 19: Be explicit about the difference between hard deadlines, soft deadlines, internal deadlines, and expected completion dates<ul>
-<li>分清楚四種不同的 Deadline</li>
-<li>Hard deadline: Delay 會讓老闆或是公司很難看的狀況</li>
-<li>Soft deadline: Delay 會讓某些人很難看的狀況</li>
-<li>Internal deadline: 只會影響到團隊內的人，但不會影響到外部的人</li>
-<li>Expected completion date: 團隊內部預期要完成的日期</li>
-</ul>
-</li>
-<li>Rule 20: When somebody says Agile, push for Kanban, not Scrum<ul>
-<li>如果要跑 Agile 用 Kanban 不要用 Scrum</li>
-<li>Scrum: 在這兩週完成這些事，外部給予的時間壓力</li>
-<li>Kanba: 做兩週能完成的事，內部評估可完成的工作量</li>
-</ul>
-</li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/09/01/rules-of-thumb-for-a-1x-developer/">
         Continue reading
       </a>
     </nav>
