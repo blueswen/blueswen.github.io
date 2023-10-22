@@ -1,7 +1,7 @@
 ---
 categories:
 - Tip
-date: '2021-08-04'
+date: 2021-08-04
 tags:
 - Linux
 - Docker

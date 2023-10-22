@@ -1,7 +1,7 @@
 ---
 categories:
 - Algorithm
-date: '2020-06-08'
+date: 2020-06-08
 tags:
 - Tree
 ---

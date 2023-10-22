@@ -1,7 +1,7 @@
 ---
 categories:
 - Review
-date: '2020-04-14'
+date: 2020-04-14
 tags:
 - Python
 ---

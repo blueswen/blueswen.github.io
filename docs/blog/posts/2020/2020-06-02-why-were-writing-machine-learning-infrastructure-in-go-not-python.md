@@ -1,7 +1,7 @@
 ---
 categories:
 - Review
-date: '2020-06-02'
+date: 2020-06-02
 tags:
 - Go
 ---

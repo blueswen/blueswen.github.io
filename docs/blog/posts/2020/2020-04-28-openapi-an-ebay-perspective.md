@@ -1,7 +1,7 @@
 ---
 categories:
 - Review
-date: '2020-04-28'
+date: 2020-04-28
 tags:
 - API
 - OpenAPI

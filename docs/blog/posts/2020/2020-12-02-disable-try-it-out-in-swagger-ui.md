@@ -1,7 +1,7 @@
 ---
 categories:
 - Tip
-date: '2020-12-02'
+date: 2020-12-02
 tags:
 - OpenAPI
 ---

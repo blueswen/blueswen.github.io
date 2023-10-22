@@ -1,7 +1,7 @@
 ---
 categories:
 - Tip
-date: '2020-04-22'
+date: 2020-04-22
 tags:
 - Docker
 ---

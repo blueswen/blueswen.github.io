@@ -1,7 +1,7 @@
 ---
 categories:
 - Review
-date: '2020-11-03'
+date: 2020-11-03
 tags:
 - K8s
 ---

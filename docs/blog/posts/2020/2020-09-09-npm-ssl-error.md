@@ -1,7 +1,7 @@
 ---
 categories:
 - Tip
-date: '2020-09-09'
+date: 2020-09-09
 tags:
 - Node.js
 ---

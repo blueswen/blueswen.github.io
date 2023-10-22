@@ -1,7 +1,7 @@
 ---
 categories:
 - Share
-date: '2021-07-22'
+date: 2021-07-22
 tags:
 - Traefik
 ---

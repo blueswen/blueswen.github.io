@@ -1,7 +1,7 @@
 ---
 categories:
 - Algorithm
-date: '2020-06-01'
+date: 2020-06-01
 tags:
 - Tree
 - Bitwise

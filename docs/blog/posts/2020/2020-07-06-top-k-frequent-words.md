@@ -1,7 +1,7 @@
 ---
 categories:
 - Algorithm
-date: '2020-07-06'
+date: 2020-07-06
 tags: []
 ---
 

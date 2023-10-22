@@ -1,7 +1,7 @@
 ---
 categories:
 - Share
-date: '2020-05-30'
+date: 2020-05-30
 tags:
 - Python
 ---

@@ -1,7 +1,7 @@
 ---
 categories:
 - Review
-date: '2020-11-24'
+date: 2020-11-24
 tags:
 - Vue
 ---

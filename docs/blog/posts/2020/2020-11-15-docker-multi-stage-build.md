@@ -1,7 +1,7 @@
 ---
 categories:
 - Share
-date: '2020-11-15'
+date: 2020-11-15
 tags:
 - Docker
 ---

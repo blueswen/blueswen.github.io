@@ -1,7 +1,7 @@
 ---
 categories:
 - Tip
-date: '2021-07-28'
+date: 2021-07-28
 tags:
 - Java
 - Maven

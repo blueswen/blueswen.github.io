@@ -1,7 +1,7 @@
 ---
 categories:
 - Tip
-date: '2020-05-20'
+date: 2020-05-20
 tags:
 - Jenkins
 - git

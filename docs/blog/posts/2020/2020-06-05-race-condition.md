@@ -1,7 +1,7 @@
 ---
 categories:
 - Share
-date: '2020-06-05'
+date: 2020-06-05
 tags:
 - Go
 - Python

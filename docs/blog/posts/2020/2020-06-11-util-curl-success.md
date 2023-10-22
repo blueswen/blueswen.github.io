@@ -1,7 +1,7 @@
 ---
 categories:
 - Tip
-date: '2020-06-11'
+date: 2020-06-11
 tags:
 - Unix
 ---

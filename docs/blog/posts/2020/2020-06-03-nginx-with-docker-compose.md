@@ -1,7 +1,7 @@
 ---
 categories:
 - Tip
-date: '2020-06-03'
+date: 2020-06-03
 tags:
 - Nginx
 - Docker

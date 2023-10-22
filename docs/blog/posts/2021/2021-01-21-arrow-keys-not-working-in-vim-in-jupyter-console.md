@@ -1,7 +1,7 @@
 ---
 categories:
 - Tip
-date: '2021-01-21'
+date: 2021-01-21
 tags:
 - jupyter notebook
 ---

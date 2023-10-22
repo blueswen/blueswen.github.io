@@ -1,7 +1,7 @@
 ---
 categories:
 - Tip
-date: '2022-03-02'
+date: 2022-03-02
 tags:
 - Docker
 ---

@@ -1,7 +1,7 @@
 ---
 categories:
 - Review
-date: '2021-07-20'
+date: 2021-07-20
 tags:
 - Docker
 - Container

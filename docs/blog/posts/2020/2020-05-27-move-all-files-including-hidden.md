@@ -1,7 +1,7 @@
 ---
 categories:
 - Tip
-date: '2020-05-27'
+date: 2020-05-27
 tags:
 - Unix
 - Jenkins

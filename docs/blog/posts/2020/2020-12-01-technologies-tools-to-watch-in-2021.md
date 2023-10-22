@@ -1,7 +1,7 @@
 ---
 categories:
 - Review
-date: '2020-12-01'
+date: 2020-12-01
 tags:
 - DevOps
 ---

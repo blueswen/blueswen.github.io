@@ -1,7 +1,7 @@
 ---
 categories:
 - Share
-date: '2020-12-06'
+date: 2020-12-06
 tags:
 - Python
 - Django

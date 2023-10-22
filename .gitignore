@@ -6,3 +6,4 @@ site/
 *.ipynb
 .ipynb_checkpoints/
 .cache
+.env

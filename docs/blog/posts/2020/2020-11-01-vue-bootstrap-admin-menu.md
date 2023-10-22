@@ -1,7 +1,7 @@
 ---
 categories:
 - Share
-date: '2020-11-01'
+date: 2020-11-01
 tags:
 - Vue
 ---

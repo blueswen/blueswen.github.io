@@ -1,7 +1,7 @@
 ---
 categories:
 - Share
-date: '2020-05-22'
+date: 2020-05-22
 tags:
 - Web Development
 - SSL

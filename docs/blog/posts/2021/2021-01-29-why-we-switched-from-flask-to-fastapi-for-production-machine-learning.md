@@ -1,7 +1,7 @@
 ---
 categories:
 - Review
-date: '2021-01-29'
+date: 2021-01-29
 tags:
 - Python
 - API

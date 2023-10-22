@@ -1,7 +1,7 @@
 ---
 categories:
 - Share
-date: '2021-02-05'
+date: 2021-02-05
 tags:
 - Rules of thumb
 - Business Thinking

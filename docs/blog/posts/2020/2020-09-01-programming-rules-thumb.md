@@ -1,7 +1,7 @@
 ---
 categories:
 - Review
-date: '2020-09-01'
+date: 2020-09-01
 tags:
 - Rules of thumb
 ---

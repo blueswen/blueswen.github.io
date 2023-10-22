@@ -1,7 +1,7 @@
 ---
 categories:
 - Share
-date: '2020-09-06'
+date: 2020-09-06
 tags:
 - Toolbox
 ---

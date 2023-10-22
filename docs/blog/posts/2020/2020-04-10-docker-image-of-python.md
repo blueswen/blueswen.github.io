@@ -1,7 +1,7 @@
 ---
 categories:
 - Share
-date: '2020-04-10'
+date: 2020-04-10
 tags:
 - Docker
 - Python

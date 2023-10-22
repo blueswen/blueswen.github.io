@@ -1,7 +1,7 @@
 ---
 categories:
 - Tip
-date: '2020-06-18'
+date: 2020-06-18
 tags:
 - K8s
 ---
