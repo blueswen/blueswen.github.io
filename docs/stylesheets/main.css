@@ -18,3 +18,25 @@ body {
 .text-center {
     text-align: center;
 }
+
+.md-content__inner h1 {
+    color: #404040;
+    font-weight: 400;
+}
+
+.md-content__inner h2 {
+    font-weight: 400;
+}
+
+.md-post--excerpt {
+    margin-bottom: 1.2rem;
+}
+
+.md-post__content h2 a{
+    color: #404040;
+    font-weight: 400;
+}
+
+.md-post__content h2 a:hover{
+    color: rgba(0, 0, 0, 0.5);
+}

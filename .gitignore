@@ -7,3 +7,7 @@ site/
 .ipynb_checkpoints/
 .cache
 .venv
+
+# python
+__pycache__/
+*.egg-info/

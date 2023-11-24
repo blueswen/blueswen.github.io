@@ -71,10 +71,18 @@ plugins:
   - meta
   - tags:
       tags_file: tags.md
-  - blog:
+  - blog-extension:
       categories_toc: true
       post_readtime: false
-
+      pagination_per_page: 10
+      pagination_keep_content: true
+      post_slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - group:
+      plugins:
+        - optimize
+        - minify
 nav:
   - Home: index.md
   - Portfolio: portfolio.md
