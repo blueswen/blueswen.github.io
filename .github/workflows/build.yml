@@ -30,7 +30,8 @@ jobs:
             mkdocs-material-
       - run: pip install -r requirements.txt
       - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
-      - run: cd mkdocs-blog-extension && pip install .
+      - working-directory: ./mkdocs-blog-extension
+        run: pip install .
       - run: mkdocs gh-deploy --force
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }} 
