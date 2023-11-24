@@ -11,17 +11,17 @@
         <link rel="canonical" href="https://blueswen.github.io/blog/category/tip/">
       
       
-        <link rel="prev" href="../../">
+        <link rel="prev" href="../share/">
       
       
-        <link rel="next" href="../review/">
+        <link rel="next" href="../../archive/2023/">
       
       
         
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8+insiders-4.43.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.12+insiders-4.45.0">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.382dd0b9.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0ab26e37.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -700,6 +700,84 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../algorithm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Algorithm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../review/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Review
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../share/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Share
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -873,84 +951,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../review/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Review
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../algorithm/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Algorithm
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../share/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Share
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1148,697 +1148,314 @@
       </header>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2023-10-22 00:00:00">October 22, 2023</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2023-10-22 00:00:00">October 22, 2023</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Grafana, Prometheus</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="grafana-stat-panel-sparkline"><a class="toclink" href="../../2023/10/22/grafana-stat-panel-%E5%90%8C%E6%99%82%E9%A1%AF%E7%A4%BA%E6%9C%80%E6%96%B0%E7%9A%84%E5%80%BC%E8%88%87-sparkline/">Grafana Stat Panel 同時顯示最新的值與 Sparkline</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="grafana-stat-panel-sparkline"><a class="toclink" href="../../2023/10/22/grafana-stat-panel-sparkline/">Grafana Stat Panel 同時顯示最新的值與 Sparkline</a></h2>
-<h3 id="_1"><a class="toclink" href="../../2023/10/22/grafana-stat-panel-sparkline/#_1">需求</a></h3>
-<p>在 Grafana 的 <a href="https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/stat/">Stat Panel</a> 同時顯示最新的值與 Sparkline（迷你圖表）。</p>
-<h3 id="_2"><a class="toclink" href="../../2023/10/22/grafana-stat-panel-sparkline/#_2">問題分析</a></h3>
-<p>Stat Panel 支援 Instant Query 與 Range Query：</p>
-<ol>
-<li>Instant Query：Query Type <code>Instant</code>，只查詢最新的值，該值會顯示在 Panel 上</li>
-<li>Range Query：Query Type <code>Range</code>，查詢一段時間內的值，最後一個值會顯示在 Panel 上，所有質會以 Sparkline 的方式顯示在 Panel 上</li>
-</ol>
-<p><img alt="Instant Query 畫面" src="../../2023/imgs/2023-10-22-grafana-stat-panel/instant-query.png" /><br />
-Instant Query 畫面</p>
-<p><img alt="Range Query 畫面" src="../../2023/imgs/2023-10-22-grafana-stat-panel/range-query.png" /><br />
-Range Query 畫面</p>
-<p>但單純使用 Range Query 時會發現，有時候改變時間區間時，顯示在 Panel 上想像中代表最新的值會變大或變小，導致使用者會對於數值的正確性產生疑慮。</p>
-<p>這是因為在 Grafana 使用 Range Query 時，實際的查詢時間區間會為了配合查詢 Prometheus 時要使用的 <a href="https://prometheus.io/docs/prometheus/latest/querying/api/#range-queries">Step 參數</a>而被<a href="https://github.com/grafana/grafana/blob/v10.1.5/pkg/tsdb/prometheus/models/query.go#L147">調整</a>，查詢使用的開始與結束時間都會變得比 Grafana 畫面設定的時間區間還要早。若調整後的結束時間與畫面設定的結束時間中間剛好有資料點時，就會發生 Range Query 的結果不是該 Series 最新的值，而是調整後的結束時間點往前找到的值，如下圖所示：</p>
-<p><img alt="Query Offset" src="../../2023/imgs/2023-10-22-grafana-stat-panel/query-offset.png" /><br />
-藍色的最後一個資料點，因為查詢時間位移的關係而不會被該次查詢查到</p>
-<p>更詳細的 Step 參數與 Grafana 設定方式將於另一篇文章中說明。</p>
-<p>雖然可以使用 Both Type 進行查詢，同時顯示 Instant Query 與 Range Query 的結果，但 Panel 會顯示兩個值，容易造成使用者混淆。</p>
-<p><img alt="Both Query 畫面" src="../../2023/imgs/2023-10-22-grafana-stat-panel/both-query.png" /><br />
-Both Query 畫面</p>
-<p>圖中也可以看到，右側 Instant Query 的值與左側 Range Query 的值不同，這在查詢區間範圍較大時會更明顯。</p>
-<h3 id="_3"><a class="toclink" href="../../2023/10/22/grafana-stat-panel-sparkline/#_3">解法</a></h3>
-<p>使用 <code>Both</code> Type，並將兩個 Series 合併，讓 Instant Query 的值最為最後一個值，同時有 Range Query 的資料供繪製 Sparkline。</p>
-<ol>
-<li>
-<p>使用 <code>Both</code> Type 查詢</p>
-<p><img alt="Query Type" src="../../2023/imgs/2023-10-22-grafana-stat-panel/single-query-type.png" /><br />
-Query Type 設定</p>
-</li>
-<li>
-<p>使用 <code>Series to rows</code> 與 <code>Sort by</code> 兩個 Transform</p>
-<ol>
-<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#series-to-rows">Series to rows</a>：將 Instant Query 與 Range Query 的資料合併</li>
-<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#sort-by">Sort by</a>：將合併後的資料依照 <code>Time</code> 欄位排序，確保最後一筆資料為最新的資料</li>
-</ol>
-<p><img alt="Transform" src="../../2023/imgs/2023-10-22-grafana-stat-panel/single-transform.png" /><br />
-Transform 設定</p>
-</li>
-</ol>
-<h4 id="_4"><a class="toclink" href="../../2023/10/22/grafana-stat-panel-sparkline/#_4">說明</a></h4>
-<p><img alt="Range Series" src="../../2023/imgs/2023-10-22-grafana-stat-panel/explanation-01.png" /><br />
-先關閉 Transform，並切換為 Table 檢視，可以看到兩個 Series，第一個是 Range Query 的資料。</p>
-<p><img alt="Instant Series" src="../../2023/imgs/2023-10-22-grafana-stat-panel/explanation-02.png" /><br />
-第二個是 Instant Query 的資料。</p>
-<p><img alt="Merged Series" src="../../2023/imgs/2023-10-22-grafana-stat-panel/explanation-03.png" /><br />
-啟用 <code>Series to rows</code> transform，兩個 Series 會合併成一個 Series，但預設的排序是依照時間欄位降冪排序，導致最後一筆資料不是最新的資料，而 Stat Panel 預設會顯示最後一筆資料。</p>
-<p><img alt="Sorted Series" src="../../2023/imgs/2023-10-22-grafana-stat-panel/explanation-04.png" /><br />
-啟用 <code>Sort by</code> transform，並以 <code>Time</code> 欄位排序，確保最後一筆資料為最新的資料。</p>
-<h4 id="_5"><a class="toclink" href="../../2023/10/22/grafana-stat-panel-sparkline/#_5">多筆資料應用</a></h4>
-<p>如果想要在同一個 Stat Panel 上顯示多筆資料但達到一樣的效果，則要使用多額外使用 <code>Partition by values</code> transform 以 <code>Metrics</code> 欄位分割資料。</p>
-<ol>
-<li>
-<p>使用 <code>Both</code> Type 查詢</p>
-<p><img alt="Query Type" src="../../2023/imgs/2023-10-22-grafana-stat-panel/multi-query-type.png" /><br />
-Query Type 設定</p>
-</li>
-<li>
-<p>使用 <code>Series to rows</code>、<code>Sort by</code>、<code>Partition by values</code> 三個 Transform</p>
-<ol>
-<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#series-to-rows">Series to rows</a>：將 Instant Query 與 Range Query 的資料合併</li>
-<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#sort-by">Sort by</a>：將合併後的資料依照 <code>Time</code> 欄位排序，確保最後一筆資料為最新的資料</li>
-<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#partition-by-values">Partition by values</a>：將全部被合併的資料再以 <code>Metrics</code> 欄位分割成多筆 Series</li>
-</ol>
-<p><img alt="Transform" src="../../2023/imgs/2023-10-22-grafana-stat-panel/multi-transform.png" /><br />
-Transform 設定</p>
-</li>
-</ol>
-<p>參考資料：</p>
-<ol>
-<li><a href="https://grafana.com/blog/2023/10/18/how-to-easily-retrieve-values-from-a-range-in-grafana-using-a-stat-panel/">How to easily retrieve values from a range in Grafana using a stat panel</a></li>
-<li><a href="https://cloud.tencent.com/developer/article/1382875">详解Prometheus range query中的step参数</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2023/10/22/grafana-stat-panel-sparkline/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2022-03-02 00:00:00">March 2, 2022</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2022-03-02 00:00:00">March 2, 2022</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Docker</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="connect-docker-host-from-inside-a-docker-container"><a class="toclink" href="../../2022/03/02/connect-docker-host-from-inside-a-docker-container/">Connect docker host from inside a docker container</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="connect-docker-host-from-inside-a-docker-container"><a class="toclink" href="../../2022/03/02/connect-docker-host-from-inside-a-docker-container/">Connect docker host from inside a docker container</a></h2>
-<p>需求：在 Container 內直接使用 Hostname 與 Host 溝通</p>
-<ol>
-<li>Container 中的 Application 與在 Host 上執行的 Application 溝通</li>
-<li>使用 Container 作為 Proxy（如 Traefik），需要 Proxy 的服務開在 Host 上</li>
-</ol>
-<p>解法：</p>
-<p>最暴力解的解法為直接將在 Container 內的目標指向 Host 的 IP，但這種當環境變動時就會需要手動調整，例如 DHCP、浮動 IP 或是切換到不同主機執行時。</p>
-<p><a href="https://medium.com/@TimvanBaarsen/how-to-connect-to-the-docker-host-from-inside-a-docker-container-112b4c71bc66">How to connect to the Docker host from inside a Docker container?</a> 這篇文章介紹了在 Docker Desktop 與 Linux 上的 Docker Engine 的兩種解法</p>
-<ol>
-<li>
-<p>Docker Desktop</p>
-<p>在 Windows 或 Mac 要使用通常都會安裝 Docker Desktop，在官方的說明文件中（<a href="https://docs.docker.com/desktop/mac/networking/#i-want-to-connect-from-a-container-to-a-service-on-the-host">Mac</a>、<a href="https://docs.docker.com/desktop/windows/networking/#i-want-to-connect-from-a-container-to-a-service-on-the-host">Windows</a>），說明可以直接使用 <code>host.docker.internal</code> 這個 Hostname 從 Container 連接 Host。</p>
-</li>
-<li>
-<p>Linux Docker Engine</p>
-<p>在 20.10 版後，Docker Engine 也支援了 <code>host.docker.internal</code> 這個 Hostname，但是無法開箱即用，在啟動 Container 時需要額外使用 <code>--add-host</code> 參數設定 Host，設定如下</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>--add-host<span class="o">=</span>host.docker.internal:host-gateway
-</code></pre></div>
-<p>在 Docker Compose 中可以透過 <code>extra_hosts</code> 增加 Host，Compose 範例如下：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.8&quot;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nt">ubuntu</span><span class="p">:</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="nt">extra_hosts</span><span class="p">:</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;host.docker.internal:host-gateway&quot;</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tail -f /dev/null</span>
-</code></pre></div>
-</li>
-</ol>
-<p>Reference:</p>
-<ol>
-<li><a href="https://medium.com/@TimvanBaarsen/how-to-connect-to-the-docker-host-from-inside-a-docker-container-112b4c71bc66">How to connect to the Docker host from inside a Docker container?</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2022/03/02/connect-docker-host-from-inside-a-docker-container/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-08-04 00:00:00">August 4, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-08-04 00:00:00">August 4, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Linux, Docker, Container</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="container-timezone"><a class="toclink" href="../../2021/08/04/container-timezone/">Container Timezone</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="container-timezone"><a class="toclink" href="../../2021/08/04/container-timezone/">Container Timezone</a></h2>
-<p>需求：Container OS 時區為 UTC+0，需要設定為指定時區，如台灣的 UTC+8</p>
-<p>解決方案：依據所使用的 Linux 版本，以不同的方式設定 Timezone</p>
-<h4 id="alpine"><a class="toclink" href="../../2021/08/04/container-timezone/#alpine">alpine</a></h4>
-<p>必須先安裝 <code>tzdata</code>，並執行相關設定</p>
-<p>Dockerfile:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">apline:3.14.0</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">RUN</span><span class="w"> </span>apk<span class="w"> </span>--update<span class="w"> </span>add<span class="w"> </span>tzdata<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span>apk<span class="w"> </span>upgrade<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span>cp<span class="w"> </span>/usr/share/zoneinfo/Asia/Taipei<span class="w"> </span>/etc/localtime<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Asia/Taipei&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/etc/timezone
-</code></pre></div>
-<h4 id="alpine_1"><a class="toclink" href="../../2021/08/04/container-timezone/#alpine_1">非 alpine 版本</a></h4>
-<p>只需設定環境變數 <code>TZ</code></p>
-<p>Dockerfile:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">debian:buster</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>EVN<span class="w"> </span><span class="nv">TZ</span><span class="o">=</span>Asia/Taipei
-</code></pre></div>
-<p>或者執行 Container 時直接設定</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;TZ=Asia/Taipei&quot;</span><span class="w"> </span>debian:buster
-</code></pre></div>
-<p>Reference:</p>
-<ol>
-<li><a href="https://cynthiachuang.github.io/Change-Timezone-in-Dockerfile/">使用 Dockerfile 設定 Container 時區</a></li>
-<li><a href="https://greddyblogs.gitlab.io/2020/01/31/dockerTimeZone/">【筆記】Docker Timezone 設定</a></li>
-<li><a href="https://stackoverflow.com/a/43682030">Explanation of the “--update add” command for Alpine Linux</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2021/08/04/container-timezone/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-07-28 00:00:00">July 28, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-07-28 00:00:00">July 28, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Java, Maven</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="maven-block-http-repositories"><a class="toclink" href="../../2021/07/28/maven-block-http-repositories/">Maven block http repositories</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="maven-block-http-repositories"><a class="toclink" href="../../2021/07/28/maven-block-http-repositories/">Maven block http repositories</a></h2>
-<p>問題：maven build 時出現 <code>Could not resolve dependencies for project ... Could not transfer artifact ... from/to maven-default-http-blocker (http://0.0.0.0/) ...</code> 錯誤訊息，http repository 被 maven block 無法取得相依 jar，導致建置失敗</p>
-<p>以相依 <code>com.lowagie:itext:jar:2.1.7</code> 為例，完整錯誤訊息如下：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>[ERROR] Failed to execute goal on project sample: Could not resolve dependencies for project 
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>com.sample:sample:jar:0.0.1-SNAPSHOT: Failed to collect dependencies at net.sf.jasperreports:
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>jasperreports:jar:6.16.0 -&gt; com.lowagie:itext:jar:2.1.7.js8: Failed to read artifact descriptor 
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>for com.lowagie:itext:jar:2.1.7.js8: Could not transfer artifact com.lowagie:itext:pom:2.1.7.js8 
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: 
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>[jaspersoft-third-party (http://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/, 
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>default, releases+snapshots), jr-ce-releases (http://jaspersoft.jfrog.io/jaspersoft/jr-ce-releases, 
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>default, releases+snapshots)]
-</code></pre></div>
-<p>原因：Maven 在 3.8.1 之後為了避免被利用 http 執行中間人攻擊（<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-26291">CVE-2021-26291</a>），預設會 block 所有 http repositories</p>
-<p>解法：在無法找到可使用的 https repository 時，可以在 maven 的 config 自訂 mirror 並將 blocked 設定關閉</p>
-<p>以 <code>http://jaspersoft.jfrog.io/</code> 這個 http repository 為例：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nt">&lt;settings</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/SETTINGS/1.2.0&quot;</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">          </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">          </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/SETTINGS/1.2.0 http://maven.apache.org/xsd/settings-1.2.0.xsd&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">  </span><span class="nt">&lt;mirrors&gt;</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="nt">&lt;mirror&gt;</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">      </span><span class="nt">&lt;id&gt;</span>jaspersoft-third-party-mirror<span class="nt">&lt;/id&gt;</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">      </span><span class="nt">&lt;mirrorOf&gt;</span>jaspersoft-third-party<span class="nt">&lt;/mirrorOf&gt;</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">      </span><span class="nt">&lt;url&gt;</span>http://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/<span class="nt">&lt;/url&gt;</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">      </span><span class="nt">&lt;blocked&gt;</span>false<span class="nt">&lt;/blocked&gt;</span>
-<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">    </span><span class="nt">&lt;/mirror&gt;</span>
-<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">  </span><span class="nt">&lt;/mirrors&gt;</span>
-<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="nt">&lt;/settings&gt;</span>
-</code></pre></div>
-<p>如果是以 maven 的 Docker Image 建置專案可以參考以下的結構，在 <code>.mvn</code> 資料夾中寫入 <code>maven.config</code> 與 <code>local-settings.xml</code> 兩個檔案</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>├── Dockerfile
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>├── mvnw
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>├── pom.xml
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>├── src
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>└── .mvn
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    ├── local-settings.xml
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>    ├── maven.config
-<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>    └── wrapper
-</code></pre></div>
-<h4 id="dockerfile"><a class="toclink" href="../../2021/07/28/maven-block-http-repositories/#dockerfile">Dockerfile</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">maven:3.6.3-openjdk-8</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/workspace</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="k">RUN</span><span class="w"> </span><span class="nb">unset</span><span class="w"> </span>MAVEN_CONFIG<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>./mvnw<span class="w"> </span>package
-</code></pre></div>
-<h4 id="mavenconfig"><a class="toclink" href="../../2021/07/28/maven-block-http-repositories/#mavenconfig">maven.config</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>--settings ./.mvn/local-settings.xml
-</code></pre></div>
-<h4 id="local-settingsxml"><a class="toclink" href="../../2021/07/28/maven-block-http-repositories/#local-settingsxml">local-settings.xml</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nt">&lt;settings</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/SETTINGS/1.2.0&quot;</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">          </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">          </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/SETTINGS/1.2.0 http://maven.apache.org/xsd/settings-1.2.0.xsd&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">  </span><span class="nt">&lt;mirrors&gt;</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">    </span><span class="nt">&lt;mirror&gt;</span>
-<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">      </span><span class="nt">&lt;id&gt;</span>jaspersoft-third-party-mirror<span class="nt">&lt;/id&gt;</span>
-<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">      </span><span class="nt">&lt;mirrorOf&gt;</span>jaspersoft-third-party<span class="nt">&lt;/mirrorOf&gt;</span>
-<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">      </span><span class="nt">&lt;url&gt;</span>http://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/<span class="nt">&lt;/url&gt;</span>
-<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="w">      </span><span class="nt">&lt;blocked&gt;</span>false<span class="nt">&lt;/blocked&gt;</span>
-<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="w">    </span><span class="nt">&lt;/mirror&gt;</span>
-<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="w">  </span><span class="nt">&lt;/mirrors&gt;</span>
-<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="nt">&lt;/settings&gt;</span>
-</code></pre></div>
-<p>Reference:</p>
-<ol>
-<li><a href="https://maven.apache.org/docs/3.8.1/release-notes.html">Release Notes – Maven 3.8.1</a></li>
-<li><a href="https://stackoverflow.com/a/67002852">How to disable maven blocking external HTTP repositores?</a></li>
-<li><a href="https://stackoverflow.com/a/67121849">Maven Build Failure — DependencyResolutionException</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2021/07/28/maven-block-http-repositories/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-07-21 00:00:00">July 21, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-07-21 00:00:00">July 21, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Unix</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="get-column-index-of-field-in-csv-file"><a class="toclink" href="../../2021/07/21/get-column-index-of-field-in-csv-file/">Get column index of field in CSV file</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="get-column-index-of-field-in-csv-file"><a class="toclink" href="../../2021/07/21/get-column-index-of-field-in-csv-file/">Get column index of field in CSV file</a></h2>
-<p>get-column-index-of-field-in-csv-file</p>
-<p>需求：取得有標頭的 CSV 檔中指定欄位的 index</p>
-<p>解法：使用 <code>sed</code> 將標頭的分隔符號 <code>,</code> 取代為換行符號，接著使用 <code>grep</code> 搜尋要查詢的欄位名稱並回傳行數</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># some.csv</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1"># a,b,c,d,e,f,g</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># 11,22,33,44,55,66,77</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># ...</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>sed<span class="w"> </span>-n<span class="w"> </span><span class="s1">$&#39;1s/,/\\\n/gp&#39;</span><span class="w"> </span>some.csv<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-nx<span class="w"> </span><span class="s1">&#39;e&#39;</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1">#output: 5:e</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>sed<span class="w"> </span>-n<span class="w"> </span><span class="s1">$&#39;1s/,/\\\n/gp&#39;</span><span class="w"> </span>some.csv<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-nx<span class="w"> </span><span class="s1">&#39;e&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-f<span class="w"> </span><span class="m">1</span><span class="w"> </span>-d<span class="w"> </span>:
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="c1">#output: 5</span>
-</code></pre></div>
-<p>sed 參數說明：</p>
-<ol>
-<li><code>-n</code>: 同 <code>--quiet</code> 與 <code>--silent</code>，只列出處理有處理過的那一行，sed 是預設印出所有內容</li>
-<li><code>$'...'</code>: <a href="https://www.gnu.org/software/bash/manual/html_node/ANSI_002dC-Quoting.html">ANSI-C Quoting</a>，能夠以 <code>\n</code> 或 <code>\t</code> 的方式表示換行或 Tab，單純的 quotes 只會被視為一般文字</li>
-<li><code>1s/,/\\\n/gp</code>: 以 <code>/</code> 分割為四段</li>
-<li><code>1s</code>: <code>1</code> 表示只處理第一行，<code>s</code> 表示進行取代</li>
-<li><code>,</code>: 要被取代的內容</li>
-<li><code>\\\n</code>: 要取代的內容，因為換行符號的 <code>\</code> 處理兩次跳脫，因此前面有額外的兩個 <code>\</code>，一次為 sed 的正規表達式的跳脫，另一次為 shell 的跳脫</li>
-<li><code>gp</code>: <code>g</code> 表示所有內容都要取代，<code>p</code> 表示把處理後的結果直接印出</li>
-</ol>
-<p>grep 參數說明：</p>
-<ol>
-<li><code>-n</code>: 同時回傳查詢到的行數</li>
-<li><code>-x</code>: 只回傳整行都符合查詢內容的文字</li>
-</ol>
-<p>或者也可以使用 <code>tr</code> 取代 <code>sed</code> 的取代功能</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># some.csv</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="c1"># a,b,c,d,e,f,g</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1"># 11,22,33,44,55,66,77</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># ...</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>head<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w"> </span>some.csv<span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s2">&quot;,&quot;</span><span class="w"> </span><span class="s2">&quot;\n&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-nx<span class="w"> </span>e
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1">#output: 5:e</span>
-</code></pre></div>
-<p>另外也可以再搭配 <code>cut</code> 直接取出該欄的整排資料</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># some.csv</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1"># a,b,c,d,e,f,g</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1"># 11,22,33,44,55,66,77</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># ...</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>cut<span class="w"> </span>-f<span class="w"> </span><span class="k">$(</span>sed<span class="w"> </span>-n<span class="w"> </span><span class="s1">$&#39;1s/,/\\\n/gp&#39;</span><span class="w"> </span>some.csv<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-nx<span class="w"> </span><span class="s1">&#39;e&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-f<span class="w"> </span><span class="m">1</span><span class="w"> </span>-d<span class="w"> </span>:<span class="k">)</span><span class="w"> </span>-d<span class="w"> </span>,<span class="w"> </span>some.csv
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1">#output:</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="c1"># e</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="c1"># 55</span>
-</code></pre></div>
-<p>Reference:</p>
-<ol>
-<li><a href="https://stackoverflow.com/a/39782016/13582118">How to get column index of field in unix shell</a></li>
-<li><a href="https://stackoverflow.com/a/11966402/13582118">How does the leading dollar sign affect single quotes in Bash?</a></li>
-<li><a href="https://unix.stackexchange.com/a/108797">Pass the output of previous command to next as an argument</a></li>
-<li><a href="https://unix.stackexchange.com/a/169210">Remove backslashes from a text file</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2021/07/21/get-column-index-of-field-in-csv-file/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-03-10 00:00:00">March 10, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-03-10 00:00:00">March 10, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              GitBook</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="gitbook-base-path"><a class="toclink" href="../../2021/03/10/gitbook-base-path/">GitBook Base Path</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="gitbook-base-path"><a class="toclink" href="../../2021/03/10/gitbook-base-path/">GitBook Base Path</a></h2>
-<p>需求：有多份 <a href="https://github.com/GitbookIO/gitbook-cli">GitBook</a> 需要掛載在同一個 web server 下，必須針對不同 GitBook 設定 base path</p>
-<p>解法：使用 <a href="https://github.com/noamyoungerm/gitbook-plugin-base">GitBook Plugin Base</a> 在 GitBook 的 <code>book.json</code> 設定 base 參數</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;pluginsConfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="nt">&quot;base&quot;</span><span class="p">:{</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">            </span><span class="nt">&quot;base&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/book-name/content&quot;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
-</code></pre></div>
-<p>這樣建構出來的 GitBook URL 都會以 <code>/book-name/conten/</code> 作為開頭</p>
-    <nav class="md-post__action">
-      <a href="../../2021/03/10/gitbook-base-path/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-02-08 00:00:00">February 8, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-02-08 00:00:00">February 8, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Node.js</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="install-node-sass-without-download-the-bindingnode-file-from-github"><a class="toclink" href="../../2021/02/08/install-node-sass-without-download-the-bindingnode-file-from-github/">Install node-sass without download the binding.node file from GitHub</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="install-node-sass-without-download-the-bindingnode-file-from-github"><a class="toclink" href="../../2021/02/08/install-node-sass-without-download-the-bindingnode-file-from-github/">Install node-sass without download the binding.node file from GitHub</a></h2>
-<p>問題：安裝 <a href="https://www.npmjs.com/package/node-sass">node-sass</a> 時，因為網路問題無法正常下載 GitHub 上的 binary，導致專案建置失敗</p>
-<p>解法：參考 <a href="https://github.com/sass/node-sass/issues/2133#issuecomment-477924161">https://github.com/sass/node-sass/issues/2133#issuecomment-477924161</a> 這則回覆中的方法，以自訂 Binary 網路位置的方式讓下載能正常執行</p>
-<ol>
-<li>手動下載要使用的 Binary 版本</li>
-<li>上傳至內部的 Nexus 的 Raw Repositories，URL 格式為 <code>https://nexus.intra/repository/nodejs/vx.x.x/</code></li>
-<li>
-<p>在 npm 中設定 node-sass 抓取 Binary 指向網站</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npm<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>sass-binary-site<span class="o">=</span>https://nexus.intra/repository/nodejs/<span class="w"> </span>--global
-</code></pre></div>
-</li>
-</ol>
-<p>在這個 issue 中有人對安裝 npm package 預設居然是下載 Binary 檔提出質疑，這在資安上其實有很大的漏洞，而且大多數公司在建置環境下都是無法連外，只從 private repository 上下載檢核過的 package。</p>
-<p>未來在安裝 package 也要多注意是否有這種下載 Binary 的情況，避免引入不必要的風險。</p>
-<p>Reference:</p>
-<ol>
-<li><a href="https://github.com/sass/node-sass/issues/2133">Is there a way to install node-sass without download the binding.node file from GitHub?</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2021/02/08/install-node-sass-without-download-the-bindingnode-file-from-github/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-01-21 00:00:00">January 21, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-01-21 00:00:00">January 21, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              jupyter notebook</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="arrow-keys-not-working-in-vim-in-jupyter-console"><a class="toclink" href="../../2021/01/21/arrow-keys-not-working-in-vim-in-jupyter-console/">Arrow keys not working in vim in Jupyter console</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="arrow-keys-not-working-in-vim-in-jupyter-console"><a class="toclink" href="../../2021/01/21/arrow-keys-not-working-in-vim-in-jupyter-console/">Arrow keys not working in vim in Jupyter console</a></h2>
-<p>問題：vim 在 jupyter notebook console 使用時方向鍵行為異常，無法正常移動</p>
-<p>解法：在 <code>~/.vimrc</code> 增加 <code>:set term=builtin_ansi</code></p>
-<p>在 Windows 的 Unix console <a href="https://cmder.net/">Cmder</a> 也有人遇到這個種問題，一樣可以用相同方式解決，但副作用為會影響 syntax highlighting。如果想要保持 syntax highlighting 可以參考<a href="https://github.com/microsoft/WSL/issues/1154#issuecomment-595951533">調整 key code mapping 的解法</a>。</p>
-<p>Reference:</p>
-<ol>
-<li><a href="https://github.com/jupyter/jupyter_console/issues/171">Arrow keys not working in vim in Jupyter console</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2021/01/21/arrow-keys-not-working-in-vim-in-jupyter-console/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-12-02 00:00:00">December 2, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-12-02 00:00:00">December 2, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              OpenAPI</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="disable-try-it-out-in-swagger-ui"><a class="toclink" href="../../2020/12/02/disable-try-it-out-in-swagger-ui/">Disable 'Try it out' in Swagger UI</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="disable-try-it-out-in-swagger-ui"><a class="toclink" href="../../2020/12/02/disable-try-it-out-in-swagger-ui/">Disable 'Try it out' in Swagger UI</a></h2>
-<p><a href="https://github.com/swagger-api/swagger-ui">Swagger UI</a> 能生成一個完整的網頁呈現 OpenAPI 文件，且同時可以在頁面上直接發送 Request 進行測試。但在一些情況下會不希望使用者直接發送，例如文件只是供瀏覽，或後台尚未完成等等，這時候就會希望可以停用 Try it out 的功能。</p>
-<p>在比較舊的版本可以透過 plugin 的方式停用 Try it out</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">SwaggerUIBundle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;swagger-ui-dist&#39;</span><span class="p">).</span><span class="nx">SwaggerUIBundle</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">DisableTryItOutPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nx">statePlugins</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">      </span><span class="nx">spec</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="nx">wrapSelectors</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">          </span><span class="nx">allowTryItOutFor</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="kc">false</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="p">}</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="kd">const</span><span class="w"> </span><span class="nx">ui</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">SwaggerUIBundle</span><span class="p">({</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://petstore.swagger.io/v2/swagger.json&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="nx">dom_id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#swagger-ui&#39;</span><span class="p">,</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span><span class="nx">presets</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="nx">SwaggerUIBundle</span><span class="p">.</span><span class="nx">presets</span><span class="p">.</span><span class="nx">apis</span><span class="p">,</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">        </span><span class="nx">SwaggerUIBundle</span><span class="p">.</span><span class="nx">SwaggerUIStandalonePreset</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">    </span><span class="p">],</span>
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">    </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">        </span><span class="nx">DisableTryItOutPlugin</span><span class="w"> </span><span class="c1">// &lt;== 停用的 plugin</span>
-<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">    </span><span class="p">],</span>
-<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span><span class="nx">layout</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;StandaloneLayout&quot;</span>
-<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="p">})</span>
-</code></pre></div>
-<p>比較新的版本則有 <a href="https://github.com/swagger-api/swagger-ui/blob/master/docs/usage/configuration.md#user-content-supportedsubmitmethods">supportedSubmitMethods</a> 這個參數可以使用，參數值為正向表列可以要啟用 Try it out 的 HTTP method，為空時表示全部停用。</p>
-<p>使用 Docker 的環境變數設定，以 docker-compose 為範例</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.8&quot;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">swagger-ui</span><span class="p">:</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swaggerapi/swagger-ui</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80:8080</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SUPPORTED_SUBMIT_METHODS=[]</span>
-</code></pre></div>
-<p>Javascript 的話則是</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">SwaggerUIBundle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;swagger-ui-dist&#39;</span><span class="p">).</span><span class="nx">SwaggerUIBundle</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">ui</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">SwaggerUIBundle</span><span class="p">({</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://petstore.swagger.io/v2/swagger.json&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="nx">dom_id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#swagger-ui&#39;</span><span class="p">,</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="nx">presets</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">        </span><span class="nx">SwaggerUIBundle</span><span class="p">.</span><span class="nx">presets</span><span class="p">.</span><span class="nx">apis</span><span class="p">,</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="nx">SwaggerUIBundle</span><span class="p">.</span><span class="nx">SwaggerUIStandalonePreset</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="p">],</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="nx">supportedSubmitMethods</span><span class="o">:</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="c1">// &lt;== 停用所有 HTTP method 的 Try it out</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="nx">layout</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;StandaloneLayout&quot;</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="p">})</span>
-</code></pre></div>
-<p>Reference:</p>
-<ol>
-<li><a href="https://github.com/swagger-api/swagger-ui/issues/3725">How to disable 'Try it out' in Swagger UI 3.x</a></li>
-<li><a href="https://swagger.io/docs/open-source-tools/swagger-ui/usage/installation/">Swagger UI Usage</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/12/02/disable-try-it-out-in-swagger-ui/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-11-25 00:00:00">November 25, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-11-25 00:00:00">November 25, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Python, GIS</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="twd97tm2-to-wgs84"><a class="toclink" href="../../2020/11/25/twd97tm2-to-wgs84/">TWD97TM2 to WGS84</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="twd97tm2-to-wgs84"><a class="toclink" href="../../2020/11/25/twd97tm2-to-wgs84/">TWD97TM2 to WGS84</a></h2>
-<p><a href="https://github.com/snexuz/TWD97TM2toWGS84">TWD97TM2toWGS84</a> 提供了 TWD97 二度分帶座標轉 WGS 經緯度的 R 程式碼，但因為有許多資料清洗流程使用 Python，所以簡單轉換為 Python 程式碼。</p>
-<p><a href="https://gist.github.com/Blueswen/4d80e43822967bb3fb0ed28434dc0584">gits: twd_to_wgs.py</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">math</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">def</span> <span class="nf">twd_to_wgs</span><span class="p">(</span><span class="n">coord_x</span><span class="p">,</span> <span class="n">coord_y</span><span class="p">):</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="c1"># coord_x: TWD97橫座標, 南北緯度, latitude N</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="c1"># coord_y: TWD97縱座標, 東西經度, longitude E</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">a</span> <span class="o">=</span> <span class="mf">6378137.0</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">b</span> <span class="o">=</span> <span class="mf">6356752.314245</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="n">lon0</span> <span class="o">=</span> <span class="mi">121</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="n">k0</span> <span class="o">=</span> <span class="mf">0.9999</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="n">dx</span> <span class="o">=</span> <span class="mi">250000</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="n">dy</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="n">e</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">b</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">a</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">coord_x</span> <span class="o">-</span> <span class="n">dx</span>  <span class="c1"># input_lat: TWD97橫座標, 緯度, latitude</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="n">y</span> <span class="o">=</span> <span class="n">coord_y</span> <span class="o">-</span> <span class="n">dy</span>  <span class="c1"># input_lon: TWD97縱座標, 經度, longitude</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    <span class="n">M</span> <span class="o">=</span> <span class="n">y</span> <span class="o">/</span> <span class="n">k0</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="n">mu</span> <span class="o">=</span> <span class="n">M</span> <span class="o">/</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="p">(</span><span class="n">e</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mf">4.0</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="n">e</span> <span class="o">**</span> <span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="mf">64.0</span> <span class="o">-</span> <span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="n">e</span> <span class="o">**</span> <span class="mi">6</span><span class="p">)</span> <span class="o">/</span> <span class="mf">256.0</span><span class="p">))</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="n">e1</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="p">((</span><span class="mf">1.0</span> <span class="o">-</span> <span class="p">(</span><span class="n">e</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="p">((</span><span class="mf">1.0</span> <span class="o">-</span> <span class="p">(</span><span class="n">e</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">))</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    <span class="n">J1</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">e1</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">27</span> <span class="o">*</span> <span class="p">(</span><span class="n">e1</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mf">32.0</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>    <span class="n">J2</span> <span class="o">=</span> <span class="mi">21</span> <span class="o">*</span> <span class="p">(</span><span class="n">e1</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">16</span> <span class="o">-</span> <span class="mi">55</span> <span class="o">*</span> <span class="p">(</span><span class="n">e1</span> <span class="o">**</span> <span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="mf">32.0</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>    <span class="n">J3</span> <span class="o">=</span> <span class="mi">151</span> <span class="o">*</span> <span class="p">(</span><span class="n">e1</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mf">96.0</span>
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>    <span class="n">J4</span> <span class="o">=</span> <span class="mi">1097</span> <span class="o">*</span> <span class="p">(</span><span class="n">e1</span> <span class="o">**</span> <span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="mf">512.0</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>    <span class="n">fp</span> <span class="o">=</span> <span class="p">(</span> <span class="n">mu</span> <span class="o">+</span> <span class="n">J1</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">mu</span><span class="p">)</span> <span class="o">+</span> <span class="n">J2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">mu</span><span class="p">)</span> <span class="o">+</span> <span class="n">J3</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">6</span> <span class="o">*</span> <span class="n">mu</span><span class="p">)</span> <span class="o">+</span> <span class="n">J4</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="n">mu</span><span class="p">)</span> <span class="p">)</span>
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>
-<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>    <span class="n">e2</span> <span class="o">=</span> <span class="p">(</span><span class="n">e</span> <span class="o">*</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
-<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>    <span class="n">C1</span> <span class="o">=</span> <span class="n">e2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
-<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>    <span class="n">T1</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
-<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>    <span class="n">R1</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">e</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">/</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">e</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">**</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">))</span>
-<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>    <span class="n">N1</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">e</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">)</span>
-<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>
-<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>    <span class="n">D</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="p">(</span><span class="n">N1</span> <span class="o">*</span> <span class="n">k0</span><span class="p">)</span>
-<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>
-<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>    <span class="c1"># 緯度計算 latitude</span>
-<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>    <span class="n">Q1</span> <span class="o">=</span> <span class="n">N1</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span> <span class="o">/</span> <span class="n">R1</span>
-<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>    <span class="n">Q2</span> <span class="o">=</span> <span class="p">(</span><span class="n">D</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span>
-<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>    <span class="n">Q3</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">T1</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">C1</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="p">(</span><span class="n">C1</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">9</span> <span class="o">*</span> <span class="n">e2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">D</span> <span class="o">**</span> <span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="mf">24.0</span>
-<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>    <span class="n">Q4</span> <span class="o">=</span> <span class="p">(</span> <span class="p">(</span><span class="mi">61</span> <span class="o">+</span> <span class="mi">90</span> <span class="o">*</span> <span class="n">T1</span> <span class="o">+</span> <span class="mi">298</span> <span class="o">*</span> <span class="n">C1</span> <span class="o">+</span> <span class="mi">45</span> <span class="o">*</span> <span class="p">(</span><span class="n">T1</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="n">C1</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">252</span> <span class="o">*</span> <span class="n">e2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">D</span> <span class="o">**</span> <span class="mi">6</span><span class="p">)</span> <span class="o">/</span> <span class="mf">720.0</span> <span class="p">)</span>
-<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>    <span class="n">lat</span> <span class="o">=</span> <span class="n">fp</span> <span class="o">-</span> <span class="n">Q1</span> <span class="o">*</span> <span class="p">(</span><span class="n">Q2</span> <span class="o">-</span> <span class="n">Q3</span> <span class="o">+</span> <span class="n">Q4</span><span class="p">)</span>
-<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>
-<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>    <span class="c1"># 經度計算 longitude</span>
-<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>    <span class="n">Q5</span> <span class="o">=</span> <span class="n">D</span>
-<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>    <span class="n">Q6</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">T1</span> <span class="o">+</span> <span class="n">C1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">D</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">6</span>
-<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>    <span class="n">Q7</span> <span class="o">=</span> <span class="p">(</span> <span class="p">(</span><span class="mi">5</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">C1</span> <span class="o">+</span> <span class="mi">28</span> <span class="o">*</span> <span class="n">T1</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="n">C1</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">e2</span> <span class="o">+</span> <span class="mi">24</span> <span class="o">*</span> <span class="p">(</span><span class="n">T1</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="n">D</span> <span class="o">**</span> <span class="mi">5</span><span class="p">)</span> <span class="o">/</span> <span class="mf">120.0</span> <span class="p">)</span>
-<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>    <span class="n">lon</span> <span class="o">=</span> <span class="n">lon0</span> <span class="o">+</span> <span class="p">(</span><span class="n">Q5</span> <span class="o">-</span> <span class="n">Q6</span> <span class="o">+</span> <span class="n">Q7</span><span class="p">)</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
-<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>
-<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>    <span class="n">lat</span> <span class="o">=</span> <span class="p">(</span><span class="n">lat</span> <span class="o">*</span> <span class="mi">180</span><span class="p">)</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>  <span class="c1"># 南北緯度  latitude</span>
-<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>    <span class="n">lon</span> <span class="o">=</span> <span class="p">(</span><span class="n">lon</span> <span class="o">*</span> <span class="mi">180</span><span class="p">)</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>  <span class="c1"># 東西經度  longitude</span>
-<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>
-<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>    <span class="k">return</span> <span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>
-</code></pre></div>
-<p>Reference:</p>
-<ol>
-<li><a href="https://github.com/snexuz/TWD97TM2toWGS84">TWD97TM2toWGS84</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/11/25/twd97tm2-to-wgs84/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
       
         
@@ -1893,7 +1510,7 @@ Transform 設定</p>
     <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.a5ca32a6.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6981e6db.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

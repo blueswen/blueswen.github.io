@@ -8,28 +8,26 @@
       
       
       
-        <link rel="canonical" href="https://blueswen.github.io/blog/2020/05/05/openapi-swagger-resource-list-for-api-developers/">
+        <link rel="canonical" href="https://blueswen.github.io/blog/2023/10/22/grafana-stat-panel-%E5%90%8C%E6%99%82%E9%A1%AF%E7%A4%BA%E6%9C%80%E6%96%B0%E7%9A%84%E5%80%BC%E8%88%87-sparkline/">
       
       
-        <link rel="prev" href="../../04/longest-word-in-dictionary/">
+        <link rel="prev" href="../../../../2022/03/02/connect-docker-host-from-inside-a-docker-container/">
       
-      
-        <link rel="next" href="../../07/serving-traefiks-internal-dashboard-behind-traefik-itself/">
       
       
         
       
       
       <link rel="icon" href="../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8+insiders-4.43.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.12+insiders-4.45.0">
     
     
       
-        <title>OpenAPI / Swagger Resource List for API Developers - Blueswen</title>
+        <title>Grafana Stat Panel 同時顯示最新的值與 Sparkline - Blueswen</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.382dd0b9.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.0ab26e37.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -71,15 +69,15 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="OpenAPI / Swagger Resource List for API Developers - Blueswen" />
-<meta property="og:image" content="https://blueswen.github.io/assets/images/social/blog/2020/05/05/openapi-swagger-resource-list-for-api-developers.png" />
+<meta property="og:title" content="Grafana Stat Panel 同時顯示最新的值與 Sparkline - Blueswen" />
+<meta property="og:image" content="https://blueswen.github.io/assets/images/social/blog/2023/10/22/grafana-stat-panel-%E5%90%8C%E6%99%82%E9%A1%AF%E7%A4%BA%E6%9C%80%E6%96%B0%E7%9A%84%E5%80%BC%E8%88%87-sparkline.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://blueswen.github.io/blog/2020/05/05/openapi-swagger-resource-list-for-api-developers/" />
+<meta property="og:url" content="https://blueswen.github.io/blog/2023/10/22/grafana-stat-panel-%E5%90%8C%E6%99%82%E9%A1%AF%E7%A4%BA%E6%9C%80%E6%96%B0%E7%9A%84%E5%80%BC%E8%88%87-sparkline/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="OpenAPI / Swagger Resource List for API Developers - Blueswen" />
-<meta property="twitter:image" content="https://blueswen.github.io/assets/images/social/blog/2020/05/05/openapi-swagger-resource-list-for-api-developers.png" />
+<meta property="twitter:title" content="Grafana Stat Panel 同時顯示最新的值與 Sparkline - Blueswen" />
+<meta property="twitter:image" content="https://blueswen.github.io/assets/images/social/blog/2023/10/22/grafana-stat-panel-%E5%90%8C%E6%99%82%E9%A1%AF%E7%A4%BA%E6%9C%80%E6%96%B0%E7%9A%84%E5%80%BC%E8%88%87-sparkline.png" />
  <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
@@ -108,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#openapi-swagger-resource-list-for-api-developers" class="md-skip">
+        <a href="#grafana-stat-panel-sparkline" class="md-skip">
           Skip to content
         </a>
       
@@ -142,7 +140,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OpenAPI / Swagger Resource List for API Developers
+              Grafana Stat Panel 同時顯示最新的值與 Sparkline
             
           </span>
         </div>
@@ -702,13 +700,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/tip/" class="md-nav__link">
+      <a href="../../../../category/algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Tip
+    Algorithm
   
 
     
@@ -754,13 +752,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/algorithm/" class="md-nav__link">
+      <a href="../../../../category/share/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Algorithm
+    Share
   
 
     
@@ -780,13 +778,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/share/" class="md-nav__link">
+      <a href="../../../../category/tip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Share
+    Tip
   
 
     
@@ -862,6 +860,75 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        需求
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        問題分析
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        解法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="解法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        說明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多筆資料應用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -897,7 +964,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2020-05-05 00:00:00" class="md-ellipsis">May 5, 2020</time>
+                        <time datetime="2023-10-22 00:00:00" class="md-ellipsis">October 22, 2023</time>
                       </div>
                     </li>
                     
@@ -908,7 +975,7 @@
                           <span class="md-ellipsis">
                             in
                             
-                              <a href="../../../../category/review/">Review</a></span>
+                              <a href="../../../../category/tip/">Tip</a></span>
                         </div>
                       </li>
                     
@@ -934,41 +1001,92 @@
     
     
     
-      <a href="../../../../../tags/#api" class="md-tag">API</a>
+      <a href="../../../../../tags/#grafana" class="md-tag">Grafana</a>
     
   
     
     
     
-      <a href="../../../../../tags/#openapi" class="md-tag">OpenAPI</a>
+      <a href="../../../../../tags/#prometheus" class="md-tag">Prometheus</a>
     
   
 </nav>
 
 
 
-<h1 id="openapi-swagger-resource-list-for-api-developers">OpenAPI / Swagger Resource List for API Developers</h1>
-<p><a href="https://blog.runscope.com/posts/openapi-swagger-resource-list-for-api-developers">OpenAPI / Swagger Resource List for API Developers</a></p>
-<p>本文發表於 2017 中，簡單說明了使用 OpenAPI 的好處，並依主題整理 OpenAPI 相關的文章與工具。</p>
-<p>使用 OpenAPI 帶來的三個好處：</p>
+<h1 id="grafana-stat-panel-sparkline">Grafana Stat Panel 同時顯示最新的值與 Sparkline</h1>
+<h2 id="_1">需求</h2>
+<p>在 Grafana 的 <a href="https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/stat/">Stat Panel</a> 同時顯示最新的值與 Sparkline（迷你圖表）。</p>
+<h2 id="_2">問題分析</h2>
+<p>Stat Panel 支援 Instant Query 與 Range Query：</p>
 <ol>
-<li>Generating interactive documentation - 可互動的 API 文件讓人更快理解如何使用</li>
-<li>Human readable and machine readable - 人機可讀及語言無關，讓任何語言的工具都可以操作它</li>
-<li>Creating SDK for multiple languages - <a href="https://github.com/swagger-api/swagger-codegen">Swagger Codegen</a> 與 <a href="https://github.com/OpenAPITools/openapi-generator">OpenAPI Codegen</a> 可以產生多種語言與框架的 server side、client side 程式碼</li>
+<li>Instant Query：Query Type <code>Instant</code>，只查詢最新的值，該值會顯示在 Panel 上</li>
+<li>Range Query：Query Type <code>Range</code>，查詢一段時間內的值，最後一個值會顯示在 Panel 上，所有質會以 Sparkline 的方式顯示在 Panel 上</li>
 </ol>
-<p>文內包括的議題：</p>
-<ul>
-<li>Writing Spec / Design</li>
-<li>Documentation</li>
-<li>Generators</li>
-<li>Servers</li>
-<li>Clients</li>
-<li>Testing &amp; Monitoring</li>
-<li>Gateways / Management</li>
-<li>Public Specifications</li>
-<li>Other Resources</li>
-</ul>
-<p>部分連結可能因為時間關係已經失效，但透過這幾個議題來定位 OpenAPI 的功能也是一個不錯的介紹方法。</p>
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/instant-query.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Instant Query 畫面" src="../../../imgs/2023-10-22-grafana-stat-panel/instant-query.png" /></a><br />
+Instant Query 畫面</p>
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/range-query.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Range Query 畫面" src="../../../imgs/2023-10-22-grafana-stat-panel/range-query.png" /></a><br />
+Range Query 畫面</p>
+<p>但單純使用 Range Query 時會發現，有時候改變時間區間時，顯示在 Panel 上想像中代表最新的值會變大或變小，導致使用者會對於數值的正確性產生疑慮。</p>
+<p>這是因為在 Grafana 使用 Range Query 時，實際的查詢時間區間會為了配合查詢 Prometheus 時要使用的 <a href="https://prometheus.io/docs/prometheus/latest/querying/api/#range-queries">Step 參數</a>而被<a href="https://github.com/grafana/grafana/blob/v10.1.5/pkg/tsdb/prometheus/models/query.go#L147">調整</a>，查詢使用的開始與結束時間都會變得比 Grafana 畫面設定的時間區間還要早。若調整後的結束時間與畫面設定的結束時間中間剛好有資料點時，就會發生 Range Query 的結果不是該 Series 最新的值，而是調整後的結束時間點往前找到的值，如下圖所示：</p>
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/query-offset.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Query Offset" src="../../../imgs/2023-10-22-grafana-stat-panel/query-offset.png" /></a><br />
+藍色的最後一個資料點，因為查詢時間位移的關係而不會被該次查詢查到</p>
+<p>更詳細的 Step 參數與 Grafana 設定方式將於另一篇文章中說明。</p>
+<p>雖然可以使用 Both Type 進行查詢，同時顯示 Instant Query 與 Range Query 的結果，但 Panel 會顯示兩個值，容易造成使用者混淆。</p>
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/both-query.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Both Query 畫面" src="../../../imgs/2023-10-22-grafana-stat-panel/both-query.png" /></a><br />
+Both Query 畫面</p>
+<p>圖中也可以看到，右側 Instant Query 的值與左側 Range Query 的值不同，這在查詢區間範圍較大時會更明顯。</p>
+<h2 id="_3">解法</h2>
+<p>使用 <code>Both</code> Type，並將兩個 Series 合併，讓 Instant Query 的值最為最後一個值，同時有 Range Query 的資料供繪製 Sparkline。</p>
+<ol>
+<li>
+<p>使用 <code>Both</code> Type 查詢</p>
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/single-query-type.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Query Type" src="../../../imgs/2023-10-22-grafana-stat-panel/single-query-type.png" /></a><br />
+Query Type 設定</p>
+</li>
+<li>
+<p>使用 <code>Series to rows</code> 與 <code>Sort by</code> 兩個 Transform</p>
+<ol>
+<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#series-to-rows">Series to rows</a>：將 Instant Query 與 Range Query 的資料合併</li>
+<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#sort-by">Sort by</a>：將合併後的資料依照 <code>Time</code> 欄位排序，確保最後一筆資料為最新的資料</li>
+</ol>
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/single-transform.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../../../imgs/2023-10-22-grafana-stat-panel/single-transform.png" /></a><br />
+Transform 設定</p>
+</li>
+</ol>
+<h3 id="_4">說明</h3>
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/explanation-01.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Range Series" src="../../../imgs/2023-10-22-grafana-stat-panel/explanation-01.png" /></a><br />
+先關閉 Transform，並切換為 Table 檢視，可以看到兩個 Series，第一個是 Range Query 的資料。</p>
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/explanation-02.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Instant Series" src="../../../imgs/2023-10-22-grafana-stat-panel/explanation-02.png" /></a><br />
+第二個是 Instant Query 的資料。</p>
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/explanation-03.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Merged Series" src="../../../imgs/2023-10-22-grafana-stat-panel/explanation-03.png" /></a><br />
+啟用 <code>Series to rows</code> transform，兩個 Series 會合併成一個 Series，但預設的排序是依照時間欄位降冪排序，導致最後一筆資料不是最新的資料，而 Stat Panel 預設會顯示最後一筆資料。</p>
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/explanation-04.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Sorted Series" src="../../../imgs/2023-10-22-grafana-stat-panel/explanation-04.png" /></a><br />
+啟用 <code>Sort by</code> transform，並以 <code>Time</code> 欄位排序，確保最後一筆資料為最新的資料。</p>
+<h3 id="_5">多筆資料應用</h3>
+<p>如果想要在同一個 Stat Panel 上顯示多筆資料但達到一樣的效果，則要使用多額外使用 <code>Partition by values</code> transform 以 <code>Metrics</code> 欄位分割資料。</p>
+<ol>
+<li>
+<p>使用 <code>Both</code> Type 查詢</p>
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/multi-query-type.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Query Type" src="../../../imgs/2023-10-22-grafana-stat-panel/multi-query-type.png" /></a><br />
+Query Type 設定</p>
+</li>
+<li>
+<p>使用 <code>Series to rows</code>、<code>Sort by</code>、<code>Partition by values</code> 三個 Transform</p>
+<ol>
+<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#series-to-rows">Series to rows</a>：將 Instant Query 與 Range Query 的資料合併</li>
+<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#sort-by">Sort by</a>：將合併後的資料依照 <code>Time</code> 欄位排序，確保最後一筆資料為最新的資料</li>
+<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#partition-by-values">Partition by values</a>：將全部被合併的資料再以 <code>Metrics</code> 欄位分割成多筆 Series</li>
+</ol>
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/multi-transform.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../../../imgs/2023-10-22-grafana-stat-panel/multi-transform.png" /></a><br />
+Transform 設定</p>
+</li>
+</ol>
+<p>參考資料：</p>
+<ol>
+<li><a href="https://grafana.com/blog/2023/10/18/how-to-easily-retrieve-values-from-a-range-in-grafana-using-a-stat-panel/">How to easily retrieve values from a range in Grafana using a stat panel</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/1382875">详解Prometheus range query中的step参数</a></li>
+</ol>
 
 
 
@@ -1001,7 +1119,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 5, 2020</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 22, 2023</span>
   </span>
 
     
@@ -1108,7 +1226,7 @@
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.a5ca32a6.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.6981e6db.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

@@ -11,17 +11,17 @@
         <link rel="canonical" href="https://blueswen.github.io/blog/category/review/">
       
       
-        <link rel="prev" href="../tip/">
+        <link rel="prev" href="../algorithm/">
       
       
-        <link rel="next" href="../algorithm/">
+        <link rel="next" href="../share/">
       
       
         
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8+insiders-4.43.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.12+insiders-4.45.0">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.382dd0b9.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0ab26e37.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -702,13 +702,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../tip/" class="md-nav__link">
+      <a href="../algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Tip
+    Algorithm
   
 
     
@@ -910,13 +910,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../algorithm/" class="md-nav__link">
+      <a href="../share/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Algorithm
+    Share
   
 
     
@@ -936,13 +936,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../share/" class="md-nav__link">
+      <a href="../tip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Share
+    Tip
   
 
     
@@ -1148,657 +1148,314 @@
       </header>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-08-05 00:00:00">August 5, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-08-05 00:00:00">August 5, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Review</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Testing</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="we-need-to-talk-about-testing"><a class="toclink" href="../../2021/08/05/we-need-to-talk-about-testing/">We need to talk about testing</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="we-need-to-talk-about-testing"><a class="toclink" href="../../2021/08/05/we-need-to-talk-about-testing/">We need to talk about testing</a></h2>
-<p><a href="https://dannorth.net/2021/07/26/we-need-to-talk-about-testing/">We need to talk about testing</a></p>
-<h4 id="the-purpose-of-testing"><a class="toclink" href="../../2021/08/05/we-need-to-talk-about-testing/#the-purpose-of-testing">The purpose of testing</a></h4>
-<p>每次異動程式碼，都有可能破壞以下這些特性，導致壞事發生</p>
-<ol>
-<li>Functional correctness: It doesn’t produce the results we expect.</li>
-<li>Reliability: It mostly shows correct answers but sometimes it doesn’t.</li>
-<li>Usability: Sure it works but it is inconsistent and frustrating to use.</li>
-<li>Accessibility: Like usability, but exclusionary and probably illegal.</li>
-<li>Predictability: It has random spikes in resources such as memory, I/O, or CPU usage, or occasionally hangs for a noticeable amount of time.</li>
-<li>Security: It works as designed but it exposes security vulnerabilities.</li>
-<li>Compliance: It works but it doesn’t handle personal information correctly, say.</li>
-<li>Observability: It mostly works, but when it doesn’t it is hard to identify why.</li>
-</ol>
-<p>組織中有一群人關心著以上這些特性，這些人即為 stakeholders。他們代表了這個產品在不同面向上所呈現的風險與品質。</p>
-<p>The purpose of testing is to <strong><em>increase confidence</em></strong> for <strong><em>stakeholders</em></strong> through <strong><em>evidence</em></strong>.</p>
-<p>測試的目的是透過 <strong>證據</strong> 提高 <strong>利益相關人</strong> 對產品的 <strong>信心</strong></p>
-<ol>
-<li>Stakeholders: 不只是直接與產品直接相關的開發者、使用者，任何間接相關的人都算是 Stakeholder，例如維運人員、合規人員、稽核人員等任何關心上面提到的特性的人</li>
-<li>Increasing confidence: 了解 Stakeholder 關心哪些事，讓他們晚上能夠睡得更好</li>
-<li>Evidence: 透過資訊或數據證明，而不是要 Stakeholder 依賴你的承諾、保證或是名聲</li>
-</ol>
-<p>Three “superpowers” that associate with a testing mindset</p>
-<ol>
-<li>Empathy: 同理心，從 Stakeholder 的角度看問題，理解他們在意的事情，了解他們為什麼會有那些疑慮</li>
-<li>Scepticism: 懷疑論，對任何事情都保持懷疑的態度，提出假設、設計實驗、試圖證偽，積極地提出預測並證實，而不只是透過歸納法解釋過去的觀測結果</li>
-<li>Ingenuity: 匠心，把 Stakeholder 在意的事情做到最好的決心與能力</li>
-</ol>
-<h4 id="test-driven-development-a-sidebar"><a class="toclink" href="../../2021/08/05/we-need-to-talk-about-testing/#test-driven-development-a-sidebar">Test-Driven Development - a sidebar</a></h4>
-<p>TDD, BDD(behaviour-driven development), ATDD(acceptance test–driven development) 不是用來取代 Testing，而是被設計來作為一種開發技巧。</p>
-<h4 id="is-test-coverage-a-useful-metric"><a class="toclink" href="../../2021/08/05/we-need-to-talk-about-testing/#is-test-coverage-a-useful-metric">Is test coverage a useful metric?</a></h4>
-<p>程式碼覆蓋度(test coverage or code coverage)是否有用端看 Stakeholders 關注的是什麼，若他關注的是安全性，程式碼覆蓋度無法提供任何資訊。程式碼覆蓋度只能確保這份 Code 有自動化測試，並符合定義的測試案例，無法保證任何案例都可以得到預期結果。</p>
-<h4 id="what-does-it-mean-to-shift-testing-left"><a class="toclink" href="../../2021/08/05/we-need-to-talk-about-testing/#what-does-it-mean-to-shift-testing-left">What does it mean to “shift testing left”?</a></h4>
-<p>不單純只是盡早執行各種測試，而是要儘早把 Stakeholders 關注的東西納入考量中，例如開發時就思考合規、安全性等議題。</p>
-<hr />
-<p><a href="https://www.facebook.com/yftzeng.tw">Ant 大</a>在 <a href="https://www.facebook.com/yftzeng.tw/posts/10216065373106529">FB</a> 分享了這篇文章，<a href="https://www.facebook.com/hatelove">九一大</a>在貼文下也針對文中說明提到 TDD, BDD, ATDD 不該取代 Testing 分享了他的看法</p>
-<blockquote>
-<p>針對2的部分，想用 TDD/BDD/ATDD 來做測試（達到測試目的）的人，是不是本身就該先了解一下這些名詞的「全名」。</p>
-<p>他們都是 development 的方法，他們也都不是用來取代測試。</p>
-<p>所以 yes, 如果拿這些來取代測試，是錯的。</p>
-<p>拿這些來做需求分析、情境分析、驗證「已知的東西」是否符合預期，都很合適。</p>
-<p>用來驗證那些你不知道的東西，就不是自動化能做的。</p>
-<p>這也是為什麼有一派的測試，指出自動化測試的部分不應該叫 testing, 而是 validation 或 check。</p>
-<p>真正的測試更偏向探索測試類型的。</p>
-<p>-Joey Chen</p>
-</blockquote>
-    <nav class="md-post__action">
-      <a href="../../2021/08/05/we-need-to-talk-about-testing/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-07-20 00:00:00">July 20, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-07-20 00:00:00">July 20, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Review</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Docker, Container</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="10-things-to-avoid-in-docker-containers"><a class="toclink" href="../../2021/07/20/10-things-to-avoid-in-docker-containers/">10 things to avoid in docker containers</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="10-things-to-avoid-in-docker-containers"><a class="toclink" href="../../2021/07/20/10-things-to-avoid-in-docker-containers/">10 things to avoid in docker containers</a></h2>
-<p><a href="https://developers.redhat.com/blog/2016/02/24/10-things-to-avoid-in-docker-containers">10 things to avoid in docker containers</a></p>
-<p>原文寫於 2016 年，距今約 5 年前，提出了 10 個使用 Docker Container 時應該避免的行為</p>
-<ol>
-<li>Don't store data in containers<br />
-   不要在 Container 中儲存需要永久保留的資料，應使用 Volume。</li>
-<li>Don't ship your application in two pieces<br />
-   有些人會把 Container 完全視為 Virtual Machine，所以試圖把 application 部署至運行中的 Container。但正確的做法為把 application 與可運行環境的 base image 打包成一個新的 image。</li>
-<li>Don't create large images<br />
-   過肥的 image 會影響部署速度。</li>
-<li>Don't use a single layer image<br />
-   避免做出只有一層 layer 的 image，可以 OS 一層、User 設定一層、各種 package 安裝一層、config 一層，最後 application 自己一層。透過這樣的分層未更動的 layer 在建置的時候能夠使用 cache，可以加快建置的速度，因為在一般情況下都是 application 變動。</li>
-<li>Don't create images from running containers<br />
-   不要使用 Docker commit 的方式將運行中的 Container 匯出成 image，應使用 Dockerfile 建置。</li>
-<li>Don't use only the "latest" tag<br />
-   latest 不具有任何識別性，應加上其他 tag 供識別，如版本號、commit id、時間戳記等。</li>
-<li>Don't run more than one process in a single container<br />
-   Container 中只運行一個 process，同時運行多個 process 無法有效透過 Docker 管理 Container 中 process 的狀態。</li>
-<li>Don't store credentials in the image. Use environment variables<br />
-   不要把機敏資訊儲存於 Image 中，如 DB 帳密、各種 SaaS 的 api key，可以透過環境變數的方式放入。</li>
-<li>Don't run processes as a root user<br />
-   Process 不要使用 root user，如果執行的服務有安全漏洞可能會讓駭客更加容易取得 Container 的 root 權限。</li>
-<li>Don't rely on IP addresses<br />
-    不要依賴 Container 的 IP，Container 在重新啟動後會被重新分配 IP。</li>
-</ol>
-<p>雖然已經是很舊的文章了，不過還是有其參考價值。有一些內容在現在已經可以算是基本常識了，如不要在 Container 中儲存資料，不要把服務部署到 Container 中。也有一些則繼續延伸，如不要只使用 latest tag，現在大多提倡直接棄用 latest tag，每個 image 都要賦予可辨識的 tag，避免在部署時意外將 latest 部署出去。</p>
-<p>下面也有網友針對 credentials 提出不同的看法，隨著技術的推展社群也提出其他更好的方式設定 credentials，例如使用 Volume 的方式掛入寫有 credentials 的檔案，可以避免環境變數被意外寫出至 Log 或是被入侵時輕易地找出。而到了 K8s 風行的時代又更針對 credentials 提出更多處理方式，如使用 Secrets 或是使用 <a href="https://www.vaultproject.io/">Vault</a> 這類工具進行管理等。</p>
-    <nav class="md-post__action">
-      <a href="../../2021/07/20/10-things-to-avoid-in-docker-containers/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-03-09 00:00:00">March 9, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-03-09 00:00:00">March 9, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Review</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Python, API, K8s</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="implementing-request-based-autoscaling-for-machine-learning-workloads"><a class="toclink" href="../../2021/03/09/implementing-request-based-autoscaling-for-machine-learning-workloads/">Implementing request-based autoscaling for machine learning workloads</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="implementing-request-based-autoscaling-for-machine-learning-workloads"><a class="toclink" href="../../2021/03/09/implementing-request-based-autoscaling-for-machine-learning-workloads/">Implementing request-based autoscaling for machine learning workloads</a></h2>
-<p><a href="https://towardsdatascience.com/implementing-request-based-autoscaling-for-machine-learning-workloads-feb41572956">Implementing request-based autoscaling for machine learning workloads</a></p>
-<p><a href="https://github.com/cortexlabs/cortex">Cortex</a> 是一個提供 ML 服務的 Infra，支援多種不同框架 TensorFlow、PyTorch、scikit-learn 等，並提供 autoscaling、rolling updates、log 管理等。本篇是 Cortex 團隊之所以要從 Flask 轉換成 FastAPI 的始末（<a href="https://towardsdatascience.com/why-we-switched-from-flask-to-fastapi-for-production-machine-learning-765aab9b3679">Why we switched from Flask to FastAPI for production machine learning</a> ），說明他們在重新設計 autoscaling strategy 的思路。</p>
-<p>ML inference 的一些特性讓 instance 的 scaling 相較一般服務有不同的挑戰性：</p>
-<ol>
-<li>Model can be huge: ML 的模型有時候可能會很大，例如超過 5 GB，所以會需要更大的 instance</li>
-<li>Concurrency is a pain: 單純執行一個預測可能就會使用到 instance 的所有資源，所以為了能夠負擔足夠的 Concurrency 就必須多開 instance</li>
-<li>Latency can be expensive: Latency 過長會嚴重影響使用者的體驗，但很多時候只有使用 GPU 才能達到令人滿意的 Latency</li>
-</ol>
-<p>基於上面的原因，為了達到更好的體驗，instance 需要夠好（有 GPU），還要夠大（Model 可能很大）。如果不巧服務非常熱門，為了解決 Concurrency 的問題，還得開很多個。這些因素都會讓 instance 的相關費用急速增長，而一套好的 autoscaling strategy，能夠讓每一分錢花得更有效益。</p>
-<h4 id="idea-1-based-on-cpu-utilization"><a class="toclink" href="../../2021/03/09/implementing-request-based-autoscaling-for-machine-learning-workloads/#idea-1-based-on-cpu-utilization">Idea #1 Based on CPU utilization</a></h4>
-<p>CPU 是最常見的 autoscaling metrics，但在 ML 的情境裡，單純使用 CPU 進行 inference 時都會吃滿所有 CPU，而能使用 GPU 時又不太會需要使用 CPU。因此 CPU 使用量在這裡就不是一個很有效的指標。</p>
-<h4 id="idea-2-based-on-inference-latency"><a class="toclink" href="../../2021/03/09/implementing-request-based-autoscaling-for-machine-learning-workloads/#idea-2-based-on-inference-latency">Idea #2 Based on inference latency</a></h4>
-<p>用 latency 的長短來判斷是否需要 scaling 似乎是一個滿直觀的想法，但深入研究後會發現有其他問題：</p>
-<ol>
-<li>latency 的估計都是基於當前的模型，但模型更版時可能會讓 latency 永遠無法達到設定的值，導致無限 scaling</li>
-<li>latency 難以作為 scaling down 的指標</li>
-<li>如果 API 需要呼叫第三方 API，這時第三方 API 的 latency 就會嚴重影響到原 API 的 latency</li>
-</ol>
-<h4 id="idea-3-based-on-queue-length"><a class="toclink" href="../../2021/03/09/implementing-request-based-autoscaling-for-machine-learning-workloads/#idea-3-based-on-queue-length">Idea #3 Based on queue length</a></h4>
-<p>使用在排隊等待的 request 數量作為 scaling 也是另一個直觀的做法，同時也能作為 scaling down 的指標。他們一開始提出了一些可能的做法：</p>
-<ol>
-<li>建立一個 request forwarder，負責計算有多少 request 進入</li>
-<li>從 Istio 改為 <a href="https://github.com/solo-io/gloo">Gloo</a>，因為 Gloo 有提供 <a href="https://docs.solo.io/gloo-edge/latest/guides/observability/prometheus/metrics/">requests in flight</a> 的 metics</li>
-</ol>
-<p>但兩個方案執行成本都偏高，第一項需要投入過多的開發人力，而第二項則需要大幅度調整已建立好的 Istio。因此他們把目標轉向了利用 FastAPI 與 Uvicorn 替代 Flask 與 Gunicorn，利用 Uvicorn 的 async event loop 能夠在實際執行 inference 前計算 request 數目。</p>
-<p>使用 FastAPI 與 Uvicorn 的新架構能夠確保 autoscale 足夠的 instance，並且盡可能降低建立 instance 的費用。</p>
-<p>最後他們也提到還可以根據 queue length 建立更細緻的 metrics，像是使用 queue length 的變動速率（對 queue length 作微分）。例如 queue length 開始快速減少，這時表示當下的 instance 足以消耗掉等待中的 request，因此不需要多開 instance，反之則需要 scale up。</p>
-<hr />
-<p>前陣子也有在研究該如何替 Python 的 ML deployment 設定 scaling metrics，架構同樣是使用 Flask 搭配 Gunicorn。一開始也是想單純使用 CPU 或 Memory 這些基礎指標，但一樣是遇到本篇提到的 CPU 使用問題，然後因為 Python GIL 的特性，一次必定指執行一個 thread，就算 Gunicorn 更換不同的 worker type 都無法讓 CPU 或 Memory 有什麼特殊的變化。</p>
-<p>而因為我們目前使用的 K8s 是 HPE 的 KEM，scale metrics 只能設定 CPU 或 Memory，不支援任何其他自訂 metrics，所以最後也只能暫時宣告放棄。待未來切換到 OKD 時，再來好好嘗試 queue length 的變動速率這種有趣的指標。</p>
-    <nav class="md-post__action">
-      <a href="../../2021/03/09/implementing-request-based-autoscaling-for-machine-learning-workloads/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-01-29 00:00:00">January 29, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-01-29 00:00:00">January 29, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Review</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Python, API</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="why-we-switched-from-flask-to-fastapi-for-production-machine-learning"><a class="toclink" href="../../2021/01/29/why-we-switched-from-flask-to-fastapi-for-production-machine-learning/">Why we switched from Flask to FastAPI for production machine learning</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="why-we-switched-from-flask-to-fastapi-for-production-machine-learning"><a class="toclink" href="../../2021/01/29/why-we-switched-from-flask-to-fastapi-for-production-machine-learning/">Why we switched from Flask to FastAPI for production machine learning</a></h2>
-<p><a href="https://towardsdatascience.com/why-we-switched-from-flask-to-fastapi-for-production-machine-learning-765aab9b3679">Why we switched from Flask to FastAPI for production machine learning</a></p>
-<p><a href="https://github.com/cortexlabs/cortex">Cortex</a> 是一個提供 ML 服務的 Infra，支援多種不同框架 TensorFlow、PyTorch、scikit-learn 等，並提供 autoscaling、rolling updates、log 管理等。在他們的 0.14 版之後將 API 的底層從 Flask 換成了 <a href="https://fastapi.tiangolo.com/">FastAPI</a>，之後經歷了多次更新對於更換成 FastAPI 感到非常滿意。</p>
-<p>以下三點是他們決定更換的原因</p>
-<h4 id="1-ml-inference-benefits-from-native-async-support"><a class="toclink" href="../../2021/01/29/why-we-switched-from-flask-to-fastapi-for-production-machine-learning/#1-ml-inference-benefits-from-native-async-support">1. ML inference benefits from native async support</a></h4>
-<p>Cortex 從原本的依據 CPU 使用率的 autoscaling 策略，改成依據 request 的數量。但 Flask 因為沒有原生支援 async，一次只能從 queue 取出數個他能夠處理的 request 進行運算，無法得知 queue 有多少筆待處理的 request。而基於 Uvicorn 的 FastAPI 得力於 ASGI server 的特性，原生就支援 async event loop，所有 request 都會直接進到 FastAPI 中，而不會在服務外排成一個 queue，所以就能夠取到當下 request 的筆數。</p>
-<h4 id="2-improved-latency-is-a-huge-deal-for-inference"><a class="toclink" href="../../2021/01/29/why-we-switched-from-flask-to-fastapi-for-production-machine-learning/#2-improved-latency-is-a-huge-deal-for-inference">2. Improved latency is a huge deal for inference</a></h4>
-<p>在實際場景中服務的速度對使用者的影響是非常巨大的，如果 Gmail 的文句自動完成功能比使用者打字慢的話，那這個功能就完全喪失了他了價值。在 <a href="https://www.techempower.com/benchmarks/">Web Framework Benchmarks</a> 中 FastAPI 比 Flask 快了 300%。</p>
-<h4 id="3-fastapi-is-easy-to-switch-toby-design"><a class="toclink" href="../../2021/01/29/why-we-switched-from-flask-to-fastapi-for-production-machine-learning/#3-fastapi-is-easy-to-switch-toby-design">3. FastAPI is easy to switch to—by design</a></h4>
-<p>從 Flask 轉換至 FastAPI 是非常輕鬆的，兩者個寫法基本上非常相似，轉換成本在轉換框架時也是一個非常重要的參考因素。</p>
-<p>Flask API endpoint example</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/hello&quot;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;GET&quot;</span><span class="p">])</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="k">return</span> <span class="s2">&quot;Hello, World&quot;</span>
-</code></pre></div>
-<p>FastAPI API endpoint example</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/hello&quot;</span><span class="p">)</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="k">return</span> <span class="s2">&quot;Hello, World&quot;</span>
-</code></pre></div>
-<h4 id="nice-to-haves"><a class="toclink" href="../../2021/01/29/why-we-switched-from-flask-to-fastapi-for-production-machine-learning/#nice-to-haves">Nice to haves</a></h4>
-<p>除了上述的優點外，FastAPI 也提供了資料格式驗證、更友善的錯誤處理、自動生成的 API Spec 等功能。</p>
-<hr />
-<p>Flask 做為每一個寫 Python API 的 Developer 第一個使用的 Package，完善的生態圈讓他有著幾乎不可撼動的地位。資料驗證、API Spec 等功能其實也有對應的 Package 可以使用如 <a href="https://flask-restx.readthedocs.io/en/latest/">Flask-RESTX</a>。但內建非同步確實是一個很吸引人的功能，最近也是一樣有遇到無法取得 request 數量的問題，只能夠透過外部的 gateway 去取得，沒想 FastAPI 能夠輕鬆解決這個問題。後續會再多針對 FastAPI 與 ASGI Server 進行比較深入的研究，</p>
-    <nav class="md-post__action">
-      <a href="../../2021/01/29/why-we-switched-from-flask-to-fastapi-for-production-machine-learning/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-01-20 00:00:00">January 20, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-01-20 00:00:00">January 20, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Review</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              K8s</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="kubernetes-operator-for-beginners-what-why-how"><a class="toclink" href="../../2021/01/20/kubernetes-operator-for-beginners--what-why-how/">Kubernetes Operator for Beginners — What, Why, How</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="kubernetes-operator-for-beginners-what-why-how"><a class="toclink" href="../../2021/01/20/kubernetes-operator-for-beginners-what-why-how/">Kubernetes Operator for Beginners — What, Why, How</a></h2>
-<p><a href="https://medium.com/swlh/kubernetes-operator-for-beginners-what-why-how-21b23f0cb9b1">Kubernetes Operator for Beginners — What, Why, How</a></p>
-<p>本文介紹了 Operator 的功能以及如何建立 Operator</p>
-<h5 id="what-is-an-operator"><a class="toclink" href="../../2021/01/20/kubernetes-operator-for-beginners-what-why-how/#what-is-an-operator">What is an operator</a></h5>
-<p>利用 Custom Resource (CRD) 操作 K8s 上的其他資源，並且符合 K8s 的 Control loop 機制，可以用 K8s native api 管理</p>
-<h5 id="why-you-need-an-operator"><a class="toclink" href="../../2021/01/20/kubernetes-operator-for-beginners-what-why-how/#why-you-need-an-operator">Why you need an operator</a></h5>
-<p>以 Code 的方式自動化對 K8s 的操作，提高維運的可靠性</p>
-<h5 id="how-to-write-an-operator"><a class="toclink" href="../../2021/01/20/kubernetes-operator-for-beginners-what-why-how/#how-to-write-an-operator">How to write an Operator</a></h5>
-<ol>
-<li>Kudo</li>
-<li>Helm</li>
-<li>Dynamic Operator: 彈性高，需要手動撰寫許多程式碼</li>
-<li>Operator SDK</li>
-<li>Kubebuilder</li>
-</ol>
-<h5 id="is-operator-necessary"><a class="toclink" href="../../2021/01/20/kubernetes-operator-for-beginners-what-why-how/#is-operator-necessary">Is Operator Necessary</a></h5>
-<ol>
-<li>不要沈溺於自動化。如果這個工作一個月只需要花十分鐘處理，那完全不值得花一週或甚至更多的時間來特地寫一個 Operator</li>
-<li>如果已經有 Helm Chart 或 Kudo template 可以使用的話，不要硬用 Operator SDK 或 Kubebuilder 重新實作，YAML 永遠比 Go Code 簡單更多</li>
-<li>如果可以的話，比起客制 Operator，選擇醜陋但簡單的 bash script 有時候會更輕鬆一點</li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2021/01/20/kubernetes-operator-for-beginners-what-why-how/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-12-01 00:00:00">December 1, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-12-01 00:00:00">December 1, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Review</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              DevOps</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="technologies-tools-to-watch-in-2021"><a class="toclink" href="../../2020/12/01/technologies--tools-to-watch-in-2021/">Technologies &amp; Tools to Watch in 2021</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="technologies-tools-to-watch-in-2021"><a class="toclink" href="../../2020/12/01/technologies-tools-to-watch-in-2021/">Technologies &amp; Tools to Watch in 2021</a></h2>
-<p><a href="https://medium.com/dev-genius/technologies-tools-to-watch-in-2021-a216dfc30f25">Technologies &amp; Tools to Watch in 2021</a></p>
-<p>本文分享了幾個 2021 值得 DevOps Engineers 與 SREs 關注的工具</p>
-<ol>
-<li>
-<p>Managing Cloud Services via Kubernetes CRDs</p>
-<p>現在在 K8s 上都能使用 custom resource definitions (CRDs) 啟用與管理 AWS, Azure 與 GCP 上的服務。AWS 使用 <a href="https://github.com/aws/aws-controllers-k8s">AWS Controllers for Kubernetes (ACK)</a>；Azure 使用 <a href="https://github.com/Azure/azure-service-operator">Azure Service Operator (for Kubernetes)</a>；GCP 使用 <a href="https://cloud.google.com/config-connector/docs/overview">Config Connector</a>。好處是無論是 K8s 或 cloud services 都能用 K8s 的 API 操作，但缺點就是跟 K8s 有太深的耦合。</p>
-</li>
-<li>
-<p>Pulumi</p>
-</li>
-</ol>
-<p><a href="https://www.pulumi.com/">Pulumi</a> 是一個 IaC 的工具，與一般常見用 JSON 或 YAML 為基礎的 IaC 不同，他能夠直接使用 Go, Python, Javascript 來做 IaC，能夠帶來更高的彈性，並可以使用原本語言就有的測試框架進行測試。</p>
-<ol>
-<li>Terragrunt &amp; TFSEC</li>
-</ol>
-<p><a href="https://terragrunt.gruntwork.io/">Terragrunt</a> 將 Terraform 包裝起來，提供更多功能便於管理大型的 Terraform 專案，並支援版本的管理方式。<a href="https://github.com/tfsec/tfsec">TFSEC</a> 提供掃描 Terraform 專案中 IaC 可能的安全問題。</p>
-<ol>
-<li>Tekton</li>
-</ol>
-<p><a href="https://tekton.dev/">Tekton</a> 是 Cloud Native 的 CI/CD 工具，專注在 K8s 的 workloads。Pipeline 都是透過 CRDs 定義，因此能繼承 K8s 一些良好的特性，如 rollbacks，也能跟 JenkinsX 或 ArgoCD 有良好的介接。</p>
-<ol>
-<li>Trivy</li>
-</ol>
-<p><a href="https://github.com/aquasecurity/trivy">Trivy</a> 能夠掃描 Container 與 OS 安裝的 Package 是否有安全漏洞，可以很輕易地串接在 CI 流程中。</p>
-<ol>
-<li>ShellCheck</li>
-</ol>
-<p><a href="https://github.com/koalaman/shellcheck">shellcheck</a> 可以檢查 Shell 中常見的錯誤，有提供 web 版、CLI，甚至還有各種編輯器的 plugin。</p>
-<ol>
-<li>Pitest/Stryker</li>
-</ol>
-<p><a href="http://pitest.org/">Pitest</a> (Java) 與 <a href="https://stryker-mutator.io/">Stryker</a> (Javascript, C#, Scala) 都是 Mutation Test 的工具。Mutation Test 的假設是如果程式碼有變動，一個好的單元測試應該要因為這個變動而失敗，因此這兩個工具都會自動加入變動到程式中，藉此驗證單元測試或測試案例是否是好的測試。</p>
-<ol>
-<li>Litmus</li>
-</ol>
-<p><a href="https://github.com/litmuschaos/litmus">Litmus</a> 是一個 chaos engineering tool，輕量且易於使用，有良好的實驗設計功能而非單純的隨意刪除 Pod，另外也直接提供了 ChaosResult CRD 直接查看結果。</p>
-<p>Reference:</p>
-<ol>
-<li><a href="https://medium.com/@loverjersey/%E8%AE%8A%E7%95%B0%E6%B8%AC%E8%A9%A6-mutation-test-%E4%B8%80%E7%A8%AE%E6%8F%90%E9%AB%98%E6%B8%AC%E8%A9%A6%E5%92%8C%E4%BB%A3%E7%A2%BC%E8%B3%AA%E9%87%8F%E7%9A%84-%E6%96%B0-%E6%96%B9%E6%B3%95%E9%80%9F%E8%A8%98-35bde79a5c7a">變異測試 (Mutation Test) — 一種提高測試和代碼質量的 ”新” 方法速記</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/12/01/technologies-tools-to-watch-in-2021/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-11-24 00:00:00">November 24, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-11-24 00:00:00">November 24, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Review</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Vue</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="vue-vs-react-best-choice-for-startups"><a class="toclink" href="../../2020/11/24/vue-vs-react-best-choice-for-startups/">Vue vs React: Best Choice for Startups</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="vue-vs-react-best-choice-for-startups"><a class="toclink" href="../../2020/11/24/vue-vs-react-best-choice-for-startups/">Vue vs React: Best Choice for Startups</a></h2>
-<p><a href="https://swimm.io/blog/vue-vs-react-best-choice-for-startups/">Vue vs React: Best Choice for Startups</a></p>
-<p>本文為作者回覆一封詢問為何選擇 Vue 而不是 React 的來函</p>
-<h4 id="vuejs-vs-react-in-a-nutshell"><a class="toclink" href="../../2020/11/24/vue-vs-react-best-choice-for-startups/#vuejs-vs-react-in-a-nutshell">Vue.js vs React In a Nutshell</a></h4>
-<ol>
-<li>Vue 很輕量且有很高的彈性，在輕度使用的情境下用起來更像 Library</li>
-<li>Vue 的侵入性比 React 小，大部分的 Vue Project 都有類似的專案架構與 Components 結構，而 React 則差異較大，當 Dev 面對新的 Code base 時 Vue 能較快上手</li>
-<li>可讀性高，html, css 與 js 都是分離的，而 React 都合併在 js 中</li>
-<li>獨立的 Framework，不被大廠把持，React 由 Facebook 維護，Angular 由 Google 維護</li>
-</ol>
-<h4 id="when-does-react-trump-vuejs"><a class="toclink" href="../../2020/11/24/vue-vs-react-best-choice-for-startups/#when-does-react-trump-vuejs">When does React Trump Vue.js</a></h4>
-<ol>
-<li>市場上 React 的職缺數量仍大於 Vue</li>
-<li>React Components 的 visibility 與 maintenance 分離在某些情境下提供了更多彈性</li>
-<li>有較詳盡的文件</li>
-</ol>
-<h4 id="sum-up"><a class="toclink" href="../../2020/11/24/vue-vs-react-best-choice-for-startups/#sum-up">Sum Up</a></h4>
-<ol>
-<li>可以很輕易地融入舊有的專案中</li>
-<li>較高的可讀性</li>
-<li>有良好的響應式系統 (Reactivity System)，不用頻繁使用 Set Function 更新</li>
-<li>不是由大公司維護</li>
-</ol>
-<p>最後作者也分享了另外一篇更深入比較的文章 <a href="https://www.mindk.com/blog/react-vs-vue/">React vs Vue: What is the best choice for 2020?</a></p>
-    <nav class="md-post__action">
-      <a href="../../2020/11/24/vue-vs-react-best-choice-for-startups/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-11-03 00:00:00">November 3, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-11-03 00:00:00">November 3, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Review</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              K8s</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="10-most-common-mistakes-using-kubernetes"><a class="toclink" href="../../2020/11/03/10-most-common-mistakes-using-kubernetes/">10 most common mistakes using kubernetes</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="10-most-common-mistakes-using-kubernetes"><a class="toclink" href="../../2020/11/03/10-most-common-mistakes-using-kubernetes/">10 most common mistakes using kubernetes</a></h2>
-<p><a href="https://blog.pipetail.io/posts/2020-05-04-most-common-mistakes-k8s/">10 most common mistakes using kubernetes</a></p>
-<ol>
-<li>resources - requests and limits</li>
-<li>CPU request 不要不設定或設太低，當 node 資源太滿的時候，pod 仍會被運行，但會拿到非常少的 CPU，導致 app 延遲或 timeout</li>
-<li>Memory 應該使用 Guaranteed QoS setting，request == limit。CPU 取不到無法多取的時候頂多造成延遲，但 Memory 無法擴張會導致 OOM</li>
-<li>liveness and readiness probes</li>
-<li>liveness probe 失敗時會重啟 pod</li>
-<li>readiness probe 失敗時不會有任何連線送至 pod 中</li>
-<li>兩種 probe 在整個 Pod 的生命週期中都會不停探測</li>
-<li>不要讓任何一種 probe 因為 dependencies 下線而失敗，會導致 Pod 連鎖失敗</li>
-<li>LoadBalancer for every http service</li>
-<li>不要為每一個 service 都開一個 LoadBalancer，可以用 nginx-ingres-controller 作為唯一的 NodePort endpoint</li>
-<li>non-kubernetes-aware cluster autoscaling</li>
-<li>Not using the power of IAM/RBAC</li>
-<li>self anti-affinities for pods</li>
-<li>善用 affinity 讓 pod 生成在不同 node 上，以達到 HA</li>
-<li>no poddisruptionbudget</li>
-<li>使用 PodDisruptionBudget 在 draining node 時確保 pod 數量</li>
-<li>more tenants or envs in shared cluster</li>
-<li>namespace 並不會提完整的硬體隔離性</li>
-<li>externalTrafficPolicy: Cluster</li>
-<li>
-<p>pet clusters + stressing the control plane too much</p>
-<ol>
-<li>不要把 cluster 當寵物在養，要練習 Disaster Recovery，隨時有機會得重新建出一個完全一致的 cluster</li>
-<li>不要過度依賴 control plane，隨著 cluster 成長，上面的各種服務會越來越多，control plane 會開始變得緩慢，操作性變差</li>
-</ol>
-</li>
-<li>
-<p>bonus: using latest tag</p>
-</li>
-<li>不要使用 latest tag</li>
-</ol>
-<p>本文最後附上了 <a href="https://k8s.af/">Kubernetes Failure Stories</a>，收集了各種使用 Kubernetes 時發生的慘案，以供借鑒。</p>
-    <nav class="md-post__action">
-      <a href="../../2020/11/03/10-most-common-mistakes-using-kubernetes/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-09-18 00:00:00">September 18, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-09-18 00:00:00">September 18, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Review</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              DevOps</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="the-future-of-ops-jobs"><a class="toclink" href="../../2020/09/18/the-future-of-ops-jobs/">The Future of Ops Jobs</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="the-future-of-ops-jobs"><a class="toclink" href="../../2020/09/18/the-future-of-ops-jobs/">The Future of Ops Jobs</a></h2>
-<p><a href="https://acloudguru.com/blog/engineering/the-future-of-ops-jobs">The Future of Ops Jobs</a></p>
-<p>本篇介紹了維運的改變以及維運工程師的未來職涯走向</p>
-<h4 id="_1"><a class="toclink" href="../../2020/09/18/the-future-of-ops-jobs/#_1">維運的改變</a></h4>
-<ol>
-<li>From monolith to microservices<br />
-   從 monolith 到 microservices，數量的增加讓維運的難度大幅提升</li>
-<li>From monitoring to observability<br />
-   從基礎的監控（如 Prometheus）到進階的觀測（如 zipkin、jaeger）</li>
-<li>From magic autoinstrumentation to instrumenting with intent<br />
-   Autoinstrumentation 雖然能夠快速分析或監控程式，但卻無法針對特定的需求調整，所以仍有必要撰寫自己的 instrumentation 程式</li>
-</ol>
-<h4 id="_2"><a class="toclink" href="../../2020/09/18/the-future-of-ops-jobs/#_2">維運工程師的未來職涯方向</a></h4>
-<p>與過去相比現在的維運工程師可以不止依附在各公司底下，infrastructure software as a service 的形式讓維運工程師也能有很好的發展，像是 AWS 或 Azure。</p>
-<p>若是選擇在各公司底下擔任維運工程師，專注在讓工程團隊順暢地發布產品，盡可能減少自己打造 infrastructure。另外作者也提供了幾個職涯方向：</p>
-<ol>
-<li>Vendor engineering</li>
-<li>透過詢價與試探性的問題評估廠商和他們的產品</li>
-<li>評估團隊可以付出的人力與時間，盡可能削減人力的投入，專注在本業上</li>
-<li>衡量產品的實際，教育與推廣合適的解決方案給內部人員，特別是主管與財務人員</li>
-<li>Product engineering</li>
-<li>加入開發團隊一段時間，了解他們怎麼思考與開發</li>
-<li>跟開發團隊建立良好的關係</li>
-<li>Sociotechnical systems engineering</li>
-<li>精簡 deploy pipeline，優化測試、CI/CD 等等讓部署更加自動化</li>
-<li>設計與優化開發新功能與修復 Bug 的循環</li>
-<li>建立當責的文化</li>
-<li>Managing the portfolio of technical investments</li>
-<li>學會優雅地遷移，不要殘留舊產品或架構的產出物</li>
-<li>加入各種工具時要先問自己『要這個工具的維護計畫是什麼？』</li>
-<li>多學習、多增加影響力</li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/09/18/the-future-of-ops-jobs/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-09-01 00:00:00">September 1, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-09-01 00:00:00">September 1, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="./"
+                  class="md-meta__link"
+                >Review</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Rules of thumb</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="rules-of-thumb-for-a-1x-developer"><a class="toclink" href="../../2020/09/01/rules-of-thumb-for-a-1x-developer/">Rules of thumb for a 1x developer</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="rules-of-thumb-for-a-1x-developer"><a class="toclink" href="../../2020/09/01/rules-of-thumb-for-a-1x-developer/">Rules of thumb for a 1x developer</a></h2>
-<p><a href="https://muldoon.cloud/programming/2020/04/17/programming-rules-thumb.html#rule-6-when-to-use-a-hardcore-language">Rules of thumb for a 1x developer</a></p>
-<p>作者借用了 10x developer 的名字，整理了他覺得 1x developer 可以作為工作指引的 20 個經驗法則，透過這些法則希望能夠成為 1.1x developer。</p>
-<p>總分為九類的法則：</p>
-<ol>
-<li>Meta</li>
-<li>Rule 1: Rules are good<ul>
-<li>透過各種經驗法則建立思考的框架，利用邏輯結構化各種問題</li>
-</ul>
-</li>
-<li>Productivity and learning</li>
-<li>Rule 2: Most of what I learn is useless outside of its immediate context<ul>
-<li>如果工作中有大量沒有價值的部分，應該盡可能地避免，盡量關注在有價值的地方就好</li>
-</ul>
-</li>
-<li>Rule 3: Focus “learning time” on things that compound<ul>
-<li>學習能夠產生複利的東西，或是進行能產生複利的行為，形成一個正向的循環。e.g. 閱讀無法產生複利，但如果能夠實際應用，甚至是分享就能達到複利。</li>
-</ul>
-</li>
-<li>Programming languages</li>
-<li>Rule 4: When to use Java or C#<ul>
-<li>大型商用軟體</li>
-</ul>
-</li>
-<li>Rule 5: When to use Python or Ruby<ul>
-<li>AI or ML</li>
-</ul>
-</li>
-<li>Rule 6: When to use a hardcore language<ul>
-<li>Go, Rust, Haskell, Erlang, Clojure, Kotlin, Scala 歸為此類</li>
-<li>Go, Rust 用於對於效能需求較高的服務</li>
-<li>Haskell, Erlang 用於簡潔或是數學方面的程式</li>
-</ul>
-</li>
-<li>Rule 7: How to do Javascript<ul>
-<li>使用 Typescript，人生可以更簡單</li>
-<li>業務邏輯盡可能做在後端就好</li>
-<li>有互動需求使用 Vue 或 React</li>
-<li>記得做 unit tests</li>
-</ul>
-</li>
-<li>Rule 8: When to use C or C++<ul>
-<li>通常不是你選擇 C，而是 C 選擇了你，因應場景被迫使用</li>
-<li>C++ 有較佳的效能，常用在機器人或是高頻交易</li>
-</ul>
-</li>
-<li>Rule 9: Use PHP or Hack if you want to test server changes without rebuilding</li>
-<li>Technologies</li>
-<li>Rule 10: When to make a serverless function<ul>
-<li>每一隔一段時間要執行的一小片段程式</li>
-</ul>
-</li>
-<li>Rule 11: Which database technology to choose<ul>
-<li>有 ACID 需求就是乖乖用 SQL，推薦 PostgreSQL</li>
-</ul>
-</li>
-<li>Testing</li>
-<li>Rule 12: When to write a unit test<ul>
-<li>評估缺陷的可能性＊缺陷帶來的損失，如果寫測試的成本遠超過了期望值，似乎也沒有寫的必要。但每個片段的程式碼仍應該是要盡可能做到測試，或至少要寫的是可測試的。</li>
-</ul>
-</li>
-<li>Rule 13: When to write an integration test<ul>
-<li>當功能包含不屬於你的 Code 時就要做 integration test，特別是 Code 可能在你不知情的狀況下被更動</li>
-</ul>
-</li>
-<li>Rule 14: When to write an end-to-end test<ul>
-<li>可以定義為一個使用者案例，使用者可能是一個人或機器</li>
-<li>三個情境</li>
-<li>對於成品沒有完全瞭解，建立一些案例當作 Smoke Test，確保東西至少沒有壞</li>
-<li>需要迴歸執行的測試，可用於未來重構的依據</li>
-<li>牽涉複雜的計算，驗證一些其他的 Code 是否會對他產生影響</li>
-</ul>
-</li>
-<li>DevOps</li>
-<li>Rule 15: When to bring on a dedicated support engineer</li>
-<li>Security</li>
-<li>Rule 16: If you delegate all your IT security to the InfoSec, they will come up with draconian rules<ul>
-<li>如果讓資安部門決定所有資安相關規範，只會建立出極度嚴苛的規範</li>
-</ul>
-</li>
-<li>Designing and Whiteboarding</li>
-<li>Rule 17: Make the design session about input, not approval</li>
-<li>Project management</li>
-<li>Rule 18: Estimates serve more for creating pressure than for project planning<ul>
-<li>時程通常是只是用來製造壓力，而不是作為規劃的指引</li>
-</ul>
-</li>
-<li>Rule 19: Be explicit about the difference between hard deadlines, soft deadlines, internal deadlines, and expected completion dates<ul>
-<li>分清楚四種不同的 Deadline</li>
-<li>Hard deadline: Delay 會讓老闆或是公司很難看的狀況</li>
-<li>Soft deadline: Delay 會讓某些人很難看的狀況</li>
-<li>Internal deadline: 只會影響到團隊內的人，但不會影響到外部的人</li>
-<li>Expected completion date: 團隊內部預期要完成的日期</li>
-</ul>
-</li>
-<li>Rule 20: When somebody says Agile, push for Kanban, not Scrum<ul>
-<li>如果要跑 Agile 用 Kanban 不要用 Scrum</li>
-<li>Scrum: 在這兩週完成這些事，外部給予的時間壓力</li>
-<li>Kanba: 做兩週能完成的事，內部評估可完成的工作量</li>
-</ul>
-</li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/09/01/rules-of-thumb-for-a-1x-developer/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
       
         
@@ -1853,7 +1510,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.a5ca32a6.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6981e6db.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://blueswen.github.io/blog/2020/04/22/container/">
+        <link rel="canonical" href="https://blueswen.github.io/blog/2020/06/18/k8s-%E7%AF%80%E9%BB%9E%E8%B3%87%E6%BA%90%E8%80%97%E7%9B%A1/">
       
       
-        <link rel="prev" href="../../20/single-number/">
+        <link rel="prev" href="../kubernetes-probes/">
       
       
-        <link rel="next" href="../../23/principles-of-container-based-application-design/">
+        <link rel="next" href="../../../07/03/javascript-promise/">
       
       
         
       
       
       <link rel="icon" href="../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8+insiders-4.43.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.12+insiders-4.45.0">
     
     
       
-        <title>防止 Container 啟動後退出 - Blueswen</title>
+        <title>K8s 節點資源耗盡 - Blueswen</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.382dd0b9.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.0ab26e37.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -71,15 +71,15 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="防止 Container 啟動後退出 - Blueswen" />
-<meta property="og:image" content="https://blueswen.github.io/assets/images/social/blog/2020/04/22/container.png" />
+<meta property="og:title" content="K8s 節點資源耗盡 - Blueswen" />
+<meta property="og:image" content="https://blueswen.github.io/assets/images/social/blog/2020/06/18/k8s-%E7%AF%80%E9%BB%9E%E8%B3%87%E6%BA%90%E8%80%97%E7%9B%A1.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://blueswen.github.io/blog/2020/04/22/container/" />
+<meta property="og:url" content="https://blueswen.github.io/blog/2020/06/18/k8s-%E7%AF%80%E9%BB%9E%E8%B3%87%E6%BA%90%E8%80%97%E7%9B%A1/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="防止 Container 啟動後退出 - Blueswen" />
-<meta property="twitter:image" content="https://blueswen.github.io/assets/images/social/blog/2020/04/22/container.png" />
+<meta property="twitter:title" content="K8s 節點資源耗盡 - Blueswen" />
+<meta property="twitter:image" content="https://blueswen.github.io/assets/images/social/blog/2020/06/18/k8s-%E7%AF%80%E9%BB%9E%E8%B3%87%E6%BA%90%E8%80%97%E7%9B%A1.png" />
  <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#container" class="md-skip">
+        <a href="#k8s" class="md-skip">
           Skip to content
         </a>
       
@@ -142,7 +142,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              防止 Container 啟動後退出
+              K8s 節點資源耗盡
             
           </span>
         </div>
@@ -702,13 +702,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/tip/" class="md-nav__link">
+      <a href="../../../../category/algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Tip
+    Algorithm
   
 
     
@@ -754,13 +754,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/algorithm/" class="md-nav__link">
+      <a href="../../../../category/share/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Algorithm
+    Share
   
 
     
@@ -780,13 +780,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/share/" class="md-nav__link">
+      <a href="../../../../category/tip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Share
+    Tip
   
 
     
@@ -897,7 +897,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2020-04-22 00:00:00" class="md-ellipsis">April 22, 2020</time>
+                        <time datetime="2020-06-18 00:00:00" class="md-ellipsis">June 18, 2020</time>
                       </div>
                     </li>
                     
@@ -934,24 +934,74 @@
     
     
     
-      <a href="../../../../../tags/#docker" class="md-tag">Docker</a>
+      <a href="../../../../../tags/#k8s" class="md-tag">K8s</a>
     
   
 </nav>
 
 
 
-<h1 id="container">防止 Container 啟動後退出</h1>
-<p>在建置完 Image 後時常會發現 Image 不如預期中運作，如預設的 CMD 莫名地 Crash 等，這時候就會需要進入 container 中，使用 <code>tail -f /dev/null</code> 作為 CMD 就可以讓 container 一直處於 running 的狀態，隨時可以進入檢測。另一個常用的情境是透過這個方式起一個永久 running 的 container，這樣就可以作為虛擬環境使用。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>python<span class="w"> </span>tail<span class="w"> </span>-f<span class="w"> </span>/dev/null
+<h1 id="k8s">K8s 節點資源耗盡</h1>
+<p>問題：K8s 的 node 出現 EvictionThresholdMet NodeHasDiskPressure 狀況，導致 Pod 無法建立，但實際上空間還很充足</p>
+<p>解法：調高 Threshold</p>
+<ol>
+<li>
+<p>確認 kubelet 的狀態</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ sudo systemctl status kubelet
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>● kubelet.service - kubelet: The Kubernetes Node Agent
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Loaded: loaded (/lib/systemd/system/kubelet.service; enabled; vendor preset: enabled)
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Drop-In: /etc/systemd/system/kubelet.service.d
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        └─10-kubeadm.conf
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Active: active (running) since 一 2017-10-16 10:25:09 CST; 6h ago
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    Docs: http://kubernetes.io/docs/
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Main PID: 13640 (kubelet)
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    Tasks: 18
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Memory: 62.0M
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    CPU: 18min 15.235s
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>CGroup: /system.slice/kubelet.service
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        ├─13640 /usr/bin/kubelet --kubeconfig=/etc/kubernetes/kubelet.conf --require-kubeconfig=true --pod-manifest-path=/etc/kubernetes/manifests --allow-privileged=true --
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        └─13705 journalctl -k -f
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>...
 </code></pre></div>
-<p>在 Docker 的機制中 container 的運作狀態是跟隨其 CMD 或 ENTRYPOINT 所執行的程序，當程序意外停止或執行完成時就會變為 Exited，因此要讓 container 處於永久 running 的狀態就需要執行一個會不停執行的程序。</p>
-<p><code>tail -f</code> 會跟蹤並印出指定檔案的最末端，而 <code>/dev/null</code>  為 Linux 中一個特殊的檔案，檔案內容永遠只有 EOF，因此合併後的效果就是跟蹤一個永遠為空的檔案，成為一個永久執行但消耗極少資源的程序。</p>
+</li>
+<li>
+<p>與 kubelet 有關的設定有兩個</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>- /lib/systemd/system/kubelet.service
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Drop-In: /etc/systemd/system/kubelet.service.d
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        └─10-kubeadm.conf
+</code></pre></div>
+</li>
+<li>
+<p>/etc/systemd/system/kubelet.service.d/10-kubeadm.conf 是用來覆寫 /lib/systemd/system/kubelet.service 中的配置，內容如下</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[Service]
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Environment=&quot;KUBELET_KUBECONFIG_ARGS=--kubeconfig=/etc/kubernetes/kubelet.conf --require-kubeconfig=true&quot;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Environment=&quot;KUBELET_SYSTEM_PODS_ARGS=--pod-manifest-path=/etc/kubernetes/manifests --allow-privileged=true&quot;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Environment=&quot;KUBELET_NETWORK_ARGS=--network-plugin=cni --cni-conf-dir=/etc/cni/net.d --cni-bin-dir=/opt/cni/bin&quot;
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Environment=&quot;KUBELET_DNS_ARGS=--cluster-dns=10.96.0.10 --cluster-domain=cluster.local&quot;
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Environment=&quot;KUBELET_AUTHZ_ARGS=--authorization-mode=Webhook --client-ca-file=/etc/kubernetes/pki/ca.crt&quot;
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>Environment=&quot;KUBELET_CADVISOR_ARGS=--cadvisor-port=0&quot;
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>ExecStart=
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_SYSTEM_PODS_ARGS $KUBELET_NETWORK_ARGS $KUBELET_DNS_ARGS $KUBELET_AUTHZ_ARGS $KUBELET_CADVISOR_ARGS $KUBELET_EXTRA_ARGS
+</code></pre></div>
+</li>
+<li>
+<p>修改 10-kubeadm.conf 的內容調高上限，增加一個 Environment 並加入在 ExecStart 的最後</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Environment=&quot;KUBELET_EVICTION_POLICY_ARGS=--eviction-hard=nodefs.available&lt;5%&quot;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>ExecStart=
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_SYSTEM_PODS_ARGS $KUBELET_NETWORK_ARGS $KUBELET_DNS_ARGS $KUBELET_AUTHZ_ARGS $KUBELET_CADVISOR_ARGS $KUBELET_EXTRA_ARGS $KUBELET_EVICTION_POLICY_ARGS
+</code></pre></div>
+</li>
+<li>
+<p>reaload 並重啟 kubelet 就可以重新載入設定</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ sudo systemctl daemon-reload
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>$ sudo systemctl restart kubelet
+</code></pre></div>
+</li>
+</ol>
 <p>Reference:</p>
 <ol>
-<li><a href="https://blog.ponycool.com/archives/121.html">利用 tail -f /dev/null 命令防止 container 启动后退出</a></li>
-<li><a href="https://kknews.cc/zh-tw/code/valkama.html">Linux 學習——/dev/null 的簡介及作用</a></li>
-<li><a href="https://www.computerhope.com/unix/utail.htm">Linux tail command</a></li>
+<li><a href="https://tonybai.com/2017/10/16/out-of-node-resource-handling-in-kubernetes-cluster/">Kubernetes节点资源耗尽状态的处理</a></li>
+<li><a href="https://ithelp.ithome.com.tw/articles/10209357">排查 kubelet、kubeadm init 問題</a></li>
 </ol>
 
 
@@ -985,7 +1035,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 22, 2020</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 18, 2020</span>
   </span>
 
     
@@ -1092,7 +1142,7 @@
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.a5ca32a6.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.6981e6db.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

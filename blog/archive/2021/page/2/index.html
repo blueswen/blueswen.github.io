@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8+insiders-4.43.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.12+insiders-4.45.0">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.382dd0b9.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.0ab26e37.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -712,13 +712,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/tip/" class="md-nav__link">
+      <a href="../../../../category/algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Tip
+    Algorithm
   
 
     
@@ -764,13 +764,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/algorithm/" class="md-nav__link">
+      <a href="../../../../category/share/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Algorithm
+    Share
   
 
     
@@ -790,13 +790,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/share/" class="md-nav__link">
+      <a href="../../../../category/tip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Share
+    Tip
   
 
     
@@ -884,736 +884,306 @@
       </header>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-03-10 00:00:00">March 10, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../../../category/tip/" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-03-10 00:00:00">March 10, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../../../category/tip/"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              GitBook</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="gitbook-base-path"><a class="toclink" href="../../../../2021/03/10/gitbook-base-path/">GitBook Base Path</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="gitbook-base-path"><a class="toclink" href="../../../../2021/03/10/gitbook-base-path/">GitBook Base Path</a></h2>
-<p>需求：有多份 <a href="https://github.com/GitbookIO/gitbook-cli">GitBook</a> 需要掛載在同一個 web server 下，必須針對不同 GitBook 設定 base path</p>
-<p>解法：使用 <a href="https://github.com/noamyoungerm/gitbook-plugin-base">GitBook Plugin Base</a> 在 GitBook 的 <code>book.json</code> 設定 base 參數</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nt">&quot;pluginsConfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="nt">&quot;base&quot;</span><span class="p">:{</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">            </span><span class="nt">&quot;base&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/book-name/content&quot;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
-</code></pre></div>
-<p>這樣建構出來的 GitBook URL 都會以 <code>/book-name/conten/</code> 作為開頭</p>
-    <nav class="md-post__action">
-      <a href="../../../../2021/03/10/gitbook-base-path/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-03-09 00:00:00">March 9, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../../../category/review/" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-03-09 00:00:00">March 9, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../../../category/review/"
+                  class="md-meta__link"
+                >Review</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Python, API, K8s</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="implementing-request-based-autoscaling-for-machine-learning-workloads"><a class="toclink" href="../../../../2021/03/09/implementing-request-based-autoscaling-for-machine-learning-workloads/">Implementing request-based autoscaling for machine learning workloads</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="implementing-request-based-autoscaling-for-machine-learning-workloads"><a class="toclink" href="../../../../2021/03/09/implementing-request-based-autoscaling-for-machine-learning-workloads/">Implementing request-based autoscaling for machine learning workloads</a></h2>
-<p><a href="https://towardsdatascience.com/implementing-request-based-autoscaling-for-machine-learning-workloads-feb41572956">Implementing request-based autoscaling for machine learning workloads</a></p>
-<p><a href="https://github.com/cortexlabs/cortex">Cortex</a> 是一個提供 ML 服務的 Infra，支援多種不同框架 TensorFlow、PyTorch、scikit-learn 等，並提供 autoscaling、rolling updates、log 管理等。本篇是 Cortex 團隊之所以要從 Flask 轉換成 FastAPI 的始末（<a href="https://towardsdatascience.com/why-we-switched-from-flask-to-fastapi-for-production-machine-learning-765aab9b3679">Why we switched from Flask to FastAPI for production machine learning</a> ），說明他們在重新設計 autoscaling strategy 的思路。</p>
-<p>ML inference 的一些特性讓 instance 的 scaling 相較一般服務有不同的挑戰性：</p>
-<ol>
-<li>Model can be huge: ML 的模型有時候可能會很大，例如超過 5 GB，所以會需要更大的 instance</li>
-<li>Concurrency is a pain: 單純執行一個預測可能就會使用到 instance 的所有資源，所以為了能夠負擔足夠的 Concurrency 就必須多開 instance</li>
-<li>Latency can be expensive: Latency 過長會嚴重影響使用者的體驗，但很多時候只有使用 GPU 才能達到令人滿意的 Latency</li>
-</ol>
-<p>基於上面的原因，為了達到更好的體驗，instance 需要夠好（有 GPU），還要夠大（Model 可能很大）。如果不巧服務非常熱門，為了解決 Concurrency 的問題，還得開很多個。這些因素都會讓 instance 的相關費用急速增長，而一套好的 autoscaling strategy，能夠讓每一分錢花得更有效益。</p>
-<h4 id="idea-1-based-on-cpu-utilization"><a class="toclink" href="../../../../2021/03/09/implementing-request-based-autoscaling-for-machine-learning-workloads/#idea-1-based-on-cpu-utilization">Idea #1 Based on CPU utilization</a></h4>
-<p>CPU 是最常見的 autoscaling metrics，但在 ML 的情境裡，單純使用 CPU 進行 inference 時都會吃滿所有 CPU，而能使用 GPU 時又不太會需要使用 CPU。因此 CPU 使用量在這裡就不是一個很有效的指標。</p>
-<h4 id="idea-2-based-on-inference-latency"><a class="toclink" href="../../../../2021/03/09/implementing-request-based-autoscaling-for-machine-learning-workloads/#idea-2-based-on-inference-latency">Idea #2 Based on inference latency</a></h4>
-<p>用 latency 的長短來判斷是否需要 scaling 似乎是一個滿直觀的想法，但深入研究後會發現有其他問題：</p>
-<ol>
-<li>latency 的估計都是基於當前的模型，但模型更版時可能會讓 latency 永遠無法達到設定的值，導致無限 scaling</li>
-<li>latency 難以作為 scaling down 的指標</li>
-<li>如果 API 需要呼叫第三方 API，這時第三方 API 的 latency 就會嚴重影響到原 API 的 latency</li>
-</ol>
-<h4 id="idea-3-based-on-queue-length"><a class="toclink" href="../../../../2021/03/09/implementing-request-based-autoscaling-for-machine-learning-workloads/#idea-3-based-on-queue-length">Idea #3 Based on queue length</a></h4>
-<p>使用在排隊等待的 request 數量作為 scaling 也是另一個直觀的做法，同時也能作為 scaling down 的指標。他們一開始提出了一些可能的做法：</p>
-<ol>
-<li>建立一個 request forwarder，負責計算有多少 request 進入</li>
-<li>從 Istio 改為 <a href="https://github.com/solo-io/gloo">Gloo</a>，因為 Gloo 有提供 <a href="https://docs.solo.io/gloo-edge/latest/guides/observability/prometheus/metrics/">requests in flight</a> 的 metics</li>
-</ol>
-<p>但兩個方案執行成本都偏高，第一項需要投入過多的開發人力，而第二項則需要大幅度調整已建立好的 Istio。因此他們把目標轉向了利用 FastAPI 與 Uvicorn 替代 Flask 與 Gunicorn，利用 Uvicorn 的 async event loop 能夠在實際執行 inference 前計算 request 數目。</p>
-<p>使用 FastAPI 與 Uvicorn 的新架構能夠確保 autoscale 足夠的 instance，並且盡可能降低建立 instance 的費用。</p>
-<p>最後他們也提到還可以根據 queue length 建立更細緻的 metrics，像是使用 queue length 的變動速率（對 queue length 作微分）。例如 queue length 開始快速減少，這時表示當下的 instance 足以消耗掉等待中的 request，因此不需要多開 instance，反之則需要 scale up。</p>
-<hr />
-<p>前陣子也有在研究該如何替 Python 的 ML deployment 設定 scaling metrics，架構同樣是使用 Flask 搭配 Gunicorn。一開始也是想單純使用 CPU 或 Memory 這些基礎指標，但一樣是遇到本篇提到的 CPU 使用問題，然後因為 Python GIL 的特性，一次必定指執行一個 thread，就算 Gunicorn 更換不同的 worker type 都無法讓 CPU 或 Memory 有什麼特殊的變化。</p>
-<p>而因為我們目前使用的 K8s 是 HPE 的 KEM，scale metrics 只能設定 CPU 或 Memory，不支援任何其他自訂 metrics，所以最後也只能暫時宣告放棄。待未來切換到 OKD 時，再來好好嘗試 queue length 的變動速率這種有趣的指標。</p>
-    <nav class="md-post__action">
-      <a href="../../../../2021/03/09/implementing-request-based-autoscaling-for-machine-learning-workloads/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-02-22 00:00:00">February 22, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../../../category/algorithm/" class="md-meta__link">Algorithm</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-02-22 00:00:00">February 22, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../../../category/algorithm/"
+                  class="md-meta__link"
+                >Algorithm</a></li>
+          
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="3sum"><a class="toclink" href="../../../../2021/02/22/3sum/">3Sum</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="3sum"><a class="toclink" href="../../../../2021/02/22/3sum/">3Sum</a></h2>
-<p><a href="https://leetcode.com/problems/3sum/">15. 3Sum</a></p>
-<h4 id="hash-table"><a class="toclink" href="../../../../2021/02/22/3sum/#hash-table">Hash Table</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="k">def</span> <span class="nf">threeSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>        <span class="n">ans</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        <span class="n">num_dict</span> <span class="o">=</span> <span class="p">{}</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        <span class="n">nums</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>            <span class="n">num_dict</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">num_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>            <span class="n">x</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>            <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">==</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]:</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>                <span class="k">continue</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>                <span class="n">y</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>                <span class="k">if</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">!=</span> <span class="n">i</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">==</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]:</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>                    <span class="k">continue</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>                <span class="n">t</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>                <span class="k">if</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>                    <span class="k">continue</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>                <span class="k">if</span> <span class="n">num_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>                    <span class="k">continue</span>
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>                <span class="k">if</span> <span class="n">num_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span> <span class="o">==</span> <span class="n">t</span><span class="p">):</span>
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>                    <span class="n">ans</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">])</span>
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>        <span class="k">return</span> <span class="n">ans</span>
-</code></pre></div>
-<h4 id="tow-pointers"><a class="toclink" href="../../../../2021/02/22/3sum/#tow-pointers">Tow Pointers</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="k">def</span> <span class="nf">threeSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        <span class="n">ans</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        <span class="n">nums</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>            <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]:</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>                <span class="k">continue</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>            <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>            <span class="n">k</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>            <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">:</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>                <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&gt;</span> <span class="o">-</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>                    <span class="n">k</span> <span class="o">-=</span> <span class="mi">1</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>                <span class="k">elif</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&lt;</span> <span class="o">-</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>                    <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>                <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>                    <span class="n">ans</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">nums</span><span class="p">[</span><span class="n">k</span><span class="p">]])</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>                    <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">k</span> <span class="ow">and</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>                        <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>                    <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">k</span> <span class="ow">and</span> <span class="n">nums</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">nums</span><span class="p">[</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]:</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>                        <span class="n">k</span> <span class="o">-=</span> <span class="mi">1</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>                    <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>                    <span class="n">k</span> <span class="o">-=</span> <span class="mi">1</span>
-<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>        <span class="k">return</span> <span class="n">ans</span>
-</code></pre></div>
-<p>Reference:</p>
-<ol>
-<li><a href="https://leetcode.com/list/xoqag3yj/">Blind Curated 75</a></li>
-<li><a href="https://youtu.be/zQDbMjNsuvY">花花酱 LeetCode 15. 3Sum - 刷题找工作 EP383</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../../../2021/02/22/3sum/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-02-08 00:00:00">February 8, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../../../category/tip/" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-02-08 00:00:00">February 8, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../../../category/tip/"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Node.js</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="install-node-sass-without-download-the-bindingnode-file-from-github"><a class="toclink" href="../../../../2021/02/08/install-node-sass-without-download-the-bindingnode-file-from-github/">Install node-sass without download the binding.node file from GitHub</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="install-node-sass-without-download-the-bindingnode-file-from-github"><a class="toclink" href="../../../../2021/02/08/install-node-sass-without-download-the-bindingnode-file-from-github/">Install node-sass without download the binding.node file from GitHub</a></h2>
-<p>問題：安裝 <a href="https://www.npmjs.com/package/node-sass">node-sass</a> 時，因為網路問題無法正常下載 GitHub 上的 binary，導致專案建置失敗</p>
-<p>解法：參考 <a href="https://github.com/sass/node-sass/issues/2133#issuecomment-477924161">https://github.com/sass/node-sass/issues/2133#issuecomment-477924161</a> 這則回覆中的方法，以自訂 Binary 網路位置的方式讓下載能正常執行</p>
-<ol>
-<li>手動下載要使用的 Binary 版本</li>
-<li>上傳至內部的 Nexus 的 Raw Repositories，URL 格式為 <code>https://nexus.intra/repository/nodejs/vx.x.x/</code></li>
-<li>
-<p>在 npm 中設定 node-sass 抓取 Binary 指向網站</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npm<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>sass-binary-site<span class="o">=</span>https://nexus.intra/repository/nodejs/<span class="w"> </span>--global
-</code></pre></div>
-</li>
-</ol>
-<p>在這個 issue 中有人對安裝 npm package 預設居然是下載 Binary 檔提出質疑，這在資安上其實有很大的漏洞，而且大多數公司在建置環境下都是無法連外，只從 private repository 上下載檢核過的 package。</p>
-<p>未來在安裝 package 也要多注意是否有這種下載 Binary 的情況，避免引入不必要的風險。</p>
-<p>Reference:</p>
-<ol>
-<li><a href="https://github.com/sass/node-sass/issues/2133">Is there a way to install node-sass without download the binding.node file from GitHub?</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../../../2021/02/08/install-node-sass-without-download-the-bindingnode-file-from-github/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-02-05 00:00:00">February 5, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../../../category/share/" class="md-meta__link">Share</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-02-05 00:00:00">February 5, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../../../category/share/"
+                  class="md-meta__link"
+                >Share</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Rules of thumb, Business Thinking</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="_1"><a class="toclink" href="../../../../2021/02/05/%E6%8A%80%E8%A1%93%E5%B7%A5%E4%BD%9C%E8%80%85%E7%9A%84%E5%95%86%E6%A5%AD%E6%80%9D%E7%B6%AD/">技術工作者的商業思維</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="_1"><a class="toclink" href="../../../../2021/02/05/">技術工作者的商業思維</a></h2>
-<p>本文是聽完 <a href="https://www.facebook.com/91agile">91 大</a>在<a href="https://bizthinking.com.tw/">商業思維學院</a>分享『技術工作者的商業思維』後的速記與心得</p>
-<p>講座的啟發：<strong>明確掌握自己的定位，搭配出獨特且有市場價值的產品組合，成為市場的獨佔者後除了薪水的回報，更還能得到更多自由</strong></p>
-<h4 id="_2"><a class="toclink" href="../../../../2021/02/05/#_2">內容速記</a></h4>
-<h5 id="_3"><a class="toclink" href="../../../../2021/02/05/#_3">職涯成長</a></h5>
-<ul>
-<li>Job</li>
-<li>價值：時間最貴<ul>
-<li>老闆的時間</li>
-<li>團隊的時間</li>
-<li>用時間買時間，選擇好的工具並熟練使用工具</li>
-</ul>
-</li>
-<li>角色：對外橋接<ul>
-<li>不要被公司綁住，多接觸外面的事、人</li>
-<li>從外部取經，回饋到內部的價值中，節省所有人的時間</li>
-</ul>
-</li>
-<li>溝通：向上溝通<ul>
-<li>隨時回報工作狀況</li>
-<li>目前情況</li>
-<li>建議方案 Ａ, Ｂ, Ｃ</li>
-<li>推薦使用 Ａ，因為在這個需求下利大於弊</li>
-<li>持續同步公司期望與個人成果</li>
-<li>Value First，但是與老闆共同的 Value</li>
-</ul>
-</li>
-<li>Work</li>
-<li>找愛：長期投資<ul>
-<li>小成本投資去尋找愛，勇於嘗試各種不同的技術</li>
-<li>有愛才能撐得比別人久，就算沒有實質回報，過程也是開心的</li>
-</ul>
-</li>
-<li>綜效：特色變現<ul>
-<li>把自己的愛做關聯</li>
-</ul>
-</li>
-<li>影響：創造連結</li>
-<li>Career</li>
-<li>選擇：成長&gt;績效<ul>
-<li>個人成長大於績效，多做對自己成長有幫助的事，有些績效對個人成長沒有助益</li>
-<li>找新工作時如果三年不加薪都可以接受，因為有想學或想發展的領域，但三年加薪幅度要灌在一開始談的薪水中，這樣就可以不為績效做事，有更多的自由</li>
-</ul>
-</li>
-<li>目標：天花板&gt;收入<ul>
-<li>天花板是 Career，收入是 Job</li>
-</ul>
-</li>
-<li>權威：成果&gt;履歷<ul>
-<li>成果是 Career 的累積</li>
-<li>履歷是為 Job 準備</li>
-<li>Job 與 Work 的產出都要持續輸出到成果中</li>
-</ul>
-</li>
-<li>Values</li>
-<li>初心：擇己所愛</li>
-<li>人脈：真能幫上多少人<ul>
-<li>有能力幫人</li>
-<li>知道別人有需要</li>
-<li>別人願意選擇找你幫忙</li>
-</ul>
-</li>
-<li>自由：做自己，不委屈</li>
-</ul>
-<h5 id="_4"><a class="toclink" href="../../../../2021/02/05/#_4">推薦書籍</a></h5>
-<ol>
-<li>賽斯高汀</li>
-<li>戳盒子宣言：從想到做</li>
-<li>有機會拼就對了：從想到做</li>
-<li>低谷：自由工作者</li>
-<li>動機，單純的力量：推動變革</li>
-<li>學生為什麼不喜歡上學：For trainer</li>
-<li>做個有梗的人：如何做嘗試</li>
-<li>刻意練習：學習相關</li>
-<li>點子都是偷來的：學習相關</li>
-</ol>
-<h4 id="_5"><a class="toclink" href="../../../../2021/02/05/#_5">心得</a></h4>
-<p>91 大分享了很多他在職涯中的心得，其中有三點我覺得啟發我很多</p>
-<blockquote>
-<p>每多賺 100 萬，不快樂程度大概會變兩倍，更慘的是扣完稅實際才多拿 70 到 80 萬<br />
-下班後的休息，無法補償上班時的不快樂</p>
-</blockquote>
-<p>雖然這個道理一直都懂，但用數字赤裸裸呈現的時候還是讓人很震撼。聽完之後更會讓人想要多努力一點，不要掉入這個痛苦的漩渦中。</p>
-<blockquote>
-<p>無論是在工作中或是在尋找新的工作時，都應該要把眼光放在發展性，是不是有足夠的成長空間，不要只關注短期的回報</p>
-</blockquote>
-<p>以無限賽局的角度來看待，無論是技術、人生或是投資都是關注長期的獲利才是較佳的策略。</p>
-<blockquote>
-<p>縱使你有能力能幫助別人，別人不一定願意選擇找你幫忙</p>
-</blockquote>
-<p>過去很少去思考這一點，但這才是能不能幫助到別人的關鍵，如果他不願意找你，有再強的能力都無法幫助到他。而幫助也是一個正向的循環，每協助解決一個問題都是能力與人脈的累加，能幫助越來越多人，能解決的問題也越來越多，自己也會變得越來越強大。</p>
-<h4 id="_6"><a class="toclink" href="../../../../2021/02/05/#_6">職涯覆盤</a></h4>
-<p>以下是91大提出的九題職涯覆盤問答，因為目前還是 Junior，所以先從組織內部的角度回答這些問題</p>
-<p>職涯覆盤回答</p>
-<ol>
-<li>我目前用來創造商業價值的主要依據為何？<ul>
-<li>分析需求並獨立搭建解決方案</li>
-</ul>
-</li>
-<li>我真正感到熱愛的技能、工作、喜好、專業是哪些？<ul>
-<li>挖掘需求、設計與實作解決方案，從無到有搭建整個服務</li>
-<li>Web Application</li>
-<li>Vue.js, python</li>
-<li>K8s, Docker, OpenAPI, DevOps</li>
-</ul>
-</li>
-<li>如何從我熱愛的領域變現或創造商業價值？<ul>
-<li>主動發掘組織內的需求，提出可行的解決方案並實作</li>
-<li>被動承接組織內的任務，但同時主動挖掘其他潛在的痛點</li>
-</ul>
-</li>
-<li>誰會需要這樣的商業價值？為什麼要選擇我？<ul>
-<li>需要快速驗證與實作需求，一條龍能加快開發速度</li>
-<li>只需要粗略地描述需求，從SA, PG, OP 都一手包辦，獨立產出可用的服務</li>
-</ul>
-</li>
-<li>哪些熱愛的領域交集，能產生綜效或獨特商業價值？<ul>
-<li>對前後端都有自主開發能力，搭配容器化技術，能夠獨立開發出可用的服務</li>
-</ul>
-</li>
-<li>還有哪些需求或商機，需要哪些領域交集才能達成？<ul>
-<li>增加 DB, Redis, MQ 的技術能力，擴大服務的防守範圍</li>
-</ul>
-</li>
-<li>如何養成能解決別人問題的能力，並讓人知道？<ul>
-<li>把自己開發時遇到的問題紀錄下來，並寫成文件發佈到組織內的知識管理系統中</li>
-</ul>
-</li>
-<li>怎麼發現他人有這樣的需求與問題？<ul>
-<li>多關注有人在抱怨或被抱怨的內容</li>
-</ul>
-</li>
-<li>怎麼讓他們願意選擇我，接受我的幫助？<ul>
-<li>主動與他人分享與其業務相關的技術內容，讓對方知道我也對該領域有涉略，未來遇到問題時就有可能會主動徵詢，並接受幫助</li>
-</ul>
-</li>
-</ol>
-<p>回答完這些問題時，讓我更認真檢視自身技能與商業價值之間的連結。以我而言，有些自認可以帶來的商業價值，在做連結時反而發現一些軟性的技能其實可以說是缺乏的，像是需求分析還有很多可以加強的空間。</p>
-<p>與軟性的技能相比，技術面的能力高低是相對明確的，時時都會評估是否有需要加強的地方。但軟性技能的不足，比較難透過自身察覺，會慣性地用技術去克服。像是需求分析技巧因為不夠好，就透過高頻率的開發迭代，直接 trial and error 找出正確解。但人並不像機器可以無限次嘗試，過高的頻率會耗損彼此的耐心與消磨信任感，應該要加強需求分析能力，讓整個開發過程達到一個比較好的平衡。</p>
-    <nav class="md-post__action">
-      <a href="../../../../2021/02/05/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-01-29 00:00:00">January 29, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../../../category/review/" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-01-29 00:00:00">January 29, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../../../category/review/"
+                  class="md-meta__link"
+                >Review</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Python, API</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="why-we-switched-from-flask-to-fastapi-for-production-machine-learning"><a class="toclink" href="../../../../2021/01/29/why-we-switched-from-flask-to-fastapi-for-production-machine-learning/">Why we switched from Flask to FastAPI for production machine learning</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="why-we-switched-from-flask-to-fastapi-for-production-machine-learning"><a class="toclink" href="../../../../2021/01/29/why-we-switched-from-flask-to-fastapi-for-production-machine-learning/">Why we switched from Flask to FastAPI for production machine learning</a></h2>
-<p><a href="https://towardsdatascience.com/why-we-switched-from-flask-to-fastapi-for-production-machine-learning-765aab9b3679">Why we switched from Flask to FastAPI for production machine learning</a></p>
-<p><a href="https://github.com/cortexlabs/cortex">Cortex</a> 是一個提供 ML 服務的 Infra，支援多種不同框架 TensorFlow、PyTorch、scikit-learn 等，並提供 autoscaling、rolling updates、log 管理等。在他們的 0.14 版之後將 API 的底層從 Flask 換成了 <a href="https://fastapi.tiangolo.com/">FastAPI</a>，之後經歷了多次更新對於更換成 FastAPI 感到非常滿意。</p>
-<p>以下三點是他們決定更換的原因</p>
-<h4 id="1-ml-inference-benefits-from-native-async-support"><a class="toclink" href="../../../../2021/01/29/why-we-switched-from-flask-to-fastapi-for-production-machine-learning/#1-ml-inference-benefits-from-native-async-support">1. ML inference benefits from native async support</a></h4>
-<p>Cortex 從原本的依據 CPU 使用率的 autoscaling 策略，改成依據 request 的數量。但 Flask 因為沒有原生支援 async，一次只能從 queue 取出數個他能夠處理的 request 進行運算，無法得知 queue 有多少筆待處理的 request。而基於 Uvicorn 的 FastAPI 得力於 ASGI server 的特性，原生就支援 async event loop，所有 request 都會直接進到 FastAPI 中，而不會在服務外排成一個 queue，所以就能夠取到當下 request 的筆數。</p>
-<h4 id="2-improved-latency-is-a-huge-deal-for-inference"><a class="toclink" href="../../../../2021/01/29/why-we-switched-from-flask-to-fastapi-for-production-machine-learning/#2-improved-latency-is-a-huge-deal-for-inference">2. Improved latency is a huge deal for inference</a></h4>
-<p>在實際場景中服務的速度對使用者的影響是非常巨大的，如果 Gmail 的文句自動完成功能比使用者打字慢的話，那這個功能就完全喪失了他了價值。在 <a href="https://www.techempower.com/benchmarks/">Web Framework Benchmarks</a> 中 FastAPI 比 Flask 快了 300%。</p>
-<h4 id="3-fastapi-is-easy-to-switch-toby-design"><a class="toclink" href="../../../../2021/01/29/why-we-switched-from-flask-to-fastapi-for-production-machine-learning/#3-fastapi-is-easy-to-switch-toby-design">3. FastAPI is easy to switch to—by design</a></h4>
-<p>從 Flask 轉換至 FastAPI 是非常輕鬆的，兩者個寫法基本上非常相似，轉換成本在轉換框架時也是一個非常重要的參考因素。</p>
-<p>Flask API endpoint example</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/hello&quot;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;GET&quot;</span><span class="p">])</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="k">return</span> <span class="s2">&quot;Hello, World&quot;</span>
-</code></pre></div>
-<p>FastAPI API endpoint example</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/hello&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="k">return</span> <span class="s2">&quot;Hello, World&quot;</span>
-</code></pre></div>
-<h4 id="nice-to-haves"><a class="toclink" href="../../../../2021/01/29/why-we-switched-from-flask-to-fastapi-for-production-machine-learning/#nice-to-haves">Nice to haves</a></h4>
-<p>除了上述的優點外，FastAPI 也提供了資料格式驗證、更友善的錯誤處理、自動生成的 API Spec 等功能。</p>
-<hr />
-<p>Flask 做為每一個寫 Python API 的 Developer 第一個使用的 Package，完善的生態圈讓他有著幾乎不可撼動的地位。資料驗證、API Spec 等功能其實也有對應的 Package 可以使用如 <a href="https://flask-restx.readthedocs.io/en/latest/">Flask-RESTX</a>。但內建非同步確實是一個很吸引人的功能，最近也是一樣有遇到無法取得 request 數量的問題，只能夠透過外部的 gateway 去取得，沒想 FastAPI 能夠輕鬆解決這個問題。後續會再多針對 FastAPI 與 ASGI Server 進行比較深入的研究，</p>
-    <nav class="md-post__action">
-      <a href="../../../../2021/01/29/why-we-switched-from-flask-to-fastapi-for-production-machine-learning/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-01-25 00:00:00">January 25, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../../../category/algorithm/" class="md-meta__link">Algorithm</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-01-25 00:00:00">January 25, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../../../category/algorithm/"
+                  class="md-meta__link"
+                >Algorithm</a></li>
+          
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="container-with-most-water"><a class="toclink" href="../../../../2021/01/25/container-with-most-water/">Container With Most Water</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="container-with-most-water"><a class="toclink" href="../../../../2021/01/25/container-with-most-water/">Container With Most Water</a></h2>
-<p><a href="https://leetcode.com/problems/container-with-most-water/">11. Container With Most Water</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">def</span> <span class="nf">maxArea</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="n">l</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="n">r</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">height</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="k">while</span> <span class="n">l</span> <span class="o">!=</span> <span class="n">r</span><span class="p">:</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>            <span class="n">ans</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">height</span><span class="p">[</span><span class="n">l</span><span class="p">],</span> <span class="n">height</span><span class="p">[</span><span class="n">r</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">l</span><span class="p">))</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>            <span class="k">if</span> <span class="n">height</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">[</span><span class="n">r</span><span class="p">]:</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>                <span class="n">l</span> <span class="o">+=</span> <span class="mi">1</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>            <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>                <span class="n">r</span> <span class="o">-=</span> <span class="mi">1</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        <span class="k">return</span> <span class="n">ans</span>
-</code></pre></div>
-<p>Reference:</p>
-<ol>
-<li><a href="https://leetcode.com/list/xoqag3yj/">Blind Curated 75</a></li>
-<li><a href="https://youtu.be/IONgE6QZgGI">花花酱 LeetCode 11. Container With Most Water - 刷题找工作 EP121</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../../../2021/01/25/container-with-most-water/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-01-23 00:00:00">January 23, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../../../category/share/" class="md-meta__link">Share</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-01-23 00:00:00">January 23, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../../../category/share/"
+                  class="md-meta__link"
+                >Share</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Vue</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="vxe-table-with-filter-search-and-pagination"><a class="toclink" href="../../../../2021/01/23/vxe-table-with-filter-search-and-pagination/">vxe-table with filter search and pagination</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="vxe-table-with-filter-search-and-pagination"><a class="toclink" href="../../../../2021/01/23/vxe-table-with-filter-search-and-pagination/">vxe-table with filter search and pagination</a></h2>
-<p><a href="https://github.com/x-extends/vxe-table">vxe-table</a> 是一款基於 Vue 的 PC 端表格元件，支援 CRUD、虛擬滾動、懶加載、分頁、樹狀顯示等功能，且有完善的 API 文件與大量範例。</p>
-<p>文件中關於查詢與分頁的範例都較為複雜，一般常用以 filter 實現查詢的功能須自行實作。所以簡單寫了一個範例，詳細程式碼如下，也可以參考 <a href="https://codesandbox.io/s/vxe-table-filter-search-nn8tf">CodeSandbox</a>。</p>
-<p>App.js</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&lt;template&gt;
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  &lt;div id=&quot;app&quot;&gt;
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    &lt;vxe-grid
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>      border
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>      resizable
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>      show-overflow
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>      height=&quot;auto&quot;
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>      :columns=&quot;tableColumn&quot;
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>      :toolbar-config=&quot;{ slots: { buttons: &#39;toolbar_buttons&#39; } }&quot;
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>      :data=&quot;tableData&quot;
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>      :pager-config=&quot;tablePage&quot;
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>      @page-change=&quot;handlePageChange&quot;
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    &gt;
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>      &lt;template v-slot:toolbar_buttons&gt;
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>        &lt;vxe-form&gt;
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>          &lt;vxe-form-item title=&quot;Filter&quot;&gt;
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>            &lt;template v-slot&gt;
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>              &lt;vxe-input v-model=&quot;keyword&quot; placeholder=&quot;Search&quot; clearable /&gt;
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>            &lt;/template&gt;
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>          &lt;/vxe-form-item&gt;
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>        &lt;/vxe-form&gt;
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>      &lt;/template&gt;
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>
-<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>      &lt;template v-slot:empty&gt;
-<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>        &lt;span style=&quot;color: red&quot;&gt;
-<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>          &lt;p&gt;Data Not Found&lt;/p&gt;
-<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>        &lt;/span&gt;
-<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>      &lt;/template&gt;
-<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>    &lt;/vxe-grid&gt;
-<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>  &lt;/div&gt;
-<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>&lt;/template&gt;
-<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>
-<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>&lt;script&gt;
-<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>export default {
-<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>  name: &quot;App&quot;,
-<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>  data() {
-<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>    return {
-<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>      tableColumn: [
-<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>        { field: &quot;code&quot;, title: &quot;Customer Code&quot; },
-<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>        { field: &quot;title&quot;, title: &quot;Customer Name&quot;, showHeaderOverflow: true },
-<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>      ],
-<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>      tablePage: {
-<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>        total: 0,
-<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>        currentPage: 1,
-<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>        pageSize: 5,
-<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>        align: &quot;center&quot;,
-<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>        layouts: [
-<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>          &quot;PrevJump&quot;,
-<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>          &quot;PrevPage&quot;,
-<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>          &quot;Number&quot;,
-<a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>          &quot;NextPage&quot;,
-<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>          &quot;NextJump&quot;,
-<a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>          &quot;FullJump&quot;,
-<a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>          &quot;Total&quot;,
-<a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>        ],
-<a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a>        perfect: true,
-<a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a>      },
-<a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>      customerList: [
-<a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a>        { code: &quot;001&quot;, title: &quot;one&quot; },
-<a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a>        { code: &quot;002&quot;, title: &quot;two&quot; },
-<a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a>        { code: &quot;003&quot;, title: &quot;three&quot; },
-<a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a>        { code: &quot;004&quot;, title: &quot;four&quot; },
-<a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a>        { code: &quot;005&quot;, title: &quot;five&quot; },
-<a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a>        { code: &quot;006&quot;, title: &quot;six&quot; },
-<a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a>        { code: &quot;007&quot;, title: &quot;seven&quot; },
-<a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a>        { code: &quot;008&quot;, title: &quot;eight&quot; },
-<a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a>        { code: &quot;009&quot;, title: &quot;nine&quot; },
-<a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a>        { code: &quot;010&quot;, title: &quot;ten&quot; },
-<a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a>      ],
-<a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a>      keyword: &quot;&quot;,
-<a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a>    };
-<a id="__codelineno-4-72" name="__codelineno-4-72" href="#__codelineno-4-72"></a>  },
-<a id="__codelineno-4-73" name="__codelineno-4-73" href="#__codelineno-4-73"></a>  computed: {
-<a id="__codelineno-4-74" name="__codelineno-4-74" href="#__codelineno-4-74"></a>    filteredData() {
-<a id="__codelineno-4-75" name="__codelineno-4-75" href="#__codelineno-4-75"></a>      const lowerKeyworkd = this.keyword.toLowerCase();
-<a id="__codelineno-4-76" name="__codelineno-4-76" href="#__codelineno-4-76"></a>      return lowerKeyworkd
-<a id="__codelineno-4-77" name="__codelineno-4-77" href="#__codelineno-4-77"></a>        ? this.customerList.filter(
-<a id="__codelineno-4-78" name="__codelineno-4-78" href="#__codelineno-4-78"></a>            (row) =&gt;
-<a id="__codelineno-4-79" name="__codelineno-4-79" href="#__codelineno-4-79"></a>              row.code.toLowerCase().includes(lowerKeyworkd) ||
-<a id="__codelineno-4-80" name="__codelineno-4-80" href="#__codelineno-4-80"></a>              row.title.toLowerCase().includes(lowerKeyworkd)
-<a id="__codelineno-4-81" name="__codelineno-4-81" href="#__codelineno-4-81"></a>          )
-<a id="__codelineno-4-82" name="__codelineno-4-82" href="#__codelineno-4-82"></a>        : this.customerList;
-<a id="__codelineno-4-83" name="__codelineno-4-83" href="#__codelineno-4-83"></a>    },
-<a id="__codelineno-4-84" name="__codelineno-4-84" href="#__codelineno-4-84"></a>    tableData() {
-<a id="__codelineno-4-85" name="__codelineno-4-85" href="#__codelineno-4-85"></a>      return this.filteredData.slice(
-<a id="__codelineno-4-86" name="__codelineno-4-86" href="#__codelineno-4-86"></a>        (this.tablePage.currentPage - 1) * this.tablePage.pageSize,
-<a id="__codelineno-4-87" name="__codelineno-4-87" href="#__codelineno-4-87"></a>        this.tablePage.currentPage * this.tablePage.pageSize
-<a id="__codelineno-4-88" name="__codelineno-4-88" href="#__codelineno-4-88"></a>      );
-<a id="__codelineno-4-89" name="__codelineno-4-89" href="#__codelineno-4-89"></a>    },
-<a id="__codelineno-4-90" name="__codelineno-4-90" href="#__codelineno-4-90"></a>  },
-<a id="__codelineno-4-91" name="__codelineno-4-91" href="#__codelineno-4-91"></a>  watch: {
-<a id="__codelineno-4-92" name="__codelineno-4-92" href="#__codelineno-4-92"></a>    filteredData(newValue) {
-<a id="__codelineno-4-93" name="__codelineno-4-93" href="#__codelineno-4-93"></a>      this.tablePage.total = newValue.length;
-<a id="__codelineno-4-94" name="__codelineno-4-94" href="#__codelineno-4-94"></a>    },
-<a id="__codelineno-4-95" name="__codelineno-4-95" href="#__codelineno-4-95"></a>  },
-<a id="__codelineno-4-96" name="__codelineno-4-96" href="#__codelineno-4-96"></a>  methods: {
-<a id="__codelineno-4-97" name="__codelineno-4-97" href="#__codelineno-4-97"></a>    handlePageChange({ currentPage, pageSize }) {
-<a id="__codelineno-4-98" name="__codelineno-4-98" href="#__codelineno-4-98"></a>      this.tablePage.currentPage = currentPage;
-<a id="__codelineno-4-99" name="__codelineno-4-99" href="#__codelineno-4-99"></a>      this.tablePage.pageSize = pageSize;
-<a id="__codelineno-4-100" name="__codelineno-4-100" href="#__codelineno-4-100"></a>    },
-<a id="__codelineno-4-101" name="__codelineno-4-101" href="#__codelineno-4-101"></a>  },
-<a id="__codelineno-4-102" name="__codelineno-4-102" href="#__codelineno-4-102"></a>};
-<a id="__codelineno-4-103" name="__codelineno-4-103" href="#__codelineno-4-103"></a>&lt;/script&gt;
-<a id="__codelineno-4-104" name="__codelineno-4-104" href="#__codelineno-4-104"></a>
-<a id="__codelineno-4-105" name="__codelineno-4-105" href="#__codelineno-4-105"></a>&lt;style&gt;
-<a id="__codelineno-4-106" name="__codelineno-4-106" href="#__codelineno-4-106"></a>#app {
-<a id="__codelineno-4-107" name="__codelineno-4-107" href="#__codelineno-4-107"></a>  margin: 20px;
-<a id="__codelineno-4-108" name="__codelineno-4-108" href="#__codelineno-4-108"></a>}
-<a id="__codelineno-4-109" name="__codelineno-4-109" href="#__codelineno-4-109"></a>&lt;/style&gt;
-</code></pre></div>
-<p>main.js</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">Vue</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;vue&quot;</span><span class="p">;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">App</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./App.vue&quot;</span><span class="p">;</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">import</span><span class="w"> </span><span class="s2">&quot;xe-utils&quot;</span><span class="p">;</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">import</span><span class="w"> </span><span class="nx">VXETable</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;vxe-table&quot;</span><span class="p">;</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">import</span><span class="w"> </span><span class="nx">VXETablePluginElement</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;vxe-table-plugin-element&quot;</span><span class="p">;</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="nx">Vue</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">productionTip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">VXETable</span><span class="p">);</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="nx">VXETable</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">VXETablePluginElement</span><span class="p">);</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="ow">new</span><span class="w"> </span><span class="nx">Vue</span><span class="p">({</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">  </span><span class="nx">render</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">h</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">h</span><span class="p">(</span><span class="nx">App</span><span class="p">)</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="p">}).</span><span class="nx">$mount</span><span class="p">(</span><span class="s2">&quot;#app&quot;</span><span class="p">);</span>
-</code></pre></div>
-    <nav class="md-post__action">
-      <a href="../../../../2021/01/23/vxe-table-with-filter-search-and-pagination/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-01-21 00:00:00">January 21, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../../../category/tip/" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-01-21 00:00:00">January 21, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../../../category/tip/"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              jupyter notebook</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="arrow-keys-not-working-in-vim-in-jupyter-console"><a class="toclink" href="../../../../2021/01/21/arrow-keys-not-working-in-vim-in-jupyter-console/">Arrow keys not working in vim in Jupyter console</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="arrow-keys-not-working-in-vim-in-jupyter-console"><a class="toclink" href="../../../../2021/01/21/arrow-keys-not-working-in-vim-in-jupyter-console/">Arrow keys not working in vim in Jupyter console</a></h2>
-<p>問題：vim 在 jupyter notebook console 使用時方向鍵行為異常，無法正常移動</p>
-<p>解法：在 <code>~/.vimrc</code> 增加 <code>:set term=builtin_ansi</code></p>
-<p>在 Windows 的 Unix console <a href="https://cmder.net/">Cmder</a> 也有人遇到這個種問題，一樣可以用相同方式解決，但副作用為會影響 syntax highlighting。如果想要保持 syntax highlighting 可以參考<a href="https://github.com/microsoft/WSL/issues/1154#issuecomment-595951533">調整 key code mapping 的解法</a>。</p>
-<p>Reference:</p>
-<ol>
-<li><a href="https://github.com/jupyter/jupyter_console/issues/171">Arrow keys not working in vim in Jupyter console</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../../../2021/01/21/arrow-keys-not-working-in-vim-in-jupyter-console/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-01-20 00:00:00">January 20, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../../../category/review/" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-01-20 00:00:00">January 20, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../../../category/review/"
+                  class="md-meta__link"
+                >Review</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              K8s</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="kubernetes-operator-for-beginners-what-why-how"><a class="toclink" href="../../../../2021/01/20/kubernetes-operator-for-beginners--what-why-how/">Kubernetes Operator for Beginners — What, Why, How</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="kubernetes-operator-for-beginners-what-why-how"><a class="toclink" href="../../../../2021/01/20/kubernetes-operator-for-beginners-what-why-how/">Kubernetes Operator for Beginners — What, Why, How</a></h2>
-<p><a href="https://medium.com/swlh/kubernetes-operator-for-beginners-what-why-how-21b23f0cb9b1">Kubernetes Operator for Beginners — What, Why, How</a></p>
-<p>本文介紹了 Operator 的功能以及如何建立 Operator</p>
-<h5 id="what-is-an-operator"><a class="toclink" href="../../../../2021/01/20/kubernetes-operator-for-beginners-what-why-how/#what-is-an-operator">What is an operator</a></h5>
-<p>利用 Custom Resource (CRD) 操作 K8s 上的其他資源，並且符合 K8s 的 Control loop 機制，可以用 K8s native api 管理</p>
-<h5 id="why-you-need-an-operator"><a class="toclink" href="../../../../2021/01/20/kubernetes-operator-for-beginners-what-why-how/#why-you-need-an-operator">Why you need an operator</a></h5>
-<p>以 Code 的方式自動化對 K8s 的操作，提高維運的可靠性</p>
-<h5 id="how-to-write-an-operator"><a class="toclink" href="../../../../2021/01/20/kubernetes-operator-for-beginners-what-why-how/#how-to-write-an-operator">How to write an Operator</a></h5>
-<ol>
-<li>Kudo</li>
-<li>Helm</li>
-<li>Dynamic Operator: 彈性高，需要手動撰寫許多程式碼</li>
-<li>Operator SDK</li>
-<li>Kubebuilder</li>
-</ol>
-<h5 id="is-operator-necessary"><a class="toclink" href="../../../../2021/01/20/kubernetes-operator-for-beginners-what-why-how/#is-operator-necessary">Is Operator Necessary</a></h5>
-<ol>
-<li>不要沈溺於自動化。如果這個工作一個月只需要花十分鐘處理，那完全不值得花一週或甚至更多的時間來特地寫一個 Operator</li>
-<li>如果已經有 Helm Chart 或 Kudo template 可以使用的話，不要硬用 Operator SDK 或 Kubebuilder 重新實作，YAML 永遠比 Go Code 簡單更多</li>
-<li>如果可以的話，比起客制 Operator，選擇醜陋但簡單的 bash script 有時候會更輕鬆一點</li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../../../2021/01/20/kubernetes-operator-for-beginners-what-why-how/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
       
         
@@ -1668,7 +1238,7 @@
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.a5ca32a6.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.6981e6db.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

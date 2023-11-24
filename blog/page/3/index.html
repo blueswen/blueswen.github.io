@@ -14,22 +14,22 @@
         <link rel="prev" href="../../../portfolio/">
       
       
-        <link rel="next" href="../../category/tip/">
+        <link rel="next" href="../../category/algorithm/">
       
       
         
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8+insiders-4.43.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.12+insiders-4.45.0">
     
     
       
-        <title>Blog - Blueswen</title>
+        <title>Index - Blueswen</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.382dd0b9.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0ab26e37.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -71,14 +71,14 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Blog - Blueswen" />
+<meta property="og:title" content="Index - Blueswen" />
 <meta property="og:image" content="https://blueswen.github.io/assets/images/social/blog/page/3/index.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:url" content="https://blueswen.github.io/blog/page/3/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="Blog - Blueswen" />
+<meta property="twitter:title" content="Index - Blueswen" />
 <meta property="twitter:image" content="https://blueswen.github.io/assets/images/social/blog/page/3/index.png" />
  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
@@ -106,11 +106,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#blog" class="md-skip">
-          Skip to content
-        </a>
       
     </div>
     <div data-md-component="announce">
@@ -142,7 +137,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Blog
+              Index
             
           </span>
         </div>
@@ -702,13 +697,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/tip/" class="md-nav__link">
+      <a href="../../category/algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Tip
+    Algorithm
   
 
     
@@ -754,13 +749,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/algorithm/" class="md-nav__link">
+      <a href="../../category/share/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Algorithm
+    Share
   
 
     
@@ -780,13 +775,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/share/" class="md-nav__link">
+      <a href="../../category/tip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Share
+    Tip
   
 
     
@@ -859,8 +854,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -872,883 +865,310 @@
   <div class="md-content" data-md-component="content">
     <div class="md-content__inner">
       <header class="md-typeset">
-        <h1 id="blog">Blog</h1>
+        
       </header>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-01-21 00:00:00">January 21, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tip/" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-01-21 00:00:00">January 21, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/tip/"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              jupyter notebook</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="arrow-keys-not-working-in-vim-in-jupyter-console"><a class="toclink" href="../../2021/01/21/arrow-keys-not-working-in-vim-in-jupyter-console/">Arrow keys not working in vim in Jupyter console</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="arrow-keys-not-working-in-vim-in-jupyter-console"><a class="toclink" href="../../2021/01/21/arrow-keys-not-working-in-vim-in-jupyter-console/">Arrow keys not working in vim in Jupyter console</a></h2>
-<p>問題：vim 在 jupyter notebook console 使用時方向鍵行為異常，無法正常移動</p>
-<p>解法：在 <code>~/.vimrc</code> 增加 <code>:set term=builtin_ansi</code></p>
-<p>在 Windows 的 Unix console <a href="https://cmder.net/">Cmder</a> 也有人遇到這個種問題，一樣可以用相同方式解決，但副作用為會影響 syntax highlighting。如果想要保持 syntax highlighting 可以參考<a href="https://github.com/microsoft/WSL/issues/1154#issuecomment-595951533">調整 key code mapping 的解法</a>。</p>
-<p>Reference:</p>
-<ol>
-<li><a href="https://github.com/jupyter/jupyter_console/issues/171">Arrow keys not working in vim in Jupyter console</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2021/01/21/arrow-keys-not-working-in-vim-in-jupyter-console/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-01-20 00:00:00">January 20, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/review/" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-01-20 00:00:00">January 20, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/review/"
+                  class="md-meta__link"
+                >Review</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              K8s</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="kubernetes-operator-for-beginners-what-why-how"><a class="toclink" href="../../2021/01/20/kubernetes-operator-for-beginners--what-why-how/">Kubernetes Operator for Beginners — What, Why, How</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="kubernetes-operator-for-beginners-what-why-how"><a class="toclink" href="../../2021/01/20/kubernetes-operator-for-beginners-what-why-how/">Kubernetes Operator for Beginners — What, Why, How</a></h2>
-<p><a href="https://medium.com/swlh/kubernetes-operator-for-beginners-what-why-how-21b23f0cb9b1">Kubernetes Operator for Beginners — What, Why, How</a></p>
-<p>本文介紹了 Operator 的功能以及如何建立 Operator</p>
-<h5 id="what-is-an-operator"><a class="toclink" href="../../2021/01/20/kubernetes-operator-for-beginners-what-why-how/#what-is-an-operator">What is an operator</a></h5>
-<p>利用 Custom Resource (CRD) 操作 K8s 上的其他資源，並且符合 K8s 的 Control loop 機制，可以用 K8s native api 管理</p>
-<h5 id="why-you-need-an-operator"><a class="toclink" href="../../2021/01/20/kubernetes-operator-for-beginners-what-why-how/#why-you-need-an-operator">Why you need an operator</a></h5>
-<p>以 Code 的方式自動化對 K8s 的操作，提高維運的可靠性</p>
-<h5 id="how-to-write-an-operator"><a class="toclink" href="../../2021/01/20/kubernetes-operator-for-beginners-what-why-how/#how-to-write-an-operator">How to write an Operator</a></h5>
-<ol>
-<li>Kudo</li>
-<li>Helm</li>
-<li>Dynamic Operator: 彈性高，需要手動撰寫許多程式碼</li>
-<li>Operator SDK</li>
-<li>Kubebuilder</li>
-</ol>
-<h5 id="is-operator-necessary"><a class="toclink" href="../../2021/01/20/kubernetes-operator-for-beginners-what-why-how/#is-operator-necessary">Is Operator Necessary</a></h5>
-<ol>
-<li>不要沈溺於自動化。如果這個工作一個月只需要花十分鐘處理，那完全不值得花一週或甚至更多的時間來特地寫一個 Operator</li>
-<li>如果已經有 Helm Chart 或 Kudo template 可以使用的話，不要硬用 Operator SDK 或 Kubebuilder 重新實作，YAML 永遠比 Go Code 簡單更多</li>
-<li>如果可以的話，比起客制 Operator，選擇醜陋但簡單的 bash script 有時候會更輕鬆一點</li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2021/01/20/kubernetes-operator-for-beginners-what-why-how/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-01-18 00:00:00">January 18, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/algorithm/" class="md-meta__link">Algorithm</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2021-01-18 00:00:00">January 18, 2021</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/algorithm/"
+                  class="md-meta__link"
+                >Algorithm</a></li>
+          
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="longest-palindromic-substring"><a class="toclink" href="../../2021/01/18/longest-palindromic-substring/">Longest Palindromic Substring</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="longest-palindromic-substring"><a class="toclink" href="../../2021/01/18/longest-palindromic-substring/">Longest Palindromic Substring</a></h2>
-<p><a href="https://leetcode.com/problems/longest-palindromic-substring/">5. Longest Palindromic Substring</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="k">def</span> <span class="nf">longestPalindrome</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        <span class="k">def</span> <span class="nf">getLen</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>            <span class="k">while</span> <span class="n">l</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="ow">and</span> <span class="n">s</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="n">r</span><span class="p">]:</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>                <span class="n">l</span> <span class="o">-=</span> <span class="mi">1</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>                <span class="n">r</span> <span class="o">+=</span> <span class="mi">1</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>            <span class="k">return</span> <span class="n">r</span> <span class="o">-</span> <span class="n">l</span> <span class="o">-</span> <span class="mi">1</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="n">maxLen</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>            <span class="n">curMax</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">getLen</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">getLen</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>            <span class="k">if</span> <span class="n">curMax</span> <span class="o">&lt;=</span> <span class="n">maxLen</span><span class="p">:</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>                <span class="k">continue</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>            <span class="n">maxLen</span> <span class="o">=</span> <span class="n">curMax</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>            <span class="n">start</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="p">(</span><span class="n">curMax</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>        <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="n">start</span> <span class="p">:</span> <span class="n">start</span> <span class="o">+</span> <span class="n">maxLen</span><span class="p">]</span>
-</code></pre></div>
-<p>Reference:</p>
-<ol>
-<li><a href="https://leetcode.com/list/xoqag3yj/">Blind Curated 75</a></li>
-<li><a href="https://youtu.be/g3R-pjUNa3k">花花酱 LeetCode 5. Longest Palindromic Substring - 刷题找工作 EP292</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2021/01/18/longest-palindromic-substring/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-12-06 00:00:00">December 6, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/share/" class="md-meta__link">Share</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-12-06 00:00:00">December 6, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/share/"
+                  class="md-meta__link"
+                >Share</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Python, Django, JWT</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="django-custom-user-with-drf-and-simple-jwt"><a class="toclink" href="../../2020/12/06/django-custom-user-with-drf-and-simple-jwt/">Django Custom User with DRF and Simple JWT</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-custom-user-with-drf-and-simple-jwt"><a class="toclink" href="../../2020/12/06/django-custom-user-with-drf-and-simple-jwt/">Django Custom User with DRF and Simple JWT</a></h2>
-<p>Django 內建 <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#user-model">User Model</a> 供認證，但<a href="https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project">官方文件</a>強烈建議在專案一開始就使用自訂的 User Model。因為未來若對 User Model 有調整需求，例如增加欄位，都只能使用自訂的 User Model，在一開始就使用內建的 User Model 會因為牽涉到各種 foreign ken 與多對多關係導致難以遷移(<a href="https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#changing-to-a-custom-user-model-mid-project">Changing to a custom user model mid-project</a>)。</p>
-<p><a href="https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#a-full-example">官方文件</a>提供了一個比較複雜的 Custom User 建立方式，但使用 AbstractBaseUser 或是 AbstractUser 是大家比較常用而且也相對簡單的方式。AbstractBaseUser 需要補充許多 User Model 的實作細節，而 AbstractUser 是 AbstractBaseUser 的 subclass，已經實作出一個完整的 User Model，單純只是調整欄位使用 AbstractUser 是最簡便的方式。</p>
-<p>本範例使用 <a href="https://www.django-rest-framework.org/">Django REST framework</a>(DRF) 做 API，並利用 <a href="https://github.com/SimpleJWT/django-rest-framework-simplejwt">Simple JWT</a> 進行驗證。完整範例請參考 <a href="https://github.com/Blueswen/django-custom-user">Django Custom User with DRF and Simple JWT</a>。</p>
-<h4 id="setup"><a class="toclink" href="../../2020/12/06/django-custom-user-with-drf-and-simple-jwt/#setup">Setup</a></h4>
-<ol>
-<li>使用 virtualenv 建立虛擬環境</li>
-<li>安裝 package</li>
-<li>初始 Django project website</li>
-<li>建立 Django application account 用於放置 Custom User Model</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>$<span class="w"> </span>mkdir<span class="w"> </span>django-custom-user<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>django-custom-user
-<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>$<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
-<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
-<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">Django</span><span class="o">==</span><span class="m">3</span>.1.4<span class="w"> </span><span class="nv">djangorestframework</span><span class="o">==</span><span class="m">3</span>.12.2<span class="w"> </span>djangorestframework-simplejwt<span class="o">==</span><span class="m">4</span>.6.0
-<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>django-admin.py<span class="w"> </span>startproject<span class="w"> </span>website<span class="w"> </span>.
-<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>python<span class="w"> </span>manage.py<span class="w"> </span>startapp<span class="w"> </span>account
-<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>python<span class="w"> </span>manage.py<span class="w"> </span>runserver
-</code></pre></div>
-<h4 id="custom-user-model"><a class="toclink" href="../../2020/12/06/django-custom-user-with-drf-and-simple-jwt/#custom-user-model">Custom User Model</a></h4>
-<ol>
-<li>建立 Custom User Model</li>
-<li>更新 <code>website/settings.py</code>，將 User Model 改為 Custom User Model</li>
-<li>執行 <code>makemigrations</code> 與 <code>migrate</code> 更新 DB</li>
-<li>建立 superuser admin 帳號</li>
-</ol>
-<p>在 <code>account/models.py</code> 新增我們要用的 Custom User Model，這時就可以增加需要的欄位，例如生日等。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="c1"># account/models.py</span>
-<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">AbstractUser</span>
-<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
-<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>
-<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>
-<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a><span class="k">class</span> <span class="nc">CustomUser</span><span class="p">(</span><span class="n">AbstractUser</span><span class="p">):</span>
-<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>    <span class="n">birthday</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateField</span><span class="p">(</span><span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>    <span class="c1"># add additional fields in here</span>
-<a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>
-<a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">username</span>
-</code></pre></div>
-<p>在 <code>website/settings.py</code> 需要加入我們增加的 account application，並增加 <code>AUTH_USER_MODEL</code> 設為我們新建的 Custom User Model，取代原本內建的 User Model。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="c1"># website/settings.py</span>
-<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="o">...</span>
-<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
-<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>    <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
-<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>    <span class="s1">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
-<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>    <span class="s1">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
-<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>    <span class="s1">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
-<a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>    <span class="s1">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
-<a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>    <span class="s1">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
-<a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a>    <span class="s1">&#39;account.apps.AccountConfig&#39;</span><span class="p">,</span> <span class="c1"># new</span>
-<a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a><span class="p">]</span>
-<a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a><span class="o">...</span>
-<a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a><span class="n">AUTH_USER_MODEL</span> <span class="o">=</span> <span class="s2">&quot;account.CustomUser&quot;</span>
-</code></pre></div>
-<p>完成 <code>AUTH_USER_MODEL</code> 的設定後就可以執行首次的 <code>makemigrations</code> 與 <code>migrate</code>，在調整 <code>AUTH_USER_MODEL</code> 前切勿執行！</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>python<span class="w"> </span>manage.py<span class="w"> </span>makemigrations
-<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>python<span class="w"> </span>manage.py<span class="w"> </span>migrate
-</code></pre></div>
-<p>建立 superuser 之後用於驗證。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>python<span class="w"> </span>manage.py<span class="w"> </span>createsuperuser
-</code></pre></div>
-<h4 id="django-rest-framework"><a class="toclink" href="../../2020/12/06/django-custom-user-with-drf-and-simple-jwt/#django-rest-framework">Django REST framework</a></h4>
-<ol>
-<li>新增 <code>account/serializers.py</code>, <code>account/views.py</code> 與 <code>account/urls.py</code></li>
-<li>更新 <code>website/settings.py</code> 與 <code>website/urls.py</code></li>
-</ol>
-<p>序列化查詢結果，除了 Customer User Model 外也增加了內建的 Group Model。輸出的 <code>fields</code> 設定為全部欄位，可依需求調整。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="c1"># account/serializers.py</span>
-<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">CustomUser</span>
-<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">Group</span>
-<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">serializers</span>
-<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>
-<a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>
-<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a><span class="k">class</span> <span class="nc">CustomUserSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
-<a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
-<a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a>        <span class="n">model</span> <span class="o">=</span> <span class="n">CustomUser</span>
-<a id="__codelineno-35-10" name="__codelineno-35-10" href="#__codelineno-35-10"></a>        <span class="n">fields</span> <span class="o">=</span> <span class="s2">&quot;__all__&quot;</span>
-<a id="__codelineno-35-11" name="__codelineno-35-11" href="#__codelineno-35-11"></a>
-<a id="__codelineno-35-12" name="__codelineno-35-12" href="#__codelineno-35-12"></a>
-<a id="__codelineno-35-13" name="__codelineno-35-13" href="#__codelineno-35-13"></a><span class="k">class</span> <span class="nc">GroupSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
-<a id="__codelineno-35-14" name="__codelineno-35-14" href="#__codelineno-35-14"></a>    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
-<a id="__codelineno-35-15" name="__codelineno-35-15" href="#__codelineno-35-15"></a>        <span class="n">model</span> <span class="o">=</span> <span class="n">Group</span>
-<a id="__codelineno-35-16" name="__codelineno-35-16" href="#__codelineno-35-16"></a>        <span class="n">fields</span> <span class="o">=</span> <span class="s2">&quot;__all__&quot;</span>
-</code></pre></div>
-<p>設定 View 作為 API interface。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="c1"># account/views.py</span>
-<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">CustomUser</span>
-<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">Group</span>
-<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">viewsets</span>
-<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">permissions</span>
-<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a><span class="kn">from</span> <span class="nn">.serializers</span> <span class="kn">import</span> <span class="n">CustomUserSerializer</span><span class="p">,</span> <span class="n">GroupSerializer</span>
-<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>
-<a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a>
-<a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a><span class="k">class</span> <span class="nc">CustomUserViewSet</span><span class="p">(</span><span class="n">viewsets</span><span class="o">.</span><span class="n">ModelViewSet</span><span class="p">):</span>
-<a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a><span class="sd">    API endpoint that allows users to be viewed or edited.</span>
-<a id="__codelineno-36-12" name="__codelineno-36-12" href="#__codelineno-36-12"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-36-13" name="__codelineno-36-13" href="#__codelineno-36-13"></a>
-<a id="__codelineno-36-14" name="__codelineno-36-14" href="#__codelineno-36-14"></a>    <span class="n">queryset</span> <span class="o">=</span> <span class="n">CustomUser</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s2">&quot;-date_joined&quot;</span><span class="p">)</span>
-<a id="__codelineno-36-15" name="__codelineno-36-15" href="#__codelineno-36-15"></a>    <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">CustomUserSerializer</span>
-<a id="__codelineno-36-16" name="__codelineno-36-16" href="#__codelineno-36-16"></a>    <span class="n">permission_classes</span> <span class="o">=</span> <span class="p">[</span><span class="n">permissions</span><span class="o">.</span><span class="n">IsAuthenticated</span><span class="p">]</span>
-<a id="__codelineno-36-17" name="__codelineno-36-17" href="#__codelineno-36-17"></a>
-<a id="__codelineno-36-18" name="__codelineno-36-18" href="#__codelineno-36-18"></a>
-<a id="__codelineno-36-19" name="__codelineno-36-19" href="#__codelineno-36-19"></a><span class="k">class</span> <span class="nc">GroupViewSet</span><span class="p">(</span><span class="n">viewsets</span><span class="o">.</span><span class="n">ModelViewSet</span><span class="p">):</span>
-<a id="__codelineno-36-20" name="__codelineno-36-20" href="#__codelineno-36-20"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-36-21" name="__codelineno-36-21" href="#__codelineno-36-21"></a><span class="sd">    API endpoint that allows groups to be viewed or edited.</span>
-<a id="__codelineno-36-22" name="__codelineno-36-22" href="#__codelineno-36-22"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-36-23" name="__codelineno-36-23" href="#__codelineno-36-23"></a>
-<a id="__codelineno-36-24" name="__codelineno-36-24" href="#__codelineno-36-24"></a>    <span class="n">queryset</span> <span class="o">=</span> <span class="n">Group</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
-<a id="__codelineno-36-25" name="__codelineno-36-25" href="#__codelineno-36-25"></a>    <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">GroupSerializer</span>
-<a id="__codelineno-36-26" name="__codelineno-36-26" href="#__codelineno-36-26"></a>    <span class="n">permission_classes</span> <span class="o">=</span> <span class="p">[</span><span class="n">permissions</span><span class="o">.</span><span class="n">IsAuthenticated</span><span class="p">]</span>
-</code></pre></div>
-<p>將 View 註冊到 router 中。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="c1"># account/urls.py</span>
-<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">include</span><span class="p">,</span> <span class="n">path</span>
-<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">routers</span>
-<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>
-<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a><span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>
-<a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>
-<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a><span class="n">router</span> <span class="o">=</span> <span class="n">routers</span><span class="o">.</span><span class="n">DefaultRouter</span><span class="p">()</span>
-<a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a><span class="n">router</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;account/user&quot;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">CustomUserViewSet</span><span class="p">)</span>
-<a id="__codelineno-37-9" name="__codelineno-37-9" href="#__codelineno-37-9"></a><span class="n">router</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;account/group&quot;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">GroupViewSet</span><span class="p">)</span>
-<a id="__codelineno-37-10" name="__codelineno-37-10" href="#__codelineno-37-10"></a>
-<a id="__codelineno-37-11" name="__codelineno-37-11" href="#__codelineno-37-11"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-<a id="__codelineno-37-12" name="__codelineno-37-12" href="#__codelineno-37-12"></a>    <span class="n">path</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="n">router</span><span class="o">.</span><span class="n">urls</span><span class="p">)),</span>
-<a id="__codelineno-37-13" name="__codelineno-37-13" href="#__codelineno-37-13"></a><span class="p">]</span>
-</code></pre></div>
-<p>在 <code>website/settings.py</code> 的 <code>INSTALLED_APPS</code> 增加 <code>rest_framework</code>。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="c1"># website/settings.py</span>
-<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="o">...</span>
-<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
-<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>    <span class="o">...</span>
-<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>    <span class="s2">&quot;rest_framework&quot;</span><span class="p">,</span> <span class="c1"># new</span>
-<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a><span class="p">]</span>
-<a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a><span class="o">...</span>
-</code></pre></div>
-<p>include 前面在 account 中設定的 url，並增加 api-auth 用於通過 DRF 的內建網頁認證。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="c1"># website/urls.py</span>
-<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
-<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span>
-<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>
-<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>
-<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-<a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a>    <span class="n">path</span><span class="p">(</span><span class="s2">&quot;admin/&quot;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
-<a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a>    <span class="n">path</span><span class="p">(</span><span class="s2">&quot;api/&quot;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s2">&quot;account.urls&quot;</span><span class="p">)),</span> <span class="c1"># new</span>
-<a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a>    <span class="n">path</span><span class="p">(</span><span class="s2">&quot;api-auth/&quot;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s2">&quot;rest_framework.urls&quot;</span><span class="p">,</span> <span class="n">namespace</span><span class="o">=</span><span class="s2">&quot;rest_framework&quot;</span><span class="p">)),</span> <span class="c1"># new</span>
-<a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a><span class="p">]</span>
-</code></pre></div>
-<p>完成後就可以使用 <code>curl</code> 測試 API，帳號使用先前建立的 superuser。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>$<span class="w"> </span>curl<span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;Accept: application/json; indent=4&#39;</span><span class="w"> </span>-u<span class="w"> </span>admin:admin<span class="w"> </span>http://127.0.0.1:8000/api/account/user/
-<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="o">[</span>
-<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="w">    </span><span class="o">{</span>
-<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="w">        </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="m">1</span>,
-<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a><span class="w">        </span><span class="s2">&quot;password&quot;</span>:<span class="w"> </span><span class="s2">&quot;pbkdf2_sha256</span><span class="nv">$216000$fHERFJ7toIcI$3</span><span class="s2">QOXbA4or+srGXn+60aW+z4rslvJkQcW2wS0oWWzYHI=&quot;</span>,
-<a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a><span class="w">        </span><span class="s2">&quot;last_login&quot;</span>:<span class="w"> </span><span class="s2">&quot;2020-12-07T15:46:50.478483Z&quot;</span>,
-<a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a><span class="w">        </span><span class="s2">&quot;is_superuser&quot;</span>:<span class="w"> </span>true,
-<a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a><span class="w">        </span><span class="s2">&quot;username&quot;</span>:<span class="w"> </span><span class="s2">&quot;admin&quot;</span>,
-<a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a><span class="w">        </span><span class="s2">&quot;first_name&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,
-<a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a><span class="w">        </span><span class="s2">&quot;last_name&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,
-<a id="__codelineno-40-11" name="__codelineno-40-11" href="#__codelineno-40-11"></a><span class="w">        </span><span class="s2">&quot;email&quot;</span>:<span class="w"> </span><span class="s2">&quot;admin@sample.com&quot;</span>,
-<a id="__codelineno-40-12" name="__codelineno-40-12" href="#__codelineno-40-12"></a><span class="w">        </span><span class="s2">&quot;is_staff&quot;</span>:<span class="w"> </span>true,
-<a id="__codelineno-40-13" name="__codelineno-40-13" href="#__codelineno-40-13"></a><span class="w">        </span><span class="s2">&quot;is_active&quot;</span>:<span class="w"> </span>true,
-<a id="__codelineno-40-14" name="__codelineno-40-14" href="#__codelineno-40-14"></a><span class="w">        </span><span class="s2">&quot;date_joined&quot;</span>:<span class="w"> </span><span class="s2">&quot;2020-12-07T13:54:21.479125Z&quot;</span>,
-<a id="__codelineno-40-15" name="__codelineno-40-15" href="#__codelineno-40-15"></a><span class="w">        </span><span class="s2">&quot;birthday&quot;</span>:<span class="w"> </span>null,
-<a id="__codelineno-40-16" name="__codelineno-40-16" href="#__codelineno-40-16"></a><span class="w">        </span><span class="s2">&quot;groups&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
-<a id="__codelineno-40-17" name="__codelineno-40-17" href="#__codelineno-40-17"></a><span class="w">        </span><span class="s2">&quot;user_permissions&quot;</span>:<span class="w"> </span><span class="o">[]</span>
-<a id="__codelineno-40-18" name="__codelineno-40-18" href="#__codelineno-40-18"></a><span class="w">    </span><span class="o">}</span>
-<a id="__codelineno-40-19" name="__codelineno-40-19" href="#__codelineno-40-19"></a><span class="o">]</span>
-</code></pre></div>
-<p>或是開起 DRF 內建的網頁 <a href="http://localhost:8000/api/account/user/">localhost:8000/api/account/user/</a>，如下圖：</p>
-<p><img alt="DRF" src="../../imgs/2020-12-06-django-custom-user-with-drf-and-simple-jwt/drf.png" /></p>
-<p>從結果可以確認我們使用的 Custom User 有新增的 Birthday 欄位，superuser 也是建立在 Custom User Model 中。</p>
-<h4 id="simple-jwt"><a class="toclink" href="../../2020/12/06/django-custom-user-with-drf-and-simple-jwt/#simple-jwt">Simple JWT</a></h4>
-<ol>
-<li>更新 <code>website/settings.py</code>，調整預設認證 class</li>
-<li>更新 <code>website/urls.py</code>，增加 Token 相關 API</li>
-</ol>
-<p>設定 <code>REST_FRAMEWORK</code> 的 <code>DEFAULT_AUTHENTICATION_CLASSES</code> 為 Simple JWT。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="c1"># website/settings.py</span>
-<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="n">REST_FRAMEWORK</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>    <span class="s2">&quot;DEFAULT_AUTHENTICATION_CLASSES&quot;</span><span class="p">:</span> <span class="p">(</span>
-<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>        <span class="s2">&quot;rest_framework_simplejwt.authentication.JWTAuthentication&quot;</span><span class="p">,</span>
-<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>    <span class="p">)</span>
-<a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a><span class="p">}</span>
-</code></pre></div>
-<p>增加取得 Token 與更新 Token 的兩個 API。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="c1"># website/urls.py</span>
-<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="kn">from</span> <span class="nn">rest_framework_simplejwt.views</span> <span class="kn">import</span> <span class="p">(</span>
-<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>    <span class="n">TokenObtainPairView</span><span class="p">,</span>
-<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>    <span class="n">TokenRefreshView</span><span class="p">,</span>
-<a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a><span class="p">)</span>
-<a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>
-<a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-<a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a>    <span class="o">...</span>
-<a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;api/token/&#39;</span><span class="p">,</span> <span class="n">TokenObtainPairView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;token_obtain_pair&#39;</span><span class="p">),</span>
-<a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;api/token/refresh/&#39;</span><span class="p">,</span> <span class="n">TokenRefreshView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;token_refresh&#39;</span><span class="p">),</span>
-<a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a>    <span class="o">...</span>
-<a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a><span class="p">]</span>
-</code></pre></div>
-<p>完成後可以使用先前建立的 superuser 取得 Token。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>$<span class="w"> </span>curl<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="w">  </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a><span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;username&quot;: &quot;admin&quot;, &quot;password&quot;: &quot;admin&quot;}&#39;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a><span class="w">  </span>http://localhost:8000/api/token/
-<a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a>
-<a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a><span class="o">{</span><span class="s2">&quot;refresh&quot;</span>:<span class="s2">&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYwNzQ0MzQ3NiwianRpIjoiYzQzYjM2Zjg2ODA0NDU1MzliYzUwNTlmN2YzN2NkMTEiLCJ1c2VyX2lkIjoxfQ.ZC0fAj7HR99v_po4BI-uVVeS9c7ZoN4B35_pYzosE_o&quot;</span>,<span class="s2">&quot;access&quot;</span>:<span class="s2">&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA3MzU3Mzc2LCJqdGkiOiIyYjY5NzkxMmZhNjE0NzY3YmJkNDA2NjExMzE1YzkxMCIsInVzZXJfaWQiOjF9.92m-V9vjRxUWGLlcJRFBdLqSHp0UII3SLPTt_yPynqY&quot;</span><span class="o">}</span>
-</code></pre></div>
-<p>將取得的 Token 加入 Header 中，再次測試 User 清單的 API。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>$<span class="w"> </span>curl<span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;Accept: application/json; indent=4&#39;</span><span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA3MzU3Mzc2LCJqdGkiOiIyYjY5NzkxMmZhNjE0NzY3YmJkNDA2NjExMzE1YzkxMCIsInVzZXJfaWQiOjF9.92m-V9vjRxUWGLlcJRFBdLqSHp0UII3SLPTt_yPynqY&quot;</span><span class="w"> </span>http://127.0.0.1:8000/api/account/user/
-<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="o">[</span>
-<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="w">    </span><span class="o">{</span>
-<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="w">        </span><span class="s2">&quot;id&quot;</span>:<span class="w"> </span><span class="m">1</span>,
-<a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a><span class="w">        </span><span class="s2">&quot;password&quot;</span>:<span class="w"> </span><span class="s2">&quot;pbkdf2_sha256</span><span class="nv">$216000$fHERFJ7toIcI$3</span><span class="s2">QOXbA4or+srGXn+60aW+z4rslvJkQcW2wS0oWWzYHI=&quot;</span>,
-<a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a><span class="w">        </span><span class="s2">&quot;last_login&quot;</span>:<span class="w"> </span><span class="s2">&quot;2020-12-07T16:02:06.847562Z&quot;</span>,
-<a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a><span class="w">        </span><span class="s2">&quot;is_superuser&quot;</span>:<span class="w"> </span>true,
-<a id="__codelineno-44-8" name="__codelineno-44-8" href="#__codelineno-44-8"></a><span class="w">        </span><span class="s2">&quot;username&quot;</span>:<span class="w"> </span><span class="s2">&quot;admin&quot;</span>,
-<a id="__codelineno-44-9" name="__codelineno-44-9" href="#__codelineno-44-9"></a><span class="w">        </span><span class="s2">&quot;first_name&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,
-<a id="__codelineno-44-10" name="__codelineno-44-10" href="#__codelineno-44-10"></a><span class="w">        </span><span class="s2">&quot;last_name&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,
-<a id="__codelineno-44-11" name="__codelineno-44-11" href="#__codelineno-44-11"></a><span class="w">        </span><span class="s2">&quot;email&quot;</span>:<span class="w"> </span><span class="s2">&quot;admin@sample.com&quot;</span>,
-<a id="__codelineno-44-12" name="__codelineno-44-12" href="#__codelineno-44-12"></a><span class="w">        </span><span class="s2">&quot;is_staff&quot;</span>:<span class="w"> </span>true,
-<a id="__codelineno-44-13" name="__codelineno-44-13" href="#__codelineno-44-13"></a><span class="w">        </span><span class="s2">&quot;is_active&quot;</span>:<span class="w"> </span>true,
-<a id="__codelineno-44-14" name="__codelineno-44-14" href="#__codelineno-44-14"></a><span class="w">        </span><span class="s2">&quot;date_joined&quot;</span>:<span class="w"> </span><span class="s2">&quot;2020-12-07T13:54:21.479125Z&quot;</span>,
-<a id="__codelineno-44-15" name="__codelineno-44-15" href="#__codelineno-44-15"></a><span class="w">        </span><span class="s2">&quot;birthday&quot;</span>:<span class="w"> </span>null,
-<a id="__codelineno-44-16" name="__codelineno-44-16" href="#__codelineno-44-16"></a><span class="w">        </span><span class="s2">&quot;groups&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
-<a id="__codelineno-44-17" name="__codelineno-44-17" href="#__codelineno-44-17"></a><span class="w">        </span><span class="s2">&quot;user_permissions&quot;</span>:<span class="w"> </span><span class="o">[]</span>
-<a id="__codelineno-44-18" name="__codelineno-44-18" href="#__codelineno-44-18"></a><span class="w">    </span><span class="o">}</span>
-<a id="__codelineno-44-19" name="__codelineno-44-19" href="#__codelineno-44-19"></a><span class="o">]</span>
-</code></pre></div>
-<p>Reference:</p>
-<ol>
-<li><a href="https://learndjango.com/tutorials/django-custom-user-model">Django Custom User Model</a></li>
-<li><a href="https://codinganimal.info/%E8%87%AA%E8%A8%82-django-user-model-%E7%9A%84%E4%B8%89%E7%A8%AE%E6%96%B9%E5%BC%8F-becd8affc0df">自訂 Django User Model 的三種方式</a></li>
-<li><a href="https://www.django-rest-framework.org/">Django REST framework</a></li>
-<li><a href="https://django-rest-framework-simplejwt.readthedocs.io/">SimpleJWT Document</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/12/06/django-custom-user-with-drf-and-simple-jwt/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-12-02 00:00:00">December 2, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tip/" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-12-02 00:00:00">December 2, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/tip/"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              OpenAPI</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="disable-try-it-out-in-swagger-ui"><a class="toclink" href="../../2020/12/02/disable-try-it-out-in-swagger-ui/">Disable 'Try it out' in Swagger UI</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="disable-try-it-out-in-swagger-ui"><a class="toclink" href="../../2020/12/02/disable-try-it-out-in-swagger-ui/">Disable 'Try it out' in Swagger UI</a></h2>
-<p><a href="https://github.com/swagger-api/swagger-ui">Swagger UI</a> 能生成一個完整的網頁呈現 OpenAPI 文件，且同時可以在頁面上直接發送 Request 進行測試。但在一些情況下會不希望使用者直接發送，例如文件只是供瀏覽，或後台尚未完成等等，這時候就會希望可以停用 Try it out 的功能。</p>
-<p>在比較舊的版本可以透過 plugin 的方式停用 Try it out</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">SwaggerUIBundle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;swagger-ui-dist&#39;</span><span class="p">).</span><span class="nx">SwaggerUIBundle</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">DisableTryItOutPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="nx">statePlugins</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">      </span><span class="nx">spec</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">        </span><span class="nx">wrapSelectors</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">          </span><span class="nx">allowTryItOutFor</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="kc">false</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="p">}</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="kd">const</span><span class="w"> </span><span class="nx">ui</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">SwaggerUIBundle</span><span class="p">({</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://petstore.swagger.io/v2/swagger.json&quot;</span><span class="p">,</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">    </span><span class="nx">dom_id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#swagger-ui&#39;</span><span class="p">,</span>
-<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">    </span><span class="nx">presets</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">        </span><span class="nx">SwaggerUIBundle</span><span class="p">.</span><span class="nx">presets</span><span class="p">.</span><span class="nx">apis</span><span class="p">,</span>
-<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">        </span><span class="nx">SwaggerUIBundle</span><span class="p">.</span><span class="nx">SwaggerUIStandalonePreset</span>
-<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">    </span><span class="p">],</span>
-<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">    </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">        </span><span class="nx">DisableTryItOutPlugin</span><span class="w"> </span><span class="c1">// &lt;== 停用的 plugin</span>
-<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">    </span><span class="p">],</span>
-<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">    </span><span class="nx">layout</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;StandaloneLayout&quot;</span>
-<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="p">})</span>
-</code></pre></div>
-<p>比較新的版本則有 <a href="https://github.com/swagger-api/swagger-ui/blob/master/docs/usage/configuration.md#user-content-supportedsubmitmethods">supportedSubmitMethods</a> 這個參數可以使用，參數值為正向表列可以要啟用 Try it out 的 HTTP method，為空時表示全部停用。</p>
-<p>使用 Docker 的環境變數設定，以 docker-compose 為範例</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.8&quot;</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nt">swagger-ui</span><span class="p">:</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swaggerapi/swagger-ui</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80:8080</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SUPPORTED_SUBMIT_METHODS=[]</span>
-</code></pre></div>
-<p>Javascript 的話則是</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">SwaggerUIBundle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;swagger-ui-dist&#39;</span><span class="p">).</span><span class="nx">SwaggerUIBundle</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">ui</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">SwaggerUIBundle</span><span class="p">({</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://petstore.swagger.io/v2/swagger.json&quot;</span><span class="p">,</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="nx">dom_id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#swagger-ui&#39;</span><span class="p">,</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="nx">presets</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">        </span><span class="nx">SwaggerUIBundle</span><span class="p">.</span><span class="nx">presets</span><span class="p">.</span><span class="nx">apis</span><span class="p">,</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">        </span><span class="nx">SwaggerUIBundle</span><span class="p">.</span><span class="nx">SwaggerUIStandalonePreset</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="p">],</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="nx">supportedSubmitMethods</span><span class="o">:</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="c1">// &lt;== 停用所有 HTTP method 的 Try it out</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="nx">layout</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;StandaloneLayout&quot;</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="p">})</span>
-</code></pre></div>
-<p>Reference:</p>
-<ol>
-<li><a href="https://github.com/swagger-api/swagger-ui/issues/3725">How to disable 'Try it out' in Swagger UI 3.x</a></li>
-<li><a href="https://swagger.io/docs/open-source-tools/swagger-ui/usage/installation/">Swagger UI Usage</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/12/02/disable-try-it-out-in-swagger-ui/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-12-01 00:00:00">December 1, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/review/" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-12-01 00:00:00">December 1, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/review/"
+                  class="md-meta__link"
+                >Review</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              DevOps</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="technologies-tools-to-watch-in-2021"><a class="toclink" href="../../2020/12/01/technologies--tools-to-watch-in-2021/">Technologies &amp; Tools to Watch in 2021</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="technologies-tools-to-watch-in-2021"><a class="toclink" href="../../2020/12/01/technologies-tools-to-watch-in-2021/">Technologies &amp; Tools to Watch in 2021</a></h2>
-<p><a href="https://medium.com/dev-genius/technologies-tools-to-watch-in-2021-a216dfc30f25">Technologies &amp; Tools to Watch in 2021</a></p>
-<p>本文分享了幾個 2021 值得 DevOps Engineers 與 SREs 關注的工具</p>
-<ol>
-<li>
-<p>Managing Cloud Services via Kubernetes CRDs</p>
-<p>現在在 K8s 上都能使用 custom resource definitions (CRDs) 啟用與管理 AWS, Azure 與 GCP 上的服務。AWS 使用 <a href="https://github.com/aws/aws-controllers-k8s">AWS Controllers for Kubernetes (ACK)</a>；Azure 使用 <a href="https://github.com/Azure/azure-service-operator">Azure Service Operator (for Kubernetes)</a>；GCP 使用 <a href="https://cloud.google.com/config-connector/docs/overview">Config Connector</a>。好處是無論是 K8s 或 cloud services 都能用 K8s 的 API 操作，但缺點就是跟 K8s 有太深的耦合。</p>
-</li>
-<li>
-<p>Pulumi</p>
-</li>
-</ol>
-<p><a href="https://www.pulumi.com/">Pulumi</a> 是一個 IaC 的工具，與一般常見用 JSON 或 YAML 為基礎的 IaC 不同，他能夠直接使用 Go, Python, Javascript 來做 IaC，能夠帶來更高的彈性，並可以使用原本語言就有的測試框架進行測試。</p>
-<ol>
-<li>Terragrunt &amp; TFSEC</li>
-</ol>
-<p><a href="https://terragrunt.gruntwork.io/">Terragrunt</a> 將 Terraform 包裝起來，提供更多功能便於管理大型的 Terraform 專案，並支援版本的管理方式。<a href="https://github.com/tfsec/tfsec">TFSEC</a> 提供掃描 Terraform 專案中 IaC 可能的安全問題。</p>
-<ol>
-<li>Tekton</li>
-</ol>
-<p><a href="https://tekton.dev/">Tekton</a> 是 Cloud Native 的 CI/CD 工具，專注在 K8s 的 workloads。Pipeline 都是透過 CRDs 定義，因此能繼承 K8s 一些良好的特性，如 rollbacks，也能跟 JenkinsX 或 ArgoCD 有良好的介接。</p>
-<ol>
-<li>Trivy</li>
-</ol>
-<p><a href="https://github.com/aquasecurity/trivy">Trivy</a> 能夠掃描 Container 與 OS 安裝的 Package 是否有安全漏洞，可以很輕易地串接在 CI 流程中。</p>
-<ol>
-<li>ShellCheck</li>
-</ol>
-<p><a href="https://github.com/koalaman/shellcheck">shellcheck</a> 可以檢查 Shell 中常見的錯誤，有提供 web 版、CLI，甚至還有各種編輯器的 plugin。</p>
-<ol>
-<li>Pitest/Stryker</li>
-</ol>
-<p><a href="http://pitest.org/">Pitest</a> (Java) 與 <a href="https://stryker-mutator.io/">Stryker</a> (Javascript, C#, Scala) 都是 Mutation Test 的工具。Mutation Test 的假設是如果程式碼有變動，一個好的單元測試應該要因為這個變動而失敗，因此這兩個工具都會自動加入變動到程式中，藉此驗證單元測試或測試案例是否是好的測試。</p>
-<ol>
-<li>Litmus</li>
-</ol>
-<p><a href="https://github.com/litmuschaos/litmus">Litmus</a> 是一個 chaos engineering tool，輕量且易於使用，有良好的實驗設計功能而非單純的隨意刪除 Pod，另外也直接提供了 ChaosResult CRD 直接查看結果。</p>
-<p>Reference:</p>
-<ol>
-<li><a href="https://medium.com/@loverjersey/%E8%AE%8A%E7%95%B0%E6%B8%AC%E8%A9%A6-mutation-test-%E4%B8%80%E7%A8%AE%E6%8F%90%E9%AB%98%E6%B8%AC%E8%A9%A6%E5%92%8C%E4%BB%A3%E7%A2%BC%E8%B3%AA%E9%87%8F%E7%9A%84-%E6%96%B0-%E6%96%B9%E6%B3%95%E9%80%9F%E8%A8%98-35bde79a5c7a">變異測試 (Mutation Test) — 一種提高測試和代碼質量的 ”新” 方法速記</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/12/01/technologies-tools-to-watch-in-2021/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-11-30 00:00:00">November 30, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/algorithm/" class="md-meta__link">Algorithm</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-11-30 00:00:00">November 30, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/algorithm/"
+                  class="md-meta__link"
+                >Algorithm</a></li>
+          
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="longest-substring-without-repeating-characters"><a class="toclink" href="../../2020/11/30/longest-substring-without-repeating-characters/">Longest Substring Without Repeating Characters</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="longest-substring-without-repeating-characters"><a class="toclink" href="../../2020/11/30/longest-substring-without-repeating-characters/">Longest Substring Without Repeating Characters</a></h2>
-<p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">3. Longest Substring Without Repeating Characters</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">def</span> <span class="nf">lengthOfLongestSubstring</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        <span class="n">hash_dict</span> <span class="o">=</span> <span class="p">{}</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>            <span class="n">i</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">hash_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>            <span class="n">ans</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span> <span class="n">j</span> <span class="o">-</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>            <span class="n">hash_dict</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">=</span> <span class="n">j</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        <span class="k">return</span> <span class="n">ans</span>
-</code></pre></div>
-<p>Reference:</p>
-<ol>
-<li><a href="https://leetcode.com/list/xoqag3yj/">Blind Curated 75</a></li>
-<li><a href="https://youtu.be/LupZFfCCbAU">花花酱 LeetCode 3. Longest Substring Without Repeating Characters - 刷题找工作 EP295</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/11/30/longest-substring-without-repeating-characters/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-11-29 00:00:00">November 29, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/share/" class="md-meta__link">Share</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-11-29 00:00:00">November 29, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/share/"
+                  class="md-meta__link"
+                >Share</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Spring Boot, JasperReport</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="jasperreports-with-spring"><a class="toclink" href="../../2020/11/29/jasperreports-with-spring/">JasperReports with Spring</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="jasperreports-with-spring"><a class="toclink" href="../../2020/11/29/jasperreports-with-spring/">JasperReports with Spring</a></h2>
-<p><a href="https://community.jaspersoft.com/project/jasperreports-library">JasperReport</a> 是一套以 Java 開發的開源報表程式庫，最初的版本發佈於 2001 年，能透過預先定義的模板將動態資料導入生成 PDF、HTML 或 Excel 等檔案。</p>
-<p>雖然 JasperReport 已經是很古老的程式庫，但在模板設計工具與使用的便利性上，仍沒有新生代的開源專案能匹敵。或許是因為現在的報表大多直接使用 Web 的方式進行呈現，模板類型的工具就不太有人會投注心力開發了。</p>
-<p>在使用 JasperReport 時最大的困擾就是中文或自訂字體的顯示問題，時常發生在模板設計階段可以正常顯示中文，但本機運行服務或上到 Production Server 時發現無法正常顯示中文。稍微 Google 後就可以發現大家為了解決中文顯示問題使用了各種奇技淫巧，但其實使用官方所提出的 <a href="https://community.jaspersoft.com/wiki/custom-font-font-extension">Font Extension</a> 就可以完美地解決自訂字體的問題。</p>
-<p>以下將分享一個簡單的 JasperReports Application 專案與 Font Extension 在設定時的眉角。</p>
-<h4 id="jasperreports-with-spring_1"><a class="toclink" href="../../2020/11/29/jasperreports-with-spring/#jasperreports-with-spring_1">JasperReports with Spring</a></h4>
-<p><a href="https://github.com/Blueswen/jasperreports-with-spring">jasperreports-with-spring</a> 是一個 Maven 專案，使用 Spring Boot 作為 Server 依據 request 利用 JasperReport 生成 PDF 報表，字體使用<a href="http://jikasei.me/font/genshin/">思源真黑體</a>，能夠支援顯示中文。設定了 Dockerfile 與 docker-compose 用於建置 Docker Image 與啟動服務，可以把它視為一個專門負責生成報表的微服務。</p>
-<p>專案中使用的 jrxml 模板為 <a href="https://github.com/Blueswen/jasperreports-with-spring/blob/main/reference/sample.jrxml">sample.jrxml</a>，而生成的 PDF 可以參考 <a href="https://github.com/Blueswen/jasperreports-with-spring/blob/main/reference/sample.pdf">sample.pdf</a>。</p>
-<p>Lib Dependencies:</p>
-<ol>
-<li>Spring Boot 2.3.5</li>
-<li>JasperReports 6.16.0</li>
-</ol>
-<p>JasperReport Dependencies:</p>
-<ol>
-<li>TIBCO Jaspersoft® Studio 6.16.0</li>
-<li>Source .jrxml Version: JasperReport 6.13.0</li>
-<li>Compiler Settings: 6.16.0</li>
-</ol>
-<h4 id="jaspersoft-studio"><a class="toclink" href="../../2020/11/29/jasperreports-with-spring/#jaspersoft-studio">Jaspersoft Studio</a></h4>
-<p>jrxml 與 jasper 使用 <a href="https://community.jaspersoft.com/project/jaspersoft-studio">Jaspersoft Studio</a> 編輯與生成，預設的 jasper compiler 會隨著 Jaspersoft Studio 的版本有所不同，當編譯 jasper 的版本與 run time 時產製報表的版本不相容時候會導致產製失敗。</p>
-<p>可以透過更改 Jaspersoft Studio 的 compiler 版本解決這個問題，調整位置為 <code>Preference =&gt; Jaspersoft Studio =&gt; Compatibility =&gt; Compiler Settings =&gt; Manage JasperReports Versions</code>。但 Add From URL 無法正常指定到 compiler，所以改為直接至 <a href="https://sourceforge.net/projects/jasperreports/files/jasperreports/">sourceforge</a> 下載整個 project zip 檔，再以 Add From Path 的方式使用。</p>
-<h4 id="font-extension"><a class="toclink" href="../../2020/11/29/jasperreports-with-spring/#font-extension">Font Extension</a></h4>
-<p>Jaspersoft Studio 在 v6.0 提出了 <a href="https://community.jaspersoft.com/wiki/custom-font-font-extension">Font Extension</a> 用於解決自訂字體的問題。在過去的版本中大多使用 PDF Embedded、PDF Encoding 與 PDF Font Name 這三個屬性設定 PDF 輸出時的字體設定，在 v6.0 後的 Jaspersoft Studio 這種設定方式仍可以相容，但會顯示為不推薦使用。</p>
-<p>此專案中使用開源的<a href="http://jikasei.me/font/genshin/">思源真黑體</a>作為自訂字體，思源真黑體是由 Google 與 Adobe 開源的思源黑體修改而來，在細部進行了些微調整，使字體看起來更加銳利，並提供了 Font Extension 需要使用的 TTF 的版本。</p>
-<p>Jaspersoft Studio 新增 Font 時的設定參考下圖，PDF Encoding 選擇 <code>Identify-H (Unicode with horizontal writing)</code>。</p>
-<p><img alt="Font Family Setting" src="../../imgs/2020-11-29-jasperreports-with-spring/font-family.png" /></p>
-<p>完成自訂字體設定後，就可以在 Font 中看到剛剛設定的字體，這時候可以利用 Preview 的功能並另存成 PDF 檢查字體是否能正常使用。</p>
-<p>模板設計完成後，接下來就是要讓 Application 能正常載入並使用字體，依照 <a href="https://community.jaspersoft.com/wiki/custom-font-font-extension">Font Extension</a> 中的說明將 font extension jar 匯出。官網 wiki 給的說明是直接放在 application 的 classpath 中<code>jasperserver-pro/WEB-INF/lib</code>。但如果是使用 Spring Boot 則應該透過 pom 進行相依的設定，因此將字體 jar 檔放於 project 根目錄的 lib 資料夾中，在 pom.xml 增加此 jar 的 dependency。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>com.blueswen<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>customfont<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>1.0<span class="nt">&lt;/version&gt;</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="nt">&lt;scope&gt;</span>system<span class="nt">&lt;/scope&gt;</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="nt">&lt;systemPath&gt;</span>${basedir}/lib/genshin.jar<span class="nt">&lt;/systemPath&gt;</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="nt">&lt;/dependency&gt;</span>
-</code></pre></div>
-<p>而為了讓 external jar 能夠被打包進最後的成品中，需要使用 <code>spring-boot-maven-plugin</code> plugin，並設定 <code>includeSystemScope</code> 為 true。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">&lt;build&gt;</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="nt">&lt;plugins&gt;</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">        </span><span class="nt">&lt;plugin&gt;</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">            </span><span class="nt">&lt;configuration&gt;</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">                </span><span class="nt">&lt;includeSystemScope&gt;</span>true<span class="nt">&lt;/includeSystemScope&gt;</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">            </span><span class="nt">&lt;/configuration&gt;</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">        </span><span class="nt">&lt;/plugin&gt;</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="nt">&lt;/plugins&gt;</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="nt">&lt;/build&gt;</span>
-</code></pre></div>
-<h4 id="request-sample"><a class="toclink" href="../../2020/11/29/jasperreports-with-spring/#request-sample">Request Sample</a></h4>
-<p>Server 運行後可以發送 Http Request 測試報表產製功能</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>curl<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span>-o<span class="w"> </span>sample.pdf<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="s1">    &quot;template&quot;: &quot;sample.jasper&quot;,</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="s1">    &quot;fileName&quot;: &quot;sample&quot;,</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="s1">    &quot;parameters&quot;: {</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="s1">      &quot;sr&quot;: &quot;200503001&quot;</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="s1">    },</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="s1">    &quot;data&quot;: [</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="s1">      {</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="s1">        &quot;ind&quot;: &quot;1&quot;,</span>
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="s1">        &quot;name&quot;: &quot;蘋果&quot;,</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="s1">        &quot;amount&quot;: &quot;3&quot;,</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="s1">        &quot;price&quot;: &quot;30&quot;,</span>
-<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="s1">        &quot;total_price&quot;: &quot;90&quot;</span>
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="s1">      },</span>
-<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="s1">      {</span>
-<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="s1">        &quot;ind&quot;: &quot;2&quot;,</span>
-<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="s1">        &quot;name&quot;: &quot;橘子&quot;,</span>
-<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="s1">        &quot;amount&quot;: &quot;2&quot;,</span>
-<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="s1">        &quot;price&quot;: &quot;40&quot;,</span>
-<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="s1">        &quot;total_price&quot;: &quot;80&quot;</span>
-<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="s1">      },</span>
-<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="s1">      {</span>
-<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="s1">        &quot;ind&quot;: &quot;3&quot;,</span>
-<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="s1">        &quot;name&quot;: &quot;西瓜&quot;,</span>
-<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="s1">        &quot;amount&quot;: &quot;1&quot;,</span>
-<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="s1">        &quot;price&quot;: &quot;100&quot;,</span>
-<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="s1">        &quot;total_price&quot;: &quot;100&quot;</span>
-<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="s1">      }</span>
-<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a><span class="s1">    ]</span>
-<a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a><span class="s1">  }&#39;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="w">  </span>http://localhost:8080/report
-</code></pre></div>
-<p>或者使用 Postman 發送 Request，發送時記得選擇 Send 下拉選單中的 Send and Download</p>
-<p><img alt="Postman Request" src="../../imgs/2020-11-29-jasperreports-with-spring/request.png" /></p>
-<p>取得的 PDF 如下圖，可以正常顯示中文</p>
-<p><img alt="PDF Sample" src="../../imgs/2020-11-29-jasperreports-with-spring/sample.png" /></p>
-<h4 id="_1"><a class="toclink" href="../../2020/11/29/jasperreports-with-spring/#_1">其他解決方案</a></h4>
-<p>如前面所述，有一些人提供了其他的方式解決中文顯示的問題，大部分都是在 application 中引入 <a href="https://mvnrepository.com/artifact/com.itextpdf/itext-asian">iTextAsian.jar</a>，利用裡面打包好的宋體做 PDF 產製所使用的字體，但缺點是字體就會被侷限，在設計模板階段也會無法預覽正確字體，設定上也頗為麻煩。</p>
-<p>在搞懂 Font Extension 前我也是依照這些分享使用這種方式，但後來發現限制實在太多，所以就還是走上正規的道路。雖然最後沒有採用這些解決方案，但有幾篇仍能提供一些不錯的思路，未來如果與到類似的問題或許可以作為參考。</p>
-<p><a href="https://blog.csdn.net/jiangkai528/article/details/51133347">Jasperreport 与 Springmvc 结合生成 PDF web 页面笔记（含解决中文问题）</a>依照這篇文章提供的 dependencies 就能夠完整產製含有中文的報表，如果要使用繁體 pdfFontName 需設定為 MHei-Medium、MSung-Light 或 MSungStd-Light，pdfEncoding 設為 UniCNS-UCS2-H。而因為有限定了 jasperreports 的版本，所以可能會遇到使用 Jaspersoft Studio compile 出來的 jasper 在 run time 無法被使用的問題，這時候就要使用前面提到的調整 Jaspersoft Studio 的 compiler 版本來解決。</p>
-<p><a href="https://blog.csdn.net/weixin_41807385/article/details/98478061">iText-Asian jar可 以使用的中文字符及 iText——&gt;html2pdf 使用(附坑)</a> 針對 iTextAsian.jar 提供了比較詳細的介紹與說明。</p>
-<p>Reference:</p>
-<ol>
-<li><a href="https://spring.io/guides/gs/spring-boot-docker/">Spring Boot with Docker</a></li>
-<li><a href="https://issues.jenkins.io/browse/JENKINS-47890">"mvnw" won't work on docker-pipeline with the "maven" image because docker-pipeline doesn't honor docker image entrypoint</a></li>
-<li><a href="https://community.jaspersoft.com/wiki/custom-font-font-extension">Custom Font with the Font Extension</a></li>
-<li><a href="http://jikasei.me/font/genshin/">思源真黑體</a></li>
-<li><a href="http://cw1057.blogspot.com/2012/10/java-jasperreports-pdf.html">用 Java 產出中文的 JasperReports PDF</a></li>
-<li><a href="https://github.com/gauravbrills/jasperreportswithspringboot">JASPER REPORTS WITH SPRING BOOT</a></li>
-<li><a href="http://poor-developer.blogspot.com/2017/02/jasper-reports-using-unavailable-fonts.html">Jasper Reports using unavailable fonts</a></li>
-<li><a href="https://blog.csdn.net/pspr2/article/details/78356835">jasper 综合使用 - javabean 结合实际业务-解决 PDF 中文</a></li>
-<li><a href="https://medium.com/@webber.cheng/spring-boot-%E6%89%93%E5%8C%85-external-jar-%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%A1%88-292d6e800df5">Spring Boot 打包 external jar 解決方案</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/11/29/jasperreports-with-spring/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-11-25 00:00:00">November 25, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tip/" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-11-25 00:00:00">November 25, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/tip/"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Python, GIS</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="twd97tm2-to-wgs84"><a class="toclink" href="../../2020/11/25/twd97tm2-to-wgs84/">TWD97TM2 to WGS84</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="twd97tm2-to-wgs84"><a class="toclink" href="../../2020/11/25/twd97tm2-to-wgs84/">TWD97TM2 to WGS84</a></h2>
-<p><a href="https://github.com/snexuz/TWD97TM2toWGS84">TWD97TM2toWGS84</a> 提供了 TWD97 二度分帶座標轉 WGS 經緯度的 R 程式碼，但因為有許多資料清洗流程使用 Python，所以簡單轉換為 Python 程式碼。</p>
-<p><a href="https://gist.github.com/Blueswen/4d80e43822967bb3fb0ed28434dc0584">gits: twd_to_wgs.py</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">math</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">def</span> <span class="nf">twd_to_wgs</span><span class="p">(</span><span class="n">coord_x</span><span class="p">,</span> <span class="n">coord_y</span><span class="p">):</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="c1"># coord_x: TWD97橫座標, 南北緯度, latitude N</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="c1"># coord_y: TWD97縱座標, 東西經度, longitude E</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="n">a</span> <span class="o">=</span> <span class="mf">6378137.0</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="n">b</span> <span class="o">=</span> <span class="mf">6356752.314245</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="n">lon0</span> <span class="o">=</span> <span class="mi">121</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="n">k0</span> <span class="o">=</span> <span class="mf">0.9999</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="n">dx</span> <span class="o">=</span> <span class="mi">250000</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="n">dy</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="n">e</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">b</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">a</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">coord_x</span> <span class="o">-</span> <span class="n">dx</span>  <span class="c1"># input_lat: TWD97橫座標, 緯度, latitude</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    <span class="n">y</span> <span class="o">=</span> <span class="n">coord_y</span> <span class="o">-</span> <span class="n">dy</span>  <span class="c1"># input_lon: TWD97縱座標, 經度, longitude</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    <span class="n">M</span> <span class="o">=</span> <span class="n">y</span> <span class="o">/</span> <span class="n">k0</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    <span class="n">mu</span> <span class="o">=</span> <span class="n">M</span> <span class="o">/</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="p">(</span><span class="n">e</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mf">4.0</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="n">e</span> <span class="o">**</span> <span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="mf">64.0</span> <span class="o">-</span> <span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="n">e</span> <span class="o">**</span> <span class="mi">6</span><span class="p">)</span> <span class="o">/</span> <span class="mf">256.0</span><span class="p">))</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>    <span class="n">e1</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="p">((</span><span class="mf">1.0</span> <span class="o">-</span> <span class="p">(</span><span class="n">e</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="p">((</span><span class="mf">1.0</span> <span class="o">-</span> <span class="p">(</span><span class="n">e</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">))</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>    <span class="n">J1</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">e1</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">27</span> <span class="o">*</span> <span class="p">(</span><span class="n">e1</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mf">32.0</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>    <span class="n">J2</span> <span class="o">=</span> <span class="mi">21</span> <span class="o">*</span> <span class="p">(</span><span class="n">e1</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">16</span> <span class="o">-</span> <span class="mi">55</span> <span class="o">*</span> <span class="p">(</span><span class="n">e1</span> <span class="o">**</span> <span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="mf">32.0</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>    <span class="n">J3</span> <span class="o">=</span> <span class="mi">151</span> <span class="o">*</span> <span class="p">(</span><span class="n">e1</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mf">96.0</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>    <span class="n">J4</span> <span class="o">=</span> <span class="mi">1097</span> <span class="o">*</span> <span class="p">(</span><span class="n">e1</span> <span class="o">**</span> <span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="mf">512.0</span>
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>    <span class="n">fp</span> <span class="o">=</span> <span class="p">(</span> <span class="n">mu</span> <span class="o">+</span> <span class="n">J1</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">mu</span><span class="p">)</span> <span class="o">+</span> <span class="n">J2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">mu</span><span class="p">)</span> <span class="o">+</span> <span class="n">J3</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">6</span> <span class="o">*</span> <span class="n">mu</span><span class="p">)</span> <span class="o">+</span> <span class="n">J4</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="n">mu</span><span class="p">)</span> <span class="p">)</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>    <span class="n">e2</span> <span class="o">=</span> <span class="p">(</span><span class="n">e</span> <span class="o">*</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>    <span class="n">C1</span> <span class="o">=</span> <span class="n">e2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>    <span class="n">T1</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>    <span class="n">R1</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">e</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">/</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">e</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">**</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">))</span>
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>    <span class="n">N1</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">e</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">)</span>
-<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>
-<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>    <span class="n">D</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="p">(</span><span class="n">N1</span> <span class="o">*</span> <span class="n">k0</span><span class="p">)</span>
-<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>
-<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>    <span class="c1"># 緯度計算 latitude</span>
-<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>    <span class="n">Q1</span> <span class="o">=</span> <span class="n">N1</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span> <span class="o">/</span> <span class="n">R1</span>
-<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>    <span class="n">Q2</span> <span class="o">=</span> <span class="p">(</span><span class="n">D</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span>
-<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>    <span class="n">Q3</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">T1</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">C1</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="p">(</span><span class="n">C1</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">9</span> <span class="o">*</span> <span class="n">e2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">D</span> <span class="o">**</span> <span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="mf">24.0</span>
-<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>    <span class="n">Q4</span> <span class="o">=</span> <span class="p">(</span> <span class="p">(</span><span class="mi">61</span> <span class="o">+</span> <span class="mi">90</span> <span class="o">*</span> <span class="n">T1</span> <span class="o">+</span> <span class="mi">298</span> <span class="o">*</span> <span class="n">C1</span> <span class="o">+</span> <span class="mi">45</span> <span class="o">*</span> <span class="p">(</span><span class="n">T1</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="n">C1</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">252</span> <span class="o">*</span> <span class="n">e2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">D</span> <span class="o">**</span> <span class="mi">6</span><span class="p">)</span> <span class="o">/</span> <span class="mf">720.0</span> <span class="p">)</span>
-<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>    <span class="n">lat</span> <span class="o">=</span> <span class="n">fp</span> <span class="o">-</span> <span class="n">Q1</span> <span class="o">*</span> <span class="p">(</span><span class="n">Q2</span> <span class="o">-</span> <span class="n">Q3</span> <span class="o">+</span> <span class="n">Q4</span><span class="p">)</span>
-<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>
-<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>    <span class="c1"># 經度計算 longitude</span>
-<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>    <span class="n">Q5</span> <span class="o">=</span> <span class="n">D</span>
-<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>    <span class="n">Q6</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">T1</span> <span class="o">+</span> <span class="n">C1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">D</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">6</span>
-<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>    <span class="n">Q7</span> <span class="o">=</span> <span class="p">(</span> <span class="p">(</span><span class="mi">5</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">C1</span> <span class="o">+</span> <span class="mi">28</span> <span class="o">*</span> <span class="n">T1</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="n">C1</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">e2</span> <span class="o">+</span> <span class="mi">24</span> <span class="o">*</span> <span class="p">(</span><span class="n">T1</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="n">D</span> <span class="o">**</span> <span class="mi">5</span><span class="p">)</span> <span class="o">/</span> <span class="mf">120.0</span> <span class="p">)</span>
-<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>    <span class="n">lon</span> <span class="o">=</span> <span class="n">lon0</span> <span class="o">+</span> <span class="p">(</span><span class="n">Q5</span> <span class="o">-</span> <span class="n">Q6</span> <span class="o">+</span> <span class="n">Q7</span><span class="p">)</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
-<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>
-<a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a>    <span class="n">lat</span> <span class="o">=</span> <span class="p">(</span><span class="n">lat</span> <span class="o">*</span> <span class="mi">180</span><span class="p">)</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>  <span class="c1"># 南北緯度  latitude</span>
-<a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>    <span class="n">lon</span> <span class="o">=</span> <span class="p">(</span><span class="n">lon</span> <span class="o">*</span> <span class="mi">180</span><span class="p">)</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>  <span class="c1"># 東西經度  longitude</span>
-<a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>
-<a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a>    <span class="k">return</span> <span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>
-</code></pre></div>
-<p>Reference:</p>
-<ol>
-<li><a href="https://github.com/snexuz/TWD97TM2toWGS84">TWD97TM2toWGS84</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/11/25/twd97tm2-to-wgs84/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-11-24 00:00:00">November 24, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/review/" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-11-24 00:00:00">November 24, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/review/"
+                  class="md-meta__link"
+                >Review</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Vue</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="vue-vs-react-best-choice-for-startups"><a class="toclink" href="../../2020/11/24/vue-vs-react-best-choice-for-startups/">Vue vs React: Best Choice for Startups</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="vue-vs-react-best-choice-for-startups"><a class="toclink" href="../../2020/11/24/vue-vs-react-best-choice-for-startups/">Vue vs React: Best Choice for Startups</a></h2>
-<p><a href="https://swimm.io/blog/vue-vs-react-best-choice-for-startups/">Vue vs React: Best Choice for Startups</a></p>
-<p>本文為作者回覆一封詢問為何選擇 Vue 而不是 React 的來函</p>
-<h4 id="vuejs-vs-react-in-a-nutshell"><a class="toclink" href="../../2020/11/24/vue-vs-react-best-choice-for-startups/#vuejs-vs-react-in-a-nutshell">Vue.js vs React In a Nutshell</a></h4>
-<ol>
-<li>Vue 很輕量且有很高的彈性，在輕度使用的情境下用起來更像 Library</li>
-<li>Vue 的侵入性比 React 小，大部分的 Vue Project 都有類似的專案架構與 Components 結構，而 React 則差異較大，當 Dev 面對新的 Code base 時 Vue 能較快上手</li>
-<li>可讀性高，html, css 與 js 都是分離的，而 React 都合併在 js 中</li>
-<li>獨立的 Framework，不被大廠把持，React 由 Facebook 維護，Angular 由 Google 維護</li>
-</ol>
-<h4 id="when-does-react-trump-vuejs"><a class="toclink" href="../../2020/11/24/vue-vs-react-best-choice-for-startups/#when-does-react-trump-vuejs">When does React Trump Vue.js</a></h4>
-<ol>
-<li>市場上 React 的職缺數量仍大於 Vue</li>
-<li>React Components 的 visibility 與 maintenance 分離在某些情境下提供了更多彈性</li>
-<li>有較詳盡的文件</li>
-</ol>
-<h4 id="sum-up"><a class="toclink" href="../../2020/11/24/vue-vs-react-best-choice-for-startups/#sum-up">Sum Up</a></h4>
-<ol>
-<li>可以很輕易地融入舊有的專案中</li>
-<li>較高的可讀性</li>
-<li>有良好的響應式系統 (Reactivity System)，不用頻繁使用 Set Function 更新</li>
-<li>不是由大公司維護</li>
-</ol>
-<p>最後作者也分享了另外一篇更深入比較的文章 <a href="https://www.mindk.com/blog/react-vs-vue/">React vs Vue: What is the best choice for 2020?</a></p>
-    <nav class="md-post__action">
-      <a href="../../2020/11/24/vue-vs-react-best-choice-for-startups/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
       
         
@@ -1803,7 +1223,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.a5ca32a6.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6981e6db.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

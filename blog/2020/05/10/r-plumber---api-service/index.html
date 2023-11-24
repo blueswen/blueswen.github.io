@@ -8,26 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://blueswen.github.io/blog/2023/10/22/grafana-stat-panel-sparkline/">
+        <link rel="canonical" href="https://blueswen.github.io/blog/2020/05/10/r-plumber---api-service/">
       
       
-        <link rel="prev" href="../../../../2022/03/02/connect-docker-host-from-inside-a-docker-container/">
+        <link rel="prev" href="../../07/serving-traefiks-internal-dashboard-behind-traefik-itself/">
       
+      
+        <link rel="next" href="../../11/implement-trie-prefix-tree/">
       
       
         
       
       
       <link rel="icon" href="../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8+insiders-4.43.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.12+insiders-4.45.0">
     
     
       
-        <title>Grafana Stat Panel 同時顯示最新的值與 Sparkline - Blueswen</title>
+        <title>R Plumber - API Service - Blueswen</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.382dd0b9.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.0ab26e37.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -69,15 +71,15 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Grafana Stat Panel 同時顯示最新的值與 Sparkline - Blueswen" />
-<meta property="og:image" content="https://blueswen.github.io/assets/images/social/blog/2023/10/22/grafana-stat-panel-sparkline.png" />
+<meta property="og:title" content="R Plumber - API Service - Blueswen" />
+<meta property="og:image" content="https://blueswen.github.io/assets/images/social/blog/2020/05/10/r-plumber---api-service.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://blueswen.github.io/blog/2023/10/22/grafana-stat-panel-sparkline/" />
+<meta property="og:url" content="https://blueswen.github.io/blog/2020/05/10/r-plumber---api-service/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="Grafana Stat Panel 同時顯示最新的值與 Sparkline - Blueswen" />
-<meta property="twitter:image" content="https://blueswen.github.io/assets/images/social/blog/2023/10/22/grafana-stat-panel-sparkline.png" />
+<meta property="twitter:title" content="R Plumber - API Service - Blueswen" />
+<meta property="twitter:image" content="https://blueswen.github.io/assets/images/social/blog/2020/05/10/r-plumber---api-service.png" />
  <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
@@ -106,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#grafana-stat-panel-sparkline" class="md-skip">
+        <a href="#r-plumber-api-service" class="md-skip">
           Skip to content
         </a>
       
@@ -140,7 +142,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Grafana Stat Panel 同時顯示最新的值與 Sparkline
+              R Plumber - API Service
             
           </span>
         </div>
@@ -700,13 +702,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/tip/" class="md-nav__link">
+      <a href="../../../../category/algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Tip
+    Algorithm
   
 
     
@@ -752,13 +754,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/algorithm/" class="md-nav__link">
+      <a href="../../../../category/share/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Algorithm
+    Share
   
 
     
@@ -778,13 +780,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/share/" class="md-nav__link">
+      <a href="../../../../category/tip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Share
+    Tip
   
 
     
@@ -860,75 +862,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        需求
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        問題分析
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        解法
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="解法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        說明
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        多筆資料應用
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -964,7 +897,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2023-10-22 00:00:00" class="md-ellipsis">October 22, 2023</time>
+                        <time datetime="2020-05-10 00:00:00" class="md-ellipsis">May 10, 2020</time>
                       </div>
                     </li>
                     
@@ -975,7 +908,7 @@
                           <span class="md-ellipsis">
                             in
                             
-                              <a href="../../../../category/tip/">Tip</a></span>
+                              <a href="../../../../category/share/">Share</a></span>
                         </div>
                       </li>
                     
@@ -1001,91 +934,56 @@
     
     
     
-      <a href="../../../../../tags/#grafana" class="md-tag">Grafana</a>
+      <a href="../../../../../tags/#r" class="md-tag">R</a>
     
   
     
     
     
-      <a href="../../../../../tags/#prometheus" class="md-tag">Prometheus</a>
+      <a href="../../../../../tags/#docker" class="md-tag">Docker</a>
     
   
 </nav>
 
 
 
-<h1 id="grafana-stat-panel-sparkline">Grafana Stat Panel 同時顯示最新的值與 Sparkline</h1>
-<h2 id="_1">需求</h2>
-<p>在 Grafana 的 <a href="https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/stat/">Stat Panel</a> 同時顯示最新的值與 Sparkline（迷你圖表）。</p>
-<h2 id="_2">問題分析</h2>
-<p>Stat Panel 支援 Instant Query 與 Range Query：</p>
+<h1 id="r-plumber-api-service">R Plumber - API Service</h1>
+<p><a href="https://www.rplumber.io/">Plumber</a> 是一個可以用於架設 API 服務的 R package，並能根據註解內容產生 Swagger Spec，不過目前還沒有支援 requestBody 的 Swagger Spec 生成。</p>
+<p>範例如下，主要分為定義 API 的 <code>api.R</code> 與執行服務的 <code>run.R</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># api.R</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">#* Echo back the input</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">#* @param msg The message to echo</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">#* @get /echo</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nf">function</span><span class="p">(</span><span class="n">msg</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">){</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nf">list</span><span class="p">(</span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;The message is: &#39;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&#39;&quot;</span><span class="p">))</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1">#* Return the sum of two numbers</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1">#* @param a The first number to add</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1">#* @param b The second number to add</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1">#* @post /sum</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nf">function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">){</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># run.R</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nf">library</span><span class="p">(</span><span class="n">plumber</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">r</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">plumb</span><span class="p">(</span><span class="s">&quot;api.R&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1"># Where &#39;plumber.R&#39; is the location of the file shown above</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">r</span><span class="o">$</span><span class="nf">run</span><span class="p">(</span><span class="n">port</span><span class="o">=</span><span class="m">8000</span><span class="p">)</span>
+</code></pre></div>
+<p>Plumber 提供了多種 <a href="https://www.rplumber.io/docs/hosting.html">Hosting</a> 的範例，其中也包括了 Docker，並提供了可以使用的 Image <a href="https://hub.docker.com/r/trestletech/plumber">trestletech/plumber</a>。</p>
+<p>在 Plumber 的 <a href="https://hub.docker.com/r/trestletech/plumber/dockerfile">Dockerfile</a> 可以發現他們是使用 <code>install2.r</code> 這個 Script 安裝 package。與 python 不同 R 並沒有像是 pip 這種 package manager，因此要在建置 Image 時安裝 package 並沒有一個比較通用的方法。<a href="http://dirk.eddelbuettel.com/code/littler.html">littler</a> 的 <a href="https://github.com/eddelbuettel/littler/blob/master/inst/examples/install2.r">install2.r</a> 提供了比較偏向 CLI 的方式安裝 R 的 Package，並支援了多種功能，如平行安裝加快安裝速度等。</p>
+<p>install2.r 使用範例：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>install2.r<span class="w"> </span>-l<span class="w"> </span>/tmp/lib<span class="w"> </span>Rcpp<span class="w"> </span>BH<span class="w">                    </span><span class="c1"># install into given library</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>install2.r<span class="w"> </span>--<span class="w"> </span>--with-keep.source<span class="w"> </span>drat<span class="w">             </span><span class="c1"># keep the source</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>install2.r<span class="w"> </span>--<span class="w"> </span>--data-compress<span class="o">=</span>bzip2<span class="w"> </span>stringdist<span class="w">    </span><span class="c1"># prefer bz2 compression</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>install2.r<span class="w"> </span><span class="se">\&quot;</span>.<span class="se">\&quot;</span><span class="w">                                  </span><span class="c1"># install package in current directory</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>install2.r<span class="w"> </span>-n<span class="w"> </span><span class="m">6</span><span class="w"> </span>ggplot2<span class="w">                           </span><span class="c1"># parallel install: (6 processes)</span>
+</code></pre></div>
+<p>Reference:</p>
 <ol>
-<li>Instant Query：Query Type <code>Instant</code>，只查詢最新的值，該值會顯示在 Panel 上</li>
-<li>Range Query：Query Type <code>Range</code>，查詢一段時間內的值，最後一個值會顯示在 Panel 上，所有質會以 Sparkline 的方式顯示在 Panel 上</li>
-</ol>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/instant-query.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Instant Query 畫面" src="../../../imgs/2023-10-22-grafana-stat-panel/instant-query.png" /></a><br />
-Instant Query 畫面</p>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/range-query.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Range Query 畫面" src="../../../imgs/2023-10-22-grafana-stat-panel/range-query.png" /></a><br />
-Range Query 畫面</p>
-<p>但單純使用 Range Query 時會發現，有時候改變時間區間時，顯示在 Panel 上想像中代表最新的值會變大或變小，導致使用者會對於數值的正確性產生疑慮。</p>
-<p>這是因為在 Grafana 使用 Range Query 時，實際的查詢時間區間會為了配合查詢 Prometheus 時要使用的 <a href="https://prometheus.io/docs/prometheus/latest/querying/api/#range-queries">Step 參數</a>而被<a href="https://github.com/grafana/grafana/blob/v10.1.5/pkg/tsdb/prometheus/models/query.go#L147">調整</a>，查詢使用的開始與結束時間都會變得比 Grafana 畫面設定的時間區間還要早。若調整後的結束時間與畫面設定的結束時間中間剛好有資料點時，就會發生 Range Query 的結果不是該 Series 最新的值，而是調整後的結束時間點往前找到的值，如下圖所示：</p>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/query-offset.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Query Offset" src="../../../imgs/2023-10-22-grafana-stat-panel/query-offset.png" /></a><br />
-藍色的最後一個資料點，因為查詢時間位移的關係而不會被該次查詢查到</p>
-<p>更詳細的 Step 參數與 Grafana 設定方式將於另一篇文章中說明。</p>
-<p>雖然可以使用 Both Type 進行查詢，同時顯示 Instant Query 與 Range Query 的結果，但 Panel 會顯示兩個值，容易造成使用者混淆。</p>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/both-query.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Both Query 畫面" src="../../../imgs/2023-10-22-grafana-stat-panel/both-query.png" /></a><br />
-Both Query 畫面</p>
-<p>圖中也可以看到，右側 Instant Query 的值與左側 Range Query 的值不同，這在查詢區間範圍較大時會更明顯。</p>
-<h2 id="_3">解法</h2>
-<p>使用 <code>Both</code> Type，並將兩個 Series 合併，讓 Instant Query 的值最為最後一個值，同時有 Range Query 的資料供繪製 Sparkline。</p>
-<ol>
-<li>
-<p>使用 <code>Both</code> Type 查詢</p>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/single-query-type.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Query Type" src="../../../imgs/2023-10-22-grafana-stat-panel/single-query-type.png" /></a><br />
-Query Type 設定</p>
-</li>
-<li>
-<p>使用 <code>Series to rows</code> 與 <code>Sort by</code> 兩個 Transform</p>
-<ol>
-<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#series-to-rows">Series to rows</a>：將 Instant Query 與 Range Query 的資料合併</li>
-<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#sort-by">Sort by</a>：將合併後的資料依照 <code>Time</code> 欄位排序，確保最後一筆資料為最新的資料</li>
-</ol>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/single-transform.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../../../imgs/2023-10-22-grafana-stat-panel/single-transform.png" /></a><br />
-Transform 設定</p>
-</li>
-</ol>
-<h3 id="_4">說明</h3>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/explanation-01.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Range Series" src="../../../imgs/2023-10-22-grafana-stat-panel/explanation-01.png" /></a><br />
-先關閉 Transform，並切換為 Table 檢視，可以看到兩個 Series，第一個是 Range Query 的資料。</p>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/explanation-02.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Instant Series" src="../../../imgs/2023-10-22-grafana-stat-panel/explanation-02.png" /></a><br />
-第二個是 Instant Query 的資料。</p>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/explanation-03.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Merged Series" src="../../../imgs/2023-10-22-grafana-stat-panel/explanation-03.png" /></a><br />
-啟用 <code>Series to rows</code> transform，兩個 Series 會合併成一個 Series，但預設的排序是依照時間欄位降冪排序，導致最後一筆資料不是最新的資料，而 Stat Panel 預設會顯示最後一筆資料。</p>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/explanation-04.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Sorted Series" src="../../../imgs/2023-10-22-grafana-stat-panel/explanation-04.png" /></a><br />
-啟用 <code>Sort by</code> transform，並以 <code>Time</code> 欄位排序，確保最後一筆資料為最新的資料。</p>
-<h3 id="_5">多筆資料應用</h3>
-<p>如果想要在同一個 Stat Panel 上顯示多筆資料但達到一樣的效果，則要使用多額外使用 <code>Partition by values</code> transform 以 <code>Metrics</code> 欄位分割資料。</p>
-<ol>
-<li>
-<p>使用 <code>Both</code> Type 查詢</p>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/multi-query-type.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Query Type" src="../../../imgs/2023-10-22-grafana-stat-panel/multi-query-type.png" /></a><br />
-Query Type 設定</p>
-</li>
-<li>
-<p>使用 <code>Series to rows</code>、<code>Sort by</code>、<code>Partition by values</code> 三個 Transform</p>
-<ol>
-<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#series-to-rows">Series to rows</a>：將 Instant Query 與 Range Query 的資料合併</li>
-<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#sort-by">Sort by</a>：將合併後的資料依照 <code>Time</code> 欄位排序，確保最後一筆資料為最新的資料</li>
-<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#partition-by-values">Partition by values</a>：將全部被合併的資料再以 <code>Metrics</code> 欄位分割成多筆 Series</li>
-</ol>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/multi-transform.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../../../imgs/2023-10-22-grafana-stat-panel/multi-transform.png" /></a><br />
-Transform 設定</p>
-</li>
-</ol>
-<p>參考資料：</p>
-<ol>
-<li><a href="https://grafana.com/blog/2023/10/18/how-to-easily-retrieve-values-from-a-range-in-grafana-using-a-stat-panel/">How to easily retrieve values from a range in Grafana using a stat panel</a></li>
-<li><a href="https://cloud.tencent.com/developer/article/1382875">详解Prometheus range query中的step参数</a></li>
+<li><a href="https://community.rstudio.com/t/what-is-the-current-state-of-r-package-mangers-in-2019/25143/3">What is the current state of R package mangers in 2019?</a></li>
 </ol>
 
 
@@ -1119,7 +1017,7 @@ Transform 設定</p>
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 22, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 10, 2020</span>
   </span>
 
     
@@ -1226,7 +1124,7 @@ Transform 設定</p>
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.a5ca32a6.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.6981e6db.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

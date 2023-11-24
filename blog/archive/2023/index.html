@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://blueswen.github.io/blog/archive/2023/">
       
       
-        <link rel="prev" href="../../category/share/">
+        <link rel="prev" href="../../category/tip/">
       
       
         <link rel="next" href="../2022/">
@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8+insiders-4.43.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.12+insiders-4.45.0">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.382dd0b9.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0ab26e37.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -712,13 +712,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/tip/" class="md-nav__link">
+      <a href="../../category/algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Tip
+    Algorithm
   
 
     
@@ -764,13 +764,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/algorithm/" class="md-nav__link">
+      <a href="../../category/share/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Algorithm
+    Share
   
 
     
@@ -790,13 +790,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/share/" class="md-nav__link">
+      <a href="../../category/tip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Share
+    Tip
   
 
     
@@ -884,104 +884,35 @@
       </header>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2023-10-22 00:00:00">October 22, 2023</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tip/" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2023-10-22 00:00:00">October 22, 2023</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/tip/"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Grafana, Prometheus</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="grafana-stat-panel-sparkline"><a class="toclink" href="../../2023/10/22/grafana-stat-panel-%E5%90%8C%E6%99%82%E9%A1%AF%E7%A4%BA%E6%9C%80%E6%96%B0%E7%9A%84%E5%80%BC%E8%88%87-sparkline/">Grafana Stat Panel 同時顯示最新的值與 Sparkline</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="grafana-stat-panel-sparkline"><a class="toclink" href="../../2023/10/22/grafana-stat-panel-sparkline/">Grafana Stat Panel 同時顯示最新的值與 Sparkline</a></h2>
-<h3 id="_1"><a class="toclink" href="../../2023/10/22/grafana-stat-panel-sparkline/#_1">需求</a></h3>
-<p>在 Grafana 的 <a href="https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/stat/">Stat Panel</a> 同時顯示最新的值與 Sparkline（迷你圖表）。</p>
-<h3 id="_2"><a class="toclink" href="../../2023/10/22/grafana-stat-panel-sparkline/#_2">問題分析</a></h3>
-<p>Stat Panel 支援 Instant Query 與 Range Query：</p>
-<ol>
-<li>Instant Query：Query Type <code>Instant</code>，只查詢最新的值，該值會顯示在 Panel 上</li>
-<li>Range Query：Query Type <code>Range</code>，查詢一段時間內的值，最後一個值會顯示在 Panel 上，所有質會以 Sparkline 的方式顯示在 Panel 上</li>
-</ol>
-<p><img alt="Instant Query 畫面" src="../../2023/imgs/2023-10-22-grafana-stat-panel/instant-query.png" /><br />
-Instant Query 畫面</p>
-<p><img alt="Range Query 畫面" src="../../2023/imgs/2023-10-22-grafana-stat-panel/range-query.png" /><br />
-Range Query 畫面</p>
-<p>但單純使用 Range Query 時會發現，有時候改變時間區間時，顯示在 Panel 上想像中代表最新的值會變大或變小，導致使用者會對於數值的正確性產生疑慮。</p>
-<p>這是因為在 Grafana 使用 Range Query 時，實際的查詢時間區間會為了配合查詢 Prometheus 時要使用的 <a href="https://prometheus.io/docs/prometheus/latest/querying/api/#range-queries">Step 參數</a>而被<a href="https://github.com/grafana/grafana/blob/v10.1.5/pkg/tsdb/prometheus/models/query.go#L147">調整</a>，查詢使用的開始與結束時間都會變得比 Grafana 畫面設定的時間區間還要早。若調整後的結束時間與畫面設定的結束時間中間剛好有資料點時，就會發生 Range Query 的結果不是該 Series 最新的值，而是調整後的結束時間點往前找到的值，如下圖所示：</p>
-<p><img alt="Query Offset" src="../../2023/imgs/2023-10-22-grafana-stat-panel/query-offset.png" /><br />
-藍色的最後一個資料點，因為查詢時間位移的關係而不會被該次查詢查到</p>
-<p>更詳細的 Step 參數與 Grafana 設定方式將於另一篇文章中說明。</p>
-<p>雖然可以使用 Both Type 進行查詢，同時顯示 Instant Query 與 Range Query 的結果，但 Panel 會顯示兩個值，容易造成使用者混淆。</p>
-<p><img alt="Both Query 畫面" src="../../2023/imgs/2023-10-22-grafana-stat-panel/both-query.png" /><br />
-Both Query 畫面</p>
-<p>圖中也可以看到，右側 Instant Query 的值與左側 Range Query 的值不同，這在查詢區間範圍較大時會更明顯。</p>
-<h3 id="_3"><a class="toclink" href="../../2023/10/22/grafana-stat-panel-sparkline/#_3">解法</a></h3>
-<p>使用 <code>Both</code> Type，並將兩個 Series 合併，讓 Instant Query 的值最為最後一個值，同時有 Range Query 的資料供繪製 Sparkline。</p>
-<ol>
-<li>
-<p>使用 <code>Both</code> Type 查詢</p>
-<p><img alt="Query Type" src="../../2023/imgs/2023-10-22-grafana-stat-panel/single-query-type.png" /><br />
-Query Type 設定</p>
-</li>
-<li>
-<p>使用 <code>Series to rows</code> 與 <code>Sort by</code> 兩個 Transform</p>
-<ol>
-<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#series-to-rows">Series to rows</a>：將 Instant Query 與 Range Query 的資料合併</li>
-<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#sort-by">Sort by</a>：將合併後的資料依照 <code>Time</code> 欄位排序，確保最後一筆資料為最新的資料</li>
-</ol>
-<p><img alt="Transform" src="../../2023/imgs/2023-10-22-grafana-stat-panel/single-transform.png" /><br />
-Transform 設定</p>
-</li>
-</ol>
-<h4 id="_4"><a class="toclink" href="../../2023/10/22/grafana-stat-panel-sparkline/#_4">說明</a></h4>
-<p><img alt="Range Series" src="../../2023/imgs/2023-10-22-grafana-stat-panel/explanation-01.png" /><br />
-先關閉 Transform，並切換為 Table 檢視，可以看到兩個 Series，第一個是 Range Query 的資料。</p>
-<p><img alt="Instant Series" src="../../2023/imgs/2023-10-22-grafana-stat-panel/explanation-02.png" /><br />
-第二個是 Instant Query 的資料。</p>
-<p><img alt="Merged Series" src="../../2023/imgs/2023-10-22-grafana-stat-panel/explanation-03.png" /><br />
-啟用 <code>Series to rows</code> transform，兩個 Series 會合併成一個 Series，但預設的排序是依照時間欄位降冪排序，導致最後一筆資料不是最新的資料，而 Stat Panel 預設會顯示最後一筆資料。</p>
-<p><img alt="Sorted Series" src="../../2023/imgs/2023-10-22-grafana-stat-panel/explanation-04.png" /><br />
-啟用 <code>Sort by</code> transform，並以 <code>Time</code> 欄位排序，確保最後一筆資料為最新的資料。</p>
-<h4 id="_5"><a class="toclink" href="../../2023/10/22/grafana-stat-panel-sparkline/#_5">多筆資料應用</a></h4>
-<p>如果想要在同一個 Stat Panel 上顯示多筆資料但達到一樣的效果，則要使用多額外使用 <code>Partition by values</code> transform 以 <code>Metrics</code> 欄位分割資料。</p>
-<ol>
-<li>
-<p>使用 <code>Both</code> Type 查詢</p>
-<p><img alt="Query Type" src="../../2023/imgs/2023-10-22-grafana-stat-panel/multi-query-type.png" /><br />
-Query Type 設定</p>
-</li>
-<li>
-<p>使用 <code>Series to rows</code>、<code>Sort by</code>、<code>Partition by values</code> 三個 Transform</p>
-<ol>
-<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#series-to-rows">Series to rows</a>：將 Instant Query 與 Range Query 的資料合併</li>
-<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#sort-by">Sort by</a>：將合併後的資料依照 <code>Time</code> 欄位排序，確保最後一筆資料為最新的資料</li>
-<li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#partition-by-values">Partition by values</a>：將全部被合併的資料再以 <code>Metrics</code> 欄位分割成多筆 Series</li>
-</ol>
-<p><img alt="Transform" src="../../2023/imgs/2023-10-22-grafana-stat-panel/multi-transform.png" /><br />
-Transform 設定</p>
-</li>
-</ol>
-<p>參考資料：</p>
-<ol>
-<li><a href="https://grafana.com/blog/2023/10/18/how-to-easily-retrieve-values-from-a-range-in-grafana-using-a-stat-panel/">How to easily retrieve values from a range in Grafana using a stat panel</a></li>
-<li><a href="https://cloud.tencent.com/developer/article/1382875">详解Prometheus range query中的step参数</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2023/10/22/grafana-stat-panel-sparkline/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
       
         
@@ -1036,7 +967,7 @@ Transform 設定</p>
     <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.a5ca32a6.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6981e6db.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

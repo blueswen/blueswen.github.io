@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://blueswen.github.io/blog/2021/01/20/kubernetes-operator-for-beginners-what-why-how/">
+        <link rel="canonical" href="https://blueswen.github.io/blog/2020/04/22/%E9%98%B2%E6%AD%A2-container-%E5%95%9F%E5%8B%95%E5%BE%8C%E9%80%80%E5%87%BA/">
       
       
-        <link rel="prev" href="../../18/longest-palindromic-substring/">
+        <link rel="prev" href="../../20/single-number/">
       
       
-        <link rel="next" href="../../21/arrow-keys-not-working-in-vim-in-jupyter-console/">
+        <link rel="next" href="../../23/principles-of-container-based-application-design/">
       
       
         
       
       
       <link rel="icon" href="../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8+insiders-4.43.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.12+insiders-4.45.0">
     
     
       
-        <title>Kubernetes Operator for Beginners — What, Why, How - Blueswen</title>
+        <title>防止 Container 啟動後退出 - Blueswen</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.382dd0b9.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.0ab26e37.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -71,15 +71,15 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Kubernetes Operator for Beginners — What, Why, How - Blueswen" />
-<meta property="og:image" content="https://blueswen.github.io/assets/images/social/blog/2021/01/20/kubernetes-operator-for-beginners-what-why-how.png" />
+<meta property="og:title" content="防止 Container 啟動後退出 - Blueswen" />
+<meta property="og:image" content="https://blueswen.github.io/assets/images/social/blog/2020/04/22/%E9%98%B2%E6%AD%A2-container-%E5%95%9F%E5%8B%95%E5%BE%8C%E9%80%80%E5%87%BA.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://blueswen.github.io/blog/2021/01/20/kubernetes-operator-for-beginners-what-why-how/" />
+<meta property="og:url" content="https://blueswen.github.io/blog/2020/04/22/%E9%98%B2%E6%AD%A2-container-%E5%95%9F%E5%8B%95%E5%BE%8C%E9%80%80%E5%87%BA/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="Kubernetes Operator for Beginners — What, Why, How - Blueswen" />
-<meta property="twitter:image" content="https://blueswen.github.io/assets/images/social/blog/2021/01/20/kubernetes-operator-for-beginners-what-why-how.png" />
+<meta property="twitter:title" content="防止 Container 啟動後退出 - Blueswen" />
+<meta property="twitter:image" content="https://blueswen.github.io/assets/images/social/blog/2020/04/22/%E9%98%B2%E6%AD%A2-container-%E5%95%9F%E5%8B%95%E5%BE%8C%E9%80%80%E5%87%BA.png" />
  <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kubernetes-operator-for-beginners-what-why-how" class="md-skip">
+        <a href="#container" class="md-skip">
           Skip to content
         </a>
       
@@ -142,7 +142,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kubernetes Operator for Beginners — What, Why, How
+              防止 Container 啟動後退出
             
           </span>
         </div>
@@ -702,13 +702,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/tip/" class="md-nav__link">
+      <a href="../../../../category/algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Tip
+    Algorithm
   
 
     
@@ -754,13 +754,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/algorithm/" class="md-nav__link">
+      <a href="../../../../category/share/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Algorithm
+    Share
   
 
     
@@ -780,13 +780,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/share/" class="md-nav__link">
+      <a href="../../../../category/tip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Share
+    Tip
   
 
     
@@ -862,58 +862,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-an-operator" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What is an operator
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-you-need-an-operator" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why you need an operator
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-write-an-operator" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to write an Operator
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#is-operator-necessary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Is Operator Necessary
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -949,7 +897,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2021-01-20 00:00:00" class="md-ellipsis">January 20, 2021</time>
+                        <time datetime="2020-04-22 00:00:00" class="md-ellipsis">April 22, 2020</time>
                       </div>
                     </li>
                     
@@ -960,7 +908,7 @@
                           <span class="md-ellipsis">
                             in
                             
-                              <a href="../../../../category/review/">Review</a></span>
+                              <a href="../../../../category/tip/">Tip</a></span>
                         </div>
                       </li>
                     
@@ -986,33 +934,24 @@
     
     
     
-      <a href="../../../../../tags/#k8s" class="md-tag">K8s</a>
+      <a href="../../../../../tags/#docker" class="md-tag">Docker</a>
     
   
 </nav>
 
 
 
-<h1 id="kubernetes-operator-for-beginners-what-why-how">Kubernetes Operator for Beginners — What, Why, How</h1>
-<p><a href="https://medium.com/swlh/kubernetes-operator-for-beginners-what-why-how-21b23f0cb9b1">Kubernetes Operator for Beginners — What, Why, How</a></p>
-<p>本文介紹了 Operator 的功能以及如何建立 Operator</p>
-<h4 id="what-is-an-operator">What is an operator</h4>
-<p>利用 Custom Resource (CRD) 操作 K8s 上的其他資源，並且符合 K8s 的 Control loop 機制，可以用 K8s native api 管理</p>
-<h4 id="why-you-need-an-operator">Why you need an operator</h4>
-<p>以 Code 的方式自動化對 K8s 的操作，提高維運的可靠性</p>
-<h4 id="how-to-write-an-operator">How to write an Operator</h4>
+<h1 id="container">防止 Container 啟動後退出</h1>
+<p>在建置完 Image 後時常會發現 Image 不如預期中運作，如預設的 CMD 莫名地 Crash 等，這時候就會需要進入 container 中，使用 <code>tail -f /dev/null</code> 作為 CMD 就可以讓 container 一直處於 running 的狀態，隨時可以進入檢測。另一個常用的情境是透過這個方式起一個永久 running 的 container，這樣就可以作為虛擬環境使用。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>python<span class="w"> </span>tail<span class="w"> </span>-f<span class="w"> </span>/dev/null
+</code></pre></div>
+<p>在 Docker 的機制中 container 的運作狀態是跟隨其 CMD 或 ENTRYPOINT 所執行的程序，當程序意外停止或執行完成時就會變為 Exited，因此要讓 container 處於永久 running 的狀態就需要執行一個會不停執行的程序。</p>
+<p><code>tail -f</code> 會跟蹤並印出指定檔案的最末端，而 <code>/dev/null</code>  為 Linux 中一個特殊的檔案，檔案內容永遠只有 EOF，因此合併後的效果就是跟蹤一個永遠為空的檔案，成為一個永久執行但消耗極少資源的程序。</p>
+<p>Reference:</p>
 <ol>
-<li>Kudo</li>
-<li>Helm</li>
-<li>Dynamic Operator: 彈性高，需要手動撰寫許多程式碼</li>
-<li>Operator SDK</li>
-<li>Kubebuilder</li>
-</ol>
-<h4 id="is-operator-necessary">Is Operator Necessary</h4>
-<ol>
-<li>不要沈溺於自動化。如果這個工作一個月只需要花十分鐘處理，那完全不值得花一週或甚至更多的時間來特地寫一個 Operator</li>
-<li>如果已經有 Helm Chart 或 Kudo template 可以使用的話，不要硬用 Operator SDK 或 Kubebuilder 重新實作，YAML 永遠比 Go Code 簡單更多</li>
-<li>如果可以的話，比起客制 Operator，選擇醜陋但簡單的 bash script 有時候會更輕鬆一點</li>
+<li><a href="https://blog.ponycool.com/archives/121.html">利用 tail -f /dev/null 命令防止 container 启动后退出</a></li>
+<li><a href="https://kknews.cc/zh-tw/code/valkama.html">Linux 學習——/dev/null 的簡介及作用</a></li>
+<li><a href="https://www.computerhope.com/unix/utail.htm">Linux tail command</a></li>
 </ol>
 
 
@@ -1046,7 +985,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2021</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 22, 2020</span>
   </span>
 
     
@@ -1153,7 +1092,7 @@
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.a5ca32a6.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.6981e6db.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

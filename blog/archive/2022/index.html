@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8+insiders-4.43.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.12+insiders-4.45.0">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.382dd0b9.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0ab26e37.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -712,13 +712,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/tip/" class="md-nav__link">
+      <a href="../../category/algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Tip
+    Algorithm
   
 
     
@@ -764,13 +764,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/algorithm/" class="md-nav__link">
+      <a href="../../category/share/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Algorithm
+    Share
   
 
     
@@ -790,13 +790,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/share/" class="md-nav__link">
+      <a href="../../category/tip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Share
+    Tip
   
 
     
@@ -884,67 +884,35 @@
       </header>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2022-03-02 00:00:00">March 2, 2022</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tip/" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2022-03-02 00:00:00">March 2, 2022</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/tip/"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Docker</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="connect-docker-host-from-inside-a-docker-container"><a class="toclink" href="../../2022/03/02/connect-docker-host-from-inside-a-docker-container/">Connect docker host from inside a docker container</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="connect-docker-host-from-inside-a-docker-container"><a class="toclink" href="../../2022/03/02/connect-docker-host-from-inside-a-docker-container/">Connect docker host from inside a docker container</a></h2>
-<p>需求：在 Container 內直接使用 Hostname 與 Host 溝通</p>
-<ol>
-<li>Container 中的 Application 與在 Host 上執行的 Application 溝通</li>
-<li>使用 Container 作為 Proxy（如 Traefik），需要 Proxy 的服務開在 Host 上</li>
-</ol>
-<p>解法：</p>
-<p>最暴力解的解法為直接將在 Container 內的目標指向 Host 的 IP，但這種當環境變動時就會需要手動調整，例如 DHCP、浮動 IP 或是切換到不同主機執行時。</p>
-<p><a href="https://medium.com/@TimvanBaarsen/how-to-connect-to-the-docker-host-from-inside-a-docker-container-112b4c71bc66">How to connect to the Docker host from inside a Docker container?</a> 這篇文章介紹了在 Docker Desktop 與 Linux 上的 Docker Engine 的兩種解法</p>
-<ol>
-<li>
-<p>Docker Desktop</p>
-<p>在 Windows 或 Mac 要使用通常都會安裝 Docker Desktop，在官方的說明文件中（<a href="https://docs.docker.com/desktop/mac/networking/#i-want-to-connect-from-a-container-to-a-service-on-the-host">Mac</a>、<a href="https://docs.docker.com/desktop/windows/networking/#i-want-to-connect-from-a-container-to-a-service-on-the-host">Windows</a>），說明可以直接使用 <code>host.docker.internal</code> 這個 Hostname 從 Container 連接 Host。</p>
-</li>
-<li>
-<p>Linux Docker Engine</p>
-<p>在 20.10 版後，Docker Engine 也支援了 <code>host.docker.internal</code> 這個 Hostname，但是無法開箱即用，在啟動 Container 時需要額外使用 <code>--add-host</code> 參數設定 Host，設定如下</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>--add-host<span class="o">=</span>host.docker.internal:host-gateway
-</code></pre></div>
-<p>在 Docker Compose 中可以透過 <code>extra_hosts</code> 增加 Host，Compose 範例如下：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.8&quot;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nt">ubuntu</span><span class="p">:</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nt">extra_hosts</span><span class="p">:</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;host.docker.internal:host-gateway&quot;</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tail -f /dev/null</span>
-</code></pre></div>
-</li>
-</ol>
-<p>Reference:</p>
-<ol>
-<li><a href="https://medium.com/@TimvanBaarsen/how-to-connect-to-the-docker-host-from-inside-a-docker-container-112b4c71bc66">How to connect to the Docker host from inside a Docker container?</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2022/03/02/connect-docker-host-from-inside-a-docker-container/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
       
         
@@ -999,7 +967,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.a5ca32a6.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6981e6db.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

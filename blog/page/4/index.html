@@ -14,22 +14,22 @@
         <link rel="prev" href="../../../portfolio/">
       
       
-        <link rel="next" href="../../category/tip/">
+        <link rel="next" href="../../category/algorithm/">
       
       
         
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8+insiders-4.43.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.12+insiders-4.45.0">
     
     
       
-        <title>Blog - Blueswen</title>
+        <title>Index - Blueswen</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.382dd0b9.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0ab26e37.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -71,14 +71,14 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Blog - Blueswen" />
+<meta property="og:title" content="Index - Blueswen" />
 <meta property="og:image" content="https://blueswen.github.io/assets/images/social/blog/page/4/index.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:url" content="https://blueswen.github.io/blog/page/4/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="Blog - Blueswen" />
+<meta property="twitter:title" content="Index - Blueswen" />
 <meta property="twitter:image" content="https://blueswen.github.io/assets/images/social/blog/page/4/index.png" />
  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
@@ -106,11 +106,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#blog" class="md-skip">
-          Skip to content
-        </a>
       
     </div>
     <div data-md-component="announce">
@@ -142,7 +137,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Blog
+              Index
             
           </span>
         </div>
@@ -702,13 +697,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/tip/" class="md-nav__link">
+      <a href="../../category/algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Tip
+    Algorithm
   
 
     
@@ -754,13 +749,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/algorithm/" class="md-nav__link">
+      <a href="../../category/share/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Algorithm
+    Share
   
 
     
@@ -780,13 +775,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/share/" class="md-nav__link">
+      <a href="../../category/tip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Share
+    Tip
   
 
     
@@ -859,8 +854,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -872,756 +865,306 @@
   <div class="md-content" data-md-component="content">
     <div class="md-content__inner">
       <header class="md-typeset">
-        <h1 id="blog">Blog</h1>
+        
       </header>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-11-23 00:00:00">November 23, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/algorithm/" class="md-meta__link">Algorithm</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-11-23 00:00:00">November 23, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/algorithm/"
+                  class="md-meta__link"
+                >Algorithm</a></li>
+          
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="two-sum"><a class="toclink" href="../../2020/11/23/two-sum/">Two Sum</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="two-sum"><a class="toclink" href="../../2020/11/23/two-sum/">Two Sum</a></h2>
-<p><a href="https://leetcode.com/problems/two-sum/">1. Two Sum</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">def</span> <span class="nf">twoSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        <span class="n">patch_hash</span> <span class="o">=</span> <span class="p">{}</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="k">for</span> <span class="n">ind</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>            <span class="k">if</span> <span class="p">(</span><span class="n">target</span> <span class="o">-</span> <span class="n">num</span><span class="p">)</span> <span class="ow">in</span> <span class="n">patch_hash</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>                <span class="k">return</span> <span class="p">[</span><span class="n">patch_hash</span><span class="p">[</span><span class="n">target</span> <span class="o">-</span> <span class="n">num</span><span class="p">],</span> <span class="n">ind</span><span class="p">]</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>            <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>                <span class="n">patch_hash</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">=</span> <span class="n">ind</span>
-</code></pre></div>
-<p>Reference:</p>
-<ol>
-<li><a href="https://leetcode.com/list/xoqag3yj/">Blind Curated 75</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/11/23/two-sum/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-11-15 00:00:00">November 15, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/share/" class="md-meta__link">Share</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-11-15 00:00:00">November 15, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/share/"
+                  class="md-meta__link"
+                >Share</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Docker</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="docker-multi-stage-build"><a class="toclink" href="../../2020/11/15/docker-multi-stage-build/">Docker Multi-Stage Build</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="docker-multi-stage-build"><a class="toclink" href="../../2020/11/15/docker-multi-stage-build/">Docker Multi-Stage Build</a></h2>
-<p>在 CI 的過程中許多專案都會有 compile 或 build 的需求，而基於最小化的 Docker Image 的原則，建置時期相依的套件並不會一同打包進成品的 Image 中。在這種情境下常見的做法是透過 Pipeline 切分成兩段處理，第一步先利用已有的建置環境 Image compile 或 build 原始檔，第二步再將成品打包至 Runtime 的 Image 中。</p>
-<p>不過利用 Pipeline 的缺點是會相依 shell script 或其他 CI 工具，因此 Docker 在 Docker 17.05+ 開始提供了 <a href="https://docs.docker.com/develop/develop-images/multistage-build/">Multi-Stage Build</a> 的功能，能夠將多階段的 Docker Image 處理定義在一個 Dockerfile 中。</p>
-<p>使用方法為透過 <code>FROM [compile time image] AS [temp image]</code> 的 <code>AS</code> 產生暫時的 Image，該 Image 可以被下一個階段的 Image 引用(FROM)，或是以 <code>COPY --from=[temp image] /source /dist</code> 的方式取出要用的成品。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">[compile</span><span class="w"> </span><span class="nb">time</span><span class="w"> </span>image<span class="o">]</span><span class="w"> </span>AS<span class="w"> </span><span class="o">[</span>temp<span class="w"> </span>image<span class="o">]</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/workspace</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">RUN</span><span class="w"> </span>touch<span class="w"> </span>artifact
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">FROM</span><span class="w"> </span><span class="s">[runtime</span><span class="w"> </span>image<span class="o">]</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/workspace</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="k">COPY</span><span class="w">  </span>--from<span class="o">=[</span>temp<span class="w"> </span>image<span class="o">]</span><span class="w"> </span>/workspace/artifact<span class="w"> </span>.
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="k">CMD</span><span class="w"> </span>ls<span class="w"> </span>-lha<span class="w"> </span>artifact
-</code></pre></div>
-<p>由於整份 Dockerfile 仍然是屬於同一個 build，因此如果有設定 <code>.dockerignore</code> 所有 Image 的 <code>COPY</code> 都是會被影響到的，這點在使用上時需多加注意。</p>
-<p>以下提供 Golang 與 Vue.js 的兩個 Dockerfile 範例，相關程式碼可參考 <a href="https://github.com/Blueswen/docker-multi-stage-build">docker-multi-stage-build</a>。</p>
-<h4 id="golang"><a class="toclink" href="../../2020/11/15/docker-multi-stage-build/#golang">Golang</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">golang:alpine3.12</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">builder</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/workspace</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>/workspace/
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="k">RUN</span><span class="w"> </span>go<span class="w"> </span>build<span class="w"> </span>-o<span class="w"> </span>hello-world
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="k">FROM</span><span class="w"> </span><span class="s">busybox:1.32.0</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/workspace</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="k">COPY</span><span class="w">  </span>--from<span class="o">=</span>builder<span class="w"> </span>/workspace/hello-world<span class="w"> </span>.
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="k">CMD</span><span class="w"> </span>./hello-world
-</code></pre></div>
-<h4 id="vuejs"><a class="toclink" href="../../2020/11/15/docker-multi-stage-build/#vuejs">Vue.js</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">node:15.1.0-slim</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">builder</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/workspace</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">COPY</span><span class="w"> </span>./hello-world/<span class="w"> </span>/workspace/
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">RUN</span><span class="w"> </span>npm<span class="w"> </span>install<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>build
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="k">FROM</span><span class="w"> </span><span class="s">nginx:1.19.4-alpine</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="k">COPY</span><span class="w">  </span>--from<span class="o">=</span>builder<span class="w"> </span>/workspace/dist/<span class="w"> </span>/usr/share/nginx/html/
-</code></pre></div>
-<p>Reference:</p>
-<ol>
-<li><a href="https://tachingchen.com/tw/blog/docker-multi-stage-builds/">透過 Multi-Stage Builds 改善持續交付流程</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/11/15/docker-multi-stage-build/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-11-04 00:00:00">November 4, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tip/" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-11-04 00:00:00">November 4, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/tip/"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Web Development</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="chrome-err_unsafe_port"><a class="toclink" href="../../2020/11/04/chrome-err_unsafe_port/">Chrome ERR_UNSAFE_PORT</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="chrome-err_unsafe_port"><a class="toclink" href="../../2020/11/04/chrome-err_unsafe_port/">Chrome ERR_UNSAFE_PORT</a></h2>
-<p>問題：以 6666 port 開啟服務，使用 Chrome 瀏覽時出現 ERR_UNSAFE_PORT 錯誤訊息</p>
-<p>原因：基於安全理由 Chrome 或其他瀏覽器會直接阻擋特定 port 的服務。Chromium 的<a href="https://chromium.googlesource.com/chromium/src.git/+/refs/heads/master/net/base/port_util.cc">原始碼</a>有列出會被阻擋的清單，在使用時應特別注意。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// The general list of blocked ports. Will be blocked unless a specific</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1">// protocol overrides it. (Ex: ftp can use ports 20 and 21)</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">kRestrictedPorts</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="mi">1</span><span class="p">,</span><span class="w">       </span><span class="c1">// tcpmux</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="mi">7</span><span class="p">,</span><span class="w">       </span><span class="c1">// echo</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="mi">9</span><span class="p">,</span><span class="w">       </span><span class="c1">// discard</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="mi">11</span><span class="p">,</span><span class="w">      </span><span class="c1">// systat</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="mi">13</span><span class="p">,</span><span class="w">      </span><span class="c1">// daytime</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="mi">15</span><span class="p">,</span><span class="w">      </span><span class="c1">// netstat</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="mi">17</span><span class="p">,</span><span class="w">      </span><span class="c1">// qotd</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="mi">19</span><span class="p">,</span><span class="w">      </span><span class="c1">// chargen</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="mi">20</span><span class="p">,</span><span class="w">      </span><span class="c1">// ftp data</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="mi">21</span><span class="p">,</span><span class="w">      </span><span class="c1">// ftp access</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="mi">22</span><span class="p">,</span><span class="w">      </span><span class="c1">// ssh</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="mi">23</span><span class="p">,</span><span class="w">      </span><span class="c1">// telnet</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="mi">25</span><span class="p">,</span><span class="w">      </span><span class="c1">// smtp</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="mi">37</span><span class="p">,</span><span class="w">      </span><span class="c1">// time</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="mi">42</span><span class="p">,</span><span class="w">      </span><span class="c1">// name</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="mi">43</span><span class="p">,</span><span class="w">      </span><span class="c1">// nicname</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="mi">53</span><span class="p">,</span><span class="w">      </span><span class="c1">// domain</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="mi">77</span><span class="p">,</span><span class="w">      </span><span class="c1">// priv-rjs</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="mi">79</span><span class="p">,</span><span class="w">      </span><span class="c1">// finger</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="mi">87</span><span class="p">,</span><span class="w">      </span><span class="c1">// ttylink</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="mi">95</span><span class="p">,</span><span class="w">      </span><span class="c1">// supdup</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="mi">101</span><span class="p">,</span><span class="w">     </span><span class="c1">// hostriame</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="mi">102</span><span class="p">,</span><span class="w">     </span><span class="c1">// iso-tsap</span>
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">    </span><span class="mi">103</span><span class="p">,</span><span class="w">     </span><span class="c1">// gppitnp</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">    </span><span class="mi">104</span><span class="p">,</span><span class="w">     </span><span class="c1">// acr-nema</span>
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">    </span><span class="mi">109</span><span class="p">,</span><span class="w">     </span><span class="c1">// pop2</span>
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">    </span><span class="mi">110</span><span class="p">,</span><span class="w">     </span><span class="c1">// pop3</span>
-<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">    </span><span class="mi">111</span><span class="p">,</span><span class="w">     </span><span class="c1">// sunrpc</span>
-<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">    </span><span class="mi">113</span><span class="p">,</span><span class="w">     </span><span class="c1">// auth</span>
-<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">    </span><span class="mi">115</span><span class="p">,</span><span class="w">     </span><span class="c1">// sftp</span>
-<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">    </span><span class="mi">117</span><span class="p">,</span><span class="w">     </span><span class="c1">// uucp-path</span>
-<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">    </span><span class="mi">119</span><span class="p">,</span><span class="w">     </span><span class="c1">// nntp</span>
-<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">    </span><span class="mi">123</span><span class="p">,</span><span class="w">     </span><span class="c1">// NTP</span>
-<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">    </span><span class="mi">135</span><span class="p">,</span><span class="w">     </span><span class="c1">// loc-srv /epmap</span>
-<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">    </span><span class="mi">139</span><span class="p">,</span><span class="w">     </span><span class="c1">// netbios</span>
-<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">    </span><span class="mi">143</span><span class="p">,</span><span class="w">     </span><span class="c1">// imap2</span>
-<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">    </span><span class="mi">179</span><span class="p">,</span><span class="w">     </span><span class="c1">// BGP</span>
-<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">    </span><span class="mi">389</span><span class="p">,</span><span class="w">     </span><span class="c1">// ldap</span>
-<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">    </span><span class="mi">427</span><span class="p">,</span><span class="w">     </span><span class="c1">// SLP (Also used by Apple Filing Protocol)</span>
-<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">    </span><span class="mi">465</span><span class="p">,</span><span class="w">     </span><span class="c1">// smtp+ssl</span>
-<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">    </span><span class="mi">512</span><span class="p">,</span><span class="w">     </span><span class="c1">// print / exec</span>
-<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">    </span><span class="mi">513</span><span class="p">,</span><span class="w">     </span><span class="c1">// login</span>
-<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">    </span><span class="mi">514</span><span class="p">,</span><span class="w">     </span><span class="c1">// shell</span>
-<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">    </span><span class="mi">515</span><span class="p">,</span><span class="w">     </span><span class="c1">// printer</span>
-<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="w">    </span><span class="mi">526</span><span class="p">,</span><span class="w">     </span><span class="c1">// tempo</span>
-<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="w">    </span><span class="mi">530</span><span class="p">,</span><span class="w">     </span><span class="c1">// courier</span>
-<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="w">    </span><span class="mi">531</span><span class="p">,</span><span class="w">     </span><span class="c1">// chat</span>
-<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="w">    </span><span class="mi">532</span><span class="p">,</span><span class="w">     </span><span class="c1">// netnews</span>
-<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="w">    </span><span class="mi">540</span><span class="p">,</span><span class="w">     </span><span class="c1">// uucp</span>
-<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="w">    </span><span class="mi">548</span><span class="p">,</span><span class="w">     </span><span class="c1">// AFP (Apple Filing Protocol)</span>
-<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="w">    </span><span class="mi">556</span><span class="p">,</span><span class="w">     </span><span class="c1">// remotefs</span>
-<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="w">    </span><span class="mi">563</span><span class="p">,</span><span class="w">     </span><span class="c1">// nntp+ssl</span>
-<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="w">    </span><span class="mi">587</span><span class="p">,</span><span class="w">     </span><span class="c1">// smtp (rfc6409)</span>
-<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="w">    </span><span class="mi">601</span><span class="p">,</span><span class="w">     </span><span class="c1">// syslog-conn (rfc3195)</span>
-<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="w">    </span><span class="mi">636</span><span class="p">,</span><span class="w">     </span><span class="c1">// ldap+ssl</span>
-<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a><span class="w">    </span><span class="mi">993</span><span class="p">,</span><span class="w">     </span><span class="c1">// ldap+ssl</span>
-<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="w">    </span><span class="mi">995</span><span class="p">,</span><span class="w">     </span><span class="c1">// pop3+ssl</span>
-<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="w">    </span><span class="mi">2049</span><span class="p">,</span><span class="w">    </span><span class="c1">// nfs</span>
-<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a><span class="w">    </span><span class="mi">3659</span><span class="p">,</span><span class="w">    </span><span class="c1">// apple-sasl / PasswordServer</span>
-<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a><span class="w">    </span><span class="mi">4045</span><span class="p">,</span><span class="w">    </span><span class="c1">// lockd</span>
-<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a><span class="w">    </span><span class="mi">6000</span><span class="p">,</span><span class="w">    </span><span class="c1">// X11</span>
-<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a><span class="w">    </span><span class="mi">6665</span><span class="p">,</span><span class="w">    </span><span class="c1">// Alternate IRC [Apple addition]</span>
-<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a><span class="w">    </span><span class="mi">6666</span><span class="p">,</span><span class="w">    </span><span class="c1">// Alternate IRC [Apple addition]</span>
-<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a><span class="w">    </span><span class="mi">6667</span><span class="p">,</span><span class="w">    </span><span class="c1">// Standard IRC [Apple addition]</span>
-<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a><span class="w">    </span><span class="mi">6668</span><span class="p">,</span><span class="w">    </span><span class="c1">// Alternate IRC [Apple addition]</span>
-<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a><span class="w">    </span><span class="mi">6669</span><span class="p">,</span><span class="w">    </span><span class="c1">// Alternate IRC [Apple addition]</span>
-<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a><span class="w">    </span><span class="mi">6697</span><span class="p">,</span><span class="w">    </span><span class="c1">// IRC + TLS</span>
-<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a><span class="p">};</span>
-</code></pre></div>
-<p>6665~6669 是 IRC protocol 預設使用的 Port。IRC 有許多安全漏洞，為了避免 Chrome 變成跳板去影響其他服務，所以會主動進行阻擋。因此這些阻擋是保護 Service 本身，而不是保護 Chrome 的使用者。</p>
-<p>Reference:</p>
-<ol>
-<li><a href="https://www.applenice.net/2019/06/04/ERR-UNSAFE-PORT-On-Browser/">Chrome错误代码:ERR_UNSAFE_PORT</a></li>
-<li><a href="https://superuser.com/q/188058">Which ports are considered unsafe by Chrome?</a></li>
-<li><a href="https://jazzy.id.au/2012/08/23/why_does_chrome_consider_some_ports_unsafe.html">Why does Chrome consider some ports unsafe?</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/11/04/chrome-err_unsafe_port/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-11-03 00:00:00">November 3, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/review/" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-11-03 00:00:00">November 3, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/review/"
+                  class="md-meta__link"
+                >Review</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              K8s</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="10-most-common-mistakes-using-kubernetes"><a class="toclink" href="../../2020/11/03/10-most-common-mistakes-using-kubernetes/">10 most common mistakes using kubernetes</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="10-most-common-mistakes-using-kubernetes"><a class="toclink" href="../../2020/11/03/10-most-common-mistakes-using-kubernetes/">10 most common mistakes using kubernetes</a></h2>
-<p><a href="https://blog.pipetail.io/posts/2020-05-04-most-common-mistakes-k8s/">10 most common mistakes using kubernetes</a></p>
-<ol>
-<li>resources - requests and limits</li>
-<li>CPU request 不要不設定或設太低，當 node 資源太滿的時候，pod 仍會被運行，但會拿到非常少的 CPU，導致 app 延遲或 timeout</li>
-<li>Memory 應該使用 Guaranteed QoS setting，request == limit。CPU 取不到無法多取的時候頂多造成延遲，但 Memory 無法擴張會導致 OOM</li>
-<li>liveness and readiness probes</li>
-<li>liveness probe 失敗時會重啟 pod</li>
-<li>readiness probe 失敗時不會有任何連線送至 pod 中</li>
-<li>兩種 probe 在整個 Pod 的生命週期中都會不停探測</li>
-<li>不要讓任何一種 probe 因為 dependencies 下線而失敗，會導致 Pod 連鎖失敗</li>
-<li>LoadBalancer for every http service</li>
-<li>不要為每一個 service 都開一個 LoadBalancer，可以用 nginx-ingres-controller 作為唯一的 NodePort endpoint</li>
-<li>non-kubernetes-aware cluster autoscaling</li>
-<li>Not using the power of IAM/RBAC</li>
-<li>self anti-affinities for pods</li>
-<li>善用 affinity 讓 pod 生成在不同 node 上，以達到 HA</li>
-<li>no poddisruptionbudget</li>
-<li>使用 PodDisruptionBudget 在 draining node 時確保 pod 數量</li>
-<li>more tenants or envs in shared cluster</li>
-<li>namespace 並不會提完整的硬體隔離性</li>
-<li>externalTrafficPolicy: Cluster</li>
-<li>
-<p>pet clusters + stressing the control plane too much</p>
-<ol>
-<li>不要把 cluster 當寵物在養，要練習 Disaster Recovery，隨時有機會得重新建出一個完全一致的 cluster</li>
-<li>不要過度依賴 control plane，隨著 cluster 成長，上面的各種服務會越來越多，control plane 會開始變得緩慢，操作性變差</li>
-</ol>
-</li>
-<li>
-<p>bonus: using latest tag</p>
-</li>
-<li>不要使用 latest tag</li>
-</ol>
-<p>本文最後附上了 <a href="https://k8s.af/">Kubernetes Failure Stories</a>，收集了各種使用 Kubernetes 時發生的慘案，以供借鑒。</p>
-    <nav class="md-post__action">
-      <a href="../../2020/11/03/10-most-common-mistakes-using-kubernetes/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-11-02 00:00:00">November 2, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/algorithm/" class="md-meta__link">Algorithm</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-11-02 00:00:00">November 2, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/algorithm/"
+                  class="md-meta__link"
+                >Algorithm</a></li>
+          
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="rotate-list"><a class="toclink" href="../../2020/11/02/rotate-list/">Rotate List</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="rotate-list"><a class="toclink" href="../../2020/11/02/rotate-list/">Rotate List</a></h2>
-<p><a href="https://leetcode.com/problems/rotate-list/">61. Rotate List</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Definition for singly-linked list.</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># class ListNode:</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">#     def __init__(self, val=0, next=None):</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">#         self.val = val</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1">#         self.next = next</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="k">def</span> <span class="nf">rotateRight</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">,</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ListNode</span><span class="p">:</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="k">if</span> <span class="n">head</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># 為空或 k=0 時直接回傳原 list</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>            <span class="k">return</span> <span class="n">head</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        <span class="c1"># 計算 list 的長度，決定要從哪邊切斷</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        <span class="n">list_len</span> <span class="o">=</span> <span class="mi">1</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        <span class="n">tail</span> <span class="o">=</span> <span class="n">head</span> <span class="c1"># 同時紀錄 tail node</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>        <span class="k">while</span> <span class="n">tail</span><span class="o">.</span><span class="n">next</span><span class="p">:</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>            <span class="n">list_len</span> <span class="o">+=</span> <span class="mi">1</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>            <span class="n">tail</span> <span class="o">=</span> <span class="n">tail</span><span class="o">.</span><span class="n">next</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>        <span class="c1"># k &gt; list_len 時，實際只需移動對 k 取 list_len 餘數次</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>        <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">%</span> <span class="n">list_len</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>        <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># 取完餘數為零回傳原 list</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>            <span class="k">return</span> <span class="n">head</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>        <span class="n">cur_node</span> <span class="o">=</span> <span class="n">head</span>
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>        <span class="c1"># 移動 list_len - k - 1 找到新的 head 的前一個 node</span>
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">list_len</span> <span class="o">-</span> <span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
-<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>            <span class="n">cur_node</span> <span class="o">=</span> <span class="n">cur_node</span><span class="o">.</span><span class="n">next</span>
-<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>        <span class="n">new_head</span> <span class="o">=</span> <span class="n">cur_node</span><span class="o">.</span><span class="n">next</span>
-<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>        <span class="n">tail</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">head</span>
-<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>        <span class="n">cur_node</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="kc">None</span>
-<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>        <span class="k">return</span> <span class="n">new_head</span>
-</code></pre></div>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, k = 2
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Output: 4-&gt;5-&gt;1-&gt;2-&gt;3-&gt;NULL
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Explanation:
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>rotate 1 steps to the right: 5-&gt;1-&gt;2-&gt;3-&gt;4-&gt;NULL
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>rotate 2 steps to the right: 4-&gt;5-&gt;1-&gt;2-&gt;3-&gt;NULL
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>list_len - k
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>     ^
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>{    |    }
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; NULL
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>          ^    ^
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>          |    |
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>          |    new_head
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>          cur_node
-</code></pre></div>
-<p>Reference:</p>
-<ol>
-<li><a href="https://youtu.be/a4XZu2VVE9Q">花花酱 LeetCode 61. Rotate List - 刷题找工作 EP365</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/11/02/rotate-list/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-11-01 00:00:00">November 1, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/share/" class="md-meta__link">Share</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-11-01 00:00:00">November 1, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/share/"
+                  class="md-meta__link"
+                >Share</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Vue</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="vue-bootstrap-admin-menu"><a class="toclink" href="../../2020/11/01/vue-bootstrap-admin-menu/">Vue Bootstrap Admin Menu</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="vue-bootstrap-admin-menu"><a class="toclink" href="../../2020/11/01/vue-bootstrap-admin-menu/">Vue Bootstrap Admin Menu</a></h2>
-<p><a href="https://github.com/Blueswen/vue-bootstrap-admin/tree/naive-dynamic-menu">vue-bootstrap-admin</a>：仿照 <a href="https://github.com/PanJiaChen/vue-element-admin">vue-element-admin</a> 使用 Bootstrap 與 vue-router 依 Router 生成 Menu 的 Template。</p>
-<p>Features:</p>
-<ol>
-<li>依 <a href="https://github.com/Blueswen/vue-bootstrap-admin/blob/naive-dynamic-menu/src/router/index.js">router</a> 動態生成 Navbar，最多支援兩層的選單</li>
-<li>子選單 active 時，母選單也會有 active style</li>
-</ol>
-<h4 id="router"><a class="toclink" href="../../2020/11/01/vue-bootstrap-admin-menu/#router">Router</a></h4>
-<p>在 Router 中每個一級選單都視為一組 Group，第一個階 component 為 Layout，且都至少需要一個 Child 作為 router-view 內的內容，如 Home 的 Router 設定：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/&#39;</span><span class="p">,</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nx">redirect</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/home&#39;</span><span class="p">,</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="nx">Layout</span><span class="p">,</span><span class="w"> </span><span class="c1">// &lt;== 第一階為 Layout</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="nx">children</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="c1">// &lt;== 實際要顯示的頁面</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">      </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/home&#39;</span><span class="p">,</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">      </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Home&#39;</span><span class="p">,</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">      </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="k">import</span><span class="p">(</span><span class="s1">&#39;@/views/home&#39;</span><span class="p">),</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">      </span><span class="nx">meta</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Home&#39;</span><span class="w"> </span><span class="c1">// &lt;== 顯示在 Menu 的 Title</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">  </span><span class="p">]</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="p">}</span>
-</code></pre></div>
-<p>顯示兩層選單時，Child 則為多組，母選單的 Title 設定回歸第一階進行設定，如 About 的 Router 設定：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/about&#39;</span><span class="p">,</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="nx">Layout</span><span class="p">,</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="nx">meta</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;About&#39;</span><span class="w"> </span><span class="c1">// &lt;== 顯示在 Menu 第一層 的 Title</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="p">},</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">  </span><span class="nx">children</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">      </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/about&#39;</span><span class="p">,</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">      </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;About&#39;</span><span class="p">,</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">      </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="k">import</span><span class="p">(</span><span class="s1">&#39;@/views/about&#39;</span><span class="p">),</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">        </span><span class="nx">meta</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">          </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;About&#39;</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">    </span><span class="p">},</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">      </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/contact&#39;</span><span class="p">,</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">      </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Contact&#39;</span><span class="p">,</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">      </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="k">import</span><span class="p">(</span><span class="s1">&#39;@/views/contact&#39;</span><span class="p">),</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">      </span><span class="nx">meta</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Contact&#39;</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">  </span><span class="p">]</span>
-<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="p">}</span>
-</code></pre></div>
-<p>若有 Router 沒有要顯示在選單中，則可以設定 <code>hidden=true</code>，如 Task 或 User 的 Router 設定：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/task&#39;</span><span class="p">,</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nx">redirect</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/task/list&#39;</span><span class="p">,</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="nx">Layout</span><span class="p">,</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="nx">children</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">      </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/task/list&#39;</span><span class="p">,</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">      </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Task&#39;</span><span class="p">,</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">      </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="k">import</span><span class="p">(</span><span class="s1">&#39;@/views/task/task-list&#39;</span><span class="p">),</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">      </span><span class="nx">meta</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Task&#39;</span><span class="w"> </span><span class="c1">// &lt;== 因為 children 只剩下一個可顯示的選單，此 child 變為第一層選單，顯示在 Menu 第一層的 Title 由此決定</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span><span class="p">},</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">      </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/task/detail/:id&#39;</span><span class="p">,</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">      </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;TaskDetail&#39;</span><span class="p">,</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">      </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="k">import</span><span class="p">(</span><span class="s1">&#39;@/views/task/task-detail&#39;</span><span class="p">),</span>
-<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">      </span><span class="nx">hidden</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// &lt;== 不顯示在選單中</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">      </span><span class="nx">props</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">      </span><span class="nx">meta</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Task Detail&#39;</span>
-<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">  </span><span class="p">]</span>
-<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/user&#39;</span><span class="p">,</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nx">redirect</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/user/list&#39;</span><span class="p">,</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="nx">Layout</span><span class="p">,</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="nx">meta</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;User&#39;</span><span class="w"> </span><span class="c1">// &lt;== 排除掉 hidden children 後，children 數 &gt; 0，仍生成兩層選單，Menu 第一層 的 Title 由此決定</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">  </span><span class="p">},</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">  </span><span class="nx">children</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">      </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/user/list&#39;</span><span class="p">,</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">      </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;User&#39;</span><span class="p">,</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">      </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="k">import</span><span class="p">(</span><span class="s1">&#39;@/views/user/user-list&#39;</span><span class="p">),</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">      </span><span class="nx">meta</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;User List&#39;</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">    </span><span class="p">},</span>
-<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">      </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/user/detail/:id&#39;</span><span class="p">,</span>
-<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">      </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;UserDetail&#39;</span><span class="p">,</span>
-<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">      </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="k">import</span><span class="p">(</span><span class="s1">&#39;@/views/user/user-detail&#39;</span><span class="p">),</span>
-<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">      </span><span class="nx">hidden</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// &lt;== 不顯示在選單中</span>
-<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">      </span><span class="nx">props</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">      </span><span class="nx">meta</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;User Detail&#39;</span>
-<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="w">    </span><span class="p">},</span>
-<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="w">      </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/user/dashboard&#39;</span><span class="p">,</span>
-<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="w">      </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;UserDashboard&#39;</span><span class="p">,</span>
-<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a><span class="w">      </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="k">import</span><span class="p">(</span><span class="s1">&#39;@/views/user/dashboard&#39;</span><span class="p">),</span>
-<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a><span class="w">      </span><span class="nx">meta</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;User Dashboard&#39;</span>
-<a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a><span class="w">  </span><span class="p">]</span>
-<a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a><span class="p">}</span>
-</code></pre></div>
-<p>Reference:</p>
-<ol>
-<li><a href="https://github.com/PanJiaChen/vue-element-admin">vue-element-admin</a></li>
-<li><a href="https://panjiachen.gitee.io/vue-element-admin-site/zh/">vue-element-admin Document</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/11/01/vue-bootstrap-admin-menu/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-09-18 00:00:00">September 18, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/review/" class="md-meta__link">Review</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-09-18 00:00:00">September 18, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/review/"
+                  class="md-meta__link"
+                >Review</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              DevOps</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="the-future-of-ops-jobs"><a class="toclink" href="../../2020/09/18/the-future-of-ops-jobs/">The Future of Ops Jobs</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="the-future-of-ops-jobs"><a class="toclink" href="../../2020/09/18/the-future-of-ops-jobs/">The Future of Ops Jobs</a></h2>
-<p><a href="https://acloudguru.com/blog/engineering/the-future-of-ops-jobs">The Future of Ops Jobs</a></p>
-<p>本篇介紹了維運的改變以及維運工程師的未來職涯走向</p>
-<h4 id="_1"><a class="toclink" href="../../2020/09/18/the-future-of-ops-jobs/#_1">維運的改變</a></h4>
-<ol>
-<li>From monolith to microservices<br />
-   從 monolith 到 microservices，數量的增加讓維運的難度大幅提升</li>
-<li>From monitoring to observability<br />
-   從基礎的監控（如 Prometheus）到進階的觀測（如 zipkin、jaeger）</li>
-<li>From magic autoinstrumentation to instrumenting with intent<br />
-   Autoinstrumentation 雖然能夠快速分析或監控程式，但卻無法針對特定的需求調整，所以仍有必要撰寫自己的 instrumentation 程式</li>
-</ol>
-<h4 id="_2"><a class="toclink" href="../../2020/09/18/the-future-of-ops-jobs/#_2">維運工程師的未來職涯方向</a></h4>
-<p>與過去相比現在的維運工程師可以不止依附在各公司底下，infrastructure software as a service 的形式讓維運工程師也能有很好的發展，像是 AWS 或 Azure。</p>
-<p>若是選擇在各公司底下擔任維運工程師，專注在讓工程團隊順暢地發布產品，盡可能減少自己打造 infrastructure。另外作者也提供了幾個職涯方向：</p>
-<ol>
-<li>Vendor engineering</li>
-<li>透過詢價與試探性的問題評估廠商和他們的產品</li>
-<li>評估團隊可以付出的人力與時間，盡可能削減人力的投入，專注在本業上</li>
-<li>衡量產品的實際，教育與推廣合適的解決方案給內部人員，特別是主管與財務人員</li>
-<li>Product engineering</li>
-<li>加入開發團隊一段時間，了解他們怎麼思考與開發</li>
-<li>跟開發團隊建立良好的關係</li>
-<li>Sociotechnical systems engineering</li>
-<li>精簡 deploy pipeline，優化測試、CI/CD 等等讓部署更加自動化</li>
-<li>設計與優化開發新功能與修復 Bug 的循環</li>
-<li>建立當責的文化</li>
-<li>Managing the portfolio of technical investments</li>
-<li>學會優雅地遷移，不要殘留舊產品或架構的產出物</li>
-<li>加入各種工具時要先問自己『要這個工具的維護計畫是什麼？』</li>
-<li>多學習、多增加影響力</li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/09/18/the-future-of-ops-jobs/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-09-09 00:00:00">September 9, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tip/" class="md-meta__link">Tip</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-09-09 00:00:00">September 9, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/tip/"
+                  class="md-meta__link"
+                >Tip</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Node.js</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="npm-err-code-self_signed_cert_in_chain"><a class="toclink" href="../../2020/09/09/npm-err-code-self_signed_cert_in_chain/">npm ERR! code SELF_SIGNED_CERT_IN_CHAIN</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="npm-err-code-self_signed_cert_in_chain"><a class="toclink" href="../../2020/09/09/npm-err-code-self_signed_cert_in_chain/">npm ERR! code SELF_SIGNED_CERT_IN_CHAIN</a></h2>
-<p>問題：<code>npm install</code> 出現 npm ERR! code SELF_SIGNED_CERT_IN_CHAIN 錯誤訊息</p>
-<p>原因：舊版的 npm 將自簽的 CA file 綁定在 client 中，因此當 npm registry 更新簽證時會發生簽證不吻合</p>
-<p>有三種解法：</p>
-<ol>
-<li>
-<p>更新 npm 版本</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npm<span class="w"> </span>install<span class="w"> </span>npm<span class="w"> </span>-g<span class="w"> </span>--ca<span class="o">=</span>null
-</code></pre></div>
-</li>
-<li>
-<p>不使用 npm 內建的 CA，改使用 node 的 CA</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npm<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">ca</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
-</code></pre></div>
-</li>
-<li>
-<p>停用 SSL 嚴格模式，忽略 SSL 的錯誤，但會有安全疑慮</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npm<span class="w"> </span><span class="nb">set</span><span class="w"> </span>strict-ssl<span class="w"> </span><span class="nb">false</span>
-</code></pre></div>
-</li>
-</ol>
-<p>Reference:</p>
-<ol>
-<li><a href="https://stackoverflow.com/a/34945326/13582118">nodejs “npm ERR! code SELF_SIGNED_CERT_IN_CHAIN”</a></li>
-<li><a href="https://blog.npmjs.org/post/78165272245/more-help-with-selfsignedcertinchain-and-npm">More help with SELF_SIGNED_CERT_IN_CHAIN and npm</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/09/09/npm-err-code-self_signed_cert_in_chain/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-09-07 00:00:00">September 7, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/algorithm/" class="md-meta__link">Algorithm</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-09-07 00:00:00">September 7, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/algorithm/"
+                  class="md-meta__link"
+                >Algorithm</a></li>
+          
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="number-of-ways-to-split-a-string"><a class="toclink" href="../../2020/09/07/number-of-ways-to-split-a-string/">Number of Ways to Split a String</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="number-of-ways-to-split-a-string"><a class="toclink" href="../../2020/09/07/number-of-ways-to-split-a-string/">Number of Ways to Split a String</a></h2>
-<p><a href="https://leetcode.com/problems/number-of-ways-to-split-a-string/">1573. Number of Ways to Split a String</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">def</span> <span class="nf">numWays</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="k">for</span> <span class="n">digit</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>            <span class="n">total</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">digit</span><span class="p">)</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        <span class="c1"># total 無法被 3 整除必定無法切成三份</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="k">if</span> <span class="n">total</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>            <span class="k">return</span> <span class="mi">0</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        <span class="c1"># 全為零的話有 n - 1 個切割點，C(n-1, 2) ＝&gt; (n-1)! / (2!*(n-1-2)!)  =&gt; (n-1)(n-2) / 2</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        <span class="k">if</span> <span class="n">total</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>            <span class="k">return</span> <span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="mi">9</span> <span class="o">+</span> <span class="mi">7</span><span class="p">)</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        <span class="c1"># 找到單邊滿足足夠 1 到下一個 1 之間的切割點數量</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        <span class="k">def</span> <span class="nf">count_cut</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>            <span class="n">current_sum</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>            <span class="n">cut_amount</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>            <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>                <span class="n">current_sum</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>                <span class="k">if</span> <span class="n">current_sum</span> <span class="o">&gt;</span> <span class="n">total</span> <span class="o">/</span> <span class="mi">3</span><span class="p">:</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>                    <span class="k">break</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>                <span class="k">elif</span> <span class="n">current_sum</span> <span class="o">==</span> <span class="n">total</span> <span class="o">/</span> <span class="mi">3</span><span class="p">:</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>                    <span class="n">cut_amount</span> <span class="o">+=</span> <span class="mi">1</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>            <span class="k">return</span> <span class="n">cut_amount</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>        <span class="c1"># 左邊切割點數量 * 右邊切割點數量</span>
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>        <span class="k">return</span> <span class="p">(</span><span class="n">count_cut</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span> <span class="o">*</span> <span class="n">count_cut</span><span class="p">(</span><span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">total</span><span class="p">))</span> <span class="o">%</span> <span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="mi">9</span> <span class="o">+</span> <span class="mi">7</span><span class="p">)</span>
-</code></pre></div>
-<p>切割點數量說明：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>           | | | |     | | |  
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>0 0 1 0 0 1 0 0 0 1 0 1 0 0 1 1  
-</code></pre></div>
-<p>字串總和為 6，表示三份各自總和為 2，單邊開始逐一累加，累加為 2 時開始計算可切割點，當再遇到 1 就無法再切割，左右兩邊切割點相乘（4*3）為可能組合數。</p>
-<p>Reference:</p>
-<ol>
-<li><a href="https://youtu.be/gkFKRbkrIws">花花酱 LeetCode 1573. Number of Ways to Split a String - 刷题找工作 EP354</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/09/07/number-of-ways-to-split-a-string/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
         <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-09-06 00:00:00">September 6, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/share/" class="md-meta__link">Share</a></li>
-        
-        
-      </ul>
+    <header class="md-post__header">
       
+      <div class="md-post__meta md-meta">
+        <ul class="md-meta__list">
+          <li class="md-meta__item">
+            <time datetime="2020-09-06 00:00:00">September 6, 2020</time></li>
+          
+            <li class="md-meta__item">
+              in
+              
+                <a
+                  href="../../category/share/"
+                  class="md-meta__link"
+                >Share</a></li>
+          
+          
+            <li class="md-meta__item">
+              about
+              Toolbox</li>
+          
+          
+        </ul>
+        
+      </div>
+    </header>
+    <div class="md-post__content md-typeset">
+      <h2 id="openvpn-for-docker"><a class="toclink" href="../../2020/09/06/openvpn-for-docker/">OpenVPN for Docker</a></h2>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="openvpn-for-docker"><a class="toclink" href="../../2020/09/06/openvpn-for-docker/">OpenVPN for Docker</a></h2>
-<p><a href="https://github.com/kylemanna/docker-openvpn">OpenVPN for Docker</a> 把 OpenVPN 打包成 Docker Image，透過 Docker 可以快速建立一個 OpenVPN Server。</p>
-<p>建立 OpenVPN Server 步驟：</p>
-<p>透過 Docker Volume 相關檔案都會產生於當前目錄下的 opnevpn 資料夾中(`pwd`/openvpn)</p>
-<ol>
-<li>
-<p>建立相關設定與憑證，會要求設定 passphrase</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># VPN.SERVERNAME.COM 需改為實際的 domain 或 ip</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/openvpn:/etc/openvpn<span class="w"> </span>--log-driver<span class="o">=</span>none<span class="w"> </span>--rm<span class="w"> </span>kylemanna/openvpn<span class="w"> </span>ovpn_genconfig<span class="w"> </span>-u<span class="w"> </span>udp://VPN.SERVERNAME.COM
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/openvpn:/etc/openvpn<span class="w"> </span>--log-driver<span class="o">=</span>none<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>kylemanna/openvpn<span class="w"> </span>ovpn_initpki
-</code></pre></div>
-</li>
-<li>
-<p>啟動 OpenVPN Server</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/openvpn:/etc/openvpn<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">1194</span>:1194/udp<span class="w"> </span>--cap-add<span class="o">=</span>NET_ADMIN<span class="w"> </span>kylemanna/openvpn
-</code></pre></div>
-</li>
-<li>
-<p>生成沒有 passphrase 的 client certificate</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="nv">$OVPN_DATA</span>:/etc/openvpn<span class="w"> </span>--log-driver<span class="o">=</span>none<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>kylemanna/openvpn<span class="w"> </span>easyrsa<span class="w"> </span>build-client-full<span class="w"> </span>CLIENTNAME<span class="w"> </span>nopass
-</code></pre></div>
-</li>
-<li>
-<p>生成帶有認證的 OpenVPN Client 設定檔</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="nv">$OVPN_DATA</span>:/etc/openvpn<span class="w"> </span>--log-driver<span class="o">=</span>none<span class="w"> </span>--rm<span class="w"> </span>kylemanna/openvpn<span class="w"> </span>ovpn_getclient<span class="w"> </span>CLIENTNAME<span class="w"> </span>&gt;<span class="w"> </span>CLIENTNAME.ovpn
-</code></pre></div>
-</li>
-</ol>
-<p>OpenVPN Client：</p>
-<ol>
-<li>Mac 推薦使用 <a href="https://tunnelblick.net/">Tunnelblick</a>，設定檔匯入的方式是將 .ovpn 檔拖曳到 Menubar 的 Tunnelblick icon 上</li>
-<li>windows 可以使用 OpenVPN 提供的 <a href="https://openvpn.net/community-downloads/">Client</a>，設定檔匯入的方式是將 .ovpn 檔複製至 OpenVPN 的 config 資料夾中，大多為 <code>C:\Program Files\OpenVPN\config</code></li>
-</ol>
-<p>Reference:</p>
-<ol>
-<li><a href="https://github.com/kylemanna/docker-openvpn">OpenVPN for Docker</a></li>
-</ol>
-    <nav class="md-post__action">
-      <a href="../../2020/09/06/openvpn-for-docker/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
+  </article>
       
       
         
@@ -1676,7 +1219,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.a5ca32a6.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6981e6db.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
