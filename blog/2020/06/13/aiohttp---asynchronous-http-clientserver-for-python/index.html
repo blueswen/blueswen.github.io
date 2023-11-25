@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#aiohttp-asynchronous-http-clientserver-for-python" class="md-skip">
+        <a href="#aiohttp---asynchronous-http-clientserver-for-python" class="md-skip">
           Skip to content
         </a>
       
@@ -262,6 +262,23 @@
         
   
   
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../talks/" class="md-tabs__link">
+        
+  
+    
+  
+  Talks
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
     
   
   
@@ -399,6 +416,31 @@
       
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../../../../talks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Talks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -425,7 +467,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
@@ -447,14 +489,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -494,10 +536,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -514,8 +556,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -665,10 +707,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -685,8 +727,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -947,7 +989,7 @@
 
 
 
-<h1 id="aiohttp-asynchronous-http-clientserver-for-python">AIOHTTP - asynchronous HTTP client/server for python</h1>
+<h1 id="aiohttp---asynchronous-http-clientserver-for-python">AIOHTTP - asynchronous HTTP client/server for python</h1>
 <p><a href="https://docs.aiohttp.org/en/stable/">aiohttp</a> 是基於 <a href="https://pypi.org/project/asyncio/">asyncio</a> 模組所開發的非同步 HTTP client 與 server package，目前大多用於大量併發的爬蟲程式。</p>
 <p>IO 與執行運算相比是非常緩慢的，當需要爬取大量內容時，如果單純使用 for loop 完成一筆 request 再發下一筆會非常浪費時間，因此可以利用非同步的方式一次發出大量 request，當 Server 回覆後再進行資料的處理。不過利用這種方式也要考慮接收的 Server 是否能夠一次負擔這麼大量的 request，因此仍須謹慎設定併發的數量。</p>
 <p>一般使用 <a href="https://requests.readthedocs.io/en/master/">request</a> 的爬蟲，執行時間約 20 秒</p>

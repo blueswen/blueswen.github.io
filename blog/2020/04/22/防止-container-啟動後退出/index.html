@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#container" class="md-skip">
+        <a href="#防止-container-啟動後退出" class="md-skip">
           Skip to content
         </a>
       
@@ -262,6 +262,23 @@
         
   
   
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../talks/" class="md-tabs__link">
+        
+  
+    
+  
+  Talks
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
     
   
   
@@ -399,6 +416,31 @@
       
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../../../../talks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Talks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -425,7 +467,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
@@ -447,14 +489,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -494,10 +536,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -514,8 +556,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -665,10 +707,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -685,8 +727,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -941,7 +983,7 @@
 
 
 
-<h1 id="container">防止 Container 啟動後退出</h1>
+<h1 id="防止-container-啟動後退出">防止 Container 啟動後退出</h1>
 <p>在建置完 Image 後時常會發現 Image 不如預期中運作，如預設的 CMD 莫名地 Crash 等，這時候就會需要進入 container 中，使用 <code>tail -f /dev/null</code> 作為 CMD 就可以讓 container 一直處於 running 的狀態，隨時可以進入檢測。另一個常用的情境是透過這個方式起一個永久 running 的 container，這樣就可以作為虛擬環境使用。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>python<span class="w"> </span>tail<span class="w"> </span>-f<span class="w"> </span>/dev/null
 </code></pre></div>

@@ -262,6 +262,23 @@
         
   
   
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../talks/" class="md-tabs__link">
+        
+  
+    
+  
+  Talks
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
     
   
   
@@ -399,6 +416,31 @@
       
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../../../../talks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Talks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -425,7 +467,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
@@ -447,14 +489,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -494,10 +536,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -514,8 +556,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -665,10 +707,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -685,8 +727,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -869,7 +911,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#json-newline" class="md-nav__link">
+  <a href="#json-最後為何要加入-newline" class="md-nav__link">
     <span class="md-ellipsis">
       
         JSON 最後為何要加入 newline
@@ -880,7 +922,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#解決方案" class="md-nav__link">
     <span class="md-ellipsis">
       
         解決方案
@@ -892,7 +934,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#flask" class="md-nav__link">
+  <a href="#flask-解決方案" class="md-nav__link">
     <span class="md-ellipsis">
       
         Flask 解決方案
@@ -903,7 +945,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#flask-restplus" class="md-nav__link">
+  <a href="#flask-restplus-解決方案" class="md-nav__link">
     <span class="md-ellipsis">
       
         Flask restplus 解決方案
@@ -1007,7 +1049,7 @@
 
 <h1 id="json-end-with-newline">JSON end with newline</h1>
 <p>解析 JSON 前可以預先透過簡單的文字判斷是否是合法的 JSON 來節省資源開銷，如 <a href="http://json-lib.sourceforge.net/apidocs/jdk15/net/sf/json/util/JSONUtils.html#mayBeJSON(java.lang.String)">mayBeJSON</a> 會以結尾是否為 <code>]</code> 或 <code>}</code> 判斷是否為 JSON，因此有換行符號的 JSON 字串會被當作非法的字串，導致解析失敗。但 Python 的 Flask Framework 回傳 JSON 時候會額外回傳換行符號，本篇針對為何要增加換行進行簡單介紹，以及提供針對這種特定判斷的解法。</p>
-<h2 id="json-newline">JSON 最後為何要加入 newline</h2>
+<h2 id="json-最後為何要加入-newline">JSON 最後為何要加入 newline</h2>
 <p>一般常用的 <code>json.dumps</code> 是不會有換行符號的，畢竟只是一個普通字串。所以先來看看是在什麼時候 response 的 JSON 被加上了換行符號。<a href="https://github.com/pallets/flask">Flask</a> 的 <a href="https://github.com/pallets/flask/blob/master/src/flask/json/__init__.py#L306">flask.json.jsonify</a> 是在 response 最後加入換行</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">...</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">return</span> <span class="n">current_app</span><span class="o">.</span><span class="n">response_class</span><span class="p">(</span>
@@ -1029,11 +1071,11 @@
 </code></pre></div>
 <p>在 Flask 1.0 前 jsonify 最後是不會加上換行符號的，經過了 <a href="https://github.com/pallets/flask/pull/1262">Add JSONIFY_END_WITH_NEWLINE config variable #1262</a> 這次 PR 後才加上了換行符號，增加換行符號的原因是參考 <a href="https://github.com/postmanlabs/httpbin/issues/168">postmanlabs/httpbin#168</a> 以及 <a href="https://stackoverflow.com/questions/729692/why-should-text-files-end-with-a-newline">Why should text files end with a newline?</a>。主要的論點為 <a href="https://zh.wikipedia.org/wiki/%E5%8F%AF%E7%A7%BB%E6%A4%8D%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3">POSIX</a> 規範了在文件中當一行文字不是以 newline character 結尾時不會被當作一行文字，而所有 UNIX tools 都會預期文件有遵循這個規範。如果文件沒有遵循可能會導致非預期的問題或錯誤，如 stackoverflow 中回答的範例。</p>
 <p>雖然 JSON 字串並不是文件，POSIX 也沒針對 JSON 進行規範，但在一些操作中可能會透過 UNIX tools 處理回傳的 response，若是沒有加上換行符號就會導致其他問題。而在最後加上換行符號也並不違反 JSON 本身的規範，因此若能加上換行符號對於使用 UNIX Tools 操作 response 的使用者會比較友善。</p>
-<h2 id="_1">解決方案</h2>
+<h2 id="解決方案">解決方案</h2>
 <p>大多數的情況下我們可能無法要求 API 使用者更換他們原本的 JSON 解析方式，所以我們只能試著從 Python 端解決，以下提供 Flask 與 Flask-restplus 的解法。</p>
-<h3 id="flask">Flask 解決方案</h3>
+<h3 id="flask-解決方案">Flask 解決方案</h3>
 <p>客製一個沒有加上換行符號的 jsonify，之所以不直接使用 json.dumps 是因為 response header 的 Content-Type 就只會是 text/html 而不是 application/json，在回傳時應該要利用 header 清楚表達回傳的內容。</p>
-<h3 id="flask-restplus">Flask restplus 解決方案</h3>
+<h3 id="flask-restplus-解決方案">Flask restplus 解決方案</h3>
 <p>Flask-restplus 是透過 <a href="https://github.com/noirbizarre/flask-restplus/blob/master/flask_restplus/api.py#L346">api.make_response</a> 包裝 response， flask_restplus.Api 在建立時會預設一組 JSON 的 representations：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># flask_restplus/api.py</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="o">...</span>

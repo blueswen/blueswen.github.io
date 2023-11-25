@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mkdocs-css" class="md-skip">
+        <a href="#mkdocs-css-字體中英文分別設定" class="md-skip">
           Skip to content
         </a>
       
@@ -262,6 +262,23 @@
         
   
   
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../talks/" class="md-tabs__link">
+        
+  
+    
+  
+  Talks
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
     
   
   
@@ -399,6 +416,31 @@
       
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../../../../talks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Talks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -425,7 +467,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
@@ -447,14 +489,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -494,10 +536,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -514,8 +556,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -665,10 +707,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -685,8 +727,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -941,7 +983,7 @@
 
 
 
-<h1 id="mkdocs-css">MkDocs CSS 字體中英文分別設定</h1>
+<h1 id="mkdocs-css-字體中英文分別設定">MkDocs CSS 字體中英文分別設定</h1>
 <p><a href="https://www.mkdocs.org/">MkDocs</a> 與 <a href="https://github.com/GitbookIO/gitbook">gitbook</a> 皆為使用 markdown 編寫文檔的工具，但 gitbook cli 在 2018 年底的時候因為團隊決定集中資源在 GitBook.com 平台而停止維護，MkDocs 仍持續在更新並也有各種 Plugin、Theme，如 <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>。</p>
 <p>在純英文或使用 Mac 的狀況下 Material for MkDocs 的閱讀體驗很好，預設好的字體無論是文字段落或 Code Block 都能有很好的呈現。但在 Windows 的環境下會以新細明體作為中文字體，因此希望可以針對中文字體單獨切換，而英文部分仍保留原本預設的字體。</p>
 <p>CSS3 的 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/%40font-face/unicode-range">unicode-range</a> 可以針對指定的文字或文字範圍設定字體，而 MkDocs 支援增加額外的 CSS 設定(<a href="https://squidfunk.github.io/mkdocs-material/customization/#additional-stylesheets">Additional stylesheets</a>)，只要在 mkdocs.yml 增加 extra_css 即可，結合兩者即可達到需求。</p>

@@ -8,31 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://blueswen.github.io/blog/2021/08/05/we-need-to-talk-about-testing/">
+        <link rel="canonical" href="https://blueswen.github.io/talks/">
       
       
-        <link rel="prev" href="../../04/container-timezone/">
+        <link rel="prev" href="../portfolio/">
       
       
-        <link rel="next" href="../../../../2022/03/02/connect-docker-host-from-inside-a-docker-container/">
+        <link rel="next" href="../blog/">
       
       
         
       
       
-      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.12+insiders-4.45.0">
     
     
       
-        <title>We need to talk about testing - Blueswen</title>
+        <title>Talks - Blueswen</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.0ab26e37.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0ab26e37.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,9 +51,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../stylesheets/main.css">
+      <link rel="stylesheet" href="../stylesheets/main.css">
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -71,16 +71,16 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="We need to talk about testing - Blueswen" />
-<meta property="og:image" content="https://blueswen.github.io/assets/images/social/blog/2021/08/05/we-need-to-talk-about-testing.png" />
+<meta property="og:title" content="Talks - Blueswen" />
+<meta property="og:image" content="https://blueswen.github.io/assets/images/social/talks.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://blueswen.github.io/blog/2021/08/05/we-need-to-talk-about-testing/" />
+<meta property="og:url" content="https://blueswen.github.io/talks/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="We need to talk about testing - Blueswen" />
-<meta property="twitter:image" content="https://blueswen.github.io/assets/images/social/blog/2021/08/05/we-need-to-talk-about-testing.png" />
- <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<meta property="twitter:title" content="Talks - Blueswen" />
+<meta property="twitter:image" content="https://blueswen.github.io/assets/images/social/talks.png" />
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -91,7 +91,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -107,11 +107,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#we-need-to-talk-about-testing" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -122,7 +117,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="Blueswen" class="md-header__button md-logo" aria-label="Blueswen" data-md-component="logo">
+    <a href=".." title="Blueswen" class="md-header__button md-logo" aria-label="Blueswen" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"><path d="M95.667 67.954C92.225 73.933 72.24 88.04 47.997 88.04 23.754 88.04 3.769 73.933.328 67.954c-.216-.375-.307-.796-.328-1.226V55.661c.019-.371.089-.736.226-1.081 1.489-3.738 5.386-9.166 10.417-10.623.667-1.712 1.655-4.215 2.576-6.062-.154-1.414-.208-2.872-.208-4.345 0-5.322 1.128-9.99 4.527-13.466 1.587-1.623 3.557-2.869 5.893-3.805 5.595-4.545 13.563-8.369 24.48-8.369s19.057 3.824 24.652 8.369c2.337.936 4.306 2.182 5.894 3.805 3.399 3.476 4.527 8.144 4.527 13.466 0 1.473-.054 2.931-.208 4.345.921 1.847 1.909 4.35 2.576 6.062 5.03 1.457 8.928 6.885 10.417 10.623.163.41.231.848.231 1.289v10.644c0 .504-.081 1.004-.333 1.441ZM48.686 43.993l-.3.001-1.077-.001c-.423.709-.894 1.39-1.418 2.035-3.078 3.787-7.672 5.964-14.026 5.964-6.897 0-11.952-1.435-15.123-5.032a7.886 7.886 0 0 1-.342-.419l-.39.419v26.326c5.737 3.118 18.05 8.713 31.987 8.713 13.938 0 26.251-5.595 31.988-8.713V46.96l-.39-.419s-.132.181-.342.419c-3.171 3.597-8.226 5.032-15.123 5.032-6.354 0-10.949-2.177-14.026-5.964a17.178 17.178 0 0 1-1.418-2.034h-.066l.066-.001Zm-3.94-11.733c.17-1.326.251-2.513.253-3.573v-.084c-.005-3.077-.678-5.079-1.752-6.308-1.365-1.562-4.184-2.758-10.127-2.115-6.021.652-9.386 2.146-11.294 4.098-1.847 1.889-2.818 4.715-2.818 9.272 0 4.842.698 7.703 2.232 9.443 1.459 1.655 4.332 3.001 10.625 3.001 4.837 0 7.603-1.573 9.371-3.749 1.899-2.336 2.967-5.759 3.51-9.985Zm6.503 0c.543 4.226 1.611 7.649 3.51 9.985 1.768 2.176 4.533 3.749 9.371 3.749 6.292 0 9.165-1.346 10.624-3.001 1.535-1.74 2.232-4.601 2.232-9.443 0-4.557-.97-7.383-2.817-9.272-1.908-1.952-5.274-3.446-11.294-4.098-5.943-.643-8.763.553-10.127 2.115-1.074 1.229-1.747 3.231-1.752 6.308v.084c.002 1.06.083 2.247.253 3.573Zm-2.563 11.734h.066l-.066-.001v.001Z"/><path d="M38.5 55.75a3.5 3.5 0 0 1 3.5 3.5v8.5a3.5 3.5 0 1 1-7 0v-8.5a3.5 3.5 0 0 1 3.5-3.5Zm19 0a3.5 3.5 0 0 1 3.5 3.5v8.5a3.5 3.5 0 1 1-7 0v-8.5a3.5 3.5 0 0 1 3.5-3.5Z"/></svg>
@@ -142,7 +137,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              We need to talk about testing
+              Talks
             
           </span>
         </div>
@@ -230,7 +225,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../.." class="md-tabs__link">
+      <a href=".." class="md-tabs__link">
         
   
     
@@ -247,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../portfolio/" class="md-tabs__link">
+      <a href="../portfolio/" class="md-tabs__link">
         
   
     
@@ -262,9 +257,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../../../../../talks/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
     
@@ -279,13 +276,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../blog/" class="md-tabs__link">
           
   
     
@@ -303,7 +298,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../tags/" class="md-tabs__link">
+      <a href="../tags/" class="md-tabs__link">
         
   
     
@@ -339,7 +334,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Blueswen" class="md-nav__button md-logo" aria-label="Blueswen" data-md-component="logo">
+    <a href=".." title="Blueswen" class="md-nav__button md-logo" aria-label="Blueswen" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"><path d="M95.667 67.954C92.225 73.933 72.24 88.04 47.997 88.04 23.754 88.04 3.769 73.933.328 67.954c-.216-.375-.307-.796-.328-1.226V55.661c.019-.371.089-.736.226-1.081 1.489-3.738 5.386-9.166 10.417-10.623.667-1.712 1.655-4.215 2.576-6.062-.154-1.414-.208-2.872-.208-4.345 0-5.322 1.128-9.99 4.527-13.466 1.587-1.623 3.557-2.869 5.893-3.805 5.595-4.545 13.563-8.369 24.48-8.369s19.057 3.824 24.652 8.369c2.337.936 4.306 2.182 5.894 3.805 3.399 3.476 4.527 8.144 4.527 13.466 0 1.473-.054 2.931-.208 4.345.921 1.847 1.909 4.35 2.576 6.062 5.03 1.457 8.928 6.885 10.417 10.623.163.41.231.848.231 1.289v10.644c0 .504-.081 1.004-.333 1.441ZM48.686 43.993l-.3.001-1.077-.001c-.423.709-.894 1.39-1.418 2.035-3.078 3.787-7.672 5.964-14.026 5.964-6.897 0-11.952-1.435-15.123-5.032a7.886 7.886 0 0 1-.342-.419l-.39.419v26.326c5.737 3.118 18.05 8.713 31.987 8.713 13.938 0 26.251-5.595 31.988-8.713V46.96l-.39-.419s-.132.181-.342.419c-3.171 3.597-8.226 5.032-15.123 5.032-6.354 0-10.949-2.177-14.026-5.964a17.178 17.178 0 0 1-1.418-2.034h-.066l.066-.001Zm-3.94-11.733c.17-1.326.251-2.513.253-3.573v-.084c-.005-3.077-.678-5.079-1.752-6.308-1.365-1.562-4.184-2.758-10.127-2.115-6.021.652-9.386 2.146-11.294 4.098-1.847 1.889-2.818 4.715-2.818 9.272 0 4.842.698 7.703 2.232 9.443 1.459 1.655 4.332 3.001 10.625 3.001 4.837 0 7.603-1.573 9.371-3.749 1.899-2.336 2.967-5.759 3.51-9.985Zm6.503 0c.543 4.226 1.611 7.649 3.51 9.985 1.768 2.176 4.533 3.749 9.371 3.749 6.292 0 9.165-1.346 10.624-3.001 1.535-1.74 2.232-4.601 2.232-9.443 0-4.557-.97-7.383-2.817-9.272-1.908-1.952-5.274-3.446-11.294-4.098-5.943-.643-8.763.553-10.127 2.115-1.074 1.229-1.747 3.231-1.752 6.308v.084c.002 1.06.083 2.247.253 3.573Zm-2.563 11.734h.066l-.066-.001v.001Z"/><path d="M38.5 55.75a3.5 3.5 0 0 1 3.5 3.5v8.5a3.5 3.5 0 1 1-7 0v-8.5a3.5 3.5 0 0 1 3.5-3.5Zm19 0a3.5 3.5 0 0 1 3.5 3.5v8.5a3.5 3.5 0 1 1-7 0v-8.5a3.5 3.5 0 0 1 3.5-3.5Z"/></svg>
@@ -368,7 +363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -393,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../portfolio/" class="md-nav__link">
+      <a href="../portfolio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -416,9 +411,16 @@
       
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../../../talks/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -433,6 +435,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -441,8 +444,6 @@
       
   
   
-    
-  
   
     
     
@@ -462,17 +463,17 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../" class="md-nav__link ">
+            <a href="../blog/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -495,7 +496,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -573,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2023/" class="md-nav__link">
+      <a href="../blog/archive/2023/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -599,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2022/" class="md-nav__link">
+      <a href="../blog/archive/2022/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2021/" class="md-nav__link">
+      <a href="../blog/archive/2021/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -651,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2020/" class="md-nav__link">
+      <a href="../blog/archive/2020/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -744,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/algorithm/" class="md-nav__link">
+      <a href="../blog/category/algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -770,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/review/" class="md-nav__link">
+      <a href="../blog/category/review/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -796,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/share/" class="md-nav__link">
+      <a href="../blog/category/share/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -822,7 +823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/tip/" class="md-nav__link">
+      <a href="../blog/category/tip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -863,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../tags/" class="md-nav__link">
+      <a href="../tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -892,7 +893,7 @@
               
                 
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -901,60 +902,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-purpose-of-testing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The purpose of testing
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test-driven-development---a-sidebar" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Test-Driven Development - a sidebar
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#is-test-coverage-a-useful-metric" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Is test coverage a useful metric?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-does-it-mean-to-shift-testing-left" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What does it mean to “shift testing left”?
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -963,124 +910,20 @@
             
           
           
-  <div class="md-content md-content--post" data-md-component="content">
-    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../../../" class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-                  <span class="md-ellipsis">
-                    Back to index
-                  </span>
-                </a>
-              </div>
-            </div>
-            
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    Metadata
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2021-08-05 00:00:00" class="md-ellipsis">August 5, 2021</time>
-                      </div>
-                    </li>
-                    
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3H9m3 2 4 13 3-1-4-13-3 1M5 5v13h3V5H5M3 19v2h18v-2H3Z"/></svg>
-                          <span class="md-ellipsis">
-                            in
-                            
-                              <a href="../../../../category/review/">Review</a></span>
-                        </div>
-                      </li>
-                    
-                    
-                  </ul>
-                </nav>
-              </li>
-            </ul>
-            
-          </nav>
-          
-        </div>
-      </div>
-    </div>
-    <article class="md-content__inner md-typeset">
-      
-        
-  
-  
-
-<nav class="md-tags" >
-  
-    
-    
-    
-      <a href="../../../../../tags/#testing" class="md-tag">Testing</a>
-    
-  
-</nav>
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
 
 
+  <h1>Talks</h1>
 
-<h1 id="we-need-to-talk-about-testing">We need to talk about testing</h1>
-<p><a href="https://dannorth.net/2021/07/26/we-need-to-talk-about-testing/">We need to talk about testing</a></p>
-<h3 id="the-purpose-of-testing">The purpose of testing</h3>
-<p>每次異動程式碼，都有可能破壞以下這些特性，導致壞事發生</p>
-<ol>
-<li>Functional correctness: It doesn’t produce the results we expect.</li>
-<li>Reliability: It mostly shows correct answers but sometimes it doesn’t.</li>
-<li>Usability: Sure it works but it is inconsistent and frustrating to use.</li>
-<li>Accessibility: Like usability, but exclusionary and probably illegal.</li>
-<li>Predictability: It has random spikes in resources such as memory, I/O, or CPU usage, or occasionally hangs for a noticeable amount of time.</li>
-<li>Security: It works as designed but it exposes security vulnerabilities.</li>
-<li>Compliance: It works but it doesn’t handle personal information correctly, say.</li>
-<li>Observability: It mostly works, but when it doesn’t it is hard to identify why.</li>
-</ol>
-<p>組織中有一群人關心著以上這些特性，這些人即為 stakeholders。他們代表了這個產品在不同面向上所呈現的風險與品質。</p>
-<p>The purpose of testing is to <strong><em>increase confidence</em></strong> for <strong><em>stakeholders</em></strong> through <strong><em>evidence</em></strong>.</p>
-<p>測試的目的是透過 <strong>證據</strong> 提高 <strong>利益相關人</strong> 對產品的 <strong>信心</strong></p>
-<ol>
-<li>Stakeholders: 不只是直接與產品直接相關的開發者、使用者，任何間接相關的人都算是 Stakeholder，例如維運人員、合規人員、稽核人員等任何關心上面提到的特性的人</li>
-<li>Increasing confidence: 了解 Stakeholder 關心哪些事，讓他們晚上能夠睡得更好</li>
-<li>Evidence: 透過資訊或數據證明，而不是要 Stakeholder 依賴你的承諾、保證或是名聲</li>
-</ol>
-<p>Three “superpowers” that associate with a testing mindset</p>
-<ol>
-<li>Empathy: 同理心，從 Stakeholder 的角度看問題，理解他們在意的事情，了解他們為什麼會有那些疑慮</li>
-<li>Scepticism: 懷疑論，對任何事情都保持懷疑的態度，提出假設、設計實驗、試圖證偽，積極地提出預測並證實，而不只是透過歸納法解釋過去的觀測結果</li>
-<li>Ingenuity: 匠心，把 Stakeholder 在意的事情做到最好的決心與能力</li>
-</ol>
-<h3 id="test-driven-development---a-sidebar">Test-Driven Development - a sidebar</h3>
-<p>TDD, BDD(behaviour-driven development), ATDD(acceptance test–driven development) 不是用來取代 Testing，而是被設計來作為一種開發技巧。</p>
-<h3 id="is-test-coverage-a-useful-metric">Is test coverage a useful metric?</h3>
-<p>程式碼覆蓋度(test coverage or code coverage)是否有用端看 Stakeholders 關注的是什麼，若他關注的是安全性，程式碼覆蓋度無法提供任何資訊。程式碼覆蓋度只能確保這份 Code 有自動化測試，並符合定義的測試案例，無法保證任何案例都可以得到預期結果。</p>
-<h3 id="what-does-it-mean-to-shift-testing-left">What does it mean to “shift testing left”?</h3>
-<p>不單純只是盡早執行各種測試，而是要儘早把 Stakeholders 關注的東西納入考量中，例如開發時就思考合規、安全性等議題。</p>
-<hr />
-<p><a href="https://www.facebook.com/yftzeng.tw">Ant 大</a>在 <a href="https://www.facebook.com/yftzeng.tw/posts/10216065373106529">FB</a> 分享了這篇文章，<a href="https://www.facebook.com/hatelove">九一大</a>在貼文下也針對文中說明提到 TDD, BDD, ATDD 不該取代 Testing 分享了他的看法</p>
-<blockquote>
-<p>針對2的部分，想用 TDD/BDD/ATDD 來做測試（達到測試目的）的人，是不是本身就該先了解一下這些名詞的「全名」。</p>
-<p>他們都是 development 的方法，他們也都不是用來取代測試。</p>
-<p>所以 yes, 如果拿這些來取代測試，是錯的。</p>
-<p>拿這些來做需求分析、情境分析、驗證「已知的東西」是否符合預期，都很合適。</p>
-<p>用來驗證那些你不知道的東西，就不是自動化能做的。</p>
-<p>這也是為什麼有一派的測試，指出自動化測試的部分不應該叫 testing, 而是 validation 或 check。</p>
-<p>真正的測試更偏向探索測試類型的。</p>
-<p>-Joey Chen</p>
-</blockquote>
+<ul>
+<li>2023-11-09 - <a href="https://speakerdeck.com/blueswen/cong-ling-kai-shi-da-zao-ke-guan-ce-xing-ping-tai">從零開始打造可觀測性平台</a> @ <a href="https://modernweb.tw/2023/workshop-page/2440">MWC 2023</a></li>
+<li>2023-09-25 - <a href="https://speakerdeck.com/blueswen/guo-tai-ren-shou-de-ke-guan-ce-xing-shi-jian">國泰人壽的可觀測性實踐</a> @ <a href="https://devopsdays.tw/2023/session-page/2280">DevOpsDays Taipei 2023</a></li>
+<li>2023-07-28 - <a href="https://www.youtube.com/live/dXR8WNm5uos">OpenTelemetry demo app with Grafana, Loki, Prometheus, Tempo (Grafana Office Hours #06)</a> @ <a href="https://www.youtube.com/@Grafana">Grafana YouTube Channel</a></li>
+</ul>
 
 
 
@@ -1103,7 +946,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 22, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 25, 2023</span>
   </span>
 
     
@@ -1113,7 +956,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 5, 2021</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 25, 2023</span>
   </span>
 
     
@@ -1129,58 +972,10 @@
 
 
 
-  <h2 id="__comments">Comments</h2>
-  <script src="https://giscus.app/client.js"
-        data-repo="blueswen/blueswen.github.io"
-        data-repo-id="MDEwOlJlcG9zaXRvcnkyNTMyNTUwMzM="
-        data-category="General"
-        data-category-id="DIC_kwDODxhdec4CTQHC"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-  </script>
-
-  <!-- Synchronize Giscus theme with palette -->
-  <script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    /* Set palette on initial load */
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-      var theme = palette.color.scheme === "slate" ? "dark" : "light"
-      giscus.setAttribute("data-theme", theme) 
-    }
-
-    /* Register event handlers after documented loaded */
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate" ? "dark" : "light"
-
-          /* Instruct Giscus to change theme */
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
-    })
-  </script>
-
-      
-    </article>
-  </div>
-
+                
+              </article>
+            </div>
+          
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -1217,10 +1012,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.6981e6db.min.js"></script>
+      <script src="../assets/javascripts/bundle.6981e6db.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

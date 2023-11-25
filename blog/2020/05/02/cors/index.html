@@ -262,6 +262,23 @@
         
   
   
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../talks/" class="md-tabs__link">
+        
+  
+    
+  
+  Talks
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
     
   
   
@@ -399,6 +416,31 @@
       
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../../../../talks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Talks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -425,7 +467,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
@@ -447,14 +489,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -494,10 +536,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -514,8 +556,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -665,10 +707,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -685,8 +727,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -869,7 +911,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#backend-cors" class="md-nav__link">
+  <a href="#backend-cors-設定" class="md-nav__link">
     <span class="md-ellipsis">
       
         Backend CORS 設定
@@ -1021,7 +1063,7 @@ Image Source: <a href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS">M
 <p>而除了 Request 外，網頁的元素操作很多地方都會踩到 Same-origin policy 的坑，如不同網域之間的 iframe 操作 <a href="https://stackoverflow.com/a/25098153">SecurityError: Blocked a frame with origin from accessing a cross-origin frame</a>，其核心概念就是如果不同源，有很多事情瀏覽器都會基於安全考量都擋掉。</p>
 <p>到這邊可以發現 CORS 與 Same-origin policy 都是瀏覽器負責檢核，若單純指使從後端發 Request 完全不用考慮這些問題，因此也有很多 Workaround 是在後端作一個跳板間接取得資源，或直接用 <a href="https://github.com/Rob--W/cors-anywhere/">cors-anywhere</a> 這類第三方服務當跳板。</p>
 <p>CORS 其實還有很多詳細內容，但這邊跳過了一些細節僅簡單說明原理，詳細可以參考 <a href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS">MDN web docs - 跨來源資源共用（CORS）</a>，十分值得一讀。</p>
-<h2 id="backend-cors">Backend CORS 設定</h2>
+<h2 id="backend-cors-設定">Backend CORS 設定</h2>
 <p>前端是否能執行跨域請求完全是依賴於後端是否有設定 CORS，<a href="https://enable-cors.org/server.html">Enable CORS</a> 列出了一些常見的後端 Server 設定方法。以下針對 Python 常用的 Django 與 Flask 後端框架說明設定方法。</p>
 <h3 id="django">Django</h3>
 <p>在使用 <a href="https://www.django-rest-framework.org/">Django REST framework</a> 做為網站後端的時，前端頁面通常會是不同來源，可以使用 <a href="https://github.com/adamchainz/django-cors-headers">django-cors-headers</a> 解決 CORS 的問題。</p>

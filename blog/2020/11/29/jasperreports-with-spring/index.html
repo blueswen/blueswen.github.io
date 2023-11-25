@@ -262,6 +262,23 @@
         
   
   
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../talks/" class="md-tabs__link">
+        
+  
+    
+  
+  Talks
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
     
   
   
@@ -399,6 +416,31 @@
       
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../../../../talks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Talks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -425,7 +467,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
@@ -447,14 +489,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -494,10 +536,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -514,8 +556,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -665,10 +707,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -685,8 +727,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -913,7 +955,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#其他解決方案" class="md-nav__link">
     <span class="md-ellipsis">
       
         其他解決方案
@@ -1102,7 +1144,7 @@
 <p><a class="glightbox" href="../../../../imgs/2020-11-29-jasperreports-with-spring/request.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Postman Request" src="../../../../imgs/2020-11-29-jasperreports-with-spring/request.png" /></a></p>
 <p>取得的 PDF 如下圖，可以正常顯示中文</p>
 <p><a class="glightbox" href="../../../../imgs/2020-11-29-jasperreports-with-spring/sample.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PDF Sample" src="../../../../imgs/2020-11-29-jasperreports-with-spring/sample.png" /></a></p>
-<h3 id="_1">其他解決方案</h3>
+<h3 id="其他解決方案">其他解決方案</h3>
 <p>如前面所述，有一些人提供了其他的方式解決中文顯示的問題，大部分都是在 application 中引入 <a href="https://mvnrepository.com/artifact/com.itextpdf/itext-asian">iTextAsian.jar</a>，利用裡面打包好的宋體做 PDF 產製所使用的字體，但缺點是字體就會被侷限，在設計模板階段也會無法預覽正確字體，設定上也頗為麻煩。</p>
 <p>在搞懂 Font Extension 前我也是依照這些分享使用這種方式，但後來發現限制實在太多，所以就還是走上正規的道路。雖然最後沒有採用這些解決方案，但有幾篇仍能提供一些不錯的思路，未來如果與到類似的問題或許可以作為參考。</p>
 <p><a href="https://blog.csdn.net/jiangkai528/article/details/51133347">Jasperreport 与 Springmvc 结合生成 PDF web 页面笔记（含解决中文问题）</a>依照這篇文章提供的 dependencies 就能夠完整產製含有中文的報表，如果要使用繁體 pdfFontName 需設定為 MHei-Medium、MSung-Light 或 MSungStd-Light，pdfEncoding 設為 UniCNS-UCS2-H。而因為有限定了 jasperreports 的版本，所以可能會遇到使用 Jaspersoft Studio compile 出來的 jasper 在 run time 無法被使用的問題，這時候就要使用前面提到的調整 Jaspersoft Studio 的 compiler 版本來解決。</p>
