@@ -54,6 +54,10 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
       emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
 
 plugins:
   - glightbox
@@ -86,6 +90,7 @@ plugins:
 nav:
   - Home: index.md
   - Portfolio: portfolio.md
+  - Talks: talks.md
   - Blog:
      - blog/index.md
   - Tags: tags.md
