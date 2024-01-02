@@ -14,12 +14,14 @@
         <link rel="prev" href="../../../../2022/03/02/connect-docker-host-from-inside-a-docker-container/">
       
       
+        <link rel="next" href="../../../../2024/01/02/harbor-rest-api/">
+      
       
         
       
       
       <link rel="icon" href="../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.12+insiders-4.45.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3+insiders-4.49.0">
     
     
       
@@ -27,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.0ab26e37.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.67c3bdf0.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -201,7 +203,7 @@
         <a href="https://github.com/blueswen/blueswen.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     blueswen/blueswen.github.io
@@ -350,7 +352,7 @@
       <a href="https://github.com/blueswen/blueswen.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     blueswen/blueswen.github.io
@@ -362,6 +364,7 @@
     
       
       
+  
   
   
   
@@ -390,6 +393,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../../../../portfolio/" class="md-nav__link">
         
@@ -412,6 +416,7 @@
     
       
       
+  
   
   
   
@@ -440,6 +445,7 @@
   
   
     
+  
   
   
     
@@ -511,8 +517,11 @@
   
   
   
+  
     
     
+      
+        
       
         
       
@@ -570,6 +579,38 @@
   
   
   
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
     <li class="md-nav__item">
       <a href="../../../../archive/2023/" class="md-nav__link">
         
@@ -594,6 +635,9 @@
               
                 
   
+  
+  
+    
   
   
     <li class="md-nav__item">
@@ -622,6 +666,9 @@
   
   
   
+    
+  
+  
     <li class="md-nav__item">
       <a href="../../../../archive/2021/" class="md-nav__link">
         
@@ -646,6 +693,9 @@
               
                 
   
+  
+  
+    
   
   
     <li class="md-nav__item">
@@ -679,6 +729,7 @@
             
               
                 
+  
   
   
   
@@ -741,6 +792,9 @@
   
   
   
+    
+  
+  
     <li class="md-nav__item">
       <a href="../../../../category/algorithm/" class="md-nav__link">
         
@@ -765,6 +819,9 @@
               
                 
   
+  
+  
+    
   
   
     <li class="md-nav__item">
@@ -793,6 +850,9 @@
   
   
   
+    
+  
+  
     <li class="md-nav__item">
       <a href="../../../../category/share/" class="md-nav__link">
         
@@ -817,6 +877,9 @@
               
                 
   
+  
+  
+    
   
   
     <li class="md-nav__item">
@@ -857,6 +920,7 @@
     
       
       
+  
   
   
   
@@ -1036,23 +1100,25 @@
       
         
   
-  
 
-<nav class="md-tags" >
-  
+
+  <nav class="md-tags" >
     
+      
+      
+      
+      
+        <a href="../../../../../tags/#tag:grafana" class="md-tag">Grafana</a>
+      
     
+      
+      
+      
+      
+        <a href="../../../../../tags/#tag:prometheus" class="md-tag">Prometheus</a>
+      
     
-      <a href="../../../../../tags/#grafana" class="md-tag">Grafana</a>
-    
-  
-    
-    
-    
-      <a href="../../../../../tags/#prometheus" class="md-tag">Prometheus</a>
-    
-  
-</nav>
+  </nav>
 
 
 
@@ -1065,17 +1131,17 @@
 <li>Instant Query：Query Type <code>Instant</code>，只查詢最新的值，該值會顯示在 Panel 上</li>
 <li>Range Query：Query Type <code>Range</code>，查詢一段時間內的值，最後一個值會顯示在 Panel 上，所有質會以 Sparkline 的方式顯示在 Panel 上</li>
 </ol>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/instant-query.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Instant Query 畫面" src="../../../imgs/2023-10-22-grafana-stat-panel/instant-query.png" /></a><br />
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/instant-query.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Instant Query 畫面" src="../../../imgs/2023-10-22-grafana-stat-panel/instant-query.png" /></a><br />
 Instant Query 畫面</p>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/range-query.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Range Query 畫面" src="../../../imgs/2023-10-22-grafana-stat-panel/range-query.png" /></a><br />
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/range-query.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Range Query 畫面" src="../../../imgs/2023-10-22-grafana-stat-panel/range-query.png" /></a><br />
 Range Query 畫面</p>
 <p>但單純使用 Range Query 時會發現，有時候改變時間區間時，顯示在 Panel 上想像中代表最新的值會變大或變小，導致使用者會對於數值的正確性產生疑慮。</p>
 <p>這是因為在 Grafana 使用 Range Query 時，實際的查詢時間區間會為了配合查詢 Prometheus 時要使用的 <a href="https://prometheus.io/docs/prometheus/latest/querying/api/#range-queries">Step 參數</a>而被<a href="https://github.com/grafana/grafana/blob/v10.1.5/pkg/tsdb/prometheus/models/query.go#L147">調整</a>，查詢使用的開始與結束時間都會變得比 Grafana 畫面設定的時間區間還要早。若調整後的結束時間與畫面設定的結束時間中間剛好有資料點時，就會發生 Range Query 的結果不是該 Series 最新的值，而是調整後的結束時間點往前找到的值，如下圖所示：</p>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/query-offset.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Query Offset" src="../../../imgs/2023-10-22-grafana-stat-panel/query-offset.png" /></a><br />
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/query-offset.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Query Offset" src="../../../imgs/2023-10-22-grafana-stat-panel/query-offset.png" /></a><br />
 藍色的最後一個資料點，因為查詢時間位移的關係而不會被該次查詢查到</p>
 <p>更詳細的 Step 參數與 Grafana 設定方式將於另一篇文章中說明。</p>
 <p>雖然可以使用 Both Type 進行查詢，同時顯示 Instant Query 與 Range Query 的結果，但 Panel 會顯示兩個值，容易造成使用者混淆。</p>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/both-query.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Both Query 畫面" src="../../../imgs/2023-10-22-grafana-stat-panel/both-query.png" /></a><br />
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/both-query.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Both Query 畫面" src="../../../imgs/2023-10-22-grafana-stat-panel/both-query.png" /></a><br />
 Both Query 畫面</p>
 <p>圖中也可以看到，右側 Instant Query 的值與左側 Range Query 的值不同，這在查詢區間範圍較大時會更明顯。</p>
 <h2 id="解法">解法</h2>
@@ -1083,7 +1149,7 @@ Both Query 畫面</p>
 <ol>
 <li>
 <p>使用 <code>Both</code> Type 查詢</p>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/single-query-type.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Query Type" src="../../../imgs/2023-10-22-grafana-stat-panel/single-query-type.png" /></a><br />
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/single-query-type.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Query Type" src="../../../imgs/2023-10-22-grafana-stat-panel/single-query-type.png" /></a><br />
 Query Type 設定</p>
 </li>
 <li>
@@ -1092,25 +1158,25 @@ Query Type 設定</p>
 <li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#series-to-rows">Series to rows</a>：將 Instant Query 與 Range Query 的資料合併</li>
 <li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#sort-by">Sort by</a>：將合併後的資料依照 <code>Time</code> 欄位排序，確保最後一筆資料為最新的資料</li>
 </ol>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/single-transform.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../../../imgs/2023-10-22-grafana-stat-panel/single-transform.png" /></a><br />
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/single-transform.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../../../imgs/2023-10-22-grafana-stat-panel/single-transform.png" /></a><br />
 Transform 設定</p>
 </li>
 </ol>
 <h3 id="說明">說明</h3>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/explanation-01.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Range Series" src="../../../imgs/2023-10-22-grafana-stat-panel/explanation-01.png" /></a><br />
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/explanation-01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Range Series" src="../../../imgs/2023-10-22-grafana-stat-panel/explanation-01.png" /></a><br />
 先關閉 Transform，並切換為 Table 檢視，可以看到兩個 Series，第一個是 Range Query 的資料。</p>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/explanation-02.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Instant Series" src="../../../imgs/2023-10-22-grafana-stat-panel/explanation-02.png" /></a><br />
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/explanation-02.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Instant Series" src="../../../imgs/2023-10-22-grafana-stat-panel/explanation-02.png" /></a><br />
 第二個是 Instant Query 的資料。</p>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/explanation-03.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Merged Series" src="../../../imgs/2023-10-22-grafana-stat-panel/explanation-03.png" /></a><br />
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/explanation-03.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Merged Series" src="../../../imgs/2023-10-22-grafana-stat-panel/explanation-03.png" /></a><br />
 啟用 <code>Series to rows</code> transform，兩個 Series 會合併成一個 Series，但預設的排序是依照時間欄位降冪排序，導致最後一筆資料不是最新的資料，而 Stat Panel 預設會顯示最後一筆資料。</p>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/explanation-04.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Sorted Series" src="../../../imgs/2023-10-22-grafana-stat-panel/explanation-04.png" /></a><br />
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/explanation-04.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Sorted Series" src="../../../imgs/2023-10-22-grafana-stat-panel/explanation-04.png" /></a><br />
 啟用 <code>Sort by</code> transform，並以 <code>Time</code> 欄位排序，確保最後一筆資料為最新的資料。</p>
 <h3 id="多筆資料應用">多筆資料應用</h3>
 <p>如果想要在同一個 Stat Panel 上顯示多筆資料但達到一樣的效果，則要使用多額外使用 <code>Partition by values</code> transform 以 <code>Metrics</code> 欄位分割資料。</p>
 <ol>
 <li>
 <p>使用 <code>Both</code> Type 查詢</p>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/multi-query-type.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Query Type" src="../../../imgs/2023-10-22-grafana-stat-panel/multi-query-type.png" /></a><br />
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/multi-query-type.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Query Type" src="../../../imgs/2023-10-22-grafana-stat-panel/multi-query-type.png" /></a><br />
 Query Type 設定</p>
 </li>
 <li>
@@ -1120,7 +1186,7 @@ Query Type 設定</p>
 <li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#sort-by">Sort by</a>：將合併後的資料依照 <code>Time</code> 欄位排序，確保最後一筆資料為最新的資料</li>
 <li><a href="https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#partition-by-values">Partition by values</a>：將全部被合併的資料再以 <code>Metrics</code> 欄位分割成多筆 Series</li>
 </ol>
-<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/multi-transform.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../../../imgs/2023-10-22-grafana-stat-panel/multi-transform.png" /></a><br />
+<p><a class="glightbox" href="../../../imgs/2023-10-22-grafana-stat-panel/multi-transform.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../../../imgs/2023-10-22-grafana-stat-panel/multi-transform.png" /></a><br />
 Transform 設定</p>
 </li>
 </ol>
@@ -1268,7 +1334,7 @@ Transform 設定</p>
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.6981e6db.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.8e8db93a.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
