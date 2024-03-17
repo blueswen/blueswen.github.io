@@ -6,4 +6,4 @@ hide:
 
 # Tags
 
-[TAGS]
+<!-- material/tags -->
