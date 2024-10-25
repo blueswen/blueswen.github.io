@@ -90,6 +90,7 @@ nav:
   - Home: index.md
   - Portfolio: portfolio.md
   - Talks: talks.md
+  - Publications: publications.md
   - Blog:
      - blog/index.md
   - Tags: tags.md
