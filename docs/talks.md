@@ -7,6 +7,7 @@ hide:
 
 - 2024-09-22 - 全方位強化 Python 服務可觀測性：以 FastAPI 和 Grafana Stack 為例 @ [PyCon Taiwan 2024](https://tw.pycon.org/2024/zh-hant/conference/talk/320)
     - [Slide](https://speakerdeck.com/blueswen/quan-fang-wei-qiang-hua-python-fu-wu-ke-guan-ce-xing-yi-fastapi-he-grafana-stack-wei-li) on Speaker Deck
+    - [Recording](https://www.youtube.com/watch?v=y3sumuoDq4w) @ [PyCon Taiwan Channel](https://www.youtube.com/@PyConTaiwanVideo)
 - 2024-08-21 - Observability 101：從零開始了解可觀測性 @ [iThome 鐵人講堂](https://itplus.ithome.com.tw/channel-page/93)
     - [Slide](https://speakerdeck.com/blueswen/observability-101-cong-ling-kai-shi-liao-jie-ke-guan-ce-xing) on Speaker Deck
     - [Recording](https://itplus.ithome.com.tw/webinar-page/223) on iThome
