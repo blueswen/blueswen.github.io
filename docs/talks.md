@@ -5,6 +5,8 @@ hide:
   - footer
 ---
 
+- 2024-12-20 - 快速入門可觀測性 @ [DevOps Taiwan](https://www.facebook.com/DevOpsTaiwan/) Meetup
+    - [Slide](https://speakerdeck.com/blueswen/kuai-su-ru-men-ke-guan-ce-xing)
 - 2024-09-22 - 全方位強化 Python 服務可觀測性：以 FastAPI 和 Grafana Stack 為例 @ [PyCon Taiwan 2024](https://tw.pycon.org/2024/zh-hant/conference/talk/320)
     - [Slide](https://speakerdeck.com/blueswen/quan-fang-wei-qiang-hua-python-fu-wu-ke-guan-ce-xing-yi-fastapi-he-grafana-stack-wei-li) on Speaker Deck
     - [Recording](https://www.youtube.com/watch?v=y3sumuoDq4w) on [PyCon Taiwan Channel](https://www.youtube.com/@PyConTaiwanVideo)
