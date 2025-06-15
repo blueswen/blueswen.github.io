@@ -5,7 +5,7 @@ hide:
   - footer
 ---
 
-- 2025-06-06 - 從零到一：搭建你的第一個 Observability 平台 @ [DevOpsDays Taipei 2025](https://devopsdays.tw/2025/session-page/2280)
+- 2025-06-06 - 從零到一：搭建你的第一個 Observability 平台 @ [DevOpsDays Taipei 2025](https://devopsdays.tw/2025/workshop-page/3920)
     - [Slide](https://speakerdeck.com/blueswen/cong-ling-dao-da-jian-ni-de-di-ge-observability-ping-tai) on Speaker Deck
     - [Lab](https://github.com/blueswen/devopsdays-taipei-2025-observability-bootcamp) on GitHub
 - 2024-12-20 - 快速入門可觀測性 @ [DevOps Taiwan Meetup #65](https://devops.kktix.cc/events/meetup-65)
