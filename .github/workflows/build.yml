@@ -33,8 +33,15 @@ jobs:
       - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
       - working-directory: ./mkdocs-blog-extension
         run: pip install .
-      - run: mkdocs gh-deploy --force
+      - run: mkdocs build
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy site --project-name=blueswen
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 env:
-  GH_TOKEN: ${{ secrets.GH_TOKEN }} 
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
   GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
   CI: true
