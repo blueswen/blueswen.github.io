@@ -5,6 +5,11 @@ hide:
   - footer
 ---
 
+- 2025-12-26 - Grafana：建立系統全知視角的捷徑 @ [DevOps Taiwan Meetup #74](https://devops.kktix.cc/events/meetup-73)
+    - [Slide](https://speakerdeck.com/blueswen/grafana-jian-li-xi-tong-quan-zhi-shi-jiao-de-jie-jing) on Speaker Deck
+- 2025-11-19 - 當 Grafana 遇見 LLM：AI 時代的可觀測性 @ ChatGPT 應用社群
+    - [Slide](https://speakerdeck.com/blueswen/dang-grafana-yu-jian-llm-ai-shi-dai-de-ke-guan-ce-xing) on Speaker Deck
+    - [Recording](https://www.youtube.com/live/gwi7bE3ssIw) on YouTube
 - 2025-06-06 - 從零到一：搭建你的第一個 Observability 平台 @ [DevOpsDays Taipei 2025](https://devopsdays.tw/2025/workshop-page/3920)
     - [Slide](https://speakerdeck.com/blueswen/cong-ling-dao-da-jian-ni-de-di-ge-observability-ping-tai) on Speaker Deck
     - [Lab](https://github.com/blueswen/devopsdays-taipei-2025-observability-bootcamp) on GitHub
