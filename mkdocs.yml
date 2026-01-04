@@ -68,13 +68,10 @@ plugins:
         font_family: Noto Sans TC
   - search:
       separator: '[\s\u200b\-]'
-  - git-revision-date-localized:
-      enabled: !ENV [CI, false]
-      enable_creation_date: true
-      fallback_to_build_date: true
   - meta
   - tags
   - blog-extension:
+      blog_dir: blog
       categories_toc: true
       post_readtime: false
       pagination_per_page: 10
@@ -86,6 +83,24 @@ plugins:
       plugins:
         - optimize
         - minify
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: zh-TW
+          name: 繁體中文
+          build: true
+        - locale: en
+          default: true
+          name: English
+          build: true
+  - git-revision-date-localized:
+      enabled: !ENV [CI, false]
+      enable_creation_date: true
+      fallback_to_build_date: true
+
+hooks:
+  - overrides/.hooks/blog_i18n_patch.py
+
 nav:
   - Home: index.md
   - Portfolio: portfolio.md

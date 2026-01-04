@@ -30,7 +30,6 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install -r requirements.txt
-      - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
       - working-directory: ./mkdocs-blog-extension
         run: pip install .
       - run: mkdocs build
