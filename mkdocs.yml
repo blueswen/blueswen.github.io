@@ -49,7 +49,14 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
   - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
   - meta
   - pymdownx.emoji:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
