@@ -5,6 +5,11 @@ hide:
   - footer
 ---
 
+## 2026
+
+- 2026-06-12 - Observability in Practice: The Story Behind Grafana and Edge Device SRE @ [Grafana & Friends Taipei MeetUp #2](https://grafanafriendstaipei.kktix.cc/events/1423e60d12) (Chinese)
+    - [Slide](https://speakerdeck.com/blueswen/observability-in-practice-grafana-yu-edge-device-sre-de-na-xie-shi) on Speaker Deck
+
 ## 2025
 
 - 2025-12-26 - Grafana: A Shortcut to a Comprehensive System View  @ [DevOps Taiwan Meetup #74](https://devops.kktix.cc/events/meetup-73) (Chinese)
@@ -23,7 +28,7 @@ hide:
 - 2024-09-22 - Comprehensive Python Service Observability: FastAPI with Grafana Stack @ [PyCon Taiwan 2024](https://tw.pycon.org/2024/zh-hant/conference/talk/320) (Chinese)
     - [Slide](https://speakerdeck.com/blueswen/quan-fang-wei-qiang-hua-python-fu-wu-ke-guan-ce-xing-yi-fastapi-he-grafana-stack-wei-li) on Speaker Deck
     - [Lab](https://github.com/blueswen/pycon-tw-2024-python-observability) on GitHub
-    - [Recording](https://youtu.be/y3sumuoDq4w) on [PyCon Taiwan Channel](https://www.youtube.com/@PyConTaiwanVideo) (Chinese)
+    - [Recording](https://youtu.be/y3sumuoDq4w) on [PyCon Taiwan Channel](https://www.youtube.com/@PyConTaiwanVideo)
     - [Demo Video](https://youtu.be/3Vvtqb3w5m0) on YouTube
 - 2024-08-21 - Observability 101: Understanding Observability from Scratch @ [iThome Tech Talk](https://itplus.ithome.com.tw/channel-page/93) (Chinese)
     - [Slide](https://speakerdeck.com/blueswen/observability-101-cong-ling-kai-shi-liao-jie-ke-guan-ce-xing) on Speaker Deck
