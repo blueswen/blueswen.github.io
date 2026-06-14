@@ -8,7 +8,7 @@ hide:
 ## 2026
 
 - 2026-06-12 - Observability in Practice：Grafana 與 Edge Device SRE 的那些事 @ [Grafana & Friends Taipei MeetUp #2](https://grafanafriendstaipei.kktix.cc/events/1423e60d12)
-    - [Slide](https://speakerdeck.com/blueswen/observability-in-practice-grafana-yu-edge-device-sre-de-na-xie-shi-) on Speaker Deck
+    - [Slide](https://speakerdeck.com/blueswen/observability-in-practice-grafana-yu-edge-device-sre-de-na-xie-shi) on Speaker Deck
 
 ## 2025
 
